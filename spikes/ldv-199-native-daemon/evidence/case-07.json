@@ -1,0 +1,904 @@
+{
+ "id": 7,
+ "run_status": "completed",
+ "duration_ms": 5310,
+ "result": {
+  "id": 7,
+  "title": "stream loss, exit witnessed, then reconnect after exit",
+  "start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944658919,
+    "mono_ns": "1682974751334",
+    "pid": 6288,
+    "oracle_len": 18,
+    "extra": null,
+    "observed_wall_ms": 1790944658926
+   },
+   "expectedTail": 18,
+   "wait": {
+    "tail": 18
+   }
+  },
+  "mid": {
+   "ok": true,
+   "ack": {
+    "name": "mid-emitted",
+    "wall_ms": 1790944658939,
+    "mono_ns": "1682994584342",
+    "pid": 6288,
+    "oracle_len": 25,
+    "extra": null,
+    "observed_wall_ms": 1790944658947
+   },
+   "expectedTail": 25,
+   "wait": {
+    "tail": 25
+   },
+   "running": true
+  },
+  "savedCursor": 25,
+  "exit": {
+   "exitAck": {
+    "name": "exit-stage",
+    "wall_ms": 1790944658970,
+    "mono_ns": "1683025720693",
+    "pid": 6288,
+    "oracle_len": 34,
+    "extra": {
+     "code": 7
+    },
+    "observed_wall_ms": 1790944658979
+   },
+   "releasedAt": 1790944658968,
+   "proc": {
+    "state": "gone",
+    "timedOut": false,
+    "after_exit_stage_ms": 9
+   },
+   "listExited": {
+    "wall_ms": 1790944658987,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": null,
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 7
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 17
+   },
+   "subs": {
+    "c7-witness": {
+     "exit": {
+      "exit_code_raw": 7,
+      "final_offset": 34,
+      "t": 27929.25814,
+      "wall": 1790944658974
+     },
+     "exitAfterStageMs": 4,
+     "eof": {
+      "t": 27929.39215,
+      "wall": 1790944658975,
+      "afterExit": true
+     },
+     "eofAfterExit": 1,
+     "timedOutExit": false,
+     "timedOutEof": false
+    }
+   }
+  },
+  "exitConfirmedIndependently": true,
+  "reconnect": {
+   "label": "c7-measured-reconnect",
+   "role_requested": "observer",
+   "attachmentID": "c7-measured",
+   "requestedCursor": 25,
+   "attach": {
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 25,
+    "available_offset": 25,
+    "end_offset": 34,
+    "truncated": false,
+    "replay_len": 9,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 25,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": null,
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 7
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 3402722554807910,
+     "group_id": "ldv199-c7-5957",
+     "socket": "c7-measured-reconnect"
+    }
+   },
+   "frames": 0,
+   "liveBytes": 0,
+   "maxEnd": 34,
+   "exit": null,
+   "eof": null,
+   "close": null,
+   "errors": [],
+   "problems": [],
+   "events": [],
+   "rawIntervalsCount": 0,
+   "rawIntervals": [],
+   "detachedLocally": false,
+   "framesAfterLocalDetach": 0,
+   "compare": {
+    "intervals": 1,
+    "comparedBytes": 9,
+    "preOriginBytes": 0,
+    "beyondOracleBytes": 0,
+    "boundsProblems": [],
+    "firstDifference": null,
+    "nativeSha256": "8b145f8c6b0d1686e75bf610627ec8fd30770156a9b5d37005c311a00c847493",
+    "oracleSha256": "8b145f8c6b0d1686e75bf610627ec8fd30770156a9b5d37005c311a00c847493",
+    "ok": true,
+    "coverage": {
+     "from": 25,
+     "to": 34,
+     "holes": [],
+     "overlaps": [],
+     "covered": true
+    },
+    "replayStartBasis": "requested_offset",
+    "preOriginVerified": null
+   }
+  },
+  "joined": {
+   "M1_then_M2": {
+    "intervals": 3,
+    "comparedBytes": 25,
+    "preOriginBytes": 0,
+    "beyondOracleBytes": 0,
+    "boundsProblems": [],
+    "firstDifference": null,
+    "nativeSha256": "c878ce30b16ffed2375a58011bfd631f5929b0deaa3af145039a92882a716f37",
+    "oracleSha256": "c878ce30b16ffed2375a58011bfd631f5929b0deaa3af145039a92882a716f37",
+    "ok": true
+   },
+   "coverage": {
+    "from": 9,
+    "to": 34,
+    "holes": [],
+    "overlaps": [],
+    "covered": true
+   }
+  },
+  "eofAloneNote": "EOF is recorded separately from the exited frame; exit is claimed only from fixture exit-stage ack + /proc + native list/exited frame",
+  "W": {
+   "label": "c7-witness",
+   "role_requested": "observer",
+   "attachmentID": "c7-witness",
+   "requestedCursor": 9,
+   "attach": {
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 9,
+    "available_offset": 9,
+    "end_offset": 9,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 9,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": "node",
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 9,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 3402722554807910,
+     "group_id": "ldv199-c7-5957",
+     "socket": "c7-witness"
+    }
+   },
+   "frames": 3,
+   "liveBytes": 25,
+   "maxEnd": 34,
+   "exit": {
+    "exit_code_raw": 7,
+    "final_offset": 34,
+    "t": 27929.25814,
+    "wall": 1790944658974
+   },
+   "eof": {
+    "t": 27929.39215,
+    "wall": 1790944658975,
+    "afterExit": true
+   },
+   "close": {
+    "t": 27929.489849,
+    "wall": 1790944658975,
+    "hadError": false,
+    "local": false
+   },
+   "errors": [],
+   "problems": [],
+   "events": [
+    {
+     "t": 27929.25814,
+     "type": "exited",
+     "exit_code": 7,
+     "final_offset": 34
+    }
+   ],
+   "rawIntervalsCount": 3,
+   "rawIntervals": [
+    [
+     9,
+     18
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     25,
+     34
+    ]
+   ],
+   "detachedLocally": false,
+   "framesAfterLocalDetach": 0,
+   "compare": {
+    "intervals": 3,
+    "comparedBytes": 25,
+    "preOriginBytes": 0,
+    "beyondOracleBytes": 0,
+    "boundsProblems": [],
+    "firstDifference": null,
+    "nativeSha256": "c878ce30b16ffed2375a58011bfd631f5929b0deaa3af145039a92882a716f37",
+    "oracleSha256": "c878ce30b16ffed2375a58011bfd631f5929b0deaa3af145039a92882a716f37",
+    "ok": true,
+    "coverage": {
+     "from": 9,
+     "to": 34,
+     "holes": [],
+     "overlaps": [],
+     "covered": true
+    },
+    "replayStartBasis": "requested_offset",
+    "preOriginVerified": null
+   }
+  },
+  "removeAfter": {
+   "type": "ok"
+  },
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 27659.33,
+    "wall": "2026-10-02T12:37:38.705Z",
+    "kind": "request",
+    "conn": "create-c7",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c7-5957/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c7-5957",
+     "title": "ldv199-c7",
+     "group_id": "ldv199-c7-5957",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 27668.18,
+    "wall": "2026-10-02T12:37:38.713Z",
+    "kind": "response",
+    "conn": "create-c7",
+    "rtt_ms": 9,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 3402722554807910,
+      "pid": 6288,
+      "fg": null,
+      "group": "ldv199-c7-5957",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 27668.32,
+    "wall": "2026-10-02T12:37:38.713Z",
+    "kind": "fixture-created",
+    "fx": "c7",
+    "ptyId": 3402722554807910,
+    "pid": 6288,
+    "group": "ldv199-c7-5957",
+    "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+    "proc": {
+     "pid": 6288,
+     "comm": "node",
+     "state": "R",
+     "ppid": 5971,
+     "starttime_ticks": 168276,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c7-5957/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 3402722554807910,
+      "pid": 6288,
+      "fg": null,
+      "group": "ldv199-c7-5957",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 27719.78,
+    "wall": "2026-10-02T12:37:38.765Z",
+    "kind": "ack",
+    "fx": "c7",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944658755,
+     "mono_ns": "1682810545156",
+     "pid": 6288,
+     "oracle_len": 9,
+     "extra": null,
+     "observed_wall_ms": 1790944658765
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 27851.18,
+    "wall": "2026-10-02T12:37:38.896Z",
+    "kind": "origin",
+    "fx": "c7",
+    "origin": 9,
+    "head": 0,
+    "preLen_oracle": 9,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 27851.24,
+    "wall": "2026-10-02T12:37:38.896Z",
+    "kind": "sub-attach",
+    "sub": "c7-measured",
+    "fx": "c7",
+    "role": "observer",
+    "attachmentID": "c7-measured",
+    "cursor": 9,
+    "takeover": false
+   },
+   {
+    "i": 6,
+    "t_ms": 27860.14,
+    "wall": "2026-10-02T12:37:38.905Z",
+    "kind": "sub-attached",
+    "sub": "c7-measured",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 9,
+    "available_offset": 9,
+    "end_offset": 9,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 9,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": "node",
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 9,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 3402722554807910,
+     "group_id": "ldv199-c7-5957",
+     "socket": "c7-measured"
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 27860.19,
+    "wall": "2026-10-02T12:37:38.905Z",
+    "kind": "sub-attach",
+    "sub": "c7-witness",
+    "fx": "c7",
+    "role": "observer",
+    "attachmentID": "c7-witness",
+    "cursor": 9,
+    "takeover": false
+   },
+   {
+    "i": 8,
+    "t_ms": 27870.33,
+    "wall": "2026-10-02T12:37:38.916Z",
+    "kind": "sub-attached",
+    "sub": "c7-witness",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 9,
+    "available_offset": 9,
+    "end_offset": 9,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 9,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": "node",
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 9,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 3402722554807910,
+     "group_id": "ldv199-c7-5957",
+     "socket": "c7-witness"
+    }
+   },
+   {
+    "i": 9,
+    "t_ms": 27870.58,
+    "wall": "2026-10-02T12:37:38.916Z",
+    "kind": "gate-release",
+    "fx": "c7",
+    "name": "start",
+    "wall_ms": 1790944658916
+   },
+   {
+    "i": 10,
+    "t_ms": 27875.89,
+    "wall": "2026-10-02T12:37:38.921Z",
+    "kind": "output",
+    "sub": "c7-witness",
+    "start": 9,
+    "end": 18,
+    "len": 9
+   },
+   {
+    "i": 11,
+    "t_ms": 27875.99,
+    "wall": "2026-10-02T12:37:38.921Z",
+    "kind": "output",
+    "sub": "c7-measured",
+    "start": 9,
+    "end": 18,
+    "len": 9
+   },
+   {
+    "i": 12,
+    "t_ms": 27881.24,
+    "wall": "2026-10-02T12:37:38.926Z",
+    "kind": "ack",
+    "fx": "c7",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944658919,
+     "mono_ns": "1682974751334",
+     "pid": 6288,
+     "oracle_len": 18,
+     "extra": null,
+     "observed_wall_ms": 1790944658926
+    }
+   },
+   {
+    "i": 13,
+    "t_ms": 27891.99,
+    "wall": "2026-10-02T12:37:38.937Z",
+    "kind": "gate-release",
+    "fx": "c7",
+    "name": "mid",
+    "wall_ms": 1790944658937
+   },
+   {
+    "i": 14,
+    "t_ms": 27895.64,
+    "wall": "2026-10-02T12:37:38.941Z",
+    "kind": "output",
+    "sub": "c7-witness",
+    "start": 18,
+    "end": 25,
+    "len": 7
+   },
+   {
+    "i": 15,
+    "t_ms": 27895.79,
+    "wall": "2026-10-02T12:37:38.941Z",
+    "kind": "output",
+    "sub": "c7-measured",
+    "start": 18,
+    "end": 25,
+    "len": 7
+   },
+   {
+    "i": 16,
+    "t_ms": 27902.2,
+    "wall": "2026-10-02T12:37:38.947Z",
+    "kind": "ack",
+    "fx": "c7",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944658939,
+     "mono_ns": "1682994584342",
+     "pid": 6288,
+     "oracle_len": 25,
+     "extra": null,
+     "observed_wall_ms": 1790944658947
+    }
+   },
+   {
+    "i": 17,
+    "t_ms": 27912.23,
+    "wall": "2026-10-02T12:37:38.957Z",
+    "kind": "request",
+    "conn": "list-running-c7",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 18,
+    "t_ms": 27922.23,
+    "wall": "2026-10-02T12:37:38.967Z",
+    "kind": "response",
+    "conn": "list-running-c7",
+    "rtt_ms": 10.15,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 3402722554807910,
+       "pid": 6288,
+       "fg": "node",
+       "group": "ldv199-c7-5957",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 25,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 19,
+    "t_ms": 27922.28,
+    "wall": "2026-10-02T12:37:38.967Z",
+    "kind": "native-running",
+    "fx": "c7",
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": "node",
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 25,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 20,
+    "t_ms": 27922.31,
+    "wall": "2026-10-02T12:37:38.967Z",
+    "kind": "sub-detach",
+    "sub": "c7-measured"
+   },
+   {
+    "i": 21,
+    "t_ms": 27922.5,
+    "wall": "2026-10-02T12:37:38.968Z",
+    "kind": "gate-release",
+    "fx": "c7",
+    "name": "exit",
+    "wall_ms": 1790944658968
+   },
+   {
+    "i": 22,
+    "t_ms": 27922.69,
+    "wall": "2026-10-02T12:37:38.968Z",
+    "kind": "sub-conn",
+    "sub": "c7-measured",
+    "conn_event": "close",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 23,
+    "t_ms": 27926.65,
+    "wall": "2026-10-02T12:37:38.972Z",
+    "kind": "output",
+    "sub": "c7-witness",
+    "start": 25,
+    "end": 34,
+    "len": 9
+   },
+   {
+    "i": 24,
+    "t_ms": 27929.31,
+    "wall": "2026-10-02T12:37:38.974Z",
+    "kind": "sub-event",
+    "sub": "c7-witness",
+    "event": {
+     "type": "exited",
+     "exit_code": 7,
+     "final_offset": 34
+    }
+   },
+   {
+    "i": 25,
+    "t_ms": 27929.39,
+    "wall": "2026-10-02T12:37:38.975Z",
+    "kind": "sub-conn",
+    "sub": "c7-witness",
+    "conn_event": "eof"
+   },
+   {
+    "i": 26,
+    "t_ms": 27929.49,
+    "wall": "2026-10-02T12:37:38.975Z",
+    "kind": "sub-conn",
+    "sub": "c7-witness",
+    "conn_event": "close",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 27,
+    "t_ms": 27934,
+    "wall": "2026-10-02T12:37:38.979Z",
+    "kind": "ack",
+    "fx": "c7",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944658970,
+     "mono_ns": "1683025720693",
+     "pid": 6288,
+     "oracle_len": 34,
+     "extra": {
+      "code": 7
+     },
+     "observed_wall_ms": 1790944658979
+    }
+   },
+   {
+    "i": 28,
+    "t_ms": 27941.49,
+    "wall": "2026-10-02T12:37:38.987Z",
+    "kind": "list-lifecycle-after-exit",
+    "fx": "c7",
+    "wall_ms": 1790944658987,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": null,
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 7
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 17
+   },
+   {
+    "i": 29,
+    "t_ms": 27941.62,
+    "wall": "2026-10-02T12:37:38.987Z",
+    "kind": "sub-attach",
+    "sub": "c7-measured-reconnect",
+    "fx": "c7",
+    "role": "observer",
+    "attachmentID": "c7-measured",
+    "cursor": 25,
+    "takeover": false
+   },
+   {
+    "i": 30,
+    "t_ms": 27951.94,
+    "wall": "2026-10-02T12:37:38.997Z",
+    "kind": "sub-attached",
+    "sub": "c7-measured-reconnect",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 25,
+    "available_offset": 25,
+    "end_offset": 34,
+    "truncated": false,
+    "replay_len": 9,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 25,
+    "terminal": {
+     "id": 3402722554807910,
+     "pid": 6288,
+     "fg": null,
+     "group": "ldv199-c7-5957",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 7
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 3402722554807910,
+     "group_id": "ldv199-c7-5957",
+     "socket": "c7-measured-reconnect"
+    }
+   },
+   {
+    "i": 31,
+    "t_ms": 32960.69,
+    "wall": "2026-10-02T12:37:44.006Z",
+    "kind": "sub-detach",
+    "sub": "c7-measured-reconnect"
+   },
+   {
+    "i": 32,
+    "t_ms": 32960.9,
+    "wall": "2026-10-02T12:37:44.006Z",
+    "kind": "sub-detach",
+    "sub": "c7-witness"
+   },
+   {
+    "i": 33,
+    "t_ms": 32961.19,
+    "wall": "2026-10-02T12:37:44.006Z",
+    "kind": "request",
+    "conn": "c7-terminate",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 3402722554807910
+    }
+   },
+   {
+    "i": 34,
+    "t_ms": 32961.29,
+    "wall": "2026-10-02T12:37:44.006Z",
+    "kind": "sub-conn",
+    "sub": "c7-measured-reconnect",
+    "conn_event": "close",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 35,
+    "t_ms": 32967.97,
+    "wall": "2026-10-02T12:37:44.013Z",
+    "kind": "response",
+    "conn": "c7-terminate",
+    "rtt_ms": 6.95,
+    "response": {
+     "type": "ok"
+    }
+   }
+  ]
+ }
+}

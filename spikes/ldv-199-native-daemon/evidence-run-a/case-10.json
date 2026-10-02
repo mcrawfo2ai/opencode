@@ -1,0 +1,1250 @@
+{
+ "id": 10,
+ "run_status": "completed",
+ "duration_ms": 1152,
+ "result": {
+  "id": 10,
+  "title": "native daemon replacement",
+  "start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944236378,
+    "mono_ns": "1260432879678",
+    "pid": 4053,
+    "oracle_len": 28,
+    "extra": null,
+    "observed_wall_ms": 1790944236381
+   },
+   "expectedTail": 28,
+   "wait": {
+    "tail": 28
+   }
+  },
+  "old": {
+   "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+   "daemon_pid": 3634,
+   "daemon_proc": {
+    "pid": 3634,
+    "comm": "opencode-pty",
+    "state": "R",
+    "ppid": 3623,
+    "starttime_ticks": 122568,
+    "exe": "/tmp/r/bin/opencode-pty",
+    "cmdline": [
+     "/tmp/r/bin/opencode-pty",
+     "daemon"
+    ]
+   },
+   "ptyId": 6648932334356908,
+   "fixture_proc": {
+    "pid": 4053,
+    "comm": "node",
+    "state": "R",
+    "ppid": 3634,
+    "starttime_ticks": 126022,
+    "exe": "/opt/node22/bin/node",
+    "cmdline": [
+     "/opt/node22/bin/node",
+     "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+     "/tmp/r/fx/c10-old-3623/scenario.json"
+    ]
+   },
+   "cursor": 28,
+   "token_sha8": "5f520603",
+   "socket": "/tmp/opencode-pty-0/1da2e5077cbf86b5139a19f32c8eecb2.sock"
+  },
+  "shutdown": {
+   "resp": {
+    "type": "ok"
+   },
+   "rtt_ms": 8.69
+  },
+  "stopProof": {
+   "daemon_proc_state": "gone",
+   "stopped_by_proc": true,
+   "after_ms": 26,
+   "daemon_exit_event": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 34815,
+    "wall": "2026-10-02T12:30:36.416Z"
+   },
+   "ping_old": {
+    "failure": "connect",
+    "message": "connect ENOENT /tmp/opencode-pty-0/1da2e5077cbf86b5139a19f32c8eecb2.sock",
+    "code": "ENOENT"
+   }
+  },
+  "afterShutdown": {
+   "fixture_proc": "gone",
+   "S1": {
+    "eof": {
+     "t": 34809.970963,
+     "wall": 1790944236412,
+     "afterExit": false
+    },
+    "close": {
+     "t": 34810.017112,
+     "wall": 1790944236412,
+     "hadError": false,
+     "local": false
+    },
+    "exit": null,
+    "errors": []
+   },
+   "owner_closed": true
+  },
+  "new": {
+   "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+   "daemon_pid": 4077,
+   "spawned_pid": 4077,
+   "socket": "/tmp/opencode-pty-0/0e733c3736db28654e0eafc0bdf2e8f4.sock",
+   "token_sha8": "685fb594",
+   "identity_changed": {
+    "instance_id": true,
+    "pid": true,
+    "token": true,
+    "socket": true
+   },
+   "proc": {
+    "pid": 4077,
+    "comm": "opencode-pty",
+    "state": "R",
+    "ppid": 3623,
+    "starttime_ticks": 126098,
+    "exe": "/tmp/r/bin/opencode-pty",
+    "cmdline": [
+     "/tmp/r/bin/opencode-pty",
+     "daemon"
+    ]
+   }
+  },
+  "oldIdOnNew": {
+   "listTerminals": [],
+   "contains_old_id": false
+  },
+  "oldCursorOnNew": {
+   "attach": {
+    "failure": "eof"
+   },
+   "note": "no old cursor is evidence of cross-instance continuity"
+  },
+  "freshStart": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944237234,
+    "mono_ns": "1261289413350",
+    "pid": 4083,
+    "oracle_len": 28,
+    "extra": null,
+    "observed_wall_ms": 1790944237241
+   },
+   "expectedTail": 28,
+   "wait": {
+    "tail": 28
+   }
+  },
+  "freshMid": {
+   "ok": true,
+   "ack": {
+    "name": "mid-emitted",
+    "wall_ms": 1790944237255,
+    "mono_ns": "1261310741506",
+    "pid": 4083,
+    "oracle_len": 40,
+    "extra": null,
+    "observed_wall_ms": 1790944237262
+   },
+   "expectedTail": 40,
+   "wait": {
+    "tail": 40
+   },
+   "running": true
+  },
+  "freshExit": {
+   "exitAck": {
+    "name": "exit-stage",
+    "wall_ms": 1790944237285,
+    "mono_ns": "1261340706946",
+    "pid": 4083,
+    "oracle_len": 54,
+    "extra": {
+     "code": 0
+    },
+    "observed_wall_ms": 1790944237293
+   },
+   "releasedAt": 1790944237283,
+   "proc": {
+    "state": "gone",
+    "timedOut": false,
+    "after_exit_stage_ms": 7
+   },
+   "listExited": {
+    "wall_ms": 1790944237302,
+    "terminal": {
+     "id": 6840452868152403,
+     "pid": 4083,
+     "fg": null,
+     "group": "ldv199-c10-new-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 54,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 17
+   },
+   "subs": {
+    "c10-new-observer": {
+     "exit": {
+      "exit_code_raw": 0,
+      "final_offset": 54,
+      "t": 35688.228063,
+      "wall": 1790944237290
+     },
+     "exitAfterStageMs": 5,
+     "eof": {
+      "t": 35688.384011,
+      "wall": 1790944237290,
+      "afterExit": true
+     },
+     "eofAfterExit": 0,
+     "timedOutExit": false,
+     "timedOutEof": false
+    }
+   }
+  },
+  "freshCompare": {
+   "label": "c10-new-observer",
+   "role_requested": "observer",
+   "attachmentID": "c10-new-obs",
+   "requestedCursor": 14,
+   "attach": {
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 14,
+    "available_offset": 14,
+    "end_offset": 14,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 14,
+    "terminal": {
+     "id": 6840452868152403,
+     "pid": 4083,
+     "fg": "node",
+     "group": "ldv199-c10-new-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 14,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+     "pty_id": 6840452868152403,
+     "group_id": "ldv199-c10-new-3623",
+     "socket": "c10-new-observer"
+    }
+   },
+   "frames": 3,
+   "liveBytes": 40,
+   "maxEnd": 54,
+   "exit": {
+    "exit_code_raw": 0,
+    "final_offset": 54,
+    "t": 35688.228063,
+    "wall": 1790944237290
+   },
+   "eof": {
+    "t": 35688.384011,
+    "wall": 1790944237290,
+    "afterExit": true
+   },
+   "close": {
+    "t": 35688.494293,
+    "wall": 1790944237290,
+    "hadError": false,
+    "local": false
+   },
+   "errors": [],
+   "problems": [],
+   "events": [
+    {
+     "t": 35688.228063,
+     "type": "exited",
+     "exit_code": 0,
+     "final_offset": 54
+    }
+   ],
+   "rawIntervalsCount": 3,
+   "rawIntervals": [
+    [
+     14,
+     28
+    ],
+    [
+     28,
+     40
+    ],
+    [
+     40,
+     54
+    ]
+   ],
+   "detachedLocally": false,
+   "framesAfterLocalDetach": 0,
+   "compare": {
+    "intervals": 3,
+    "comparedBytes": 40,
+    "preOriginBytes": 0,
+    "beyondOracleBytes": 0,
+    "boundsProblems": [],
+    "firstDifference": null,
+    "nativeSha256": "5fbe371321f55c8650741016ae9a50c399bb31ac44891f079c80bbd9505fc4fb",
+    "oracleSha256": "5fbe371321f55c8650741016ae9a50c399bb31ac44891f079c80bbd9505fc4fb",
+    "ok": true,
+    "coverage": {
+     "from": 14,
+     "to": 54,
+     "holes": [],
+     "overlaps": [],
+     "covered": true
+    },
+    "replayStartBasis": "requested_offset",
+    "preOriginVerified": null
+   }
+  },
+  "removeAfter": {
+   "type": "ok"
+  },
+  "oldFixtureLeftover": "gone",
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 34560.07,
+    "wall": "2026-10-02T12:30:36.162Z",
+    "kind": "request",
+    "conn": "create-c10-old",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c10-old-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c10-old-3623",
+     "title": "ldv199-c10-old",
+     "group_id": "ldv199-c10-old-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 34568.26,
+    "wall": "2026-10-02T12:30:36.170Z",
+    "kind": "response",
+    "conn": "create-c10-old",
+    "rtt_ms": 8.41,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 6648932334356908,
+      "pid": 4053,
+      "fg": null,
+      "group": "ldv199-c10-old-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 34568.4,
+    "wall": "2026-10-02T12:30:36.170Z",
+    "kind": "fixture-created",
+    "fx": "c10-old",
+    "ptyId": 6648932334356908,
+    "pid": 4053,
+    "group": "ldv199-c10-old-3623",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "proc": {
+     "pid": 4053,
+     "comm": "node",
+     "state": "R",
+     "ppid": 3634,
+     "starttime_ticks": 126022,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c10-old-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 6648932334356908,
+      "pid": 4053,
+      "fg": null,
+      "group": "ldv199-c10-old-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 34630.25,
+    "wall": "2026-10-02T12:30:36.232Z",
+    "kind": "ack",
+    "fx": "c10-old",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944236223,
+     "mono_ns": "1260278430138",
+     "pid": 4053,
+     "oracle_len": 14,
+     "extra": null,
+     "observed_wall_ms": 1790944236232
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 34761.29,
+    "wall": "2026-10-02T12:30:36.363Z",
+    "kind": "origin",
+    "fx": "c10-old",
+    "origin": 14,
+    "head": 0,
+    "preLen_oracle": 14,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 34761.38,
+    "wall": "2026-10-02T12:30:36.363Z",
+    "kind": "sub-attach",
+    "sub": "c10-old-observer",
+    "fx": "c10-old",
+    "role": "observer",
+    "attachmentID": "c10-old-obs",
+    "cursor": 14,
+    "takeover": false
+   },
+   {
+    "i": 6,
+    "t_ms": 34769.43,
+    "wall": "2026-10-02T12:30:36.371Z",
+    "kind": "sub-attached",
+    "sub": "c10-old-observer",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 14,
+    "available_offset": 14,
+    "end_offset": 14,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 14,
+    "terminal": {
+     "id": 6648932334356908,
+     "pid": 4053,
+     "fg": "node",
+     "group": "ldv199-c10-old-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 14,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 6648932334356908,
+     "group_id": "ldv199-c10-old-3623",
+     "socket": "c10-old-observer"
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 34769.68,
+    "wall": "2026-10-02T12:30:36.371Z",
+    "kind": "gate-release",
+    "fx": "c10-old",
+    "name": "start",
+    "wall_ms": 1790944236371
+   },
+   {
+    "i": 8,
+    "t_ms": 34777.49,
+    "wall": "2026-10-02T12:30:36.379Z",
+    "kind": "output",
+    "sub": "c10-old-observer",
+    "start": 14,
+    "end": 28,
+    "len": 14
+   },
+   {
+    "i": 9,
+    "t_ms": 34779.74,
+    "wall": "2026-10-02T12:30:36.381Z",
+    "kind": "ack",
+    "fx": "c10-old",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944236378,
+     "mono_ns": "1260432879678",
+     "pid": 4053,
+     "oracle_len": 28,
+     "extra": null,
+     "observed_wall_ms": 1790944236381
+    }
+   },
+   {
+    "i": 10,
+    "t_ms": 34791.29,
+    "wall": "2026-10-02T12:30:36.393Z",
+    "kind": "request",
+    "conn": "c10-shutdown",
+    "op": "shutdown",
+    "request": {
+     "op": "shutdown"
+    }
+   },
+   {
+    "i": 11,
+    "t_ms": 34799.77,
+    "wall": "2026-10-02T12:30:36.401Z",
+    "kind": "response",
+    "conn": "c10-shutdown",
+    "rtt_ms": 8.69,
+    "response": {
+     "type": "ok"
+    }
+   },
+   {
+    "i": 12,
+    "t_ms": 34809.83,
+    "wall": "2026-10-02T12:30:36.411Z",
+    "kind": "owner-item",
+    "conn": "owner-d1-1",
+    "item": "eof"
+   },
+   {
+    "i": 13,
+    "t_ms": 34809.98,
+    "wall": "2026-10-02T12:30:36.412Z",
+    "kind": "eof",
+    "sub": "c10-old-observer"
+   },
+   {
+    "i": 14,
+    "t_ms": 34810.02,
+    "wall": "2026-10-02T12:30:36.412Z",
+    "kind": "close",
+    "sub": "c10-old-observer",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 15,
+    "t_ms": 34810.03,
+    "wall": "2026-10-02T12:30:36.412Z",
+    "kind": "owner-item",
+    "conn": "owner-d1-1",
+    "item": "close",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 16,
+    "t_ms": 34815,
+    "wall": "2026-10-02T12:30:36.416Z",
+    "kind": "daemon-exit-event",
+    "daemon": "d1",
+    "code": 0,
+    "signal": null
+   },
+   {
+    "i": 17,
+    "t_ms": 34825.61,
+    "wall": "2026-10-02T12:30:36.427Z",
+    "kind": "request-failed",
+    "conn": "c10-ping-old-after-shutdown",
+    "op": "ping",
+    "failure": "connect",
+    "message": "connect ENOENT /tmp/opencode-pty-0/1da2e5077cbf86b5139a19f32c8eecb2.sock",
+    "code": "ENOENT"
+   },
+   {
+    "i": 18,
+    "t_ms": 35379.46,
+    "wall": "2026-10-02T12:30:36.981Z",
+    "kind": "request",
+    "conn": "ping-launch",
+    "op": "ping",
+    "request": {
+     "op": "ping"
+    }
+   },
+   {
+    "i": 19,
+    "t_ms": 35384.71,
+    "wall": "2026-10-02T12:30:36.986Z",
+    "kind": "response",
+    "conn": "ping-launch",
+    "rtt_ms": 5.45,
+    "response": {
+     "type": "pong",
+     "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+     "pid": 4077,
+     "protocol": 7
+    }
+   },
+   {
+    "i": 20,
+    "t_ms": 35384.79,
+    "wall": "2026-10-02T12:30:36.986Z",
+    "kind": "daemon-launched",
+    "daemon": "d2",
+    "identity": {
+     "tag": "d2",
+     "spawned_pid": 4077,
+     "registration": {
+      "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+      "pid": 4077,
+      "protocol": 7,
+      "socket": "/tmp/opencode-pty-0/0e733c3736db28654e0eafc0bdf2e8f4.sock",
+      "token": "<redacted len=35 sha256_8=98d2b73b>"
+     },
+     "registration_keys": [
+      "instance_id",
+      "pid",
+      "protocol",
+      "socket",
+      "token"
+     ],
+     "registration_pid_equals_spawned_pid": true,
+     "protocol_is_7": true,
+     "ping": {
+      "type": "pong",
+      "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+      "pid": 4077,
+      "protocol": 7
+     },
+     "ping_matches_registration": true,
+     "proc": {
+      "pid": 4077,
+      "comm": "opencode-pty",
+      "state": "R",
+      "ppid": 3623,
+      "starttime_ticks": 126098,
+      "exe": "/tmp/r/bin/opencode-pty",
+      "cmdline": [
+       "/tmp/r/bin/opencode-pty",
+       "daemon"
+      ]
+     },
+     "runtime_dir": "/tmp/r/rt-d2",
+     "env_keys": [
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "ready_ms": 59
+    }
+   },
+   {
+    "i": 21,
+    "t_ms": 35385.03,
+    "wall": "2026-10-02T12:30:36.987Z",
+    "kind": "request",
+    "conn": "owner-d2-1",
+    "op": "own",
+    "request": {
+     "op": "own",
+     "instance_id": "a126400c9850f9c3e1931acf88ee2a55"
+    }
+   },
+   {
+    "i": 22,
+    "t_ms": 35394.77,
+    "wall": "2026-10-02T12:30:36.996Z",
+    "kind": "response",
+    "conn": "owner-d2-1",
+    "response": {
+     "type": "owned"
+    },
+    "problems": []
+   },
+   {
+    "i": 23,
+    "t_ms": 35395.19,
+    "wall": "2026-10-02T12:30:36.997Z",
+    "kind": "request",
+    "conn": "c10-list-new",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 24,
+    "t_ms": 35405.08,
+    "wall": "2026-10-02T12:30:37.007Z",
+    "kind": "response",
+    "conn": "c10-list-new",
+    "rtt_ms": 10.09,
+    "response": {
+     "type": "terminals",
+     "terminals": []
+    }
+   },
+   {
+    "i": 25,
+    "t_ms": 35405.21,
+    "wall": "2026-10-02T12:30:37.007Z",
+    "kind": "sub-attach",
+    "sub": "c10-old-id-on-new-instance",
+    "fx": "c10-old",
+    "role": "observer",
+    "attachmentID": "c10-ghost",
+    "cursor": 28,
+    "takeover": false
+   },
+   {
+    "i": 26,
+    "t_ms": 35425.39,
+    "wall": "2026-10-02T12:30:37.027Z",
+    "kind": "sub-attach-failed",
+    "sub": "c10-old-id-on-new-instance",
+    "failure": "eof"
+   },
+   {
+    "i": 27,
+    "t_ms": 35425.44,
+    "wall": "2026-10-02T12:30:37.027Z",
+    "kind": "sub-detach",
+    "sub": "c10-old-id-on-new-instance"
+   },
+   {
+    "i": 28,
+    "t_ms": 35426.05,
+    "wall": "2026-10-02T12:30:37.028Z",
+    "kind": "request",
+    "conn": "create-c10-new",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c10-new-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c10-new-3623",
+     "title": "ldv199-c10-new",
+     "group_id": "ldv199-c10-new-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 29,
+    "t_ms": 35437.42,
+    "wall": "2026-10-02T12:30:37.039Z",
+    "kind": "response",
+    "conn": "create-c10-new",
+    "rtt_ms": 11.43,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 6840452868152403,
+      "pid": 4083,
+      "fg": null,
+      "group": "ldv199-c10-new-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 30,
+    "t_ms": 35437.63,
+    "wall": "2026-10-02T12:30:37.039Z",
+    "kind": "fixture-created",
+    "fx": "c10-new",
+    "ptyId": 6840452868152403,
+    "pid": 4083,
+    "group": "ldv199-c10-new-3623",
+    "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+    "proc": {
+     "pid": 4083,
+     "comm": "node",
+     "state": "R",
+     "ppid": 4077,
+     "starttime_ticks": 126109,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c10-new-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 6840452868152403,
+      "pid": 4083,
+      "fg": null,
+      "group": "ldv199-c10-new-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 31,
+    "t_ms": 35489.19,
+    "wall": "2026-10-02T12:30:37.091Z",
+    "kind": "ack",
+    "fx": "c10-new",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944237081,
+     "mono_ns": "1261136131811",
+     "pid": 4083,
+     "oracle_len": 14,
+     "extra": null,
+     "observed_wall_ms": 1790944237091
+    }
+   },
+   {
+    "i": 32,
+    "t_ms": 35620.51,
+    "wall": "2026-10-02T12:30:37.222Z",
+    "kind": "origin",
+    "fx": "c10-new",
+    "origin": 14,
+    "head": 0,
+    "preLen_oracle": 14,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 33,
+    "t_ms": 35620.61,
+    "wall": "2026-10-02T12:30:37.222Z",
+    "kind": "sub-attach",
+    "sub": "c10-new-observer",
+    "fx": "c10-new",
+    "role": "observer",
+    "attachmentID": "c10-new-obs",
+    "cursor": 14,
+    "takeover": false
+   },
+   {
+    "i": 34,
+    "t_ms": 35629.09,
+    "wall": "2026-10-02T12:30:37.231Z",
+    "kind": "sub-attached",
+    "sub": "c10-new-observer",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 14,
+    "available_offset": 14,
+    "end_offset": 14,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 14,
+    "terminal": {
+     "id": 6840452868152403,
+     "pid": 4083,
+     "fg": "node",
+     "group": "ldv199-c10-new-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 14,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+     "pty_id": 6840452868152403,
+     "group_id": "ldv199-c10-new-3623",
+     "socket": "c10-new-observer"
+    }
+   },
+   {
+    "i": 35,
+    "t_ms": 35629.36,
+    "wall": "2026-10-02T12:30:37.231Z",
+    "kind": "gate-release",
+    "fx": "c10-new",
+    "name": "start",
+    "wall_ms": 1790944237231
+   },
+   {
+    "i": 36,
+    "t_ms": 35634.02,
+    "wall": "2026-10-02T12:30:37.236Z",
+    "kind": "output",
+    "sub": "c10-new-observer",
+    "start": 14,
+    "end": 28,
+    "len": 14
+   },
+   {
+    "i": 37,
+    "t_ms": 35639.33,
+    "wall": "2026-10-02T12:30:37.241Z",
+    "kind": "ack",
+    "fx": "c10-new",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944237234,
+     "mono_ns": "1261289413350",
+     "pid": 4083,
+     "oracle_len": 28,
+     "extra": null,
+     "observed_wall_ms": 1790944237241
+    }
+   },
+   {
+    "i": 38,
+    "t_ms": 35650.57,
+    "wall": "2026-10-02T12:30:37.252Z",
+    "kind": "gate-release",
+    "fx": "c10-new",
+    "name": "mid",
+    "wall_ms": 1790944237252
+   },
+   {
+    "i": 39,
+    "t_ms": 35655.4,
+    "wall": "2026-10-02T12:30:37.257Z",
+    "kind": "output",
+    "sub": "c10-new-observer",
+    "start": 28,
+    "end": 40,
+    "len": 12
+   },
+   {
+    "i": 40,
+    "t_ms": 35660.74,
+    "wall": "2026-10-02T12:30:37.262Z",
+    "kind": "ack",
+    "fx": "c10-new",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944237255,
+     "mono_ns": "1261310741506",
+     "pid": 4083,
+     "oracle_len": 40,
+     "extra": null,
+     "observed_wall_ms": 1790944237262
+    }
+   },
+   {
+    "i": 41,
+    "t_ms": 35671.02,
+    "wall": "2026-10-02T12:30:37.273Z",
+    "kind": "request",
+    "conn": "list-running-c10-new",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 42,
+    "t_ms": 35680.73,
+    "wall": "2026-10-02T12:30:37.282Z",
+    "kind": "response",
+    "conn": "list-running-c10-new",
+    "rtt_ms": 9.78,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 6840452868152403,
+       "pid": 4083,
+       "fg": "node",
+       "group": "ldv199-c10-new-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 40,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 43,
+    "t_ms": 35680.77,
+    "wall": "2026-10-02T12:30:37.282Z",
+    "kind": "native-running",
+    "fx": "c10-new",
+    "terminal": {
+     "id": 6840452868152403,
+     "pid": 4083,
+     "fg": "node",
+     "group": "ldv199-c10-new-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 40,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 44,
+    "t_ms": 35680.91,
+    "wall": "2026-10-02T12:30:37.283Z",
+    "kind": "gate-release",
+    "fx": "c10-new",
+    "name": "exit",
+    "wall_ms": 1790944237283
+   },
+   {
+    "i": 45,
+    "t_ms": 35685.22,
+    "wall": "2026-10-02T12:30:37.287Z",
+    "kind": "output",
+    "sub": "c10-new-observer",
+    "start": 40,
+    "end": 54,
+    "len": 14
+   },
+   {
+    "i": 46,
+    "t_ms": 35688.29,
+    "wall": "2026-10-02T12:30:37.290Z",
+    "kind": "sub-event",
+    "sub": "c10-new-observer",
+    "event": {
+     "type": "exited",
+     "exit_code": 0,
+     "final_offset": 54
+    }
+   },
+   {
+    "i": 47,
+    "t_ms": 35688.39,
+    "wall": "2026-10-02T12:30:37.290Z",
+    "kind": "eof",
+    "sub": "c10-new-observer"
+   },
+   {
+    "i": 48,
+    "t_ms": 35688.5,
+    "wall": "2026-10-02T12:30:37.290Z",
+    "kind": "close",
+    "sub": "c10-new-observer",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 49,
+    "t_ms": 35690.9,
+    "wall": "2026-10-02T12:30:37.293Z",
+    "kind": "ack",
+    "fx": "c10-new",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944237285,
+     "mono_ns": "1261340706946",
+     "pid": 4083,
+     "oracle_len": 54,
+     "extra": {
+      "code": 0
+     },
+     "observed_wall_ms": 1790944237293
+    }
+   },
+   {
+    "i": 50,
+    "t_ms": 35700.29,
+    "wall": "2026-10-02T12:30:37.302Z",
+    "kind": "list-lifecycle-after-exit",
+    "fx": "c10-new",
+    "wall_ms": 1790944237302,
+    "terminal": {
+     "id": 6840452868152403,
+     "pid": 4083,
+     "fg": null,
+     "group": "ldv199-c10-new-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 54,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 17
+   },
+   {
+    "i": 51,
+    "t_ms": 35700.56,
+    "wall": "2026-10-02T12:30:37.302Z",
+    "kind": "sub-detach",
+    "sub": "c10-new-observer"
+   },
+   {
+    "i": 52,
+    "t_ms": 35700.58,
+    "wall": "2026-10-02T12:30:37.302Z",
+    "kind": "sub-detach",
+    "sub": "c10-old-observer"
+   },
+   {
+    "i": 53,
+    "t_ms": 35700.79,
+    "wall": "2026-10-02T12:30:37.302Z",
+    "kind": "request",
+    "conn": "c10-terminate-fresh",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 6840452868152403
+    }
+   },
+   {
+    "i": 54,
+    "t_ms": 35710.69,
+    "wall": "2026-10-02T12:30:37.312Z",
+    "kind": "response",
+    "conn": "c10-terminate-fresh",
+    "rtt_ms": 10.02,
+    "response": {
+     "type": "ok"
+    }
+   }
+  ]
+ }
+}

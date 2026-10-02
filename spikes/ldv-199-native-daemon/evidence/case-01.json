@@ -1,0 +1,1803 @@
+{
+ "id": 1,
+ "run_status": "completed",
+ "duration_ms": 18591,
+ "result": {
+  "id": 1,
+  "title": "unobserved exit0/exit7: list/snapshot at 100ms/1s/5s, late observer",
+  "subcases": [
+   {
+    "code": 0,
+    "ptyId": 828395501584285,
+    "pid": 5975,
+    "origin": 15,
+    "originHead": 0,
+    "preLen": 15,
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true
+    },
+    "start": {
+     "ok": true,
+     "ack": {
+      "name": "started",
+      "wall_ms": 1790944631337,
+      "mono_ns": "1655391974908",
+      "pid": 5975,
+      "oracle_len": 30,
+      "extra": null,
+      "observed_wall_ms": 1790944631347
+     },
+     "expectedTail": 30,
+     "wait": {
+      "tail": 30
+     }
+    },
+    "mid": {
+     "ok": true,
+     "ack": {
+      "name": "mid-emitted",
+      "wall_ms": 1790944631358,
+      "mono_ns": "1655413162421",
+      "pid": 5975,
+      "oracle_len": 43,
+      "extra": null,
+      "observed_wall_ms": 1790944631367
+     },
+     "expectedTail": 43,
+     "wait": {
+      "tail": 43
+     },
+     "running": true
+    },
+    "exitStage": {
+     "wall_ms": 1790944631389,
+     "code": 0,
+     "oracle_len": 58
+    },
+    "procWitness": {
+     "state": "gone",
+     "timedOut": false,
+     "after_exit_stage_ms": 9
+    },
+    "samples": [
+     {
+      "requested_after_ms": 100,
+      "list_sent_after_anchor_ms": 100,
+      "list_rtt_ms": 7.98,
+      "present": true,
+      "terminal": {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "snapshot": {
+       "type": "snapshot",
+       "terminal": {
+        "id": 828395501584285,
+        "pid": 5975,
+        "fg": null,
+        "group": "ldv199-c1-exit0-5957",
+        "lifecycle": {
+         "status": "exited",
+         "exit_code": 0
+        },
+        "head": 0,
+        "tail": 58,
+        "cols": 80,
+        "rows": 24
+       },
+       "text_len": 139,
+       "text_head": "\"READY c1-exit0\\n              START c1-exit0\\n                            MID c1-exit0\\n                                   …\"",
+       "checkpoint_len": 292,
+       "cursor": [
+        54,
+        4
+       ]
+      },
+      "proc_state": "gone"
+     },
+     {
+      "requested_after_ms": 1000,
+      "list_sent_after_anchor_ms": 1001,
+      "list_rtt_ms": 10.55,
+      "present": true,
+      "terminal": {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "snapshot": {
+       "type": "snapshot",
+       "terminal": {
+        "id": 828395501584285,
+        "pid": 5975,
+        "fg": null,
+        "group": "ldv199-c1-exit0-5957",
+        "lifecycle": {
+         "status": "exited",
+         "exit_code": 0
+        },
+        "head": 0,
+        "tail": 58,
+        "cols": 80,
+        "rows": 24
+       },
+       "text_len": 139,
+       "text_head": "\"READY c1-exit0\\n              START c1-exit0\\n                            MID c1-exit0\\n                                   …\"",
+       "checkpoint_len": 292,
+       "cursor": [
+        54,
+        4
+       ]
+      },
+      "proc_state": "gone"
+     },
+     {
+      "requested_after_ms": 5000,
+      "list_sent_after_anchor_ms": 5003,
+      "list_rtt_ms": 5.31,
+      "present": true,
+      "terminal": {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "snapshot": {
+       "type": "snapshot",
+       "terminal": {
+        "id": 828395501584285,
+        "pid": 5975,
+        "fg": null,
+        "group": "ldv199-c1-exit0-5957",
+        "lifecycle": {
+         "status": "exited",
+         "exit_code": 0
+        },
+        "head": 0,
+        "tail": 58,
+        "cols": 80,
+        "rows": 24
+       },
+       "text_len": 139,
+       "text_head": "\"READY c1-exit0\\n              START c1-exit0\\n                            MID c1-exit0\\n                                   …\"",
+       "checkpoint_len": 292,
+       "cursor": [
+        54,
+        4
+       ]
+      },
+      "proc_state": "gone"
+     }
+    ],
+    "late": {
+     "label": "c1-0-late",
+     "role_requested": "observer",
+     "attachmentID": "c1-0-late",
+     "requestedCursor": 0,
+     "attach": {
+      "type": "attached",
+      "role": "observer",
+      "generation": 0,
+      "requested_offset": 0,
+      "available_offset": 0,
+      "end_offset": 58,
+      "truncated": false,
+      "replay_len": 58,
+      "replay_start_basis": "requested_offset",
+      "replay_start": 0,
+      "terminal": {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "problems": [],
+      "bind": {
+       "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+       "pty_id": 828395501584285,
+       "group_id": "ldv199-c1-exit0-5957",
+       "socket": "c1-0-late"
+      }
+     },
+     "frames": 0,
+     "liveBytes": 0,
+     "maxEnd": 58,
+     "exit": null,
+     "eof": null,
+     "close": null,
+     "errors": [],
+     "problems": [],
+     "events": [],
+     "rawIntervalsCount": 0,
+     "rawIntervals": [],
+     "detachedLocally": false,
+     "framesAfterLocalDetach": 0,
+     "compare": {
+      "intervals": 1,
+      "comparedBytes": 43,
+      "preOriginBytes": 15,
+      "beyondOracleBytes": 0,
+      "boundsProblems": [],
+      "firstDifference": null,
+      "nativeSha256": "cf63ebe728c7ba2fde81bd49ea5fc69b65744cd243c2aae5a0dde1b49db85b50",
+      "oracleSha256": "cf63ebe728c7ba2fde81bd49ea5fc69b65744cd243c2aae5a0dde1b49db85b50",
+      "ok": true,
+      "coverage": {
+       "from": 0,
+       "to": 58,
+       "holes": [],
+       "overlaps": [],
+       "covered": true
+      },
+      "replayStartBasis": "requested_offset",
+      "preOriginVerified": true
+     },
+     "oracle_total_bytes": 58,
+     "final_text_expected_tail": "FINAL c1-exit0"
+    },
+    "removeAfter": {
+     "type": "ok"
+    }
+   },
+   {
+    "code": 7,
+    "ptyId": 3675000901613742,
+    "pid": 6006,
+    "origin": 15,
+    "originHead": 0,
+    "preLen": 15,
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true
+    },
+    "start": {
+     "ok": true,
+     "ack": {
+      "name": "started",
+      "wall_ms": 1790944640632,
+      "mono_ns": "1664687113945",
+      "pid": 6006,
+      "oracle_len": 30,
+      "extra": null,
+      "observed_wall_ms": 1790944640635
+     },
+     "expectedTail": 30,
+     "wait": {
+      "tail": 30
+     }
+    },
+    "mid": {
+     "ok": true,
+     "ack": {
+      "name": "mid-emitted",
+      "wall_ms": 1790944640653,
+      "mono_ns": "1664708266458",
+      "pid": 6006,
+      "oracle_len": 43,
+      "extra": null,
+      "observed_wall_ms": 1790944640655
+     },
+     "expectedTail": 43,
+     "wait": {
+      "tail": 43
+     },
+     "running": true
+    },
+    "exitStage": {
+     "wall_ms": 1790944640684,
+     "code": 7,
+     "oracle_len": 58
+    },
+    "procWitness": {
+     "state": "gone",
+     "timedOut": false,
+     "after_exit_stage_ms": 13
+    },
+    "samples": [
+     {
+      "requested_after_ms": 100,
+      "list_sent_after_anchor_ms": 100,
+      "list_rtt_ms": 1.93,
+      "present": true,
+      "terminal": {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "snapshot": {
+       "type": "snapshot",
+       "terminal": {
+        "id": 3675000901613742,
+        "pid": 6006,
+        "fg": null,
+        "group": "ldv199-c1-exit7-5957",
+        "lifecycle": {
+         "status": "exited",
+         "exit_code": 7
+        },
+        "head": 0,
+        "tail": 58,
+        "cols": 80,
+        "rows": 24
+       },
+       "text_len": 139,
+       "text_head": "\"READY c1-exit7\\n              START c1-exit7\\n                            MID c1-exit7\\n                                   …\"",
+       "checkpoint_len": 292,
+       "cursor": [
+        54,
+        4
+       ]
+      },
+      "proc_state": "gone"
+     },
+     {
+      "requested_after_ms": 1000,
+      "list_sent_after_anchor_ms": 1001,
+      "list_rtt_ms": 5.6,
+      "present": true,
+      "terminal": {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "snapshot": {
+       "type": "snapshot",
+       "terminal": {
+        "id": 3675000901613742,
+        "pid": 6006,
+        "fg": null,
+        "group": "ldv199-c1-exit7-5957",
+        "lifecycle": {
+         "status": "exited",
+         "exit_code": 7
+        },
+        "head": 0,
+        "tail": 58,
+        "cols": 80,
+        "rows": 24
+       },
+       "text_len": 139,
+       "text_head": "\"READY c1-exit7\\n              START c1-exit7\\n                            MID c1-exit7\\n                                   …\"",
+       "checkpoint_len": 292,
+       "cursor": [
+        54,
+        4
+       ]
+      },
+      "proc_state": "gone"
+     },
+     {
+      "requested_after_ms": 5000,
+      "list_sent_after_anchor_ms": 5005,
+      "list_rtt_ms": 3.42,
+      "present": true,
+      "terminal": {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "snapshot": {
+       "type": "snapshot",
+       "terminal": {
+        "id": 3675000901613742,
+        "pid": 6006,
+        "fg": null,
+        "group": "ldv199-c1-exit7-5957",
+        "lifecycle": {
+         "status": "exited",
+         "exit_code": 7
+        },
+        "head": 0,
+        "tail": 58,
+        "cols": 80,
+        "rows": 24
+       },
+       "text_len": 139,
+       "text_head": "\"READY c1-exit7\\n              START c1-exit7\\n                            MID c1-exit7\\n                                   …\"",
+       "checkpoint_len": 292,
+       "cursor": [
+        54,
+        4
+       ]
+      },
+      "proc_state": "gone"
+     }
+    ],
+    "late": {
+     "label": "c1-7-late",
+     "role_requested": "observer",
+     "attachmentID": "c1-7-late",
+     "requestedCursor": 0,
+     "attach": {
+      "type": "attached",
+      "role": "observer",
+      "generation": 0,
+      "requested_offset": 0,
+      "available_offset": 0,
+      "end_offset": 58,
+      "truncated": false,
+      "replay_len": 58,
+      "replay_start_basis": "requested_offset",
+      "replay_start": 0,
+      "terminal": {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      },
+      "problems": [],
+      "bind": {
+       "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+       "pty_id": 3675000901613742,
+       "group_id": "ldv199-c1-exit7-5957",
+       "socket": "c1-7-late"
+      }
+     },
+     "frames": 0,
+     "liveBytes": 0,
+     "maxEnd": 58,
+     "exit": null,
+     "eof": null,
+     "close": null,
+     "errors": [],
+     "problems": [],
+     "events": [],
+     "rawIntervalsCount": 0,
+     "rawIntervals": [],
+     "detachedLocally": false,
+     "framesAfterLocalDetach": 0,
+     "compare": {
+      "intervals": 1,
+      "comparedBytes": 43,
+      "preOriginBytes": 15,
+      "beyondOracleBytes": 0,
+      "boundsProblems": [],
+      "firstDifference": null,
+      "nativeSha256": "8fde4ed839987cc4a2b0f28ead29c22dce73bcd94ca22d257300bd4953d5b9ef",
+      "oracleSha256": "8fde4ed839987cc4a2b0f28ead29c22dce73bcd94ca22d257300bd4953d5b9ef",
+      "ok": true,
+      "coverage": {
+       "from": 0,
+       "to": 58,
+       "holes": [],
+       "overlaps": [],
+       "covered": true
+      },
+      "replayStartBasis": "requested_offset",
+      "preOriginVerified": true
+     },
+     "oracle_total_bytes": 58,
+     "final_text_expected_tail": "FINAL c1-exit7"
+    },
+    "removeAfter": {
+     "type": "ok"
+    }
+   }
+  ],
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 97.48,
+    "wall": "2026-10-02T12:37:11.143Z",
+    "kind": "request",
+    "conn": "create-c1-exit0",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c1-exit0-5957/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c1-exit0-5957",
+     "title": "ldv199-c1-exit0",
+     "group_id": "ldv199-c1-exit0-5957",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 108.35,
+    "wall": "2026-10-02T12:37:11.154Z",
+    "kind": "response",
+    "conn": "create-c1-exit0",
+    "rtt_ms": 10.74,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 828395501584285,
+      "pid": 5975,
+      "fg": null,
+      "group": "ldv199-c1-exit0-5957",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 108.52,
+    "wall": "2026-10-02T12:37:11.154Z",
+    "kind": "fixture-created",
+    "fx": "c1-exit0",
+    "ptyId": 828395501584285,
+    "pid": 5975,
+    "group": "ldv199-c1-exit0-5957",
+    "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+    "proc": {
+     "pid": 5975,
+     "comm": "node",
+     "state": "R",
+     "ppid": 5971,
+     "starttime_ticks": 165520,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c1-exit0-5957/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 828395501584285,
+      "pid": 5975,
+      "fg": null,
+      "group": "ldv199-c1-exit0-5957",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 150.21,
+    "wall": "2026-10-02T12:37:11.195Z",
+    "kind": "ack",
+    "fx": "c1-exit0",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944631193,
+     "mono_ns": "1655248282131",
+     "pid": 5975,
+     "oracle_len": 15,
+     "extra": null,
+     "observed_wall_ms": 1790944631195
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 280.86,
+    "wall": "2026-10-02T12:37:11.326Z",
+    "kind": "origin",
+    "fx": "c1-exit0",
+    "origin": 15,
+    "head": 0,
+    "preLen_oracle": 15,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 281.31,
+    "wall": "2026-10-02T12:37:11.326Z",
+    "kind": "gate-release",
+    "fx": "c1-exit0",
+    "name": "start",
+    "wall_ms": 1790944631326
+   },
+   {
+    "i": 6,
+    "t_ms": 302.14,
+    "wall": "2026-10-02T12:37:11.347Z",
+    "kind": "ack",
+    "fx": "c1-exit0",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944631337,
+     "mono_ns": "1655391974908",
+     "pid": 5975,
+     "oracle_len": 30,
+     "extra": null,
+     "observed_wall_ms": 1790944631347
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 311.29,
+    "wall": "2026-10-02T12:37:11.356Z",
+    "kind": "gate-release",
+    "fx": "c1-exit0",
+    "name": "mid",
+    "wall_ms": 1790944631356
+   },
+   {
+    "i": 8,
+    "t_ms": 321.8,
+    "wall": "2026-10-02T12:37:11.367Z",
+    "kind": "ack",
+    "fx": "c1-exit0",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944631358,
+     "mono_ns": "1655413162421",
+     "pid": 5975,
+     "oracle_len": 43,
+     "extra": null,
+     "observed_wall_ms": 1790944631367
+    }
+   },
+   {
+    "i": 9,
+    "t_ms": 333.1,
+    "wall": "2026-10-02T12:37:11.378Z",
+    "kind": "request",
+    "conn": "list-running-c1-exit0",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 10,
+    "t_ms": 341.73,
+    "wall": "2026-10-02T12:37:11.387Z",
+    "kind": "response",
+    "conn": "list-running-c1-exit0",
+    "rtt_ms": 9.87,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": "node",
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 43,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 11,
+    "t_ms": 341.85,
+    "wall": "2026-10-02T12:37:11.387Z",
+    "kind": "native-running",
+    "fx": "c1-exit0",
+    "terminal": {
+     "id": 828395501584285,
+     "pid": 5975,
+     "fg": "node",
+     "group": "ldv199-c1-exit0-5957",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 43,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 12,
+    "t_ms": 342.19,
+    "wall": "2026-10-02T12:37:11.387Z",
+    "kind": "gate-release",
+    "fx": "c1-exit0",
+    "name": "exit",
+    "wall_ms": 1790944631387
+   },
+   {
+    "i": 13,
+    "t_ms": 352.82,
+    "wall": "2026-10-02T12:37:11.398Z",
+    "kind": "ack",
+    "fx": "c1-exit0",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944631389,
+     "mono_ns": "1655444285861",
+     "pid": 5975,
+     "oracle_len": 58,
+     "extra": {
+      "code": 0
+     },
+     "observed_wall_ms": 1790944631398
+    }
+   },
+   {
+    "i": 14,
+    "t_ms": 444.73,
+    "wall": "2026-10-02T12:37:11.490Z",
+    "kind": "request",
+    "conn": "c1-0-list-100",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 15,
+    "t_ms": 452.57,
+    "wall": "2026-10-02T12:37:11.498Z",
+    "kind": "response",
+    "conn": "c1-0-list-100",
+    "rtt_ms": 7.98,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 16,
+    "t_ms": 453,
+    "wall": "2026-10-02T12:37:11.498Z",
+    "kind": "request",
+    "conn": "c1-0-snapshot-100",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 828395501584285
+    }
+   },
+   {
+    "i": 17,
+    "t_ms": 462.83,
+    "wall": "2026-10-02T12:37:11.508Z",
+    "kind": "response",
+    "conn": "c1-0-snapshot-100",
+    "rtt_ms": 9.71,
+    "response": {
+     "type": "snapshot",
+     "terminal": {
+      "id": 828395501584285,
+      "pid": 5975,
+      "fg": null,
+      "group": "ldv199-c1-exit0-5957",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 0,
+      "tail": 58,
+      "cols": 80,
+      "rows": 24
+     },
+     "text": "READY c1-exit0\n              START c1-exit0\n                            MID c1-exit0\n                                        FINAL c1-exit0",
+     "checkpoint_base64": {
+      "len": 292,
+      "sha256_8": "feb841ec",
+      "head": "UkVBRFkgYzEtZXhpdDANCiAgICAgICAgICAgICAgU1RBUlQgYzEtZXhpdDAN"
+     },
+     "cursor_x": 54,
+     "cursor_y": 4
+    }
+   },
+   {
+    "i": 18,
+    "t_ms": 1345.55,
+    "wall": "2026-10-02T12:37:12.391Z",
+    "kind": "request",
+    "conn": "c1-0-list-1000",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 19,
+    "t_ms": 1356.01,
+    "wall": "2026-10-02T12:37:12.401Z",
+    "kind": "response",
+    "conn": "c1-0-list-1000",
+    "rtt_ms": 10.55,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 20,
+    "t_ms": 1356.28,
+    "wall": "2026-10-02T12:37:12.401Z",
+    "kind": "request",
+    "conn": "c1-0-snapshot-1000",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 828395501584285
+    }
+   },
+   {
+    "i": 21,
+    "t_ms": 1366.29,
+    "wall": "2026-10-02T12:37:12.411Z",
+    "kind": "response",
+    "conn": "c1-0-snapshot-1000",
+    "rtt_ms": 10.05,
+    "response": {
+     "type": "snapshot",
+     "terminal": {
+      "id": 828395501584285,
+      "pid": 5975,
+      "fg": null,
+      "group": "ldv199-c1-exit0-5957",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 0,
+      "tail": 58,
+      "cols": 80,
+      "rows": 24
+     },
+     "text": "READY c1-exit0\n              START c1-exit0\n                            MID c1-exit0\n                                        FINAL c1-exit0",
+     "checkpoint_base64": {
+      "len": 292,
+      "sha256_8": "feb841ec",
+      "head": "UkVBRFkgYzEtZXhpdDANCiAgICAgICAgICAgICAgU1RBUlQgYzEtZXhpdDAN"
+     },
+     "cursor_x": 54,
+     "cursor_y": 4
+    }
+   },
+   {
+    "i": 22,
+    "t_ms": 5347.12,
+    "wall": "2026-10-02T12:37:16.392Z",
+    "kind": "request",
+    "conn": "c1-0-list-5000",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 23,
+    "t_ms": 5352.39,
+    "wall": "2026-10-02T12:37:16.398Z",
+    "kind": "response",
+    "conn": "c1-0-list-5000",
+    "rtt_ms": 5.31,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 828395501584285,
+       "pid": 5975,
+       "fg": null,
+       "group": "ldv199-c1-exit0-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 24,
+    "t_ms": 5352.62,
+    "wall": "2026-10-02T12:37:16.398Z",
+    "kind": "request",
+    "conn": "c1-0-snapshot-5000",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 828395501584285
+    }
+   },
+   {
+    "i": 25,
+    "t_ms": 5362.26,
+    "wall": "2026-10-02T12:37:16.407Z",
+    "kind": "response",
+    "conn": "c1-0-snapshot-5000",
+    "rtt_ms": 9.66,
+    "response": {
+     "type": "snapshot",
+     "terminal": {
+      "id": 828395501584285,
+      "pid": 5975,
+      "fg": null,
+      "group": "ldv199-c1-exit0-5957",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 0,
+      "tail": 58,
+      "cols": 80,
+      "rows": 24
+     },
+     "text": "READY c1-exit0\n              START c1-exit0\n                            MID c1-exit0\n                                        FINAL c1-exit0",
+     "checkpoint_base64": {
+      "len": 292,
+      "sha256_8": "feb841ec",
+      "head": "UkVBRFkgYzEtZXhpdDANCiAgICAgICAgICAgICAgU1RBUlQgYzEtZXhpdDAN"
+     },
+     "cursor_x": 54,
+     "cursor_y": 4
+    }
+   },
+   {
+    "i": 26,
+    "t_ms": 5362.91,
+    "wall": "2026-10-02T12:37:16.408Z",
+    "kind": "sub-attach",
+    "sub": "c1-0-late",
+    "fx": "c1-exit0",
+    "role": "observer",
+    "attachmentID": "c1-0-late",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 27,
+    "t_ms": 5372.53,
+    "wall": "2026-10-02T12:37:16.418Z",
+    "kind": "sub-attached",
+    "sub": "c1-0-late",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 0,
+    "available_offset": 0,
+    "end_offset": 58,
+    "truncated": false,
+    "replay_len": 58,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 0,
+    "terminal": {
+     "id": 828395501584285,
+     "pid": 5975,
+     "fg": null,
+     "group": "ldv199-c1-exit0-5957",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 58,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 828395501584285,
+     "group_id": "ldv199-c1-exit0-5957",
+     "socket": "c1-0-late"
+    }
+   },
+   {
+    "i": 28,
+    "t_ms": 9385.96,
+    "wall": "2026-10-02T12:37:20.431Z",
+    "kind": "sub-detach",
+    "sub": "c1-0-late"
+   },
+   {
+    "i": 29,
+    "t_ms": 9386.43,
+    "wall": "2026-10-02T12:37:20.432Z",
+    "kind": "request",
+    "conn": "c1-0-terminate",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 828395501584285
+    }
+   },
+   {
+    "i": 30,
+    "t_ms": 9386.82,
+    "wall": "2026-10-02T12:37:20.432Z",
+    "kind": "sub-conn",
+    "sub": "c1-0-late",
+    "conn_event": "close",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 31,
+    "t_ms": 9395.89,
+    "wall": "2026-10-02T12:37:20.441Z",
+    "kind": "response",
+    "conn": "c1-0-terminate",
+    "rtt_ms": 9.55,
+    "response": {
+     "type": "ok"
+    }
+   },
+   {
+    "i": 32,
+    "t_ms": 9396.74,
+    "wall": "2026-10-02T12:37:20.442Z",
+    "kind": "request",
+    "conn": "create-c1-exit7",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c1-exit7-5957/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c1-exit7-5957",
+     "title": "ldv199-c1-exit7",
+     "group_id": "ldv199-c1-exit7-5957",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 33,
+    "t_ms": 9406.93,
+    "wall": "2026-10-02T12:37:20.452Z",
+    "kind": "response",
+    "conn": "create-c1-exit7",
+    "rtt_ms": 10.36,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 3675000901613742,
+      "pid": 6006,
+      "fg": null,
+      "group": "ldv199-c1-exit7-5957",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 34,
+    "t_ms": 9407.12,
+    "wall": "2026-10-02T12:37:20.452Z",
+    "kind": "fixture-created",
+    "fx": "c1-exit7",
+    "ptyId": 3675000901613742,
+    "pid": 6006,
+    "group": "ldv199-c1-exit7-5957",
+    "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+    "proc": {
+     "pid": 6006,
+     "comm": "node",
+     "state": "R",
+     "ppid": 5971,
+     "starttime_ticks": 166450,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c1-exit7-5957/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 3675000901613742,
+      "pid": 6006,
+      "fg": null,
+      "group": "ldv199-c1-exit7-5957",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 35,
+    "t_ms": 9448.53,
+    "wall": "2026-10-02T12:37:20.494Z",
+    "kind": "ack",
+    "fx": "c1-exit7",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944640488,
+     "mono_ns": "1664543447026",
+     "pid": 6006,
+     "oracle_len": 15,
+     "extra": null,
+     "observed_wall_ms": 1790944640494
+    }
+   },
+   {
+    "i": 36,
+    "t_ms": 9579.62,
+    "wall": "2026-10-02T12:37:20.625Z",
+    "kind": "origin",
+    "fx": "c1-exit7",
+    "origin": 15,
+    "head": 0,
+    "preLen_oracle": 15,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 37,
+    "t_ms": 9579.88,
+    "wall": "2026-10-02T12:37:20.625Z",
+    "kind": "gate-release",
+    "fx": "c1-exit7",
+    "name": "start",
+    "wall_ms": 1790944640625
+   },
+   {
+    "i": 38,
+    "t_ms": 9590.35,
+    "wall": "2026-10-02T12:37:20.636Z",
+    "kind": "ack",
+    "fx": "c1-exit7",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944640632,
+     "mono_ns": "1664687113945",
+     "pid": 6006,
+     "oracle_len": 30,
+     "extra": null,
+     "observed_wall_ms": 1790944640635
+    }
+   },
+   {
+    "i": 39,
+    "t_ms": 9599.87,
+    "wall": "2026-10-02T12:37:20.645Z",
+    "kind": "gate-release",
+    "fx": "c1-exit7",
+    "name": "mid",
+    "wall_ms": 1790944640645
+   },
+   {
+    "i": 40,
+    "t_ms": 9610.26,
+    "wall": "2026-10-02T12:37:20.655Z",
+    "kind": "ack",
+    "fx": "c1-exit7",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944640653,
+     "mono_ns": "1664708266458",
+     "pid": 6006,
+     "oracle_len": 43,
+     "extra": null,
+     "observed_wall_ms": 1790944640655
+    }
+   },
+   {
+    "i": 41,
+    "t_ms": 9620.3,
+    "wall": "2026-10-02T12:37:20.665Z",
+    "kind": "request",
+    "conn": "list-running-c1-exit7",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 42,
+    "t_ms": 9630.18,
+    "wall": "2026-10-02T12:37:20.675Z",
+    "kind": "response",
+    "conn": "list-running-c1-exit7",
+    "rtt_ms": 9.98,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": "node",
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 43,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 43,
+    "t_ms": 9630.24,
+    "wall": "2026-10-02T12:37:20.675Z",
+    "kind": "native-running",
+    "fx": "c1-exit7",
+    "terminal": {
+     "id": 3675000901613742,
+     "pid": 6006,
+     "fg": "node",
+     "group": "ldv199-c1-exit7-5957",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 43,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 44,
+    "t_ms": 9630.37,
+    "wall": "2026-10-02T12:37:20.676Z",
+    "kind": "gate-release",
+    "fx": "c1-exit7",
+    "name": "exit",
+    "wall_ms": 1790944640676
+   },
+   {
+    "i": 45,
+    "t_ms": 9641.11,
+    "wall": "2026-10-02T12:37:20.686Z",
+    "kind": "ack",
+    "fx": "c1-exit7",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944640684,
+     "mono_ns": "1664739446025",
+     "pid": 6006,
+     "oracle_len": 58,
+     "extra": {
+      "code": 7
+     },
+     "observed_wall_ms": 1790944640686
+    }
+   },
+   {
+    "i": 46,
+    "t_ms": 9739.21,
+    "wall": "2026-10-02T12:37:20.784Z",
+    "kind": "request",
+    "conn": "c1-7-list-100",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 47,
+    "t_ms": 9740.98,
+    "wall": "2026-10-02T12:37:20.786Z",
+    "kind": "response",
+    "conn": "c1-7-list-100",
+    "rtt_ms": 1.93,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 48,
+    "t_ms": 9741.24,
+    "wall": "2026-10-02T12:37:20.786Z",
+    "kind": "request",
+    "conn": "c1-7-snapshot-100",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 3675000901613742
+    }
+   },
+   {
+    "i": 49,
+    "t_ms": 9751.35,
+    "wall": "2026-10-02T12:37:20.797Z",
+    "kind": "response",
+    "conn": "c1-7-snapshot-100",
+    "rtt_ms": 10.12,
+    "response": {
+     "type": "snapshot",
+     "terminal": {
+      "id": 3675000901613742,
+      "pid": 6006,
+      "fg": null,
+      "group": "ldv199-c1-exit7-5957",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 58,
+      "cols": 80,
+      "rows": 24
+     },
+     "text": "READY c1-exit7\n              START c1-exit7\n                            MID c1-exit7\n                                        FINAL c1-exit7",
+     "checkpoint_base64": {
+      "len": 292,
+      "sha256_8": "f0d03ca2",
+      "head": "UkVBRFkgYzEtZXhpdDcNCiAgICAgICAgICAgICAgU1RBUlQgYzEtZXhpdDcN"
+     },
+     "cursor_x": 54,
+     "cursor_y": 4
+    }
+   },
+   {
+    "i": 50,
+    "t_ms": 10640.18,
+    "wall": "2026-10-02T12:37:21.685Z",
+    "kind": "request",
+    "conn": "c1-7-list-1000",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 51,
+    "t_ms": 10645.68,
+    "wall": "2026-10-02T12:37:21.691Z",
+    "kind": "response",
+    "conn": "c1-7-list-1000",
+    "rtt_ms": 5.6,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 52,
+    "t_ms": 10646.07,
+    "wall": "2026-10-02T12:37:21.691Z",
+    "kind": "request",
+    "conn": "c1-7-snapshot-1000",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 3675000901613742
+    }
+   },
+   {
+    "i": 53,
+    "t_ms": 10656.01,
+    "wall": "2026-10-02T12:37:21.701Z",
+    "kind": "response",
+    "conn": "c1-7-snapshot-1000",
+    "rtt_ms": 10.05,
+    "response": {
+     "type": "snapshot",
+     "terminal": {
+      "id": 3675000901613742,
+      "pid": 6006,
+      "fg": null,
+      "group": "ldv199-c1-exit7-5957",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 58,
+      "cols": 80,
+      "rows": 24
+     },
+     "text": "READY c1-exit7\n              START c1-exit7\n                            MID c1-exit7\n                                        FINAL c1-exit7",
+     "checkpoint_base64": {
+      "len": 292,
+      "sha256_8": "f0d03ca2",
+      "head": "UkVBRFkgYzEtZXhpdDcNCiAgICAgICAgICAgICAgU1RBUlQgYzEtZXhpdDcN"
+     },
+     "cursor_x": 54,
+     "cursor_y": 4
+    }
+   },
+   {
+    "i": 54,
+    "t_ms": 14644.16,
+    "wall": "2026-10-02T12:37:25.689Z",
+    "kind": "request",
+    "conn": "c1-7-list-5000",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 55,
+    "t_ms": 14647.37,
+    "wall": "2026-10-02T12:37:25.693Z",
+    "kind": "response",
+    "conn": "c1-7-list-5000",
+    "rtt_ms": 3.42,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 3675000901613742,
+       "pid": 6006,
+       "fg": null,
+       "group": "ldv199-c1-exit7-5957",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 58,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 56,
+    "t_ms": 14647.68,
+    "wall": "2026-10-02T12:37:25.693Z",
+    "kind": "request",
+    "conn": "c1-7-snapshot-5000",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 3675000901613742
+    }
+   },
+   {
+    "i": 57,
+    "t_ms": 14657.69,
+    "wall": "2026-10-02T12:37:25.703Z",
+    "kind": "response",
+    "conn": "c1-7-snapshot-5000",
+    "rtt_ms": 10.06,
+    "response": {
+     "type": "snapshot",
+     "terminal": {
+      "id": 3675000901613742,
+      "pid": 6006,
+      "fg": null,
+      "group": "ldv199-c1-exit7-5957",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 58,
+      "cols": 80,
+      "rows": 24
+     },
+     "text": "READY c1-exit7\n              START c1-exit7\n                            MID c1-exit7\n                                        FINAL c1-exit7",
+     "checkpoint_base64": {
+      "len": 292,
+      "sha256_8": "f0d03ca2",
+      "head": "UkVBRFkgYzEtZXhpdDcNCiAgICAgICAgICAgICAgU1RBUlQgYzEtZXhpdDcN"
+     },
+     "cursor_x": 54,
+     "cursor_y": 4
+    }
+   },
+   {
+    "i": 58,
+    "t_ms": 14658,
+    "wall": "2026-10-02T12:37:25.703Z",
+    "kind": "sub-attach",
+    "sub": "c1-7-late",
+    "fx": "c1-exit7",
+    "role": "observer",
+    "attachmentID": "c1-7-late",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 59,
+    "t_ms": 14667.95,
+    "wall": "2026-10-02T12:37:25.713Z",
+    "kind": "sub-attached",
+    "sub": "c1-7-late",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 0,
+    "available_offset": 0,
+    "end_offset": 58,
+    "truncated": false,
+    "replay_len": 58,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 0,
+    "terminal": {
+     "id": 3675000901613742,
+     "pid": 6006,
+     "fg": null,
+     "group": "ldv199-c1-exit7-5957",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 7
+     },
+     "head": 0,
+     "tail": 58,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+     "pty_id": 3675000901613742,
+     "group_id": "ldv199-c1-exit7-5957",
+     "socket": "c1-7-late"
+    }
+   },
+   {
+    "i": 60,
+    "t_ms": 18678.89,
+    "wall": "2026-10-02T12:37:29.724Z",
+    "kind": "sub-detach",
+    "sub": "c1-7-late"
+   },
+   {
+    "i": 61,
+    "t_ms": 18679.22,
+    "wall": "2026-10-02T12:37:29.724Z",
+    "kind": "request",
+    "conn": "c1-7-terminate",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 3675000901613742
+    }
+   },
+   {
+    "i": 62,
+    "t_ms": 18679.33,
+    "wall": "2026-10-02T12:37:29.725Z",
+    "kind": "sub-conn",
+    "sub": "c1-7-late",
+    "conn_event": "close",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 63,
+    "t_ms": 18686.83,
+    "wall": "2026-10-02T12:37:29.732Z",
+    "kind": "response",
+    "conn": "c1-7-terminate",
+    "rtt_ms": 7.68,
+    "response": {
+     "type": "ok"
+    }
+   }
+  ]
+ }
+}

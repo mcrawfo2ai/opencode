@@ -1,0 +1,264 @@
+{
+ "run": {
+  "started": "2026-10-02T12:30:01.602Z",
+  "mono_start_ms": 1,
+  "dev": false,
+  "artifact": {
+   "source_path": "/home/user/opencode/.spike-scratch/dl/native/package/bin/opencode-pty",
+   "size": 3138672,
+   "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa",
+   "expected": {
+    "size": 3138672,
+    "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa"
+   },
+   "size_ok": true,
+   "sha256_ok": true,
+   "package": {
+    "name": "@opencode-ai/pty-linux-x64-gnu",
+    "version": "0.1.13",
+    "os": [
+     "linux"
+    ],
+    "cpu": [
+     "x64"
+    ],
+    "libc": [
+     "glibc"
+    ]
+   },
+   "platform": {
+    "platform": "linux",
+    "arch": "x64",
+    "libc": "gnu",
+    "glibcVersionRuntime": "2.39",
+    "kernel": "6.18.44-fc-v51",
+    "node": "v22.22.0"
+   },
+   "platform_compatible": true,
+   "run_copy": {
+    "path": "/tmp/r/bin/opencode-pty",
+    "size": 3138672,
+    "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa",
+    "sha256_ok": true
+   }
+  },
+  "isolation": {
+   "mnt_ns": "mnt:[4026532262]",
+   "tmp_mountinfo": [
+    "76 50 254:0 /home/user/opencode/.spike-scratch/tmp /tmp rw,relatime - ext4 /dev/vda rw,discard,resv_strict,resuid=65534,resgid=65534"
+   ],
+   "tmpdir_env": "/tmp",
+   "tmp_probe_landed_in_workspace_scratch": true,
+   "cwd": "/home/user/opencode",
+   "run_root": "/tmp/r",
+   "host_boot_id": "6159cce6-ab5f-4c1e-b1a1-8a3079651ce2",
+   "note": "harness itself runs with the cloud agent environment; daemon/PTY children get explicit allowlist envs (see daemon.identity.env_keys and fixture mode.env_keys)",
+   "harness_process_env_var_count": 166,
+   "note_post_hoc_edit": "process_env_keys_present (host environment variable NAMES) removed after the run before commit; replaced by a count. No other change."
+  },
+  "clock": {
+   "clk_tck": 100,
+   "btime_epoch_s": 1790942975,
+   "uptime_s": "1225.68"
+  },
+  "scripts": {
+   "cases.mjs": {
+    "bytes": 40459,
+    "sha256": "8ed409373bcf485a08e7ff775f6bc1075d9bc4194355797516698ce80b5ed59e"
+   },
+   "compare.mjs": {
+    "bytes": 5964,
+    "sha256": "f0a5cb925d9562758bf3267dc80c7438d01687e05a9d2278a001d7793cc4ffac"
+   },
+   "controls.mjs": {
+    "bytes": 7514,
+    "sha256": "fe4424cf0801d64c2e3672942a112e9c7f2e506a3be563458c1b625c1f1a8463"
+   },
+   "fixture-shell.sh": {
+    "bytes": 1317,
+    "sha256": "2edadad0361ccee3b65b599846ed86524a7dccc8b80585c0edf4375285605a7e"
+   },
+   "fixture.mjs": {
+    "bytes": 4056,
+    "sha256": "5255618dbaa18e4e6af1645a61abdb54952bd855e6d4df0a59df6601ca2a860e"
+   },
+   "harness.mjs": {
+    "bytes": 22479,
+    "sha256": "c560892ff7e05356a3315a7eb801f7c56772174b2d936d0b8a617bef7fccdb18"
+   },
+   "lib.mjs": {
+    "bytes": 12144,
+    "sha256": "113000f4d7670845278a8f5bbee5061dcf130dff5934bad31ab4d3000bfbf86a"
+   },
+   "run.mjs": {
+    "bytes": 17952,
+    "sha256": "cfae16f26b5cb7dcd797979b2abc5e76dadcef452c6a8a5a1870db6af34d1820"
+   }
+  },
+  "source": {
+   "pin": "591c6999ebceb86f1b4869685d87bc2e10d9a333",
+   "git_head": "591c6999ebceb86f1b4869685d87bc2e10d9a333"
+  },
+  "experiment_started_mono_ms": 32,
+  "daemon_d1": {
+   "tag": "d1",
+   "spawned_pid": 3634,
+   "registration": {
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "pid": 3634,
+    "protocol": 7,
+    "socket": "/tmp/opencode-pty-0/1da2e5077cbf86b5139a19f32c8eecb2.sock",
+    "token": "<redacted len=16 sha256_8=1c34e0cf>"
+   },
+   "registration_keys": [
+    "instance_id",
+    "pid",
+    "protocol",
+    "socket",
+    "token"
+   ],
+   "registration_pid_equals_spawned_pid": true,
+   "protocol_is_7": true,
+   "ping": {
+    "type": "pong",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "pid": 3634,
+    "protocol": 7
+   },
+   "ping_matches_registration": true,
+   "proc": {
+    "pid": 3634,
+    "comm": "opencode-pty",
+    "state": "R",
+    "ppid": 3623,
+    "starttime_ticks": 122568,
+    "exe": "/tmp/r/bin/opencode-pty",
+    "cmdline": [
+     "/tmp/r/bin/opencode-pty",
+     "daemon"
+    ]
+   },
+   "runtime_dir": "/tmp/r/rt-d1",
+   "env_keys": [
+    "HOME",
+    "LANG",
+    "OPENCODE_PTY_RUNTIME_DIR",
+    "PATH",
+    "TMPDIR",
+    "XDG_CACHE_HOME",
+    "XDG_CONFIG_HOME",
+    "XDG_DATA_HOME",
+    "XDG_RUNTIME_DIR"
+   ],
+   "ready_ms": 59
+  },
+  "daemon_d2": {
+   "tag": "d2",
+   "spawned_pid": 4077,
+   "registration": {
+    "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+    "pid": 4077,
+    "protocol": 7,
+    "socket": "/tmp/opencode-pty-0/0e733c3736db28654e0eafc0bdf2e8f4.sock",
+    "token": "<redacted len=16 sha256_8=1c34e0cf>"
+   },
+   "registration_keys": [
+    "instance_id",
+    "pid",
+    "protocol",
+    "socket",
+    "token"
+   ],
+   "registration_pid_equals_spawned_pid": true,
+   "protocol_is_7": true,
+   "ping": {
+    "type": "pong",
+    "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+    "pid": 4077,
+    "protocol": 7
+   },
+   "ping_matches_registration": true,
+   "proc": {
+    "pid": 4077,
+    "comm": "opencode-pty",
+    "state": "R",
+    "ppid": 3623,
+    "starttime_ticks": 126098,
+    "exe": "/tmp/r/bin/opencode-pty",
+    "cmdline": [
+     "/tmp/r/bin/opencode-pty",
+     "daemon"
+    ]
+   },
+   "runtime_dir": "/tmp/r/rt-d2",
+   "env_keys": [
+    "HOME",
+    "LANG",
+    "OPENCODE_PTY_RUNTIME_DIR",
+    "PATH",
+    "TMPDIR",
+    "XDG_CACHE_HOME",
+    "XDG_CONFIG_HOME",
+    "XDG_DATA_HOME",
+    "XDG_RUNTIME_DIR"
+   ],
+   "ready_ms": 59
+  },
+  "daemon_d3": {
+   "tag": "d3",
+   "spawned_pid": 4164,
+   "registration": {
+    "instance_id": "db27cf99f8a00b4cb28045effeca284b",
+    "pid": 4164,
+    "protocol": 7,
+    "socket": "/tmp/opencode-pty-0/e5a5fda1fc0d3f14395e9738b37eed91.sock",
+    "token": "<redacted len=16 sha256_8=1c34e0cf>"
+   },
+   "registration_keys": [
+    "instance_id",
+    "pid",
+    "protocol",
+    "socket",
+    "token"
+   ],
+   "registration_pid_equals_spawned_pid": true,
+   "protocol_is_7": true,
+   "ping": {
+    "type": "pong",
+    "instance_id": "db27cf99f8a00b4cb28045effeca284b",
+    "pid": 4164,
+    "protocol": 7
+   },
+   "ping_matches_registration": true,
+   "proc": {
+    "pid": 4164,
+    "comm": "opencode-pty",
+    "state": "R",
+    "ppid": 3623,
+    "starttime_ticks": 126308,
+    "exe": "/tmp/r/bin/opencode-pty",
+    "cmdline": [
+     "/tmp/r/bin/opencode-pty",
+     "daemon"
+    ]
+   },
+   "runtime_dir": "/tmp/r/rt-d3",
+   "env_keys": [
+    "HOME",
+    "LANG",
+    "OPENCODE_PTY_RUNTIME_DIR",
+    "PATH",
+    "TMPDIR",
+    "XDG_CACHE_HOME",
+    "XDG_CONFIG_HOME",
+    "XDG_DATA_HOME",
+    "XDG_RUNTIME_DIR"
+   ],
+   "ready_ms": 58
+  },
+  "experiment_elapsed_ms": 49208,
+  "finished": "2026-10-02T12:30:51.456Z",
+  "total_elapsed_ms": 49854,
+  "matrix_blocked": null
+ }
+}

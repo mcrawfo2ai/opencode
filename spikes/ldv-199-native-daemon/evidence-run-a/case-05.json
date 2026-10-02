@@ -1,0 +1,4913 @@
+{
+ "id": 5,
+ "run_status": "completed",
+ "duration_ms": 2090,
+ "result": {
+  "id": 5,
+  "title": "replay/truncation sweep on held-live fixture",
+  "sizes": [
+   {
+    "size": 65536,
+    "ack": {
+     "oracle_len": 65545,
+     "wall_ms": 1790944227066
+    },
+    "native": {
+     "expectedTail": 65545,
+     "waited": true,
+     "terminal": {
+      "id": 8684591256061254,
+      "pid": 3873,
+      "fg": "node",
+      "group": "ldv199-c5-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 65545,
+      "cols": 80,
+      "rows": 24
+     }
+    },
+    "subs": [
+     {
+      "at": "0",
+      "cursor": 0,
+      "label": "c5-65536-at-0",
+      "role_requested": "observer",
+      "attachmentID": "c5-65536-at-0",
+      "requestedCursor": 0,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 0,
+       "available_offset": 0,
+       "end_offset": 65545,
+       "truncated": false,
+       "replay_len": 65545,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 0,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 65545,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-65536-at-0"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 65545,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 65536,
+       "preOriginBytes": 9,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "e796b9f62cf29af8aad26b01545c059d93de402c0fa7a8217855066d41d716a3",
+       "oracleSha256": "e796b9f62cf29af8aad26b01545c059d93de402c0fa7a8217855066d41d716a3",
+       "ok": true,
+       "coverage": {
+        "from": 0,
+        "to": 65545,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": true
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "captured",
+      "cursor": 9,
+      "label": "c5-65536-at-captured",
+      "role_requested": "observer",
+      "attachmentID": "c5-65536-at-captured",
+      "requestedCursor": 9,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 9,
+       "available_offset": 9,
+       "end_offset": 65545,
+       "truncated": false,
+       "replay_len": 65536,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 9,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 65545,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-65536-at-captured"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 65545,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 65536,
+       "preOriginBytes": 0,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "e796b9f62cf29af8aad26b01545c059d93de402c0fa7a8217855066d41d716a3",
+       "oracleSha256": "e796b9f62cf29af8aad26b01545c059d93de402c0fa7a8217855066d41d716a3",
+       "ok": true,
+       "coverage": {
+        "from": 9,
+        "to": 65545,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": null
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "head",
+      "cursor": 0,
+      "sameCursorAs": "0"
+     },
+     {
+      "at": "tail",
+      "cursor": 65545,
+      "label": "c5-65536-tail",
+      "role_requested": "observer",
+      "attachmentID": "c5-65536-tail",
+      "requestedCursor": 65545,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 65545,
+       "available_offset": 65545,
+       "end_offset": 65545,
+       "truncated": false,
+       "replay_len": 0,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 65545,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 65545,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-65536-tail"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 65545,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [
+       [
+        65545,
+        69640
+       ],
+       [
+        69640,
+        81417
+       ],
+       [
+        81417,
+        93702
+       ],
+       [
+        93702,
+        102783
+       ],
+       [
+        102783,
+        115068
+       ],
+       [
+        115068,
+        127353
+       ],
+       [
+        127353,
+        136711
+       ],
+       [
+        136711,
+        146951
+       ],
+       [
+        146951,
+        157191
+       ],
+       [
+        157191,
+        167431
+       ],
+       [
+        167431,
+        175625
+       ],
+       [
+        175625,
+        187910
+       ],
+       [
+        187910,
+        200195
+       ],
+       [
+        200195,
+        212480
+       ],
+       [
+        212480,
+        226751
+       ],
+       [
+        226751,
+        239036
+       ],
+       [
+        239036,
+        251321
+       ],
+       [
+        251321,
+        262153
+       ]
+      ],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 0,
+       "note": "no intervals (no replay bytes and no live frames)"
+      }
+     }
+    ],
+    "stoppedHere": null
+   },
+   {
+    "size": 262144,
+    "ack": {
+     "oracle_len": 262153,
+     "wall_ms": 1790944227448
+    },
+    "native": {
+     "expectedTail": 262153,
+     "waited": true,
+     "terminal": {
+      "id": 8684591256061254,
+      "pid": 3873,
+      "fg": "node",
+      "group": "ldv199-c5-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 262153,
+      "cols": 80,
+      "rows": 24
+     }
+    },
+    "priorTailSubscriber": {
+     "label": "c5-65536-tail",
+     "attach": {
+      "type": "attached",
+      "role": "observer",
+      "generation": 0,
+      "requested_offset": 65545,
+      "available_offset": 65545,
+      "end_offset": 65545,
+      "truncated": false,
+      "replay_len": 0,
+      "replay_start_basis": "requested_offset",
+      "replay_start": 65545,
+      "terminal": {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 65545,
+       "cols": 80,
+       "rows": 24
+      },
+      "problems": [],
+      "bind": {
+       "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+       "pty_id": 8684591256061254,
+       "group_id": "ldv199-c5-3623",
+       "socket": "c5-65536-tail"
+      }
+     },
+     "maxEnd": 262153,
+     "frames": 18,
+     "problems": [],
+     "compare": {
+      "intervals": 18,
+      "comparedBytes": 196608,
+      "preOriginBytes": 0,
+      "beyondOracleBytes": 0,
+      "boundsProblems": [],
+      "firstDifference": null,
+      "nativeSha256": "1ab2621e68d672c783a3b910c875b5c74a3a5de8f2c0908210aea562a5e1c539",
+      "oracleSha256": "1ab2621e68d672c783a3b910c875b5c74a3a5de8f2c0908210aea562a5e1c539",
+      "ok": true,
+      "coverage": {
+       "from": 65545,
+       "to": 262153,
+       "holes": [],
+       "overlaps": [],
+       "covered": true
+      },
+      "replayStartBasis": "requested_offset",
+      "preOriginVerified": null
+     }
+    },
+    "subs": [
+     {
+      "at": "0",
+      "cursor": 0,
+      "label": "c5-262144-at-0",
+      "role_requested": "observer",
+      "attachmentID": "c5-262144-at-0",
+      "requestedCursor": 0,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 0,
+       "available_offset": 0,
+       "end_offset": 262153,
+       "truncated": false,
+       "replay_len": 262153,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 0,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 262153,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-262144-at-0"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 262153,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 262144,
+       "preOriginBytes": 9,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "ca869399fbefa93ee5f38b39ffae6455c40d4e2f2c045f673e8d0328bb18e725",
+       "oracleSha256": "ca869399fbefa93ee5f38b39ffae6455c40d4e2f2c045f673e8d0328bb18e725",
+       "ok": true,
+       "coverage": {
+        "from": 0,
+        "to": 262153,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": true
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "captured",
+      "cursor": 65545,
+      "label": "c5-262144-at-captured",
+      "role_requested": "observer",
+      "attachmentID": "c5-262144-at-captured",
+      "requestedCursor": 65545,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 65545,
+       "available_offset": 65545,
+       "end_offset": 262153,
+       "truncated": false,
+       "replay_len": 196608,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 65545,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 262153,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-262144-at-captured"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 262153,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 196608,
+       "preOriginBytes": 0,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "1ab2621e68d672c783a3b910c875b5c74a3a5de8f2c0908210aea562a5e1c539",
+       "oracleSha256": "1ab2621e68d672c783a3b910c875b5c74a3a5de8f2c0908210aea562a5e1c539",
+       "ok": true,
+       "coverage": {
+        "from": 65545,
+        "to": 262153,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": null
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "head",
+      "cursor": 0,
+      "sameCursorAs": "0"
+     },
+     {
+      "at": "tail",
+      "cursor": 262153,
+      "label": "c5-262144-tail",
+      "role_requested": "observer",
+      "attachmentID": "c5-262144-tail",
+      "requestedCursor": 262153,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 262153,
+       "available_offset": 262153,
+       "end_offset": 262153,
+       "truncated": false,
+       "replay_len": 0,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 262153,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 262153,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-262144-tail"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 262153,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [
+       [
+        262153,
+        274438
+       ],
+       [
+        274438,
+        286723
+       ],
+       [
+        286723,
+        299008
+       ],
+       [
+        299008,
+        311293
+       ],
+       [
+        311293,
+        323578
+       ],
+       [
+        323578,
+        335863
+       ],
+       [
+        335863,
+        348148
+       ],
+       [
+        348148,
+        360433
+       ],
+       [
+        360433,
+        372718
+       ],
+       [
+        372718,
+        385003
+       ],
+       [
+        385003,
+        397288
+       ],
+       [
+        397288,
+        409573
+       ],
+       [
+        409573,
+        421858
+       ],
+       [
+        421858,
+        434143
+       ],
+       [
+        434143,
+        443455
+       ],
+       [
+        443455,
+        455740
+       ],
+       [
+        455740,
+        468025
+       ],
+       [
+        468025,
+        484407
+       ],
+       [
+        484407,
+        495111
+       ],
+       [
+        495111,
+        507396
+       ],
+       [
+        507396,
+        519681
+       ],
+       [
+        519681,
+        524297
+       ],
+       [
+        524297,
+        536073
+       ],
+       [
+        536073,
+        546815
+       ],
+       [
+        546815,
+        559100
+       ],
+       [
+        559100,
+        575482
+       ],
+       [
+        575482,
+        583869
+       ],
+       [
+        583869,
+        595263
+       ],
+       [
+        595263,
+        607548
+       ],
+       [
+        607548,
+        619833
+       ],
+       [
+        619833,
+        632118
+       ],
+       [
+        632118,
+        641012
+       ],
+       [
+        641012,
+        649224
+       ],
+       [
+        649224,
+        657417
+       ],
+       [
+        657417,
+        666567
+       ],
+       [
+        666567,
+        675205
+       ],
+       [
+        675205,
+        683529
+       ],
+       [
+        683529,
+        692606
+       ],
+       [
+        692606,
+        704891
+       ],
+       [
+        704891,
+        717176
+       ],
+       [
+        717176,
+        729461
+       ],
+       [
+        729461,
+        737907
+       ],
+       [
+        737907,
+        750192
+       ],
+       [
+        750192,
+        759150
+       ],
+       [
+        759150,
+        768009
+       ],
+       [
+        768009,
+        776455
+       ],
+       [
+        776455,
+        785093
+       ],
+       [
+        785093,
+        786441
+       ],
+       [
+        786441,
+        798729
+       ],
+       [
+        798729,
+        809085
+       ],
+       [
+        809085,
+        821370
+       ],
+       [
+        821370,
+        833655
+       ],
+       [
+        833655,
+        845940
+       ],
+       [
+        845940,
+        858225
+       ],
+       [
+        858225,
+        870510
+       ],
+       [
+        870510,
+        882795
+       ],
+       [
+        882795,
+        892424
+       ],
+       [
+        892424,
+        904709
+       ],
+       [
+        904709,
+        916994
+       ],
+       [
+        916994,
+        929279
+       ],
+       [
+        929279,
+        939529
+       ],
+       [
+        939529,
+        951814
+       ],
+       [
+        951814,
+        964099
+       ],
+       [
+        964099,
+        978752
+       ],
+       [
+        978752,
+        991039
+       ],
+       [
+        991039,
+        1002110
+       ],
+       [
+        1002110,
+        1014395
+       ],
+       [
+        1014395,
+        1026680
+       ],
+       [
+        1026680,
+        1038965
+       ],
+       [
+        1038965,
+        1048585
+       ]
+      ],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 0,
+       "note": "no intervals (no replay bytes and no live frames)"
+      }
+     }
+    ],
+    "stoppedHere": null
+   },
+   {
+    "size": 1048576,
+    "ack": {
+     "oracle_len": 1048585,
+     "wall_ms": 1790944227838
+    },
+    "native": {
+     "expectedTail": 1048585,
+     "waited": true,
+     "terminal": {
+      "id": 8684591256061254,
+      "pid": 3873,
+      "fg": "node",
+      "group": "ldv199-c5-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 1048585,
+      "cols": 80,
+      "rows": 24
+     }
+    },
+    "priorTailSubscriber": {
+     "label": "c5-262144-tail",
+     "attach": {
+      "type": "attached",
+      "role": "observer",
+      "generation": 0,
+      "requested_offset": 262153,
+      "available_offset": 262153,
+      "end_offset": 262153,
+      "truncated": false,
+      "replay_len": 0,
+      "replay_start_basis": "requested_offset",
+      "replay_start": 262153,
+      "terminal": {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 262153,
+       "cols": 80,
+       "rows": 24
+      },
+      "problems": [],
+      "bind": {
+       "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+       "pty_id": 8684591256061254,
+       "group_id": "ldv199-c5-3623",
+       "socket": "c5-262144-tail"
+      }
+     },
+     "maxEnd": 1048585,
+     "frames": 70,
+     "problems": [],
+     "compare": {
+      "intervals": 70,
+      "comparedBytes": 786432,
+      "preOriginBytes": 0,
+      "beyondOracleBytes": 0,
+      "boundsProblems": [],
+      "firstDifference": null,
+      "nativeSha256": "2f5b89d87bcc4fc1d5ca498ab4489f261ec15ba5a69ed7dcad066d171d785db5",
+      "oracleSha256": "2f5b89d87bcc4fc1d5ca498ab4489f261ec15ba5a69ed7dcad066d171d785db5",
+      "ok": true,
+      "coverage": {
+       "from": 262153,
+       "to": 1048585,
+       "holes": [],
+       "overlaps": [],
+       "covered": true
+      },
+      "replayStartBasis": "requested_offset",
+      "preOriginVerified": null
+     }
+    },
+    "subs": [
+     {
+      "at": "0",
+      "cursor": 0,
+      "label": "c5-1048576-at-0",
+      "role_requested": "observer",
+      "attachmentID": "c5-1048576-at-0",
+      "requestedCursor": 0,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 0,
+       "available_offset": 0,
+       "end_offset": 1048585,
+       "truncated": false,
+       "replay_len": 1048585,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 0,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 1048585,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-1048576-at-0"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 1048585,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 1048576,
+       "preOriginBytes": 9,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "9d0071e0dcd46087054c5fa766dcaf91d7867a98c46c44393aebcee5fb01df82",
+       "oracleSha256": "9d0071e0dcd46087054c5fa766dcaf91d7867a98c46c44393aebcee5fb01df82",
+       "ok": true,
+       "coverage": {
+        "from": 0,
+        "to": 1048585,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": true
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "captured",
+      "cursor": 262153,
+      "label": "c5-1048576-at-captured",
+      "role_requested": "observer",
+      "attachmentID": "c5-1048576-at-captured",
+      "requestedCursor": 262153,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 262153,
+       "available_offset": 262153,
+       "end_offset": 1048585,
+       "truncated": false,
+       "replay_len": 786432,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 262153,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 1048585,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-1048576-at-captured"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 1048585,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 786432,
+       "preOriginBytes": 0,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "2f5b89d87bcc4fc1d5ca498ab4489f261ec15ba5a69ed7dcad066d171d785db5",
+       "oracleSha256": "2f5b89d87bcc4fc1d5ca498ab4489f261ec15ba5a69ed7dcad066d171d785db5",
+       "ok": true,
+       "coverage": {
+        "from": 262153,
+        "to": 1048585,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": null
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "head",
+      "cursor": 0,
+      "sameCursorAs": "0"
+     },
+     {
+      "at": "tail",
+      "cursor": 1048585,
+      "label": "c5-1048576-tail",
+      "role_requested": "observer",
+      "attachmentID": "c5-1048576-tail",
+      "requestedCursor": 1048585,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 1048585,
+       "available_offset": 1048585,
+       "end_offset": 1048585,
+       "truncated": false,
+       "replay_len": 0,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 1048585,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 0,
+        "tail": 1048585,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-1048576-tail"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 1048585,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [
+       [
+        1048585,
+        1062534
+       ],
+       [
+        1062534,
+        1074819
+       ],
+       [
+        1074819,
+        1084481
+       ],
+       [
+        1084481,
+        1096766
+       ],
+       [
+        1096766,
+        1107975
+       ],
+       [
+        1107975,
+        1120260
+       ],
+       [
+        1120260,
+        1132545
+       ],
+       [
+        1132545,
+        1144830
+       ],
+       [
+        1144830,
+        1157115
+       ],
+       [
+        1157115,
+        1169400
+       ],
+       [
+        1169400,
+        1181685
+       ],
+       [
+        1181685,
+        1193970
+       ],
+       [
+        1193970,
+        1206255
+       ],
+       [
+        1206255,
+        1218055
+       ],
+       [
+        1218055,
+        1228296
+       ],
+       [
+        1228296,
+        1244678
+       ],
+       [
+        1244678,
+        1252870
+       ],
+       [
+        1252870,
+        1265155
+       ],
+       [
+        1265155,
+        1278655
+       ],
+       [
+        1278655,
+        1290940
+       ],
+       [
+        1290940,
+        1303225
+       ],
+       [
+        1303225,
+        1310729
+       ],
+       [
+        1310729,
+        1323014
+       ],
+       [
+        1323014,
+        1335299
+       ],
+       [
+        1335299,
+        1347584
+       ],
+       [
+        1347584,
+        1358399
+       ],
+       [
+        1358399,
+        1370622
+       ],
+       [
+        1370622,
+        1385791
+       ],
+       [
+        1385791,
+        1394685
+       ],
+       [
+        1394685,
+        1406970
+       ],
+       [
+        1406970,
+        1419255
+       ],
+       [
+        1419255,
+        1431540
+       ],
+       [
+        1431540,
+        1443825
+       ],
+       [
+        1443825,
+        1456110
+       ],
+       [
+        1456110,
+        1468395
+       ],
+       [
+        1468395,
+        1480680
+       ],
+       [
+        1480680,
+        1491966
+       ],
+       [
+        1491966,
+        1504251
+       ],
+       [
+        1504251,
+        1512443
+       ],
+       [
+        1512443,
+        1521161
+       ],
+       [
+        1521161,
+        1533446
+       ],
+       [
+        1533446,
+        1545731
+       ],
+       [
+        1545731,
+        1558016
+       ],
+       [
+        1558016,
+        1570301
+       ],
+       [
+        1570301,
+        1572873
+       ],
+       [
+        1572873,
+        1585158
+       ],
+       [
+        1585158,
+        1593350
+       ],
+       [
+        1593350,
+        1602301
+       ],
+       [
+        1602301,
+        1614586
+       ],
+       [
+        1614586,
+        1626871
+       ],
+       [
+        1626871,
+        1639156
+       ],
+       [
+        1639156,
+        1651441
+       ],
+       [
+        1651441,
+        1663726
+       ],
+       [
+        1663726,
+        1676011
+       ],
+       [
+        1676011,
+        1688296
+       ],
+       [
+        1688296,
+        1700581
+       ],
+       [
+        1700581,
+        1712866
+       ],
+       [
+        1712866,
+        1725151
+       ],
+       [
+        1725151,
+        1737436
+       ],
+       [
+        1737436,
+        1749721
+       ],
+       [
+        1749721,
+        1762006
+       ],
+       [
+        1762006,
+        1776531
+       ],
+       [
+        1776531,
+        1788816
+       ],
+       [
+        1788816,
+        1801101
+       ],
+       [
+        1801101,
+        1813386
+       ],
+       [
+        1813386,
+        1825671
+       ],
+       [
+        1825671,
+        1835017
+       ],
+       [
+        1835017,
+        1845831
+       ],
+       [
+        1845831,
+        1858116
+       ],
+       [
+        1858116,
+        1870401
+       ],
+       [
+        1870401,
+        1882686
+       ],
+       [
+        1882686,
+        1894971
+       ],
+       [
+        1894971,
+        1907256
+       ],
+       [
+        1907256,
+        1921215
+       ],
+       [
+        1921215,
+        1933500
+       ],
+       [
+        1933500,
+        1945785
+       ],
+       [
+        1945785,
+        1958070
+       ],
+       [
+        1958070,
+        1970355
+       ],
+       [
+        1970355,
+        1983792
+       ],
+       [
+        1983792,
+        1992046
+       ],
+       [
+        1992046,
+        2004331
+       ],
+       [
+        2004331,
+        2016616
+       ],
+       [
+        2016616,
+        2024969
+       ],
+       [
+        2024969,
+        2041351
+       ],
+       [
+        2041351,
+        2049545
+       ],
+       [
+        2049545,
+        2061830
+       ],
+       [
+        2061830,
+        2070980
+       ],
+       [
+        2070980,
+        2083265
+       ],
+       [
+        2083265,
+        2095550
+       ],
+       [
+        2095550,
+        2097161
+       ],
+       [
+        2097161,
+        2108807
+       ],
+       [
+        2108807,
+        2121092
+       ],
+       [
+        2121092,
+        2133377
+       ],
+       [
+        2133377,
+        2142846
+       ],
+       [
+        2142846,
+        2151100
+       ],
+       [
+        2151100,
+        2163385
+       ],
+       [
+        2163385,
+        2175670
+       ],
+       [
+        2175670,
+        2187955
+       ],
+       [
+        2187955,
+        2200240
+       ],
+       [
+        2200240,
+        2213487
+       ],
+       [
+        2213487,
+        2225215
+       ],
+       [
+        2225215,
+        2241597
+       ],
+       [
+        2241597,
+        2253882
+       ],
+       [
+        2253882,
+        2262136
+       ],
+       [
+        2262136,
+        2274997
+       ],
+       [
+        2274997,
+        2287282
+       ],
+       [
+        2287282,
+        2299567
+       ],
+       [
+        2299567,
+        2311852
+       ],
+       [
+        2311852,
+        2321929
+       ],
+       [
+        2321929,
+        2334214
+       ],
+       [
+        2334214,
+        2342920
+       ],
+       [
+        2342920,
+        2355205
+       ],
+       [
+        2355205,
+        2359305
+       ],
+       [
+        2359305,
+        2374150
+       ],
+       [
+        2374150,
+        2386435
+       ],
+       [
+        2386435,
+        2398720
+       ],
+       [
+        2398720,
+        2411005
+       ],
+       [
+        2411005,
+        2423290
+       ],
+       [
+        2423290,
+        2435575
+       ],
+       [
+        2435575,
+        2447860
+       ],
+       [
+        2447860,
+        2460145
+       ],
+       [
+        2460145,
+        2472432
+       ],
+       [
+        2472432,
+        2484717
+       ],
+       [
+        2484717,
+        2497002
+       ],
+       [
+        2497002,
+        2509287
+       ],
+       [
+        2509287,
+        2521726
+       ],
+       [
+        2521726,
+        2534651
+       ],
+       [
+        2534651,
+        2546936
+       ],
+       [
+        2546936,
+        2559221
+       ],
+       [
+        2559221,
+        2572297
+       ],
+       [
+        2572297,
+        2584582
+       ],
+       [
+        2584582,
+        2596867
+       ],
+       [
+        2596867,
+        2609152
+       ],
+       [
+        2609152,
+        2621437
+       ],
+       [
+        2621437,
+        2621449
+       ],
+       [
+        2621449,
+        2631177
+       ],
+       [
+        2631177,
+        2643462
+       ],
+       [
+        2643462,
+        2655747
+       ],
+       [
+        2655747,
+        2668736
+       ],
+       [
+        2668736,
+        2681021
+       ],
+       [
+        2681021,
+        2693306
+       ],
+       [
+        2693306,
+        2705591
+       ],
+       [
+        2705591,
+        2717876
+       ],
+       [
+        2717876,
+        2730161
+       ],
+       [
+        2730161,
+        2743790
+       ],
+       [
+        2743790,
+        2756075
+       ],
+       [
+        2756075,
+        2768360
+       ],
+       [
+        2768360,
+        2780645
+       ],
+       [
+        2780645,
+        2792930
+       ],
+       [
+        2792930,
+        2805215
+       ],
+       [
+        2805215,
+        2817500
+       ],
+       [
+        2817500,
+        2829785
+       ],
+       [
+        2829785,
+        2842070
+       ],
+       [
+        2842070,
+        2854355
+       ],
+       [
+        2854355,
+        2866640
+       ],
+       [
+        2866640,
+        2878925
+       ],
+       [
+        2878925,
+        2883593
+       ],
+       [
+        2883593,
+        2895878
+       ],
+       [
+        2895878,
+        2908163
+       ],
+       [
+        2908163,
+        2920448
+       ],
+       [
+        2920448,
+        2932745
+       ],
+       [
+        2932745,
+        2943111
+       ],
+       [
+        2943111,
+        2955396
+       ],
+       [
+        2955396,
+        2967681
+       ],
+       [
+        2967681,
+        2979966
+       ],
+       [
+        2979966,
+        2992251
+       ],
+       [
+        2992251,
+        3004536
+       ],
+       [
+        3004536,
+        3016823
+       ],
+       [
+        3016823,
+        3026943
+       ],
+       [
+        3026943,
+        3039228
+       ],
+       [
+        3039228,
+        3051513
+       ],
+       [
+        3051513,
+        3061255
+       ],
+       [
+        3061255,
+        3069960
+       ],
+       [
+        3069960,
+        3082245
+       ],
+       [
+        3082245,
+        3091976
+       ],
+       [
+        3091976,
+        3104261
+       ],
+       [
+        3104261,
+        3116546
+       ],
+       [
+        3116546,
+        3128831
+       ],
+       [
+        3128831,
+        3141116
+       ],
+       [
+        3141116,
+        3145737
+       ],
+       [
+        3145737,
+        3158022
+       ],
+       [
+        3158022,
+        3170307
+       ],
+       [
+        3170307,
+        3182592
+       ],
+       [
+        3182592,
+        3194877
+       ],
+       [
+        3194877,
+        3203903
+       ],
+       [
+        3203903,
+        3216188
+       ],
+       [
+        3216188,
+        3229689
+       ],
+       [
+        3229689,
+        3241974
+       ],
+       [
+        3241974,
+        3254259
+       ],
+       [
+        3254259,
+        3265919
+       ],
+       [
+        3265919,
+        3276297
+       ],
+       [
+        3276297,
+        3288582
+       ],
+       [
+        3288582,
+        3300867
+       ],
+       [
+        3300867,
+        3309249
+       ],
+       [
+        3309249,
+        3317767
+       ],
+       [
+        3317767,
+        3326981
+       ],
+       [
+        3326981,
+        3339266
+       ],
+       [
+        3339266,
+        3350080
+       ],
+       [
+        3350080,
+        3362365
+       ],
+       [
+        3362365,
+        3374650
+       ],
+       [
+        3374650,
+        3386935
+       ],
+       [
+        3386935,
+        3399220
+       ],
+       [
+        3399220,
+        3403315
+       ],
+       [
+        3403315,
+        3407881
+       ],
+       [
+        3407881,
+        3420166
+       ],
+       [
+        3420166,
+        3432451
+       ],
+       [
+        3432451,
+        3442369
+       ],
+       [
+        3442369,
+        3454654
+       ],
+       [
+        3454654,
+        3466939
+       ],
+       [
+        3466939,
+        3479224
+       ],
+       [
+        3479224,
+        3487416
+       ],
+       [
+        3487416,
+        3496253
+       ],
+       [
+        3496253,
+        3508538
+       ],
+       [
+        3508538,
+        3520823
+       ],
+       [
+        3520823,
+        3533108
+       ],
+       [
+        3533108,
+        3545393
+       ],
+       [
+        3545393,
+        3557678
+       ],
+       [
+        3557678,
+        3569963
+       ],
+       [
+        3569963,
+        3579399
+       ],
+       [
+        3579399,
+        3591684
+       ],
+       [
+        3591684,
+        3602439
+       ],
+       [
+        3602439,
+        3614724
+       ],
+       [
+        3614724,
+        3627009
+       ],
+       [
+        3627009,
+        3639294
+       ],
+       [
+        3639294,
+        3647496
+       ],
+       [
+        3647496,
+        3663878
+       ],
+       [
+        3663878,
+        3667839
+       ],
+       [
+        3667839,
+        3670025
+       ],
+       [
+        3670025,
+        3682310
+       ],
+       [
+        3682310,
+        3694595
+       ],
+       [
+        3694595,
+        3706880
+       ],
+       [
+        3706880,
+        3719165
+       ],
+       [
+        3719165,
+        3728319
+       ],
+       [
+        3728319,
+        3740604
+       ],
+       [
+        3740604,
+        3752889
+       ],
+       [
+        3752889,
+        3765174
+       ],
+       [
+        3765174,
+        3777459
+       ],
+       [
+        3777459,
+        3786249
+       ],
+       [
+        3786249,
+        3802175
+       ],
+       [
+        3802175,
+        3814460
+       ],
+       [
+        3814460,
+        3826745
+       ],
+       [
+        3826745,
+        3839030
+       ],
+       [
+        3839030,
+        3851315
+       ],
+       [
+        3851315,
+        3863600
+       ],
+       [
+        3863600,
+        3875885
+       ],
+       [
+        3875885,
+        3888172
+       ],
+       [
+        3888172,
+        3898749
+       ],
+       [
+        3898749,
+        3911034
+       ],
+       [
+        3911034,
+        3923319
+       ],
+       [
+        3923319,
+        3932169
+       ],
+       [
+        3932169,
+        3944454
+       ],
+       [
+        3944454,
+        3956739
+       ],
+       [
+        3956739,
+        3969024
+       ],
+       [
+        3969024,
+        3981309
+       ],
+       [
+        3981309,
+        3993594
+       ],
+       [
+        3993594,
+        4005879
+       ],
+       [
+        4005879,
+        4019519
+       ],
+       [
+        4019519,
+        4031804
+       ],
+       [
+        4031804,
+        4044089
+       ],
+       [
+        4044089,
+        4056374
+       ],
+       [
+        4056374,
+        4068659
+       ],
+       [
+        4068659,
+        4080944
+       ],
+       [
+        4080944,
+        4093229
+       ],
+       [
+        4093229,
+        4105514
+       ],
+       [
+        4105514,
+        4117799
+       ],
+       [
+        4117799,
+        4130084
+       ],
+       [
+        4130084,
+        4142369
+       ],
+       [
+        4142369,
+        4154654
+       ],
+       [
+        4154654,
+        4166939
+       ],
+       [
+        4166939,
+        4179224
+       ],
+       [
+        4179224,
+        4187416
+       ],
+       [
+        4187416,
+        4194313
+       ]
+      ],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 0,
+       "note": "no intervals (no replay bytes and no live frames)"
+      }
+     }
+    ],
+    "stoppedHere": null
+   },
+   {
+    "size": 4194304,
+    "ack": {
+     "oracle_len": 4194313,
+     "wall_ms": 1790944228337
+    },
+    "native": {
+     "expectedTail": 4194313,
+     "waited": true,
+     "terminal": {
+      "id": 8684591256061254,
+      "pid": 3873,
+      "fg": "node",
+      "group": "ldv199-c5-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 2097161,
+      "tail": 4194313,
+      "cols": 80,
+      "rows": 24
+     }
+    },
+    "priorTailSubscriber": {
+     "label": "c5-1048576-tail",
+     "attach": {
+      "type": "attached",
+      "role": "observer",
+      "generation": 0,
+      "requested_offset": 1048585,
+      "available_offset": 1048585,
+      "end_offset": 1048585,
+      "truncated": false,
+      "replay_len": 0,
+      "replay_start_basis": "requested_offset",
+      "replay_start": 1048585,
+      "terminal": {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 1048585,
+       "cols": 80,
+       "rows": 24
+      },
+      "problems": [],
+      "bind": {
+       "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+       "pty_id": 8684591256061254,
+       "group_id": "ldv199-c5-3623",
+       "socket": "c5-1048576-tail"
+      }
+     },
+     "maxEnd": 4194313,
+     "frames": 272,
+     "problems": [],
+     "compare": {
+      "intervals": 272,
+      "comparedBytes": 3145728,
+      "preOriginBytes": 0,
+      "beyondOracleBytes": 0,
+      "boundsProblems": [],
+      "firstDifference": null,
+      "nativeSha256": "f90ec7fb5da00920a884b58c84508103ca5e04bed01839509ca9a9fdefa5746c",
+      "oracleSha256": "f90ec7fb5da00920a884b58c84508103ca5e04bed01839509ca9a9fdefa5746c",
+      "ok": true,
+      "coverage": {
+       "from": 1048585,
+       "to": 4194313,
+       "holes": [],
+       "overlaps": [],
+       "covered": true
+      },
+      "replayStartBasis": "requested_offset",
+      "preOriginVerified": null
+     }
+    },
+    "subs": [
+     {
+      "at": "0",
+      "cursor": 0,
+      "label": "c5-4194304-at-0",
+      "role_requested": "observer",
+      "attachmentID": "c5-4194304-at-0",
+      "requestedCursor": 0,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 0,
+       "available_offset": 2097161,
+       "end_offset": 4194313,
+       "truncated": true,
+       "replay_len": 2097152,
+       "replay_start_basis": "available_offset",
+       "replay_start": 2097161,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 2097161,
+        "tail": 4194313,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-4194304-at-0"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 4194313,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 2097152,
+       "preOriginBytes": 0,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "9910e4e3400643ccd999e0850e9e16500fb94df35335a904975f6a582a570aee",
+       "oracleSha256": "9910e4e3400643ccd999e0850e9e16500fb94df35335a904975f6a582a570aee",
+       "ok": true,
+       "coverage": {
+        "from": 2097161,
+        "to": 4194313,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "available_offset",
+       "preOriginVerified": null
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "captured",
+      "cursor": 1048585,
+      "label": "c5-4194304-at-captured",
+      "role_requested": "observer",
+      "attachmentID": "c5-4194304-at-captured",
+      "requestedCursor": 1048585,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 1048585,
+       "available_offset": 2097161,
+       "end_offset": 4194313,
+       "truncated": true,
+       "replay_len": 2097152,
+       "replay_start_basis": "available_offset",
+       "replay_start": 2097161,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 2097161,
+        "tail": 4194313,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-4194304-at-captured"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 4194313,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 2097152,
+       "preOriginBytes": 0,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "9910e4e3400643ccd999e0850e9e16500fb94df35335a904975f6a582a570aee",
+       "oracleSha256": "9910e4e3400643ccd999e0850e9e16500fb94df35335a904975f6a582a570aee",
+       "ok": true,
+       "coverage": {
+        "from": 2097161,
+        "to": 4194313,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "available_offset",
+       "preOriginVerified": null
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "head",
+      "cursor": 2097161,
+      "label": "c5-4194304-at-head",
+      "role_requested": "observer",
+      "attachmentID": "c5-4194304-at-head",
+      "requestedCursor": 2097161,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 2097161,
+       "available_offset": 2097161,
+       "end_offset": 4194313,
+       "truncated": false,
+       "replay_len": 2097152,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 2097161,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 2097161,
+        "tail": 4194313,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-4194304-at-head"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 4194313,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 1,
+       "comparedBytes": 2097152,
+       "preOriginBytes": 0,
+       "beyondOracleBytes": 0,
+       "boundsProblems": [],
+       "firstDifference": null,
+       "nativeSha256": "9910e4e3400643ccd999e0850e9e16500fb94df35335a904975f6a582a570aee",
+       "oracleSha256": "9910e4e3400643ccd999e0850e9e16500fb94df35335a904975f6a582a570aee",
+       "ok": true,
+       "coverage": {
+        "from": 2097161,
+        "to": 4194313,
+        "holes": [],
+        "overlaps": [],
+        "covered": true
+       },
+       "replayStartBasis": "requested_offset",
+       "preOriginVerified": null
+      },
+      "liveWindowFrames": 0
+     },
+     {
+      "at": "tail",
+      "cursor": 4194313,
+      "label": "c5-4194304-tail",
+      "role_requested": "observer",
+      "attachmentID": "c5-4194304-tail",
+      "requestedCursor": 4194313,
+      "attach": {
+       "type": "attached",
+       "role": "observer",
+       "generation": 0,
+       "requested_offset": 4194313,
+       "available_offset": 4194313,
+       "end_offset": 4194313,
+       "truncated": false,
+       "replay_len": 0,
+       "replay_start_basis": "requested_offset",
+       "replay_start": 4194313,
+       "terminal": {
+        "id": 8684591256061254,
+        "pid": 3873,
+        "fg": "node",
+        "group": "ldv199-c5-3623",
+        "lifecycle": {
+         "status": "running"
+        },
+        "head": 2097161,
+        "tail": 4194313,
+        "cols": 80,
+        "rows": 24
+       },
+       "problems": [],
+       "bind": {
+        "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+        "pty_id": 8684591256061254,
+        "group_id": "ldv199-c5-3623",
+        "socket": "c5-4194304-tail"
+       }
+      },
+      "frames": 0,
+      "liveBytes": 0,
+      "maxEnd": 4194313,
+      "exit": null,
+      "eof": null,
+      "close": null,
+      "errors": [],
+      "problems": [],
+      "events": [],
+      "rawIntervalsCount": 0,
+      "rawIntervals": [],
+      "detachedLocally": false,
+      "framesAfterLocalDetach": 0,
+      "compare": {
+       "intervals": 0,
+       "note": "no intervals (no replay bytes and no live frames)"
+      }
+     }
+    ],
+    "stoppedHere": "head advanced to 2097161 at size 4194304"
+   }
+  ],
+  "unreached": [
+   {
+    "size": 16777216,
+    "reason": "sweep stopped: head advanced to 2097161 at size 4194304"
+   }
+  ],
+  "capacityUnknownReason": "sweep stopped on first truncation/error; retention capacity beyond the examined sizes is unknown",
+  "removeAfter": {
+   "type": "ok"
+  },
+  "afterRemoval": {
+   "proc": {
+    "state": "gone",
+    "timedOut": false,
+    "after_ms": 16
+   }
+  },
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 25257.57,
+    "wall": "2026-10-02T12:30:26.859Z",
+    "kind": "request",
+    "conn": "create-c5",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c5-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c5-3623",
+     "title": "ldv199-c5",
+     "group_id": "ldv199-c5-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 25266.79,
+    "wall": "2026-10-02T12:30:26.868Z",
+    "kind": "response",
+    "conn": "create-c5",
+    "rtt_ms": 9.34,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 8684591256061254,
+      "pid": 3873,
+      "fg": null,
+      "group": "ldv199-c5-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 25266.94,
+    "wall": "2026-10-02T12:30:26.869Z",
+    "kind": "fixture-created",
+    "fx": "c5",
+    "ptyId": 8684591256061254,
+    "pid": 3873,
+    "group": "ldv199-c5-3623",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "proc": {
+     "pid": 3873,
+     "comm": "node",
+     "state": "R",
+     "ppid": 3634,
+     "starttime_ticks": 125092,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c5-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 8684591256061254,
+      "pid": 3873,
+      "fg": null,
+      "group": "ldv199-c5-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 25318.49,
+    "wall": "2026-10-02T12:30:26.920Z",
+    "kind": "ack",
+    "fx": "c5",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944226915,
+     "mono_ns": "1250969856612",
+     "pid": 3873,
+     "oracle_len": 9,
+     "extra": null,
+     "observed_wall_ms": 1790944226920
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 25450,
+    "wall": "2026-10-02T12:30:27.052Z",
+    "kind": "origin",
+    "fx": "c5",
+    "origin": 9,
+    "head": 0,
+    "preLen_oracle": 9,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 25450.28,
+    "wall": "2026-10-02T12:30:27.052Z",
+    "kind": "gate-release",
+    "fx": "c5",
+    "name": "start",
+    "wall_ms": 1790944227052
+   },
+   {
+    "i": 6,
+    "t_ms": 25471.02,
+    "wall": "2026-10-02T12:30:27.073Z",
+    "kind": "ack",
+    "fx": "c5",
+    "name": "size-65536",
+    "ack": {
+     "name": "size-65536",
+     "wall_ms": 1790944227066,
+     "mono_ns": "1251120884125",
+     "pid": 3873,
+     "oracle_len": 65545,
+     "extra": null,
+     "observed_wall_ms": 1790944227073
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 25481.32,
+    "wall": "2026-10-02T12:30:27.083Z",
+    "kind": "request",
+    "conn": "c5-list-65536",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 8,
+    "t_ms": 25491.25,
+    "wall": "2026-10-02T12:30:27.093Z",
+    "kind": "response",
+    "conn": "c5-list-65536",
+    "rtt_ms": 9.89,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 65545,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 9,
+    "t_ms": 25491.37,
+    "wall": "2026-10-02T12:30:27.093Z",
+    "kind": "sub-attach",
+    "sub": "c5-65536-at-0",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-65536-at-0",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 10,
+    "t_ms": 25500.48,
+    "wall": "2026-10-02T12:30:27.102Z",
+    "kind": "sub-attached",
+    "sub": "c5-65536-at-0",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 0,
+    "available_offset": 0,
+    "end_offset": 65545,
+    "truncated": false,
+    "replay_len": 65545,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 0,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 65545,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-65536-at-0"
+    }
+   },
+   {
+    "i": 11,
+    "t_ms": 25651.5,
+    "wall": "2026-10-02T12:30:27.253Z",
+    "kind": "sub-detach",
+    "sub": "c5-65536-at-0"
+   },
+   {
+    "i": 12,
+    "t_ms": 25651.67,
+    "wall": "2026-10-02T12:30:27.253Z",
+    "kind": "sub-attach",
+    "sub": "c5-65536-at-captured",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-65536-at-captured",
+    "cursor": 9,
+    "takeover": false
+   },
+   {
+    "i": 13,
+    "t_ms": 25652.01,
+    "wall": "2026-10-02T12:30:27.254Z",
+    "kind": "close",
+    "sub": "c5-65536-at-0",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 14,
+    "t_ms": 25663.23,
+    "wall": "2026-10-02T12:30:27.265Z",
+    "kind": "sub-attached",
+    "sub": "c5-65536-at-captured",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 9,
+    "available_offset": 9,
+    "end_offset": 65545,
+    "truncated": false,
+    "replay_len": 65536,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 9,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 65545,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-65536-at-captured"
+    }
+   },
+   {
+    "i": 15,
+    "t_ms": 25814.72,
+    "wall": "2026-10-02T12:30:27.416Z",
+    "kind": "sub-detach",
+    "sub": "c5-65536-at-captured"
+   },
+   {
+    "i": 16,
+    "t_ms": 25814.88,
+    "wall": "2026-10-02T12:30:27.417Z",
+    "kind": "sub-attach",
+    "sub": "c5-65536-tail",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-65536-tail",
+    "cursor": 65545,
+    "takeover": false
+   },
+   {
+    "i": 17,
+    "t_ms": 25815.24,
+    "wall": "2026-10-02T12:30:27.417Z",
+    "kind": "close",
+    "sub": "c5-65536-at-captured",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 18,
+    "t_ms": 25825.35,
+    "wall": "2026-10-02T12:30:27.427Z",
+    "kind": "sub-attached",
+    "sub": "c5-65536-tail",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 65545,
+    "available_offset": 65545,
+    "end_offset": 65545,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 65545,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 65545,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-65536-tail"
+    }
+   },
+   {
+    "i": 19,
+    "t_ms": 25825.65,
+    "wall": "2026-10-02T12:30:27.427Z",
+    "kind": "gate-release",
+    "fx": "c5",
+    "name": "next-65536",
+    "wall_ms": 1790944227427
+   },
+   {
+    "i": 20,
+    "t_ms": 25843.35,
+    "wall": "2026-10-02T12:30:27.445Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 65545,
+    "end": 69640,
+    "len": 4095
+   },
+   {
+    "i": 21,
+    "t_ms": 25844.3,
+    "wall": "2026-10-02T12:30:27.446Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 69640,
+    "end": 81417,
+    "len": 11777
+   },
+   {
+    "i": 22,
+    "t_ms": 25845.24,
+    "wall": "2026-10-02T12:30:27.447Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 81417,
+    "end": 93702,
+    "len": 12285
+   },
+   {
+    "i": 23,
+    "t_ms": 25845.57,
+    "wall": "2026-10-02T12:30:27.447Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 93702,
+    "end": 102783,
+    "len": 9081
+   },
+   {
+    "i": 24,
+    "t_ms": 25845.7,
+    "wall": "2026-10-02T12:30:27.447Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 102783,
+    "end": 115068,
+    "len": 12285
+   },
+   {
+    "i": 25,
+    "t_ms": 25845.9,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 115068,
+    "end": 127353,
+    "len": 12285
+   },
+   {
+    "i": 26,
+    "t_ms": 25845.91,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 127353,
+    "end": 136711,
+    "len": 9358
+   },
+   {
+    "i": 27,
+    "t_ms": 25845.91,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 136711,
+    "end": 146951,
+    "len": 10240
+   },
+   {
+    "i": 28,
+    "t_ms": 25846.59,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 146951,
+    "end": 157191,
+    "len": 10240
+   },
+   {
+    "i": 29,
+    "t_ms": 25846.6,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 157191,
+    "end": 167431,
+    "len": 10240
+   },
+   {
+    "i": 30,
+    "t_ms": 25846.61,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 167431,
+    "end": 175625,
+    "len": 8194
+   },
+   {
+    "i": 31,
+    "t_ms": 25846.61,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 175625,
+    "end": 187910,
+    "len": 12285
+   },
+   {
+    "i": 32,
+    "t_ms": 25846.62,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 187910,
+    "end": 200195,
+    "len": 12285
+   },
+   {
+    "i": 33,
+    "t_ms": 25846.73,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 200195,
+    "end": 212480,
+    "len": 12285
+   },
+   {
+    "i": 34,
+    "t_ms": 25846.73,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 212480,
+    "end": 226751,
+    "len": 14271
+   },
+   {
+    "i": 35,
+    "t_ms": 25846.74,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 226751,
+    "end": 239036,
+    "len": 12285
+   },
+   {
+    "i": 36,
+    "t_ms": 25846.74,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 239036,
+    "end": 251321,
+    "len": 12285
+   },
+   {
+    "i": 37,
+    "t_ms": 25846.75,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "output",
+    "sub": "c5-65536-tail",
+    "start": 251321,
+    "end": 262153,
+    "len": 10832
+   },
+   {
+    "i": 38,
+    "t_ms": 25846.84,
+    "wall": "2026-10-02T12:30:27.448Z",
+    "kind": "ack",
+    "fx": "c5",
+    "name": "size-262144",
+    "ack": {
+     "name": "size-262144",
+     "wall_ms": 1790944227448,
+     "mono_ns": "1251503366331",
+     "pid": 3873,
+     "oracle_len": 262153,
+     "extra": null,
+     "observed_wall_ms": 1790944227448
+    }
+   },
+   {
+    "i": 39,
+    "t_ms": 25857.17,
+    "wall": "2026-10-02T12:30:27.459Z",
+    "kind": "request",
+    "conn": "c5-list-262144",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 40,
+    "t_ms": 25867.53,
+    "wall": "2026-10-02T12:30:27.469Z",
+    "kind": "response",
+    "conn": "c5-list-262144",
+    "rtt_ms": 10.44,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 262153,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 41,
+    "t_ms": 25868.29,
+    "wall": "2026-10-02T12:30:27.470Z",
+    "kind": "sub-detach",
+    "sub": "c5-65536-tail"
+   },
+   {
+    "i": 42,
+    "t_ms": 25868.39,
+    "wall": "2026-10-02T12:30:27.470Z",
+    "kind": "sub-attach",
+    "sub": "c5-262144-at-0",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-262144-at-0",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 43,
+    "t_ms": 25868.54,
+    "wall": "2026-10-02T12:30:27.470Z",
+    "kind": "close",
+    "sub": "c5-65536-tail",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 44,
+    "t_ms": 25879.22,
+    "wall": "2026-10-02T12:30:27.481Z",
+    "kind": "sub-attached",
+    "sub": "c5-262144-at-0",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 0,
+    "available_offset": 0,
+    "end_offset": 262153,
+    "truncated": false,
+    "replay_len": 262153,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 0,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 262153,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-262144-at-0"
+    }
+   },
+   {
+    "i": 45,
+    "t_ms": 26030.68,
+    "wall": "2026-10-02T12:30:27.632Z",
+    "kind": "sub-detach",
+    "sub": "c5-262144-at-0"
+   },
+   {
+    "i": 46,
+    "t_ms": 26030.85,
+    "wall": "2026-10-02T12:30:27.632Z",
+    "kind": "sub-attach",
+    "sub": "c5-262144-at-captured",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-262144-at-captured",
+    "cursor": 65545,
+    "takeover": false
+   },
+   {
+    "i": 47,
+    "t_ms": 26031.27,
+    "wall": "2026-10-02T12:30:27.633Z",
+    "kind": "close",
+    "sub": "c5-262144-at-0",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 48,
+    "t_ms": 26041.65,
+    "wall": "2026-10-02T12:30:27.643Z",
+    "kind": "sub-attached",
+    "sub": "c5-262144-at-captured",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 65545,
+    "available_offset": 65545,
+    "end_offset": 262153,
+    "truncated": false,
+    "replay_len": 196608,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 65545,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 262153,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-262144-at-captured"
+    }
+   },
+   {
+    "i": 49,
+    "t_ms": 26192.76,
+    "wall": "2026-10-02T12:30:27.794Z",
+    "kind": "sub-detach",
+    "sub": "c5-262144-at-captured"
+   },
+   {
+    "i": 50,
+    "t_ms": 26192.93,
+    "wall": "2026-10-02T12:30:27.795Z",
+    "kind": "sub-attach",
+    "sub": "c5-262144-tail",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-262144-tail",
+    "cursor": 262153,
+    "takeover": false
+   },
+   {
+    "i": 51,
+    "t_ms": 26193.34,
+    "wall": "2026-10-02T12:30:27.795Z",
+    "kind": "close",
+    "sub": "c5-262144-at-captured",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 52,
+    "t_ms": 26201.65,
+    "wall": "2026-10-02T12:30:27.803Z",
+    "kind": "sub-attached",
+    "sub": "c5-262144-tail",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 262153,
+    "available_offset": 262153,
+    "end_offset": 262153,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 262153,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 262153,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-262144-tail"
+    }
+   },
+   {
+    "i": 53,
+    "t_ms": 26201.89,
+    "wall": "2026-10-02T12:30:27.804Z",
+    "kind": "gate-release",
+    "fx": "c5",
+    "name": "next-262144",
+    "wall_ms": 1790944227804
+   },
+   {
+    "i": 54,
+    "t_ms": 26215.34,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 262153,
+    "end": 274438,
+    "len": 12285
+   },
+   {
+    "i": 55,
+    "t_ms": 26215.37,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 274438,
+    "end": 286723,
+    "len": 12285
+   },
+   {
+    "i": 56,
+    "t_ms": 26215.38,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 286723,
+    "end": 299008,
+    "len": 12285
+   },
+   {
+    "i": 57,
+    "t_ms": 26215.38,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 299008,
+    "end": 311293,
+    "len": 12285
+   },
+   {
+    "i": 58,
+    "t_ms": 26215.39,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 311293,
+    "end": 323578,
+    "len": 12285
+   },
+   {
+    "i": 59,
+    "t_ms": 26215.49,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 323578,
+    "end": 335863,
+    "len": 12285
+   },
+   {
+    "i": 60,
+    "t_ms": 26215.5,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 335863,
+    "end": 348148,
+    "len": 12285
+   },
+   {
+    "i": 61,
+    "t_ms": 26215.83,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 348148,
+    "end": 360433,
+    "len": 12285
+   },
+   {
+    "i": 62,
+    "t_ms": 26215.84,
+    "wall": "2026-10-02T12:30:27.817Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 360433,
+    "end": 372718,
+    "len": 12285
+   },
+   {
+    "i": 63,
+    "t_ms": 26215.97,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 372718,
+    "end": 385003,
+    "len": 12285
+   },
+   {
+    "i": 64,
+    "t_ms": 26216,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 385003,
+    "end": 397288,
+    "len": 12285
+   },
+   {
+    "i": 65,
+    "t_ms": 26216.03,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 397288,
+    "end": 409573,
+    "len": 12285
+   },
+   {
+    "i": 66,
+    "t_ms": 26216.21,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 409573,
+    "end": 421858,
+    "len": 12285
+   },
+   {
+    "i": 67,
+    "t_ms": 26216.22,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 421858,
+    "end": 434143,
+    "len": 12285
+   },
+   {
+    "i": 68,
+    "t_ms": 26216.41,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 434143,
+    "end": 443455,
+    "len": 9312
+   },
+   {
+    "i": 69,
+    "t_ms": 26216.42,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 443455,
+    "end": 455740,
+    "len": 12285
+   },
+   {
+    "i": 70,
+    "t_ms": 26216.62,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 455740,
+    "end": 468025,
+    "len": 12285
+   },
+   {
+    "i": 71,
+    "t_ms": 26216.71,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 468025,
+    "end": 484407,
+    "len": 16382
+   },
+   {
+    "i": 72,
+    "t_ms": 26216.73,
+    "wall": "2026-10-02T12:30:27.818Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 484407,
+    "end": 495111,
+    "len": 10704
+   },
+   {
+    "i": 73,
+    "t_ms": 26217.01,
+    "wall": "2026-10-02T12:30:27.819Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 495111,
+    "end": 507396,
+    "len": 12285
+   },
+   {
+    "i": 74,
+    "t_ms": 26217.24,
+    "wall": "2026-10-02T12:30:27.819Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 507396,
+    "end": 519681,
+    "len": 12285
+   },
+   {
+    "i": 75,
+    "t_ms": 26218.45,
+    "wall": "2026-10-02T12:30:27.820Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 519681,
+    "end": 524297,
+    "len": 4616
+   },
+   {
+    "i": 76,
+    "t_ms": 26223.86,
+    "wall": "2026-10-02T12:30:27.825Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 524297,
+    "end": 536073,
+    "len": 11776
+   },
+   {
+    "i": 77,
+    "t_ms": 26223.95,
+    "wall": "2026-10-02T12:30:27.826Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 536073,
+    "end": 546815,
+    "len": 10742
+   },
+   {
+    "i": 78,
+    "t_ms": 26224.29,
+    "wall": "2026-10-02T12:30:27.826Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 546815,
+    "end": 559100,
+    "len": 12285
+   },
+   {
+    "i": 79,
+    "t_ms": 26224.6,
+    "wall": "2026-10-02T12:30:27.826Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 559100,
+    "end": 575482,
+    "len": 16382
+   },
+   {
+    "i": 80,
+    "t_ms": 26224.73,
+    "wall": "2026-10-02T12:30:27.826Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 575482,
+    "end": 583869,
+    "len": 8387
+   },
+   {
+    "i": 81,
+    "t_ms": 26224.74,
+    "wall": "2026-10-02T12:30:27.826Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 583869,
+    "end": 595263,
+    "len": 11394
+   },
+   {
+    "i": 82,
+    "t_ms": 26225.27,
+    "wall": "2026-10-02T12:30:27.827Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 595263,
+    "end": 607548,
+    "len": 12285
+   },
+   {
+    "i": 83,
+    "t_ms": 26225.56,
+    "wall": "2026-10-02T12:30:27.827Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 607548,
+    "end": 619833,
+    "len": 12285
+   },
+   {
+    "i": 84,
+    "t_ms": 26225.74,
+    "wall": "2026-10-02T12:30:27.827Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 619833,
+    "end": 632118,
+    "len": 12285
+   },
+   {
+    "i": 85,
+    "t_ms": 26225.75,
+    "wall": "2026-10-02T12:30:27.827Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 632118,
+    "end": 641012,
+    "len": 8894
+   },
+   {
+    "i": 86,
+    "t_ms": 26225.93,
+    "wall": "2026-10-02T12:30:27.828Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 641012,
+    "end": 649224,
+    "len": 8212
+   },
+   {
+    "i": 87,
+    "t_ms": 26226.94,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 649224,
+    "end": 657417,
+    "len": 8193
+   },
+   {
+    "i": 88,
+    "t_ms": 26226.96,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 657417,
+    "end": 666567,
+    "len": 9150
+   },
+   {
+    "i": 89,
+    "t_ms": 26226.97,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 666567,
+    "end": 675205,
+    "len": 8638
+   },
+   {
+    "i": 90,
+    "t_ms": 26226.97,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 675205,
+    "end": 683529,
+    "len": 8324
+   },
+   {
+    "i": 91,
+    "t_ms": 26226.97,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 683529,
+    "end": 692606,
+    "len": 9077
+   },
+   {
+    "i": 92,
+    "t_ms": 26226.99,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 692606,
+    "end": 704891,
+    "len": 12285
+   },
+   {
+    "i": 93,
+    "t_ms": 26227.23,
+    "wall": "2026-10-02T12:30:27.829Z",
+    "kind": "output",
+    "sub": "c5-262144-tail",
+    "start": 704891,
+    "end": 717176,
+    "len": 12285
+   },
+   {
+    "i": 94,
+    "t_ms": 26244.22,
+    "wall": "2026-10-02T12:30:27.846Z",
+    "kind": "ack",
+    "fx": "c5",
+    "name": "size-1048576",
+    "ack": {
+     "name": "size-1048576",
+     "wall_ms": 1790944227838,
+     "mono_ns": "1251893533675",
+     "pid": 3873,
+     "oracle_len": 1048585,
+     "extra": null,
+     "observed_wall_ms": 1790944227846
+    }
+   },
+   {
+    "i": 95,
+    "t_ms": 26253.67,
+    "wall": "2026-10-02T12:30:27.855Z",
+    "kind": "request",
+    "conn": "c5-list-1048576",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 96,
+    "t_ms": 26263.7,
+    "wall": "2026-10-02T12:30:27.865Z",
+    "kind": "response",
+    "conn": "c5-list-1048576",
+    "rtt_ms": 10.12,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 1048585,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 97,
+    "t_ms": 26266.07,
+    "wall": "2026-10-02T12:30:27.868Z",
+    "kind": "sub-detach",
+    "sub": "c5-262144-tail"
+   },
+   {
+    "i": 98,
+    "t_ms": 26266.25,
+    "wall": "2026-10-02T12:30:27.868Z",
+    "kind": "sub-attach",
+    "sub": "c5-1048576-at-0",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-1048576-at-0",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 99,
+    "t_ms": 26266.46,
+    "wall": "2026-10-02T12:30:27.868Z",
+    "kind": "close",
+    "sub": "c5-262144-tail",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 100,
+    "t_ms": 26282.73,
+    "wall": "2026-10-02T12:30:27.884Z",
+    "kind": "sub-attached",
+    "sub": "c5-1048576-at-0",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 0,
+    "available_offset": 0,
+    "end_offset": 1048585,
+    "truncated": false,
+    "replay_len": 1048585,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 0,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 1048585,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-1048576-at-0"
+    }
+   },
+   {
+    "i": 101,
+    "t_ms": 26436.39,
+    "wall": "2026-10-02T12:30:28.038Z",
+    "kind": "sub-detach",
+    "sub": "c5-1048576-at-0"
+   },
+   {
+    "i": 102,
+    "t_ms": 26436.62,
+    "wall": "2026-10-02T12:30:28.038Z",
+    "kind": "sub-attach",
+    "sub": "c5-1048576-at-captured",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-1048576-at-captured",
+    "cursor": 262153,
+    "takeover": false
+   },
+   {
+    "i": 103,
+    "t_ms": 26437.17,
+    "wall": "2026-10-02T12:30:28.039Z",
+    "kind": "close",
+    "sub": "c5-1048576-at-0",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 104,
+    "t_ms": 26450.65,
+    "wall": "2026-10-02T12:30:28.052Z",
+    "kind": "sub-attached",
+    "sub": "c5-1048576-at-captured",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 262153,
+    "available_offset": 262153,
+    "end_offset": 1048585,
+    "truncated": false,
+    "replay_len": 786432,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 262153,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 1048585,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-1048576-at-captured"
+    }
+   },
+   {
+    "i": 105,
+    "t_ms": 26602.82,
+    "wall": "2026-10-02T12:30:28.204Z",
+    "kind": "sub-detach",
+    "sub": "c5-1048576-at-captured"
+   },
+   {
+    "i": 106,
+    "t_ms": 26603,
+    "wall": "2026-10-02T12:30:28.205Z",
+    "kind": "sub-attach",
+    "sub": "c5-1048576-tail",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-1048576-tail",
+    "cursor": 1048585,
+    "takeover": false
+   },
+   {
+    "i": 107,
+    "t_ms": 26603.39,
+    "wall": "2026-10-02T12:30:28.205Z",
+    "kind": "close",
+    "sub": "c5-1048576-at-captured",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 108,
+    "t_ms": 26607.17,
+    "wall": "2026-10-02T12:30:28.209Z",
+    "kind": "sub-attached",
+    "sub": "c5-1048576-tail",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 1048585,
+    "available_offset": 1048585,
+    "end_offset": 1048585,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 1048585,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 1048585,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-1048576-tail"
+    }
+   },
+   {
+    "i": 109,
+    "t_ms": 26607.6,
+    "wall": "2026-10-02T12:30:28.209Z",
+    "kind": "gate-release",
+    "fx": "c5",
+    "name": "next-1048576",
+    "wall_ms": 1790944228209
+   },
+   {
+    "i": 110,
+    "t_ms": 26623.25,
+    "wall": "2026-10-02T12:30:28.225Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1048585,
+    "end": 1062534,
+    "len": 13949
+   },
+   {
+    "i": 111,
+    "t_ms": 26623.28,
+    "wall": "2026-10-02T12:30:28.225Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1062534,
+    "end": 1074819,
+    "len": 12285
+   },
+   {
+    "i": 112,
+    "t_ms": 26623.35,
+    "wall": "2026-10-02T12:30:28.225Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1074819,
+    "end": 1084481,
+    "len": 9662
+   },
+   {
+    "i": 113,
+    "t_ms": 26623.36,
+    "wall": "2026-10-02T12:30:28.225Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1084481,
+    "end": 1096766,
+    "len": 12285
+   },
+   {
+    "i": 114,
+    "t_ms": 26623.43,
+    "wall": "2026-10-02T12:30:28.225Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1096766,
+    "end": 1107975,
+    "len": 11209
+   },
+   {
+    "i": 115,
+    "t_ms": 26623.87,
+    "wall": "2026-10-02T12:30:28.225Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1107975,
+    "end": 1120260,
+    "len": 12285
+   },
+   {
+    "i": 116,
+    "t_ms": 26624.16,
+    "wall": "2026-10-02T12:30:28.226Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1120260,
+    "end": 1132545,
+    "len": 12285
+   },
+   {
+    "i": 117,
+    "t_ms": 26624.31,
+    "wall": "2026-10-02T12:30:28.226Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1132545,
+    "end": 1144830,
+    "len": 12285
+   },
+   {
+    "i": 118,
+    "t_ms": 26624.32,
+    "wall": "2026-10-02T12:30:28.226Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1144830,
+    "end": 1157115,
+    "len": 12285
+   },
+   {
+    "i": 119,
+    "t_ms": 26624.51,
+    "wall": "2026-10-02T12:30:28.226Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1157115,
+    "end": 1169400,
+    "len": 12285
+   },
+   {
+    "i": 120,
+    "t_ms": 26624.53,
+    "wall": "2026-10-02T12:30:28.226Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1169400,
+    "end": 1181685,
+    "len": 12285
+   },
+   {
+    "i": 121,
+    "t_ms": 26624.66,
+    "wall": "2026-10-02T12:30:28.226Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1181685,
+    "end": 1193970,
+    "len": 12285
+   },
+   {
+    "i": 122,
+    "t_ms": 26624.92,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1193970,
+    "end": 1206255,
+    "len": 12285
+   },
+   {
+    "i": 123,
+    "t_ms": 26625.02,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1206255,
+    "end": 1218055,
+    "len": 11800
+   },
+   {
+    "i": 124,
+    "t_ms": 26625.03,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1218055,
+    "end": 1228296,
+    "len": 10241
+   },
+   {
+    "i": 125,
+    "t_ms": 26625.11,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1228296,
+    "end": 1244678,
+    "len": 16382
+   },
+   {
+    "i": 126,
+    "t_ms": 26625.48,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1244678,
+    "end": 1252870,
+    "len": 8192
+   },
+   {
+    "i": 127,
+    "t_ms": 26625.5,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1252870,
+    "end": 1265155,
+    "len": 12285
+   },
+   {
+    "i": 128,
+    "t_ms": 26625.5,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1265155,
+    "end": 1278655,
+    "len": 13500
+   },
+   {
+    "i": 129,
+    "t_ms": 26625.51,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1278655,
+    "end": 1290940,
+    "len": 12285
+   },
+   {
+    "i": 130,
+    "t_ms": 26625.79,
+    "wall": "2026-10-02T12:30:28.227Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1290940,
+    "end": 1303225,
+    "len": 12285
+   },
+   {
+    "i": 131,
+    "t_ms": 26627.22,
+    "wall": "2026-10-02T12:30:28.229Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1303225,
+    "end": 1310729,
+    "len": 7504
+   },
+   {
+    "i": 132,
+    "t_ms": 26634.82,
+    "wall": "2026-10-02T12:30:28.236Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1310729,
+    "end": 1323014,
+    "len": 12285
+   },
+   {
+    "i": 133,
+    "t_ms": 26634.92,
+    "wall": "2026-10-02T12:30:28.237Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1323014,
+    "end": 1335299,
+    "len": 12285
+   },
+   {
+    "i": 134,
+    "t_ms": 26634.92,
+    "wall": "2026-10-02T12:30:28.237Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1335299,
+    "end": 1347584,
+    "len": 12285
+   },
+   {
+    "i": 135,
+    "t_ms": 26635.46,
+    "wall": "2026-10-02T12:30:28.237Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1347584,
+    "end": 1358399,
+    "len": 10815
+   },
+   {
+    "i": 136,
+    "t_ms": 26635.47,
+    "wall": "2026-10-02T12:30:28.237Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1358399,
+    "end": 1370622,
+    "len": 12223
+   },
+   {
+    "i": 137,
+    "t_ms": 26635.48,
+    "wall": "2026-10-02T12:30:28.237Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1370622,
+    "end": 1385791,
+    "len": 15169
+   },
+   {
+    "i": 138,
+    "t_ms": 26635.48,
+    "wall": "2026-10-02T12:30:28.237Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1385791,
+    "end": 1394685,
+    "len": 8894
+   },
+   {
+    "i": 139,
+    "t_ms": 26636.44,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1394685,
+    "end": 1406970,
+    "len": 12285
+   },
+   {
+    "i": 140,
+    "t_ms": 26636.46,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1406970,
+    "end": 1419255,
+    "len": 12285
+   },
+   {
+    "i": 141,
+    "t_ms": 26636.46,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1419255,
+    "end": 1431540,
+    "len": 12285
+   },
+   {
+    "i": 142,
+    "t_ms": 26636.47,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1431540,
+    "end": 1443825,
+    "len": 12285
+   },
+   {
+    "i": 143,
+    "t_ms": 26636.47,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1443825,
+    "end": 1456110,
+    "len": 12285
+   },
+   {
+    "i": 144,
+    "t_ms": 26636.59,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1456110,
+    "end": 1468395,
+    "len": 12285
+   },
+   {
+    "i": 145,
+    "t_ms": 26636.59,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1468395,
+    "end": 1480680,
+    "len": 12285
+   },
+   {
+    "i": 146,
+    "t_ms": 26636.61,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1480680,
+    "end": 1491966,
+    "len": 11286
+   },
+   {
+    "i": 147,
+    "t_ms": 26636.61,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1491966,
+    "end": 1504251,
+    "len": 12285
+   },
+   {
+    "i": 148,
+    "t_ms": 26636.61,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1504251,
+    "end": 1512443,
+    "len": 8192
+   },
+   {
+    "i": 149,
+    "t_ms": 26636.62,
+    "wall": "2026-10-02T12:30:28.238Z",
+    "kind": "output",
+    "sub": "c5-1048576-tail",
+    "start": 1512443,
+    "end": 1521161,
+    "len": 8718
+   },
+   {
+    "i": 150,
+    "t_ms": 26741.19,
+    "wall": "2026-10-02T12:30:28.343Z",
+    "kind": "ack",
+    "fx": "c5",
+    "name": "size-4194304",
+    "ack": {
+     "name": "size-4194304",
+     "wall_ms": 1790944228337,
+     "mono_ns": "1252392337103",
+     "pid": 3873,
+     "oracle_len": 4194313,
+     "extra": null,
+     "observed_wall_ms": 1790944228343
+    }
+   },
+   {
+    "i": 151,
+    "t_ms": 26751.18,
+    "wall": "2026-10-02T12:30:28.353Z",
+    "kind": "request",
+    "conn": "c5-list-4194304",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 152,
+    "t_ms": 26760.88,
+    "wall": "2026-10-02T12:30:28.363Z",
+    "kind": "response",
+    "conn": "c5-list-4194304",
+    "rtt_ms": 9.9,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 8684591256061254,
+       "pid": 3873,
+       "fg": "node",
+       "group": "ldv199-c5-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 2097161,
+       "tail": 4194313,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 153,
+    "t_ms": 26769.85,
+    "wall": "2026-10-02T12:30:28.371Z",
+    "kind": "sub-detach",
+    "sub": "c5-1048576-tail"
+   },
+   {
+    "i": 154,
+    "t_ms": 26770.01,
+    "wall": "2026-10-02T12:30:28.372Z",
+    "kind": "sub-attach",
+    "sub": "c5-4194304-at-0",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-4194304-at-0",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 155,
+    "t_ms": 26770.23,
+    "wall": "2026-10-02T12:30:28.372Z",
+    "kind": "close",
+    "sub": "c5-1048576-tail",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 156,
+    "t_ms": 26804.02,
+    "wall": "2026-10-02T12:30:28.406Z",
+    "kind": "sub-attached",
+    "sub": "c5-4194304-at-0",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 0,
+    "available_offset": 2097161,
+    "end_offset": 4194313,
+    "truncated": true,
+    "replay_len": 2097152,
+    "replay_start_basis": "available_offset",
+    "replay_start": 2097161,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 2097161,
+     "tail": 4194313,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-4194304-at-0"
+    }
+   },
+   {
+    "i": 157,
+    "t_ms": 26960.68,
+    "wall": "2026-10-02T12:30:28.562Z",
+    "kind": "sub-detach",
+    "sub": "c5-4194304-at-0"
+   },
+   {
+    "i": 158,
+    "t_ms": 26960.87,
+    "wall": "2026-10-02T12:30:28.562Z",
+    "kind": "sub-attach",
+    "sub": "c5-4194304-at-captured",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-4194304-at-captured",
+    "cursor": 1048585,
+    "takeover": false
+   },
+   {
+    "i": 159,
+    "t_ms": 26961.32,
+    "wall": "2026-10-02T12:30:28.563Z",
+    "kind": "close",
+    "sub": "c5-4194304-at-0",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 160,
+    "t_ms": 26979.75,
+    "wall": "2026-10-02T12:30:28.581Z",
+    "kind": "sub-attached",
+    "sub": "c5-4194304-at-captured",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 1048585,
+    "available_offset": 2097161,
+    "end_offset": 4194313,
+    "truncated": true,
+    "replay_len": 2097152,
+    "replay_start_basis": "available_offset",
+    "replay_start": 2097161,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 2097161,
+     "tail": 4194313,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-4194304-at-captured"
+    }
+   },
+   {
+    "i": 161,
+    "t_ms": 27135.94,
+    "wall": "2026-10-02T12:30:28.738Z",
+    "kind": "sub-detach",
+    "sub": "c5-4194304-at-captured"
+   },
+   {
+    "i": 162,
+    "t_ms": 27136.11,
+    "wall": "2026-10-02T12:30:28.738Z",
+    "kind": "sub-attach",
+    "sub": "c5-4194304-at-head",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-4194304-at-head",
+    "cursor": 2097161,
+    "takeover": false
+   },
+   {
+    "i": 163,
+    "t_ms": 27136.51,
+    "wall": "2026-10-02T12:30:28.738Z",
+    "kind": "close",
+    "sub": "c5-4194304-at-captured",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 164,
+    "t_ms": 27168.99,
+    "wall": "2026-10-02T12:30:28.771Z",
+    "kind": "sub-attached",
+    "sub": "c5-4194304-at-head",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 2097161,
+    "available_offset": 2097161,
+    "end_offset": 4194313,
+    "truncated": false,
+    "replay_len": 2097152,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 2097161,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 2097161,
+     "tail": 4194313,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-4194304-at-head"
+    }
+   },
+   {
+    "i": 165,
+    "t_ms": 27324.99,
+    "wall": "2026-10-02T12:30:28.927Z",
+    "kind": "sub-detach",
+    "sub": "c5-4194304-at-head"
+   },
+   {
+    "i": 166,
+    "t_ms": 27325.28,
+    "wall": "2026-10-02T12:30:28.927Z",
+    "kind": "sub-attach",
+    "sub": "c5-4194304-tail",
+    "fx": "c5",
+    "role": "observer",
+    "attachmentID": "c5-4194304-tail",
+    "cursor": 4194313,
+    "takeover": false
+   },
+   {
+    "i": 167,
+    "t_ms": 27325.74,
+    "wall": "2026-10-02T12:30:28.927Z",
+    "kind": "close",
+    "sub": "c5-4194304-at-head",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 168,
+    "t_ms": 27330.27,
+    "wall": "2026-10-02T12:30:28.932Z",
+    "kind": "sub-attached",
+    "sub": "c5-4194304-tail",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 4194313,
+    "available_offset": 4194313,
+    "end_offset": 4194313,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 4194313,
+    "terminal": {
+     "id": 8684591256061254,
+     "pid": 3873,
+     "fg": "node",
+     "group": "ldv199-c5-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 2097161,
+     "tail": 4194313,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 8684591256061254,
+     "group_id": "ldv199-c5-3623",
+     "socket": "c5-4194304-tail"
+    }
+   },
+   {
+    "i": 169,
+    "t_ms": 27330.36,
+    "wall": "2026-10-02T12:30:28.932Z",
+    "kind": "sub-detach",
+    "sub": "c5-4194304-tail"
+   },
+   {
+    "i": 170,
+    "t_ms": 27330.65,
+    "wall": "2026-10-02T12:30:28.932Z",
+    "kind": "close",
+    "sub": "c5-4194304-tail",
+    "hadError": false,
+    "local": true
+   },
+   {
+    "i": 171,
+    "t_ms": 27330.71,
+    "wall": "2026-10-02T12:30:28.932Z",
+    "kind": "request",
+    "conn": "c5-terminate",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 8684591256061254
+    }
+   },
+   {
+    "i": 172,
+    "t_ms": 27346.02,
+    "wall": "2026-10-02T12:30:28.948Z",
+    "kind": "response",
+    "conn": "c5-terminate",
+    "rtt_ms": 15.46,
+    "response": {
+     "type": "ok"
+    }
+   }
+  ]
+ }
+}

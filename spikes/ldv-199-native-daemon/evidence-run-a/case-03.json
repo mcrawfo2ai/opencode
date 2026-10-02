@@ -1,0 +1,2537 @@
+{
+ "id": 3,
+ "run_status": "completed",
+ "duration_ms": 1644,
+ "result": {
+  "id": 3,
+  "title": "explicit identity A1/A2 (groupA) + B1 (groupB)",
+  "ptys": [
+   {
+    "name": "c3-A1",
+    "ptyId": 2639029440201642,
+    "group": "ldv199-groupA-3623",
+    "pid": 3743,
+    "origin": 12
+   },
+   {
+    "name": "c3-A2",
+    "ptyId": 3428073321731357,
+    "group": "ldv199-groupA-3623",
+    "pid": 3762,
+    "origin": 12
+   },
+   {
+    "name": "c3-B1",
+    "ptyId": 1833934824403201,
+    "group": "ldv199-groupB-3623",
+    "pid": 3781,
+    "origin": 12
+   }
+  ],
+  "arbitration": {
+   "A2": {
+    "first": [
+     {
+      "t": 22380.238716,
+      "type": "controller_changed",
+      "attachment_id": "c3-sA2",
+      "generation": 1
+     },
+     {
+      "t": 22400.814087,
+      "type": "controller_changed",
+      "attachment_id": "c3-sA2-takeover",
+      "generation": 2
+     },
+     {
+      "t": 23417.487592,
+      "type": "exited",
+      "exit_code": 0,
+      "final_offset": 46
+     }
+    ],
+    "takeover": {
+     "type": "attached",
+     "role": "controller",
+     "generation": 2,
+     "requested_offset": 12,
+     "available_offset": 12,
+     "end_offset": 12,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 12,
+     "terminal": {
+      "id": 3428073321731357,
+      "pid": 3762,
+      "fg": "node",
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 12,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 3428073321731357,
+      "group_id": "ldv199-groupA-3623",
+      "socket": "c3-sA2-takeover"
+     }
+    }
+   },
+   "controlA1": {
+    "type": "ok"
+   }
+  },
+  "A1start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944224318,
+    "mono_ns": "1248373588233",
+    "pid": 3743,
+    "oracle_len": 24,
+    "extra": null,
+    "observed_wall_ms": 1790944224324
+   },
+   "expectedTail": 24,
+   "wait": {
+    "tail": 24
+   }
+  },
+  "B1start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944224332,
+    "mono_ns": "1248387316242",
+    "pid": 3781,
+    "oracle_len": 24,
+    "extra": null,
+    "observed_wall_ms": 1790944224342
+   },
+   "expectedTail": 24,
+   "wait": {
+    "tail": 24
+   }
+  },
+  "A2gatedWindow": {
+   "witness": {
+    "A1_started": true,
+    "B1_started": true
+   },
+   "A2_started_ack": false,
+   "A2_sub_maxEnd_before": 12,
+   "after": 12,
+   "A2_takeover_maxEnd": 12
+  },
+  "A1mid": {
+   "ok": true,
+   "ack": {
+    "name": "mid-emitted",
+    "wall_ms": 1790944224861,
+    "mono_ns": "1248916619754",
+    "pid": 3743,
+    "oracle_len": 34,
+    "extra": null,
+    "observed_wall_ms": 1790944224862
+   },
+   "expectedTail": 34,
+   "wait": {
+    "tail": 34
+   },
+   "running": true
+  },
+  "B1mid": {
+   "ok": true,
+   "ack": {
+    "name": "mid-emitted",
+    "wall_ms": 1790944224885,
+    "mono_ns": "1248939993205",
+    "pid": 3781,
+    "oracle_len": 34,
+    "extra": null,
+    "observed_wall_ms": 1790944224888
+   },
+   "expectedTail": 34,
+   "wait": {
+    "tail": 34
+   },
+   "running": true
+  },
+  "A1exit": {
+   "exitAck": {
+    "name": "exit-stage",
+    "wall_ms": 1790944224913,
+    "mono_ns": "1248968396912",
+    "pid": 3743,
+    "oracle_len": 46,
+    "extra": {
+     "code": 0
+    },
+    "observed_wall_ms": 1790944224920
+   },
+   "releasedAt": 1790944224909,
+   "proc": {
+    "state": "gone",
+    "timedOut": false,
+    "after_exit_stage_ms": 6
+   },
+   "listExited": {
+    "wall_ms": 1790944224929,
+    "terminal": {
+     "id": 2639029440201642,
+     "pid": 3743,
+     "fg": null,
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 46,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 16
+   },
+   "subs": {
+    "c3-sA1": {
+     "exit": {
+      "exit_code_raw": 0,
+      "final_offset": 46,
+      "t": 23316.214106,
+      "wall": 1790944224918
+     },
+     "exitAfterStageMs": 5,
+     "eof": {
+      "t": 23316.398355,
+      "wall": 1790944224918,
+      "afterExit": true
+     },
+     "eofAfterExit": 0,
+     "timedOutExit": false,
+     "timedOutEof": false
+    }
+   }
+  },
+  "B1exit": {
+   "exitAck": {
+    "name": "exit-stage",
+    "wall_ms": 1790944224936,
+    "mono_ns": "1248991477230",
+    "pid": 3781,
+    "oracle_len": 46,
+    "extra": {
+     "code": 0
+    },
+    "observed_wall_ms": 1790944224939
+   },
+   "releasedAt": 1790944224929,
+   "proc": {
+    "state": "zombie",
+    "timedOut": false,
+    "after_exit_stage_ms": 3
+   },
+   "listExited": {
+    "wall_ms": 1790944224948,
+    "terminal": {
+     "id": 1833934824403201,
+     "pid": 3781,
+     "fg": null,
+     "group": "ldv199-groupB-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 46,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 12
+   },
+   "subs": {
+    "c3-sB1": {
+     "exit": {
+      "exit_code_raw": 0,
+      "final_offset": 46,
+      "t": 23338.449453,
+      "wall": 1790944224940
+     },
+     "exitAfterStageMs": 4,
+     "eof": {
+      "t": 23338.599857,
+      "wall": 1790944224940,
+      "afterExit": true
+     },
+     "eofAfterExit": 0,
+     "timedOutExit": false,
+     "timedOutEof": false
+    }
+   }
+  },
+  "A2_after_A1B1_exit": {
+   "lifecycle": {
+    "status": "running"
+   },
+   "procA2": "alive:S"
+  },
+  "A2start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944224963,
+    "mono_ns": "1249018042558",
+    "pid": 3762,
+    "oracle_len": 24,
+    "extra": null,
+    "observed_wall_ms": 1790944224969
+   },
+   "expectedTail": 24,
+   "wait": {
+    "tail": 24
+   }
+  },
+  "A2mid": {
+   "ok": true,
+   "ack": {
+    "name": "mid-emitted",
+    "wall_ms": 1790944224984,
+    "mono_ns": "1249039044081",
+    "pid": 3762,
+    "oracle_len": 34,
+    "extra": null,
+    "observed_wall_ms": 1790944224989
+   },
+   "expectedTail": 34,
+   "wait": {
+    "tail": 34
+   },
+   "running": true
+  },
+  "A2exit": {
+   "exitAck": {
+    "name": "exit-stage",
+    "wall_ms": 1790944225015,
+    "mono_ns": "1249070194958",
+    "pid": 3762,
+    "oracle_len": 46,
+    "extra": {
+     "code": 0
+    },
+    "observed_wall_ms": 1790944225019
+   },
+   "releasedAt": 1790944225009,
+   "proc": {
+    "state": "gone",
+    "timedOut": false,
+    "after_exit_stage_ms": 4
+   },
+   "listExited": {
+    "wall_ms": 1790944225028,
+    "terminal": {
+     "id": 3428073321731357,
+     "pid": 3762,
+     "fg": null,
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 46,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 13
+   },
+   "subs": {
+    "c3-sA2": {
+     "exit": {
+      "exit_code_raw": 0,
+      "final_offset": 46,
+      "t": 23417.487592,
+      "wall": 1790944225019
+     },
+     "exitAfterStageMs": 4,
+     "eof": {
+      "t": 23417.968193,
+      "wall": 1790944225020,
+      "afterExit": true
+     },
+     "eofAfterExit": 1,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "c3-sA2-takeover": {
+     "exit": {
+      "exit_code_raw": 0,
+      "final_offset": 46,
+      "t": 23417.625038,
+      "wall": 1790944225019
+     },
+     "exitAfterStageMs": 4,
+     "eof": {
+      "t": 23418.030533,
+      "wall": 1790944225020,
+      "afterExit": true
+     },
+     "eofAfterExit": 1,
+     "timedOutExit": false,
+     "timedOutEof": false
+    }
+   }
+  },
+  "identityViolations": [],
+  "identityFramesChecked": 12,
+  "subs": {
+   "c3-sA1": {
+    "label": "c3-sA1",
+    "role_requested": "controller",
+    "attachmentID": "c3-sA1",
+    "requestedCursor": 12,
+    "attach": {
+     "type": "attached",
+     "role": "controller",
+     "generation": 1,
+     "requested_offset": 12,
+     "available_offset": 12,
+     "end_offset": 12,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 12,
+     "terminal": {
+      "id": 2639029440201642,
+      "pid": 3743,
+      "fg": "node",
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 12,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 2639029440201642,
+      "group_id": "ldv199-groupA-3623",
+      "socket": "c3-sA1"
+     }
+    },
+    "frames": 3,
+    "liveBytes": 34,
+    "maxEnd": 46,
+    "exit": {
+     "exit_code_raw": 0,
+     "final_offset": 46,
+     "t": 23316.214106,
+     "wall": 1790944224918
+    },
+    "eof": {
+     "t": 23316.398355,
+     "wall": 1790944224918,
+     "afterExit": true
+    },
+    "close": {
+     "t": 23316.54657,
+     "wall": 1790944224918,
+     "hadError": false,
+     "local": false
+    },
+    "errors": [],
+    "problems": [],
+    "events": [
+     {
+      "t": 22370.51701,
+      "type": "controller_changed",
+      "attachment_id": "c3-sA1",
+      "generation": 1
+     },
+     {
+      "t": 23316.214106,
+      "type": "exited",
+      "exit_code": 0,
+      "final_offset": 46
+     }
+    ],
+    "rawIntervalsCount": 3,
+    "rawIntervals": [
+     [
+      12,
+      24
+     ],
+     [
+      24,
+      34
+     ],
+     [
+      34,
+      46
+     ]
+    ],
+    "detachedLocally": false,
+    "framesAfterLocalDetach": 0,
+    "compare": {
+     "intervals": 3,
+     "comparedBytes": 34,
+     "preOriginBytes": 0,
+     "beyondOracleBytes": 0,
+     "boundsProblems": [],
+     "firstDifference": null,
+     "nativeSha256": "b74b973564dd5699e739c7fa8478c6cb72f7e7357a789b8b07bf0a05788103a1",
+     "oracleSha256": "b74b973564dd5699e739c7fa8478c6cb72f7e7357a789b8b07bf0a05788103a1",
+     "ok": true,
+     "coverage": {
+      "from": 12,
+      "to": 46,
+      "holes": [],
+      "overlaps": [],
+      "covered": true
+     },
+     "replayStartBasis": "requested_offset",
+     "preOriginVerified": null
+    },
+    "foreignMarkersSeen": []
+   },
+   "c3-sA2": {
+    "label": "c3-sA2",
+    "role_requested": "controller",
+    "attachmentID": "c3-sA2",
+    "requestedCursor": 12,
+    "attach": {
+     "type": "attached",
+     "role": "controller",
+     "generation": 1,
+     "requested_offset": 12,
+     "available_offset": 12,
+     "end_offset": 12,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 12,
+     "terminal": {
+      "id": 3428073321731357,
+      "pid": 3762,
+      "fg": "node",
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 12,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 3428073321731357,
+      "group_id": "ldv199-groupA-3623",
+      "socket": "c3-sA2"
+     }
+    },
+    "frames": 3,
+    "liveBytes": 34,
+    "maxEnd": 46,
+    "exit": {
+     "exit_code_raw": 0,
+     "final_offset": 46,
+     "t": 23417.487592,
+     "wall": 1790944225019
+    },
+    "eof": {
+     "t": 23417.968193,
+     "wall": 1790944225020,
+     "afterExit": true
+    },
+    "close": {
+     "t": 23418.577353,
+     "wall": 1790944225020,
+     "hadError": false,
+     "local": false
+    },
+    "errors": [],
+    "problems": [],
+    "events": [
+     {
+      "t": 22380.238716,
+      "type": "controller_changed",
+      "attachment_id": "c3-sA2",
+      "generation": 1
+     },
+     {
+      "t": 22400.814087,
+      "type": "controller_changed",
+      "attachment_id": "c3-sA2-takeover",
+      "generation": 2
+     },
+     {
+      "t": 23417.487592,
+      "type": "exited",
+      "exit_code": 0,
+      "final_offset": 46
+     }
+    ],
+    "rawIntervalsCount": 3,
+    "rawIntervals": [
+     [
+      12,
+      24
+     ],
+     [
+      24,
+      34
+     ],
+     [
+      34,
+      46
+     ]
+    ],
+    "detachedLocally": false,
+    "framesAfterLocalDetach": 0,
+    "compare": {
+     "intervals": 3,
+     "comparedBytes": 34,
+     "preOriginBytes": 0,
+     "beyondOracleBytes": 0,
+     "boundsProblems": [],
+     "firstDifference": null,
+     "nativeSha256": "6ba25d1ef6a5f327489d96fdf214725bbad721971ab4715fc76ada4c2291ce95",
+     "oracleSha256": "6ba25d1ef6a5f327489d96fdf214725bbad721971ab4715fc76ada4c2291ce95",
+     "ok": true,
+     "coverage": {
+      "from": 12,
+      "to": 46,
+      "holes": [],
+      "overlaps": [],
+      "covered": true
+     },
+     "replayStartBasis": "requested_offset",
+     "preOriginVerified": null
+    },
+    "foreignMarkersSeen": []
+   },
+   "c3-sB1": {
+    "label": "c3-sB1",
+    "role_requested": "controller",
+    "attachmentID": "c3-sB1",
+    "requestedCursor": 12,
+    "attach": {
+     "type": "attached",
+     "role": "controller",
+     "generation": 1,
+     "requested_offset": 12,
+     "available_offset": 12,
+     "end_offset": 12,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 12,
+     "terminal": {
+      "id": 1833934824403201,
+      "pid": 3781,
+      "fg": "node",
+      "group": "ldv199-groupB-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 12,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 1833934824403201,
+      "group_id": "ldv199-groupB-3623",
+      "socket": "c3-sB1"
+     }
+    },
+    "frames": 3,
+    "liveBytes": 34,
+    "maxEnd": 46,
+    "exit": {
+     "exit_code_raw": 0,
+     "final_offset": 46,
+     "t": 23338.449453,
+     "wall": 1790944224940
+    },
+    "eof": {
+     "t": 23338.599857,
+     "wall": 1790944224940,
+     "afterExit": true
+    },
+    "close": {
+     "t": 23338.707352,
+     "wall": 1790944224940,
+     "hadError": false,
+     "local": false
+    },
+    "errors": [],
+    "problems": [],
+    "events": [
+     {
+      "t": 22390.33728,
+      "type": "controller_changed",
+      "attachment_id": "c3-sB1",
+      "generation": 1
+     },
+     {
+      "t": 23338.449453,
+      "type": "exited",
+      "exit_code": 0,
+      "final_offset": 46
+     }
+    ],
+    "rawIntervalsCount": 3,
+    "rawIntervals": [
+     [
+      12,
+      24
+     ],
+     [
+      24,
+      34
+     ],
+     [
+      34,
+      46
+     ]
+    ],
+    "detachedLocally": false,
+    "framesAfterLocalDetach": 0,
+    "compare": {
+     "intervals": 3,
+     "comparedBytes": 34,
+     "preOriginBytes": 0,
+     "beyondOracleBytes": 0,
+     "boundsProblems": [],
+     "firstDifference": null,
+     "nativeSha256": "309488f68c302f9e75d30c728c0d7e2b0ee8489f42155d53560e60669fa2a1e2",
+     "oracleSha256": "309488f68c302f9e75d30c728c0d7e2b0ee8489f42155d53560e60669fa2a1e2",
+     "ok": true,
+     "coverage": {
+      "from": 12,
+      "to": 46,
+      "holes": [],
+      "overlaps": [],
+      "covered": true
+     },
+     "replayStartBasis": "requested_offset",
+     "preOriginVerified": null
+    },
+    "foreignMarkersSeen": []
+   },
+   "c3-sA2-takeover": {
+    "label": "c3-sA2-takeover",
+    "role_requested": "controller",
+    "attachmentID": "c3-sA2-takeover",
+    "requestedCursor": 12,
+    "attach": {
+     "type": "attached",
+     "role": "controller",
+     "generation": 2,
+     "requested_offset": 12,
+     "available_offset": 12,
+     "end_offset": 12,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 12,
+     "terminal": {
+      "id": 3428073321731357,
+      "pid": 3762,
+      "fg": "node",
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 12,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 3428073321731357,
+      "group_id": "ldv199-groupA-3623",
+      "socket": "c3-sA2-takeover"
+     }
+    },
+    "frames": 3,
+    "liveBytes": 34,
+    "maxEnd": 46,
+    "exit": {
+     "exit_code_raw": 0,
+     "final_offset": 46,
+     "t": 23417.625038,
+     "wall": 1790944225019
+    },
+    "eof": {
+     "t": 23418.030533,
+     "wall": 1790944225020,
+     "afterExit": true
+    },
+    "close": {
+     "t": 23418.51578,
+     "wall": 1790944225020,
+     "hadError": false,
+     "local": false
+    },
+    "errors": [],
+    "problems": [],
+    "events": [
+     {
+      "t": 22400.890159,
+      "type": "controller_changed",
+      "attachment_id": "c3-sA2-takeover",
+      "generation": 2
+     },
+     {
+      "t": 23417.625038,
+      "type": "exited",
+      "exit_code": 0,
+      "final_offset": 46
+     }
+    ],
+    "rawIntervalsCount": 3,
+    "rawIntervals": [
+     [
+      12,
+      24
+     ],
+     [
+      24,
+      34
+     ],
+     [
+      34,
+      46
+     ]
+    ],
+    "detachedLocally": false,
+    "framesAfterLocalDetach": 0,
+    "compare": {
+     "intervals": 3,
+     "comparedBytes": 34,
+     "preOriginBytes": 0,
+     "beyondOracleBytes": 0,
+     "boundsProblems": [],
+     "firstDifference": null,
+     "nativeSha256": "6ba25d1ef6a5f327489d96fdf214725bbad721971ab4715fc76ada4c2291ce95",
+     "oracleSha256": "6ba25d1ef6a5f327489d96fdf214725bbad721971ab4715fc76ada4c2291ce95",
+     "ok": true,
+     "coverage": {
+      "from": 12,
+      "to": 46,
+      "holes": [],
+      "overlaps": [],
+      "covered": true
+     },
+     "replayStartBasis": "requested_offset",
+     "preOriginVerified": null
+    },
+    "foreignMarkersSeen": []
+   }
+  },
+  "removeAfter": [
+   {
+    "type": "ok"
+   },
+   {
+    "type": "ok"
+   },
+   {
+    "type": "ok"
+   }
+  ],
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 21814.54,
+    "wall": "2026-10-02T12:30:23.416Z",
+    "kind": "request",
+    "conn": "create-c3-A1",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c3-A1-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c3-A1-3623",
+     "title": "ldv199-c3-A1",
+     "group_id": "ldv199-groupA-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 21822.34,
+    "wall": "2026-10-02T12:30:23.424Z",
+    "kind": "response",
+    "conn": "create-c3-A1",
+    "rtt_ms": 7.95,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 2639029440201642,
+      "pid": 3743,
+      "fg": null,
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 21822.65,
+    "wall": "2026-10-02T12:30:23.424Z",
+    "kind": "fixture-created",
+    "fx": "c3-A1",
+    "ptyId": 2639029440201642,
+    "pid": 3743,
+    "group": "ldv199-groupA-3623",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "proc": {
+     "pid": 3743,
+     "comm": "node",
+     "state": "R",
+     "ppid": 3634,
+     "starttime_ticks": 124747,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c3-A1-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 2639029440201642,
+      "pid": 3743,
+      "fg": null,
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 21862.89,
+    "wall": "2026-10-02T12:30:23.465Z",
+    "kind": "ack",
+    "fx": "c3-A1",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944223459,
+     "mono_ns": "1247514649636",
+     "pid": 3743,
+     "oracle_len": 12,
+     "extra": null,
+     "observed_wall_ms": 1790944223465
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 21994.93,
+    "wall": "2026-10-02T12:30:23.597Z",
+    "kind": "origin",
+    "fx": "c3-A1",
+    "origin": 12,
+    "head": 0,
+    "preLen_oracle": 12,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 21995.75,
+    "wall": "2026-10-02T12:30:23.597Z",
+    "kind": "request",
+    "conn": "create-c3-A2",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c3-A2-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c3-A2-3623",
+     "title": "ldv199-c3-A2",
+     "group_id": "ldv199-groupA-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 6,
+    "t_ms": 22005.21,
+    "wall": "2026-10-02T12:30:23.607Z",
+    "kind": "response",
+    "conn": "create-c3-A2",
+    "rtt_ms": 9.56,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 3428073321731357,
+      "pid": 3762,
+      "fg": null,
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 22005.34,
+    "wall": "2026-10-02T12:30:23.607Z",
+    "kind": "fixture-created",
+    "fx": "c3-A2",
+    "ptyId": 3428073321731357,
+    "pid": 3762,
+    "group": "ldv199-groupA-3623",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "proc": {
+     "pid": 3762,
+     "comm": "node",
+     "state": "R",
+     "ppid": 3634,
+     "starttime_ticks": 124766,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c3-A2-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 3428073321731357,
+      "pid": 3762,
+      "fg": null,
+      "group": "ldv199-groupA-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 8,
+    "t_ms": 22046.39,
+    "wall": "2026-10-02T12:30:23.648Z",
+    "kind": "ack",
+    "fx": "c3-A2",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944223643,
+     "mono_ns": "1247698431798",
+     "pid": 3762,
+     "oracle_len": 12,
+     "extra": null,
+     "observed_wall_ms": 1790944223648
+    }
+   },
+   {
+    "i": 9,
+    "t_ms": 22179.17,
+    "wall": "2026-10-02T12:30:23.781Z",
+    "kind": "origin",
+    "fx": "c3-A2",
+    "origin": 12,
+    "head": 0,
+    "preLen_oracle": 12,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 10,
+    "t_ms": 22179.82,
+    "wall": "2026-10-02T12:30:23.781Z",
+    "kind": "request",
+    "conn": "create-c3-B1",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c3-B1-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c3-B1-3623",
+     "title": "ldv199-c3-B1",
+     "group_id": "ldv199-groupB-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 11,
+    "t_ms": 22188.97,
+    "wall": "2026-10-02T12:30:23.791Z",
+    "kind": "response",
+    "conn": "create-c3-B1",
+    "rtt_ms": 9.22,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 1833934824403201,
+      "pid": 3781,
+      "fg": null,
+      "group": "ldv199-groupB-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 12,
+    "t_ms": 22189.23,
+    "wall": "2026-10-02T12:30:23.791Z",
+    "kind": "fixture-created",
+    "fx": "c3-B1",
+    "ptyId": 1833934824403201,
+    "pid": 3781,
+    "group": "ldv199-groupB-3623",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "proc": {
+     "pid": 3781,
+     "comm": "node",
+     "state": "R",
+     "ppid": 3634,
+     "starttime_ticks": 124784,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c3-B1-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 1833934824403201,
+      "pid": 3781,
+      "fg": null,
+      "group": "ldv199-groupB-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 13,
+    "t_ms": 22230.64,
+    "wall": "2026-10-02T12:30:23.832Z",
+    "kind": "ack",
+    "fx": "c3-B1",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944223832,
+     "mono_ns": "1247886986189",
+     "pid": 3781,
+     "oracle_len": 12,
+     "extra": null,
+     "observed_wall_ms": 1790944223832
+    }
+   },
+   {
+    "i": 14,
+    "t_ms": 22362.9,
+    "wall": "2026-10-02T12:30:23.965Z",
+    "kind": "origin",
+    "fx": "c3-B1",
+    "origin": 12,
+    "head": 0,
+    "preLen_oracle": 12,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 15,
+    "t_ms": 22363.2,
+    "wall": "2026-10-02T12:30:23.965Z",
+    "kind": "sub-attach",
+    "sub": "c3-sA1",
+    "fx": "c3-A1",
+    "role": "controller",
+    "attachmentID": "c3-sA1",
+    "cursor": 12,
+    "takeover": false
+   },
+   {
+    "i": 16,
+    "t_ms": 22370.12,
+    "wall": "2026-10-02T12:30:23.972Z",
+    "kind": "sub-attached",
+    "sub": "c3-sA1",
+    "type": "attached",
+    "role": "controller",
+    "generation": 1,
+    "requested_offset": 12,
+    "available_offset": 12,
+    "end_offset": 12,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 12,
+    "terminal": {
+     "id": 2639029440201642,
+     "pid": 3743,
+     "fg": "node",
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 12,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 2639029440201642,
+     "group_id": "ldv199-groupA-3623",
+     "socket": "c3-sA1"
+    }
+   },
+   {
+    "i": 17,
+    "t_ms": 22370.33,
+    "wall": "2026-10-02T12:30:23.972Z",
+    "kind": "sub-attach",
+    "sub": "c3-sA2",
+    "fx": "c3-A2",
+    "role": "controller",
+    "attachmentID": "c3-sA2",
+    "cursor": 12,
+    "takeover": false
+   },
+   {
+    "i": 18,
+    "t_ms": 22370.55,
+    "wall": "2026-10-02T12:30:23.972Z",
+    "kind": "sub-event",
+    "sub": "c3-sA1",
+    "event": {
+     "type": "controller_changed",
+     "attachment_id": "c3-sA1",
+     "generation": 1
+    }
+   },
+   {
+    "i": 19,
+    "t_ms": 22380.38,
+    "wall": "2026-10-02T12:30:23.982Z",
+    "kind": "sub-attached",
+    "sub": "c3-sA2",
+    "type": "attached",
+    "role": "controller",
+    "generation": 1,
+    "requested_offset": 12,
+    "available_offset": 12,
+    "end_offset": 12,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 12,
+    "terminal": {
+     "id": 3428073321731357,
+     "pid": 3762,
+     "fg": "node",
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 12,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 3428073321731357,
+     "group_id": "ldv199-groupA-3623",
+     "socket": "c3-sA2"
+    }
+   },
+   {
+    "i": 20,
+    "t_ms": 22380.46,
+    "wall": "2026-10-02T12:30:23.982Z",
+    "kind": "sub-event",
+    "sub": "c3-sA2",
+    "event": {
+     "type": "controller_changed",
+     "attachment_id": "c3-sA2",
+     "generation": 1
+    }
+   },
+   {
+    "i": 21,
+    "t_ms": 22380.48,
+    "wall": "2026-10-02T12:30:23.982Z",
+    "kind": "sub-attach",
+    "sub": "c3-sB1",
+    "fx": "c3-B1",
+    "role": "controller",
+    "attachmentID": "c3-sB1",
+    "cursor": 12,
+    "takeover": false
+   },
+   {
+    "i": 22,
+    "t_ms": 22390.42,
+    "wall": "2026-10-02T12:30:23.992Z",
+    "kind": "sub-attached",
+    "sub": "c3-sB1",
+    "type": "attached",
+    "role": "controller",
+    "generation": 1,
+    "requested_offset": 12,
+    "available_offset": 12,
+    "end_offset": 12,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 12,
+    "terminal": {
+     "id": 1833934824403201,
+     "pid": 3781,
+     "fg": "node",
+     "group": "ldv199-groupB-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 12,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 1833934824403201,
+     "group_id": "ldv199-groupB-3623",
+     "socket": "c3-sB1"
+    }
+   },
+   {
+    "i": 23,
+    "t_ms": 22390.47,
+    "wall": "2026-10-02T12:30:23.992Z",
+    "kind": "sub-event",
+    "sub": "c3-sB1",
+    "event": {
+     "type": "controller_changed",
+     "attachment_id": "c3-sB1",
+     "generation": 1
+    }
+   },
+   {
+    "i": 24,
+    "t_ms": 22390.51,
+    "wall": "2026-10-02T12:30:23.992Z",
+    "kind": "sub-attach",
+    "sub": "c3-sA2-takeover",
+    "fx": "c3-A2",
+    "role": "controller",
+    "attachmentID": "c3-sA2-takeover",
+    "cursor": 12,
+    "takeover": true
+   },
+   {
+    "i": 25,
+    "t_ms": 22400.63,
+    "wall": "2026-10-02T12:30:24.002Z",
+    "kind": "sub-attached",
+    "sub": "c3-sA2-takeover",
+    "type": "attached",
+    "role": "controller",
+    "generation": 2,
+    "requested_offset": 12,
+    "available_offset": 12,
+    "end_offset": 12,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 12,
+    "terminal": {
+     "id": 3428073321731357,
+     "pid": 3762,
+     "fg": "node",
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 12,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 3428073321731357,
+     "group_id": "ldv199-groupA-3623",
+     "socket": "c3-sA2-takeover"
+    }
+   },
+   {
+    "i": 26,
+    "t_ms": 22400.83,
+    "wall": "2026-10-02T12:30:24.002Z",
+    "kind": "sub-event",
+    "sub": "c3-sA2",
+    "event": {
+     "type": "controller_changed",
+     "attachment_id": "c3-sA2-takeover",
+     "generation": 2
+    }
+   },
+   {
+    "i": 27,
+    "t_ms": 22400.9,
+    "wall": "2026-10-02T12:30:24.003Z",
+    "kind": "sub-event",
+    "sub": "c3-sA2-takeover",
+    "event": {
+     "type": "controller_changed",
+     "attachment_id": "c3-sA2-takeover",
+     "generation": 2
+    }
+   },
+   {
+    "i": 28,
+    "t_ms": 22401.54,
+    "wall": "2026-10-02T12:30:24.003Z",
+    "kind": "request",
+    "conn": "c3-control-A1",
+    "op": "control",
+    "request": {
+     "op": "control",
+     "id": 2639029440201642,
+     "attachment_id": "c3-sA1",
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 29,
+    "t_ms": 22410.71,
+    "wall": "2026-10-02T12:30:24.012Z",
+    "kind": "response",
+    "conn": "c3-control-A1",
+    "rtt_ms": 9.98,
+    "response": {
+     "type": "ok"
+    }
+   },
+   {
+    "i": 30,
+    "t_ms": 22711.57,
+    "wall": "2026-10-02T12:30:24.313Z",
+    "kind": "gate-release",
+    "fx": "c3-A1",
+    "name": "start",
+    "wall_ms": 1790944224313
+   },
+   {
+    "i": 31,
+    "t_ms": 22718.54,
+    "wall": "2026-10-02T12:30:24.320Z",
+    "kind": "output",
+    "sub": "c3-sA1",
+    "start": 12,
+    "end": 24,
+    "len": 12
+   },
+   {
+    "i": 32,
+    "t_ms": 22721.9,
+    "wall": "2026-10-02T12:30:24.324Z",
+    "kind": "ack",
+    "fx": "c3-A1",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944224318,
+     "mono_ns": "1248373588233",
+     "pid": 3743,
+     "oracle_len": 24,
+     "extra": null,
+     "observed_wall_ms": 1790944224324
+    }
+   },
+   {
+    "i": 33,
+    "t_ms": 22729.9,
+    "wall": "2026-10-02T12:30:24.332Z",
+    "kind": "gate-release",
+    "fx": "c3-B1",
+    "name": "start",
+    "wall_ms": 1790944224332
+   },
+   {
+    "i": 34,
+    "t_ms": 22731.84,
+    "wall": "2026-10-02T12:30:24.333Z",
+    "kind": "output",
+    "sub": "c3-sB1",
+    "start": 12,
+    "end": 24,
+    "len": 12
+   },
+   {
+    "i": 35,
+    "t_ms": 22740.18,
+    "wall": "2026-10-02T12:30:24.342Z",
+    "kind": "ack",
+    "fx": "c3-B1",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944224332,
+     "mono_ns": "1248387316242",
+     "pid": 3781,
+     "oracle_len": 24,
+     "extra": null,
+     "observed_wall_ms": 1790944224342
+    }
+   },
+   {
+    "i": 36,
+    "t_ms": 23250.05,
+    "wall": "2026-10-02T12:30:24.852Z",
+    "kind": "gate-release",
+    "fx": "c3-A1",
+    "name": "mid",
+    "wall_ms": 1790944224852
+   },
+   {
+    "i": 37,
+    "t_ms": 23260.46,
+    "wall": "2026-10-02T12:30:24.862Z",
+    "kind": "ack",
+    "fx": "c3-A1",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944224861,
+     "mono_ns": "1248916619754",
+     "pid": 3743,
+     "oracle_len": 34,
+     "extra": null,
+     "observed_wall_ms": 1790944224862
+    }
+   },
+   {
+    "i": 38,
+    "t_ms": 23261.17,
+    "wall": "2026-10-02T12:30:24.863Z",
+    "kind": "output",
+    "sub": "c3-sA1",
+    "start": 24,
+    "end": 34,
+    "len": 10
+   },
+   {
+    "i": 39,
+    "t_ms": 23267.33,
+    "wall": "2026-10-02T12:30:24.869Z",
+    "kind": "request",
+    "conn": "list-running-c3-A1",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 40,
+    "t_ms": 23276.52,
+    "wall": "2026-10-02T12:30:24.878Z",
+    "kind": "response",
+    "conn": "list-running-c3-A1",
+    "rtt_ms": 9.34,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 1833934824403201,
+       "pid": 3781,
+       "fg": "node",
+       "group": "ldv199-groupB-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 24,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 2639029440201642,
+       "pid": 3743,
+       "fg": "node",
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 34,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 3428073321731357,
+       "pid": 3762,
+       "fg": "node",
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 12,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 41,
+    "t_ms": 23276.57,
+    "wall": "2026-10-02T12:30:24.878Z",
+    "kind": "native-running",
+    "fx": "c3-A1",
+    "terminal": {
+     "id": 2639029440201642,
+     "pid": 3743,
+     "fg": "node",
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 42,
+    "t_ms": 23276.68,
+    "wall": "2026-10-02T12:30:24.878Z",
+    "kind": "gate-release",
+    "fx": "c3-B1",
+    "name": "mid",
+    "wall_ms": 1790944224878
+   },
+   {
+    "i": 43,
+    "t_ms": 23284.44,
+    "wall": "2026-10-02T12:30:24.886Z",
+    "kind": "output",
+    "sub": "c3-sB1",
+    "start": 24,
+    "end": 34,
+    "len": 10
+   },
+   {
+    "i": 44,
+    "t_ms": 23286.76,
+    "wall": "2026-10-02T12:30:24.888Z",
+    "kind": "ack",
+    "fx": "c3-B1",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944224885,
+     "mono_ns": "1248939993205",
+     "pid": 3781,
+     "oracle_len": 34,
+     "extra": null,
+     "observed_wall_ms": 1790944224888
+    }
+   },
+   {
+    "i": 45,
+    "t_ms": 23297.83,
+    "wall": "2026-10-02T12:30:24.899Z",
+    "kind": "request",
+    "conn": "list-running-c3-B1",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 46,
+    "t_ms": 23306.87,
+    "wall": "2026-10-02T12:30:24.908Z",
+    "kind": "response",
+    "conn": "list-running-c3-B1",
+    "rtt_ms": 9.17,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 1833934824403201,
+       "pid": 3781,
+       "fg": "node",
+       "group": "ldv199-groupB-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 34,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 2639029440201642,
+       "pid": 3743,
+       "fg": "node",
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 34,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 3428073321731357,
+       "pid": 3762,
+       "fg": "node",
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 12,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 47,
+    "t_ms": 23306.91,
+    "wall": "2026-10-02T12:30:24.909Z",
+    "kind": "native-running",
+    "fx": "c3-B1",
+    "terminal": {
+     "id": 1833934824403201,
+     "pid": 3781,
+     "fg": "node",
+     "group": "ldv199-groupB-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 48,
+    "t_ms": 23307.02,
+    "wall": "2026-10-02T12:30:24.909Z",
+    "kind": "gate-release",
+    "fx": "c3-A1",
+    "name": "exit",
+    "wall_ms": 1790944224909
+   },
+   {
+    "i": 49,
+    "t_ms": 23312.72,
+    "wall": "2026-10-02T12:30:24.914Z",
+    "kind": "output",
+    "sub": "c3-sA1",
+    "start": 34,
+    "end": 46,
+    "len": 12
+   },
+   {
+    "i": 50,
+    "t_ms": 23316.27,
+    "wall": "2026-10-02T12:30:24.918Z",
+    "kind": "sub-event",
+    "sub": "c3-sA1",
+    "event": {
+     "type": "exited",
+     "exit_code": 0,
+     "final_offset": 46
+    }
+   },
+   {
+    "i": 51,
+    "t_ms": 23316.4,
+    "wall": "2026-10-02T12:30:24.918Z",
+    "kind": "eof",
+    "sub": "c3-sA1"
+   },
+   {
+    "i": 52,
+    "t_ms": 23316.55,
+    "wall": "2026-10-02T12:30:24.918Z",
+    "kind": "close",
+    "sub": "c3-sA1",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 53,
+    "t_ms": 23317.93,
+    "wall": "2026-10-02T12:30:24.920Z",
+    "kind": "ack",
+    "fx": "c3-A1",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944224913,
+     "mono_ns": "1248968396912",
+     "pid": 3743,
+     "oracle_len": 46,
+     "extra": {
+      "code": 0
+     },
+     "observed_wall_ms": 1790944224920
+    }
+   },
+   {
+    "i": 54,
+    "t_ms": 23327.06,
+    "wall": "2026-10-02T12:30:24.929Z",
+    "kind": "list-lifecycle-after-exit",
+    "fx": "c3-A1",
+    "wall_ms": 1790944224929,
+    "terminal": {
+     "id": 2639029440201642,
+     "pid": 3743,
+     "fg": null,
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 46,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 16
+   },
+   {
+    "i": 55,
+    "t_ms": 23327.31,
+    "wall": "2026-10-02T12:30:24.929Z",
+    "kind": "gate-release",
+    "fx": "c3-B1",
+    "name": "exit",
+    "wall_ms": 1790944224929
+   },
+   {
+    "i": 56,
+    "t_ms": 23336.1,
+    "wall": "2026-10-02T12:30:24.938Z",
+    "kind": "output",
+    "sub": "c3-sB1",
+    "start": 34,
+    "end": 46,
+    "len": 12
+   },
+   {
+    "i": 57,
+    "t_ms": 23337.59,
+    "wall": "2026-10-02T12:30:24.939Z",
+    "kind": "ack",
+    "fx": "c3-B1",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944224936,
+     "mono_ns": "1248991477230",
+     "pid": 3781,
+     "oracle_len": 46,
+     "extra": {
+      "code": 0
+     },
+     "observed_wall_ms": 1790944224939
+    }
+   },
+   {
+    "i": 58,
+    "t_ms": 23338.5,
+    "wall": "2026-10-02T12:30:24.940Z",
+    "kind": "sub-event",
+    "sub": "c3-sB1",
+    "event": {
+     "type": "exited",
+     "exit_code": 0,
+     "final_offset": 46
+    }
+   },
+   {
+    "i": 59,
+    "t_ms": 23338.6,
+    "wall": "2026-10-02T12:30:24.940Z",
+    "kind": "eof",
+    "sub": "c3-sB1"
+   },
+   {
+    "i": 60,
+    "t_ms": 23338.71,
+    "wall": "2026-10-02T12:30:24.940Z",
+    "kind": "close",
+    "sub": "c3-sB1",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 61,
+    "t_ms": 23346.45,
+    "wall": "2026-10-02T12:30:24.948Z",
+    "kind": "list-lifecycle-after-exit",
+    "fx": "c3-B1",
+    "wall_ms": 1790944224948,
+    "terminal": {
+     "id": 1833934824403201,
+     "pid": 3781,
+     "fg": null,
+     "group": "ldv199-groupB-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 46,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 12
+   },
+   {
+    "i": 62,
+    "t_ms": 23346.67,
+    "wall": "2026-10-02T12:30:24.948Z",
+    "kind": "request",
+    "conn": "c3-list-A2-mid-gate",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 63,
+    "t_ms": 23356.31,
+    "wall": "2026-10-02T12:30:24.958Z",
+    "kind": "response",
+    "conn": "c3-list-A2-mid-gate",
+    "rtt_ms": 9.72,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 1833934824403201,
+       "pid": 3781,
+       "fg": null,
+       "group": "ldv199-groupB-3623",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 46,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 2639029440201642,
+       "pid": 3743,
+       "fg": null,
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 46,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 3428073321731357,
+       "pid": 3762,
+       "fg": "node",
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 12,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 64,
+    "t_ms": 23356.56,
+    "wall": "2026-10-02T12:30:24.958Z",
+    "kind": "gate-release",
+    "fx": "c3-A2",
+    "name": "start",
+    "wall_ms": 1790944224958
+   },
+   {
+    "i": 65,
+    "t_ms": 23362.6,
+    "wall": "2026-10-02T12:30:24.964Z",
+    "kind": "output",
+    "sub": "c3-sA2-takeover",
+    "start": 12,
+    "end": 24,
+    "len": 12
+   },
+   {
+    "i": 66,
+    "t_ms": 23362.72,
+    "wall": "2026-10-02T12:30:24.964Z",
+    "kind": "output",
+    "sub": "c3-sA2",
+    "start": 12,
+    "end": 24,
+    "len": 12
+   },
+   {
+    "i": 67,
+    "t_ms": 23367.02,
+    "wall": "2026-10-02T12:30:24.969Z",
+    "kind": "ack",
+    "fx": "c3-A2",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944224963,
+     "mono_ns": "1249018042558",
+     "pid": 3762,
+     "oracle_len": 24,
+     "extra": null,
+     "observed_wall_ms": 1790944224969
+    }
+   },
+   {
+    "i": 68,
+    "t_ms": 23377.4,
+    "wall": "2026-10-02T12:30:24.979Z",
+    "kind": "gate-release",
+    "fx": "c3-A2",
+    "name": "mid",
+    "wall_ms": 1790944224979
+   },
+   {
+    "i": 69,
+    "t_ms": 23383.52,
+    "wall": "2026-10-02T12:30:24.985Z",
+    "kind": "output",
+    "sub": "c3-sA2",
+    "start": 24,
+    "end": 34,
+    "len": 10
+   },
+   {
+    "i": 70,
+    "t_ms": 23383.59,
+    "wall": "2026-10-02T12:30:24.985Z",
+    "kind": "output",
+    "sub": "c3-sA2-takeover",
+    "start": 24,
+    "end": 34,
+    "len": 10
+   },
+   {
+    "i": 71,
+    "t_ms": 23387.74,
+    "wall": "2026-10-02T12:30:24.989Z",
+    "kind": "ack",
+    "fx": "c3-A2",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944224984,
+     "mono_ns": "1249039044081",
+     "pid": 3762,
+     "oracle_len": 34,
+     "extra": null,
+     "observed_wall_ms": 1790944224989
+    }
+   },
+   {
+    "i": 72,
+    "t_ms": 23397.27,
+    "wall": "2026-10-02T12:30:24.999Z",
+    "kind": "request",
+    "conn": "list-running-c3-A2",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 73,
+    "t_ms": 23407.33,
+    "wall": "2026-10-02T12:30:25.009Z",
+    "kind": "response",
+    "conn": "list-running-c3-A2",
+    "rtt_ms": 10.14,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 1833934824403201,
+       "pid": 3781,
+       "fg": null,
+       "group": "ldv199-groupB-3623",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 46,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 2639029440201642,
+       "pid": 3743,
+       "fg": null,
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 0,
+       "tail": 46,
+       "cols": 80,
+       "rows": 24
+      },
+      {
+       "id": 3428073321731357,
+       "pid": 3762,
+       "fg": "node",
+       "group": "ldv199-groupA-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 34,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 74,
+    "t_ms": 23407.38,
+    "wall": "2026-10-02T12:30:25.009Z",
+    "kind": "native-running",
+    "fx": "c3-A2",
+    "terminal": {
+     "id": 3428073321731357,
+     "pid": 3762,
+     "fg": "node",
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 34,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 75,
+    "t_ms": 23407.49,
+    "wall": "2026-10-02T12:30:25.009Z",
+    "kind": "gate-release",
+    "fx": "c3-A2",
+    "name": "exit",
+    "wall_ms": 1790944225009
+   },
+   {
+    "i": 76,
+    "t_ms": 23414.73,
+    "wall": "2026-10-02T12:30:25.016Z",
+    "kind": "output",
+    "sub": "c3-sA2",
+    "start": 34,
+    "end": 46,
+    "len": 12
+   },
+   {
+    "i": 77,
+    "t_ms": 23414.82,
+    "wall": "2026-10-02T12:30:25.016Z",
+    "kind": "output",
+    "sub": "c3-sA2-takeover",
+    "start": 34,
+    "end": 46,
+    "len": 12
+   },
+   {
+    "i": 78,
+    "t_ms": 23417.52,
+    "wall": "2026-10-02T12:30:25.019Z",
+    "kind": "sub-event",
+    "sub": "c3-sA2",
+    "event": {
+     "type": "exited",
+     "exit_code": 0,
+     "final_offset": 46
+    }
+   },
+   {
+    "i": 79,
+    "t_ms": 23417.64,
+    "wall": "2026-10-02T12:30:25.019Z",
+    "kind": "sub-event",
+    "sub": "c3-sA2-takeover",
+    "event": {
+     "type": "exited",
+     "exit_code": 0,
+     "final_offset": 46
+    }
+   },
+   {
+    "i": 80,
+    "t_ms": 23417.81,
+    "wall": "2026-10-02T12:30:25.019Z",
+    "kind": "ack",
+    "fx": "c3-A2",
+    "name": "exit-stage",
+    "ack": {
+     "name": "exit-stage",
+     "wall_ms": 1790944225015,
+     "mono_ns": "1249070194958",
+     "pid": 3762,
+     "oracle_len": 46,
+     "extra": {
+      "code": 0
+     },
+     "observed_wall_ms": 1790944225019
+    }
+   },
+   {
+    "i": 81,
+    "t_ms": 23417.97,
+    "wall": "2026-10-02T12:30:25.020Z",
+    "kind": "eof",
+    "sub": "c3-sA2"
+   },
+   {
+    "i": 82,
+    "t_ms": 23418.03,
+    "wall": "2026-10-02T12:30:25.020Z",
+    "kind": "eof",
+    "sub": "c3-sA2-takeover"
+   },
+   {
+    "i": 83,
+    "t_ms": 23418.52,
+    "wall": "2026-10-02T12:30:25.020Z",
+    "kind": "close",
+    "sub": "c3-sA2-takeover",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 84,
+    "t_ms": 23418.58,
+    "wall": "2026-10-02T12:30:25.020Z",
+    "kind": "close",
+    "sub": "c3-sA2",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 85,
+    "t_ms": 23426.7,
+    "wall": "2026-10-02T12:30:25.028Z",
+    "kind": "list-lifecycle-after-exit",
+    "fx": "c3-A2",
+    "wall_ms": 1790944225028,
+    "terminal": {
+     "id": 3428073321731357,
+     "pid": 3762,
+     "fg": null,
+     "group": "ldv199-groupA-3623",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 0,
+     "tail": 46,
+     "cols": 80,
+     "rows": 24
+    },
+    "after_exit_stage_ms": 13
+   },
+   {
+    "i": 86,
+    "t_ms": 23427.68,
+    "wall": "2026-10-02T12:30:25.029Z",
+    "kind": "sub-detach",
+    "sub": "c3-sA1"
+   },
+   {
+    "i": 87,
+    "t_ms": 23427.7,
+    "wall": "2026-10-02T12:30:25.029Z",
+    "kind": "sub-detach",
+    "sub": "c3-sA2"
+   },
+   {
+    "i": 88,
+    "t_ms": 23427.71,
+    "wall": "2026-10-02T12:30:25.029Z",
+    "kind": "sub-detach",
+    "sub": "c3-sB1"
+   },
+   {
+    "i": 89,
+    "t_ms": 23427.72,
+    "wall": "2026-10-02T12:30:25.029Z",
+    "kind": "sub-detach",
+    "sub": "c3-sA2-takeover"
+   },
+   {
+    "i": 90,
+    "t_ms": 23427.89,
+    "wall": "2026-10-02T12:30:25.030Z",
+    "kind": "request",
+    "conn": "c3-terminate-c3-A1",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 2639029440201642
+    }
+   },
+   {
+    "i": 91,
+    "t_ms": 23436.84,
+    "wall": "2026-10-02T12:30:25.038Z",
+    "kind": "response",
+    "conn": "c3-terminate-c3-A1",
+    "rtt_ms": 9.05,
+    "response": {
+     "type": "ok"
+    }
+   },
+   {
+    "i": 92,
+    "t_ms": 23437.51,
+    "wall": "2026-10-02T12:30:25.039Z",
+    "kind": "request",
+    "conn": "c3-terminate-c3-A2",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 3428073321731357
+    }
+   },
+   {
+    "i": 93,
+    "t_ms": 23447.39,
+    "wall": "2026-10-02T12:30:25.049Z",
+    "kind": "response",
+    "conn": "c3-terminate-c3-A2",
+    "rtt_ms": 10.46,
+    "response": {
+     "type": "ok"
+    }
+   },
+   {
+    "i": 94,
+    "t_ms": 23447.53,
+    "wall": "2026-10-02T12:30:25.049Z",
+    "kind": "request",
+    "conn": "c3-terminate-c3-B1",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 1833934824403201
+    }
+   },
+   {
+    "i": 95,
+    "t_ms": 23457.38,
+    "wall": "2026-10-02T12:30:25.059Z",
+    "kind": "response",
+    "conn": "c3-terminate-c3-B1",
+    "rtt_ms": 9.91,
+    "response": {
+     "type": "ok"
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,207 @@
+{
+ "when": "after matrix; mutators applied to clones of captured data (case 2 controller live frames, case 2 recorded event order, case 3 identity frames, case 12 event order, recorded native exit codes)",
+ "inputs": {
+  "intervals": 3,
+  "order_events": [
+   "ack",
+   "native-running",
+   "gate-release"
+  ],
+  "case12_source": "captured case 12 event order",
+  "exit_codes": [
+   {
+    "raw": 0,
+    "recorded": 0
+   },
+   {
+    "raw": 7,
+    "recorded": 7
+   },
+   {
+    "raw": 1,
+    "recorded": 1
+   }
+  ],
+  "frames": 6
+ },
+ "results": [
+  {
+   "tag": "native-captured",
+   "name": "observed-byte-changed",
+   "mutation": "interval#1 byte index 5 50->205",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "expectedOffset": 23,
+    "reported": {
+     "nativeOffset": 23,
+     "oracleIndex": 14,
+     "nativeByte": 205,
+     "oracleByte": 50,
+     "intervalStart": 18,
+     "intervalEnd": 25
+    }
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "observed-offset-shifted",
+   "mutation": "interval#1 start/end +1",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": {
+     "nativeOffset": 19,
+     "oracleIndex": 10,
+     "nativeByte": 77,
+     "oracleByte": 73,
+     "intervalStart": 19,
+     "intervalEnd": 26
+    }
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "interval-bounds-inconsistent",
+   "mutation": "interval#0 end +3 without data",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "start": 9,
+      "end": 21,
+      "dataLength": 9
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "intermediate-ack-omitted",
+   "mutation": "dropped ack event",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "fx": "c2",
+      "at": 1,
+      "problem": "exit gate released without intermediate acknowledgment"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "exit-released-before-native-running",
+   "mutation": "swapped native-running and gate-release",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "fx": "c2",
+      "at": 1,
+      "problem": "exit gate released without native-running observation after intermediate ack"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "detach-before-owner-close",
+   "mutation": "moved sub-detach before owner-close",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "at": 2,
+      "sub": "c12-sub-observer",
+      "problem": "sub-detach before owner-close"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "detach-before-property-settled",
+   "mutation": "moved sub-detach after owner-close but before property-observed",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "at": 3,
+      "sub": "c12-sub-observer",
+      "problem": "sub-detach before property observed/timed out"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "instance-identity-substituted",
+   "mutation": "frame#1 instance_id d1abb3af1ee5de32e025a41f483a4f69->I-substituted",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "at": 1,
+      "socket": "c3-sA1",
+      "field": "instance_id",
+      "got": "I-substituted",
+      "want": "d1abb3af1ee5de32e025a41f483a4f69"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "native-captured",
+   "name": "raw-exit-code-replaced-by-zero",
+   "mutation": "recorded exit_code 7->0 (raw_was_null=false)",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "raw_was_null": false,
+    "reported": [
+     {
+      "at": 1,
+      "raw": 7,
+      "recorded": 0,
+      "problem": "recorded exit_code differs from raw"
+     }
+    ]
+   },
+   "pass": true
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "trace": [
+  {
+   "i": 0,
+   "t_ms": 88.09,
+   "wall": "2026-10-02T12:30:01.690Z",
+   "kind": "request",
+   "conn": "ping-launch",
+   "op": "ping",
+   "request": {
+    "op": "ping"
+   }
+  },
+  {
+   "i": 1,
+   "t_ms": 90.86,
+   "wall": "2026-10-02T12:30:01.692Z",
+   "kind": "response",
+   "conn": "ping-launch",
+   "rtt_ms": 4.78,
+   "response": {
+    "type": "pong",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "pid": 3634,
+    "protocol": 7
+   }
+  },
+  {
+   "i": 2,
+   "t_ms": 90.97,
+   "wall": "2026-10-02T12:30:01.693Z",
+   "kind": "daemon-launched",
+   "daemon": "d1",
+   "identity": {
+    "tag": "d1",
+    "spawned_pid": 3634,
+    "registration": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pid": 3634,
+     "protocol": 7,
+     "socket": "/tmp/opencode-pty-0/1da2e5077cbf86b5139a19f32c8eecb2.sock",
+     "token": "<redacted len=35 sha256_8=98d2b73b>"
+    },
+    "registration_keys": [
+     "instance_id",
+     "pid",
+     "protocol",
+     "socket",
+     "token"
+    ],
+    "registration_pid_equals_spawned_pid": true,
+    "protocol_is_7": true,
+    "ping": {
+     "type": "pong",
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pid": 3634,
+     "protocol": 7
+    },
+    "ping_matches_registration": true,
+    "proc": {
+     "pid": 3634,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 3623,
+     "starttime_ticks": 122568,
+     "exe": "/tmp/r/bin/opencode-pty",
+     "cmdline": [
+      "/tmp/r/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "runtime_dir": "/tmp/r/rt-d1",
+    "env_keys": [
+     "HOME",
+     "LANG",
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PATH",
+     "TMPDIR",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "ready_ms": 59
+   }
+  },
+  {
+   "i": 3,
+   "t_ms": 92.19,
+   "wall": "2026-10-02T12:30:01.694Z",
+   "kind": "request",
+   "conn": "owner-d1-1",
+   "op": "own",
+   "request": {
+    "op": "own",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad"
+   }
+  },
+  {
+   "i": 4,
+   "t_ms": 98.03,
+   "wall": "2026-10-02T12:30:01.700Z",
+   "kind": "response",
+   "conn": "owner-d1-1",
+   "response": {
+    "type": "owned"
+   },
+   "problems": []
+  }
+ ]
+}

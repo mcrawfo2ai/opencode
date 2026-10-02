@@ -1,0 +1,193 @@
+{
+ "compared": "evidence-run-a/facts.json (earlier cleanup stage) vs evidence/facts.json (final scripts)",
+ "note": "differing keys are timings, random PTY ids/handles, live-frame counts, a generation counter, or a /proc zombie-vs-gone transient; values listed",
+ "identical_keys": 121,
+ "differing_keys": [
+  {
+   "key": "c1.exit0.list_sent_after_anchor_ms",
+   "run_a": [
+    100,
+    1001,
+    5001
+   ],
+   "run_b": [
+    100,
+    1001,
+    5003
+   ]
+  },
+  {
+   "key": "c1.exit7.proc_gone_after_exit_stage_ms",
+   "run_a": 7,
+   "run_b": 13
+  },
+  {
+   "key": "c5.sizes",
+   "run_a": [
+    {
+     "size": 65536,
+     "head": 0,
+     "tail": 65545,
+     "attaches": [
+      "0@0:avail0/end65545/truncfalse/replay65545/ok=true",
+      "captured@9:avail9/end65545/truncfalse/replay65536/ok=true",
+      "head=same as 0",
+      "tail@65545:avail65545/end65545/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": null,
+     "stop": null
+    },
+    {
+     "size": 262144,
+     "head": 0,
+     "tail": 262153,
+     "attaches": [
+      "0@0:avail0/end262153/truncfalse/replay262153/ok=true",
+      "captured@65545:avail65545/end262153/truncfalse/replay196608/ok=true",
+      "head=same as 0",
+      "tail@262153:avail262153/end262153/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": "frames=18,ok=true,holes=0,overlaps=0",
+     "stop": null
+    },
+    {
+     "size": 1048576,
+     "head": 0,
+     "tail": 1048585,
+     "attaches": [
+      "0@0:avail0/end1048585/truncfalse/replay1048585/ok=true",
+      "captured@262153:avail262153/end1048585/truncfalse/replay786432/ok=true",
+      "head=same as 0",
+      "tail@1048585:avail1048585/end1048585/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": "frames=70,ok=true,holes=0,overlaps=0",
+     "stop": null
+    },
+    {
+     "size": 4194304,
+     "head": 2097161,
+     "tail": 4194313,
+     "attaches": [
+      "0@0:avail2097161/end4194313/trunctrue/replay2097152/ok=true",
+      "captured@1048585:avail2097161/end4194313/trunctrue/replay2097152/ok=true",
+      "head@2097161:avail2097161/end4194313/truncfalse/replay2097152/ok=true",
+      "tail@4194313:avail4194313/end4194313/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": "frames=272,ok=true,holes=0,overlaps=0",
+     "stop": "head advanced to 2097161 at size 4194304"
+    }
+   ],
+   "run_b": [
+    {
+     "size": 65536,
+     "head": 0,
+     "tail": 65545,
+     "attaches": [
+      "0@0:avail0/end65545/truncfalse/replay65545/ok=true",
+      "captured@9:avail9/end65545/truncfalse/replay65536/ok=true",
+      "head=same as 0",
+      "tail@65545:avail65545/end65545/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": null,
+     "stop": null
+    },
+    {
+     "size": 262144,
+     "head": 0,
+     "tail": 262153,
+     "attaches": [
+      "0@0:avail0/end262153/truncfalse/replay262153/ok=true",
+      "captured@65545:avail65545/end262153/truncfalse/replay196608/ok=true",
+      "head=same as 0",
+      "tail@262153:avail262153/end262153/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": "frames=17,ok=true,holes=0,overlaps=0",
+     "stop": null
+    },
+    {
+     "size": 1048576,
+     "head": 0,
+     "tail": 1048585,
+     "attaches": [
+      "0@0:avail0/end1048585/truncfalse/replay1048585/ok=true",
+      "captured@262153:avail262153/end1048585/truncfalse/replay786432/ok=true",
+      "head=same as 0",
+      "tail@1048585:avail1048585/end1048585/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": "frames=68,ok=true,holes=0,overlaps=0",
+     "stop": null
+    },
+    {
+     "size": 4194304,
+     "head": 2097161,
+     "tail": 4194313,
+     "attaches": [
+      "0@0:avail2097161/end4194313/trunctrue/replay2097152/ok=true",
+      "captured@1048585:avail2097161/end4194313/trunctrue/replay2097152/ok=true",
+      "head@2097161:avail2097161/end4194313/truncfalse/replay2097152/ok=true",
+      "tail@4194313:avail4194313/end4194313/truncfalse/replay0/ok=n/a"
+     ],
+     "prior_tail_live": "frames=275,ok=true,holes=0,overlaps=0",
+     "stop": "head advanced to 2097161 at size 4194304"
+    }
+   ]
+  },
+  {
+   "key": "c7.witness_exit",
+   "run_a": "{\"exit_code_raw\":7,\"final_offset\":34,\"t\":27925.285433,\"wall\":1790944229527}",
+   "run_b": "{\"exit_code_raw\":7,\"final_offset\":34,\"t\":27929.25814,\"wall\":1790944658974}"
+  },
+  {
+   "key": "c8.proc_gone_after_response_ms",
+   "run_a": 11,
+   "run_b": 13
+  },
+  {
+   "key": "c8.snapshot_after",
+   "run_a": "{\"type\":\"error\",\"message\":\"terminal 4218507250296981 not found\"}",
+   "run_b": "{\"type\":\"error\",\"message\":\"terminal 4672739093545768 not found\"}"
+  },
+  {
+   "key": "c8.fixture_saw_signal",
+   "run_a": [
+    "c8 SIGHUP wall_ms=1790944234818"
+   ],
+   "run_b": [
+    "c8 SIGHUP wall_ms=1790944664257"
+   ]
+  },
+  {
+   "key": "c9.prepare",
+   "run_a": "handoff expires_in_ms~120000",
+   "run_b": "handoff expires_in_ms~119999"
+  },
+  {
+   "key": "c10.fresh_fixture",
+   "run_a": "bytes_ok=true exit={\"exit_code_raw\":0,\"final_offset\":54,\"t\":35688.228063,\"wall\":1790944237290}",
+   "run_b": "bytes_ok=true exit={\"exit_code_raw\":0,\"final_offset\":54,\"t\":35661.062462,\"wall\":1790944666706}"
+  },
+  {
+   "key": "c12.owner_close_to_daemon_exit_ms",
+   "run_a": 12.9,
+   "run_b": 12.7
+  },
+  {
+   "key": "c12.sub_eof_after_owner_close_ms",
+   "run_a": {},
+   "run_b": {
+    "c12-sub-controller": 8.1,
+    "c12-sub-observer": 8.2
+   }
+  },
+  {
+   "key": "c13.witness_exited_frame",
+   "run_a": "{\"exit_code_raw\":1,\"final_offset\":28,\"t\":37410.196563,\"wall\":1790944239012}",
+   "run_b": "{\"exit_code_raw\":1,\"final_offset\":28,\"t\":37375.461434,\"wall\":1790944668421}"
+  },
+  {
+   "key": "c13.proc_witness",
+   "run_a": "zombie",
+   "run_b": "gone"
+  }
+ ]
+}

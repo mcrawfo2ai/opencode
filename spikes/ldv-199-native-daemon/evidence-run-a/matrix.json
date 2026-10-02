@@ -1,0 +1,184 @@
+{
+ "matrix": [
+  {
+   "id": 1,
+   "started_ms": 66,
+   "status": "completed",
+   "duration_ms": 18569,
+   "signals": [],
+   "evidence": {
+    "file": "case-01.json",
+    "sha256": "f1c87b7092d0209a3e1f9a3125cb87e7295a0610c85bfe91a33b79ebe2ca61b6",
+    "bytes": 39295
+   }
+  },
+  {
+   "id": 2,
+   "started_ms": 18639,
+   "status": "completed",
+   "duration_ms": 3140,
+   "signals": [
+    {
+     "path": "subs.c2-ctl2.attach.failure",
+     "signal": "failure:eof"
+    }
+   ],
+   "evidence": {
+    "file": "case-02.json",
+    "sha256": "9b62f66eaf9b49d0b37071b18a35e6be4b45d2613e6e74973c7d5fdd9b0274e7",
+    "bytes": 38565
+   }
+  },
+  {
+   "id": 3,
+   "started_ms": 21781,
+   "status": "completed",
+   "duration_ms": 1644,
+   "signals": [],
+   "evidence": {
+    "file": "case-03.json",
+    "sha256": "37b4a9211520f68498dde52a82a07742a4560b6c7ee02049280c69553722ed34",
+    "bytes": 51578
+   }
+  },
+  {
+   "id": 4,
+   "started_ms": 23428,
+   "status": "completed",
+   "duration_ms": 1796,
+   "signals": [],
+   "evidence": {
+    "file": "case-04.json",
+    "sha256": "8ea4dcb60fbe35713ea2ae287e10fd0f6e35126fee905d353a041b6da91af878",
+    "bytes": 19237
+   }
+  },
+  {
+   "id": 5,
+   "started_ms": 25224,
+   "status": "completed",
+   "duration_ms": 2090,
+   "signals": [],
+   "evidence": {
+    "file": "case-05.json",
+    "sha256": "7947d035247c636d4bf7ec3b554b13114cb24b66a594eae16bb70a1bd40d3792",
+    "bytes": 96648
+   }
+  },
+  {
+   "id": 6,
+   "started_ms": 27317,
+   "status": "completed",
+   "duration_ms": 297,
+   "signals": [],
+   "evidence": {
+    "file": "case-06.json",
+    "sha256": "02d493a133e2298ff6a443280409663664f815407d3e330b6fb7e30b9b894579",
+    "bytes": 23040
+   }
+  },
+  {
+   "id": 7,
+   "started_ms": 27615,
+   "status": "completed",
+   "duration_ms": 5315,
+   "signals": [],
+   "evidence": {
+    "file": "case-07.json",
+    "sha256": "1af88804274bfe4c856c2780e3c2dd50d485a33c280f75c5679e94dc0d685335",
+    "bytes": 18651
+   }
+  },
+  {
+   "id": 8,
+   "started_ms": 32931,
+   "status": "completed",
+   "duration_ms": 589,
+   "signals": [
+    {
+     "path": "after.attachAfter.failure",
+     "signal": "failure:eof"
+    }
+   ],
+   "evidence": {
+    "file": "case-08.json",
+    "sha256": "cbd49314659af3662be98efa7821262b1ad13ea17d723c5d08bdc477e20609b8",
+    "bytes": 14318
+   }
+  },
+  {
+   "id": 9,
+   "started_ms": 33521,
+   "status": "completed",
+   "duration_ms": 1004,
+   "signals": [],
+   "evidence": {
+    "file": "case-09.json",
+    "sha256": "a4e4230bc08c05dc8ec89bdf6dfd7b344aafb7d1ea9f04347a9a2e29a0c71fa9",
+    "bytes": 31270
+   }
+  },
+  {
+   "id": 10,
+   "started_ms": 34527,
+   "status": "completed",
+   "duration_ms": 1152,
+   "signals": [
+    {
+     "path": "stopProof.ping_old.failure",
+     "signal": "failure:connect"
+    },
+    {
+     "path": "oldCursorOnNew.attach.failure",
+     "signal": "failure:eof"
+    }
+   ],
+   "evidence": {
+    "file": "case-10.json",
+    "sha256": "996d3406d10484e2e3809d4616fbf039cfe5829425d36b75cfe3c3af82706f7c",
+    "bytes": 26001
+   }
+  },
+  {
+   "id": 11,
+   "started_ms": 35682,
+   "status": "completed",
+   "duration_ms": 1448,
+   "signals": [],
+   "evidence": {
+    "file": "case-11.json",
+    "sha256": "b5b6882576f094ce4c61dbec76506acb423209740ff6ead744a56a42cbfa9f81",
+    "bytes": 23170
+   }
+  },
+  {
+   "id": 13,
+   "started_ms": 37131,
+   "status": "completed",
+   "duration_ms": 264,
+   "signals": [],
+   "evidence": {
+    "file": "case-13.json",
+    "sha256": "bec66f347014c7d4d0e25ec8049cfe46ab5161264a5997d516245d558869f0b6",
+    "bytes": 11615
+   }
+  },
+  {
+   "id": 12,
+   "started_ms": 37396,
+   "status": "completed",
+   "duration_ms": 11812,
+   "signals": [
+    {
+     "path": "ownerClose.pingAfter.failure",
+     "signal": "failure:connect"
+    }
+   ],
+   "evidence": {
+    "file": "case-12.json",
+    "sha256": "1b4c3af6091a8089f9fe22ed0318ff45b02173c48159bc59107dfb3717e06e98",
+    "bytes": 18260
+   }
+  }
+ ]
+}

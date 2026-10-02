@@ -1,0 +1,355 @@
+{
+ "c1.exit0.list_lifecycle_at_100ms_1s_5s": [
+  "{\"status\":\"exited\",\"exit_code\":0}",
+  "{\"status\":\"exited\",\"exit_code\":0}",
+  "{\"status\":\"exited\",\"exit_code\":0}"
+ ],
+ "c1.exit0.snapshot_lifecycle": [
+  "{\"status\":\"exited\",\"exit_code\":0}",
+  "{\"status\":\"exited\",\"exit_code\":0}",
+  "{\"status\":\"exited\",\"exit_code\":0}"
+ ],
+ "c1.exit0.list_sent_after_anchor_ms": [
+  100,
+  1001,
+  5001
+ ],
+ "c1.exit0.proc_gone_after_exit_stage_ms": 9,
+ "c1.exit0.output_head_tail": [
+  "0/58",
+  "0/58",
+  "0/58"
+ ],
+ "c1.exit0.late_attach": "observer/gen0/req0/avail0/end58/truncfalse/replay58",
+ "c1.exit0.late_attach_terminal_lifecycle": "{\"status\":\"exited\",\"exit_code\":0}",
+ "c1.exit0.late_exited_frame": null,
+ "c1.exit0.late_eof": null,
+ "c1.exit0.late_bytes_match_oracle": true,
+ "c1.exit0.late_pre_origin_verified": true,
+ "c1.exit7.list_lifecycle_at_100ms_1s_5s": [
+  "{\"status\":\"exited\",\"exit_code\":7}",
+  "{\"status\":\"exited\",\"exit_code\":7}",
+  "{\"status\":\"exited\",\"exit_code\":7}"
+ ],
+ "c1.exit7.snapshot_lifecycle": [
+  "{\"status\":\"exited\",\"exit_code\":7}",
+  "{\"status\":\"exited\",\"exit_code\":7}",
+  "{\"status\":\"exited\",\"exit_code\":7}"
+ ],
+ "c1.exit7.list_sent_after_anchor_ms": [
+  100,
+  1001,
+  5005
+ ],
+ "c1.exit7.proc_gone_after_exit_stage_ms": 7,
+ "c1.exit7.output_head_tail": [
+  "0/58",
+  "0/58",
+  "0/58"
+ ],
+ "c1.exit7.late_attach": "observer/gen0/req0/avail0/end58/truncfalse/replay58",
+ "c1.exit7.late_attach_terminal_lifecycle": "{\"status\":\"exited\",\"exit_code\":7}",
+ "c1.exit7.late_exited_frame": null,
+ "c1.exit7.late_eof": null,
+ "c1.exit7.late_bytes_match_oracle": true,
+ "c1.exit7.late_pre_origin_verified": true,
+ "c2.c2-ctl1.attach": "controller/gen1/req0/avail0/end9",
+ "c2.c2-ctl1.exit_frame": "code=0 final_offset=34",
+ "c2.c2-ctl1.eof_after_exit": true,
+ "c2.c2-ctl1.events": [
+  "controller_changed(c2-ctl1,gen1)",
+  "controller_changed(c2-ctl3,gen2)",
+  "controller_changed(c2-obs1,gen3)",
+  "exited"
+ ],
+ "c2.c2-ctl1.bytes_match_oracle": true,
+ "c2.c2-ctl1.compared_bytes": 25,
+ "c2.c2-obs1.attach": "observer/gen1/req9/avail9/end9",
+ "c2.c2-obs1.exit_frame": "code=0 final_offset=34",
+ "c2.c2-obs1.eof_after_exit": true,
+ "c2.c2-obs1.events": [
+  "controller_changed(c2-ctl3,gen2)",
+  "controller_changed(c2-obs1,gen3)",
+  "exited"
+ ],
+ "c2.c2-obs1.bytes_match_oracle": true,
+ "c2.c2-obs1.compared_bytes": 25,
+ "c2.c2-obs2.attach": "observer/gen1/req0/avail0/end9",
+ "c2.c2-obs2.exit_frame": "code=0 final_offset=34",
+ "c2.c2-obs2.eof_after_exit": true,
+ "c2.c2-obs2.events": [
+  "controller_changed(c2-ctl3,gen2)",
+  "controller_changed(c2-obs1,gen3)",
+  "exited"
+ ],
+ "c2.c2-obs2.bytes_match_oracle": true,
+ "c2.c2-obs2.compared_bytes": 25,
+ "c2.c2-ctl2.attach": "FAILED:eof",
+ "c2.c2-ctl2.exit_frame": null,
+ "c2.c2-ctl2.eof_after_exit": null,
+ "c2.c2-ctl2.events": [],
+ "c2.c2-ctl2.bytes_match_oracle": null,
+ "c2.c2-ctl2.compared_bytes": null,
+ "c2.c2-ctl3-takeover.attach": "controller/gen2/req9/avail9/end9",
+ "c2.c2-ctl3-takeover.exit_frame": "code=0 final_offset=34",
+ "c2.c2-ctl3-takeover.eof_after_exit": true,
+ "c2.c2-ctl3-takeover.events": [
+  "controller_changed(c2-ctl3,gen2)",
+  "controller_changed(c2-obs1,gen3)",
+  "exited"
+ ],
+ "c2.c2-ctl3-takeover.bytes_match_oracle": true,
+ "c2.c2-ctl3-takeover.compared_bytes": 25,
+ "c2.control_op_by_observer": "{\"type\":\"ok\"}",
+ "c2.retained_after_exit": "{\"status\":\"exited\",\"exit_code\":0} head/tail=0/34",
+ "c2.fresh_observer_after_exit": "observer/gen4 exit_frame=null bytes_ok=true",
+ "c3.identity_violations": 0,
+ "c3.frames_bound": 12,
+ "c3.foreign_markers_seen": {
+  "c3-sA1": [],
+  "c3-sA2": [],
+  "c3-sB1": [],
+  "c3-sA2-takeover": []
+ },
+ "c3.bytes_match_oracle": {
+  "c3-sA1": true,
+  "c3-sA2": true,
+  "c3-sB1": true,
+  "c3-sA2-takeover": true
+ },
+ "c3.A2_stayed_gated_while_A1_B1_ran": "true (witness A1/B1 started=true)",
+ "c3.A2_arbitration_events": [
+  "controller_changed(c3-sA2,gen1)",
+  "controller_changed(c3-sA2-takeover,gen2)",
+  "exited"
+ ],
+ "c3.A2_running_after_A1B1_exit": "{\"status\":\"running\"}",
+ "c4.foreground_samples_while_child_running": [
+  "node"
+ ],
+ "c4.child_exit_code_independent": "7 (file 7)",
+ "c4.window_after_child_exit": {
+  "lifecycles": [
+   "{\"status\":\"running\"}"
+  ],
+  "fg": [
+   "bash"
+  ],
+  "shell_proc": [
+   "alive"
+  ],
+  "child_proc": [
+   "gone"
+  ],
+  "exit_event_seen": false
+ },
+ "c4.observer_events": [
+  "fg->node",
+  "fg->bash",
+  "exited(code=0,final=60)"
+ ],
+ "c4.final_native_lifecycle": "{\"status\":\"exited\",\"exit_code\":0}",
+ "c4.bytes_match_oracle": true,
+ "c4.mode_echo_opost_off": "true/true",
+ "c5.sizes": [
+  {
+   "size": 65536,
+   "head": 0,
+   "tail": 65545,
+   "attaches": [
+    "0@0:avail0/end65545/truncfalse/replay65545/ok=true",
+    "captured@9:avail9/end65545/truncfalse/replay65536/ok=true",
+    "head=same as 0",
+    "tail@65545:avail65545/end65545/truncfalse/replay0/ok=n/a"
+   ],
+   "prior_tail_live": null,
+   "stop": null
+  },
+  {
+   "size": 262144,
+   "head": 0,
+   "tail": 262153,
+   "attaches": [
+    "0@0:avail0/end262153/truncfalse/replay262153/ok=true",
+    "captured@65545:avail65545/end262153/truncfalse/replay196608/ok=true",
+    "head=same as 0",
+    "tail@262153:avail262153/end262153/truncfalse/replay0/ok=n/a"
+   ],
+   "prior_tail_live": "frames=18,ok=true,holes=0,overlaps=0",
+   "stop": null
+  },
+  {
+   "size": 1048576,
+   "head": 0,
+   "tail": 1048585,
+   "attaches": [
+    "0@0:avail0/end1048585/truncfalse/replay1048585/ok=true",
+    "captured@262153:avail262153/end1048585/truncfalse/replay786432/ok=true",
+    "head=same as 0",
+    "tail@1048585:avail1048585/end1048585/truncfalse/replay0/ok=n/a"
+   ],
+   "prior_tail_live": "frames=70,ok=true,holes=0,overlaps=0",
+   "stop": null
+  },
+  {
+   "size": 4194304,
+   "head": 2097161,
+   "tail": 4194313,
+   "attaches": [
+    "0@0:avail2097161/end4194313/trunctrue/replay2097152/ok=true",
+    "captured@1048585:avail2097161/end4194313/trunctrue/replay2097152/ok=true",
+    "head@2097161:avail2097161/end4194313/truncfalse/replay2097152/ok=true",
+    "tail@4194313:avail4194313/end4194313/truncfalse/replay0/ok=n/a"
+   ],
+   "prior_tail_live": "frames=272,ok=true,holes=0,overlaps=0",
+   "stop": "head advanced to 2097161 at size 4194304"
+  }
+ ],
+ "c5.unreached": [
+  {
+   "size": 16777216,
+   "reason": "sweep stopped: head advanced to 2097161 at size 4194304"
+  }
+ ],
+ "c5.capacity_statement": "sweep stopped on first truncation/error; retention capacity beyond the examined sizes is unknown",
+ "c6.saved_cursor": 18,
+ "c6.reconnect_attach": "req18/avail18/end25/truncfalse/replay7/gen0/roleobserver",
+ "c6.holes_overlaps_M1+M2": "0/0",
+ "c6.bytes_ok": {
+  "M1": true,
+  "M2": true,
+  "W": true,
+  "joined": true
+ },
+ "c6.exit_frames": {
+  "c6-witness": "code=0 final=34",
+  "c6-measured-reconnect": "code=0 final=34"
+ },
+ "c7.exit_confirmed_independently": true,
+ "c7.reconnect_attach": "req25/end34/truncfalse/replay9/lifecycle={\"status\":\"exited\",\"exit_code\":7}",
+ "c7.reconnect_exit_frame": null,
+ "c7.reconnect_eof": null,
+ "c7.joined_bytes_ok_and_holes": "true/0/0",
+ "c7.witness_exit": "{\"exit_code_raw\":7,\"final_offset\":34,\"t\":27925.285433,\"wall\":1790944229527}",
+ "c8.terminate_response": "{\"type\":\"ok\"}",
+ "c8.fixture_proc_after_response": "gone",
+ "c8.proc_gone_after_response_ms": 11,
+ "c8.exited_frames": {
+  "M": null,
+  "W": null
+ },
+ "c8.eof": {
+  "M": true,
+  "W": true
+ },
+ "c8.list_present_after": false,
+ "c8.snapshot_after": "{\"type\":\"error\",\"message\":\"terminal 4218507250296981 not found\"}",
+ "c8.attach_after": "{\"failure\":\"eof\"}",
+ "c8.fixture_saw_signal": [
+  "c8 SIGHUP wall_ms=1790944234818"
+ ],
+ "c8.fixture_exit_stage_reached": false,
+ "c9.prepare": "handoff expires_in_ms~120000",
+ "c9.claim_while_old_owner_open": "{\"error\":\"own failed: {\\\"type\\\":\\\"error\\\",\\\"message\\\":\\\"daemon already has a live owner\\\"}\"}",
+ "c9.same_instance_before_old_close": true,
+ "c9.after_old_owner_close(variant B)": {
+  "daemon": "alive:S",
+  "fixture": "alive:S",
+  "S1_eof": false,
+  "S2_eof": false
+ },
+ "c9.claim_after_old_owner_close(variant B)": "{\"resp\":{\"type\":\"owned\"}}",
+ "c9.same_instance_after_claim": "true token_unchanged=true",
+ "c9.old_streams_survived_and_exit": {
+  "S1": "bytes_ok=true exit=code=0 final=34 eof=true",
+  "S2": "bytes_ok=true exit=code=0 final=34 eof=true",
+  "S3": "bytes_ok=true exit=code=0 final=34 eof=true"
+ },
+ "c10.shutdown_response": "{\"type\":\"ok\"}",
+ "c10.daemon_stop_proof": "proc=gone after_ms=26 exit={\"code\":0,\"signal\":null} ping_old=connect/ENOENT",
+ "c10.fixture_after_shutdown": "gone",
+ "c10.old_stream_after_shutdown": "eof=true close=true exited_frame=null",
+ "c10.identity_changed": "{\"instance_id\":true,\"pid\":true,\"token\":true,\"socket\":true}",
+ "c10.old_id_present_on_new_list": false,
+ "c10.old_id_old_cursor_attach_on_new": "{\"failure\":\"eof\"}",
+ "c10.fresh_fixture": "bytes_ok=true exit={\"exit_code_raw\":0,\"final_offset\":54,\"t\":35688.228063,\"wall\":1790944237290}",
+ "c11.roles": "{\"M\":\"controller\",\"W\":\"observer\"}",
+ "c11.local_detach": "closed_local=true destroyed=true repeated_detach_threw=false",
+ "c11.callbacks_after_detach": "frames_after=0 frames_during_window=0",
+ "c11.stimulus_witness_saw_mid": "28>=28",
+ "c11.witness_events_since_detach": [
+  "controller_changed(c11-witness,gen2)"
+ ],
+ "c11.reattach_same_attachment_id": "attached/observer/gen2",
+ "c12.before_owner_close": "{\"daemon\":\"alive:S\",\"fixture\":\"alive:S\",\"S1_open\":true,\"S2_open\":true,\"owner_open\":true}",
+ "c12.start_observed_by_both": true,
+ "c12.after_1500ms": {
+  "daemon": "gone",
+  "fixture": "gone",
+  "daemon_exit": {
+   "code": 0,
+   "signal": null
+  },
+  "S1_eof": true,
+  "S2_eof": true,
+  "S1_exited_frame": null,
+  "S2_exited_frame": null
+ },
+ "c12.owner_close_to_daemon_exit_ms": 12.9,
+ "c12.sub_eof_after_owner_close_ms": {},
+ "c12.ping_after": "{\"failure\":\"connect\",\"message\":\"connect ENOENT /tmp/opencode-pty-0/e5a5fda1fc0d3f14395e9738b37eed91.sock\",\"code\":\"ENOENT\"}",
+ "c12.service_registration_after": "{\"present\":false,\"instance_unchanged\":false,\"error\":\"ENOENT: no such file or directory, open '/tmp/r/rt-d3/service.json'\"}",
+ "c12.mid_after_close": "NOT reached: fixture produced no mid ack (fixture dead)",
+ "c12.exit_observation": "exit gate NOT released: intermediate acknowledgment and/or native-running observation unavailable",
+ "c12.order_violations": 0,
+ "c13.native_lifecycle_after_external_sigkill": "{\"status\":\"exited\",\"exit_code\":1}",
+ "c13.witness_exited_frame": "{\"exit_code_raw\":1,\"final_offset\":28,\"t\":37410.196563,\"wall\":1790944239012}",
+ "c13.proc_witness": "zombie",
+ "matrix.status": {
+  "1": "completed",
+  "2": "completed",
+  "3": "completed",
+  "4": "completed",
+  "5": "completed",
+  "6": "completed",
+  "7": "completed",
+  "8": "completed",
+  "9": "completed",
+  "10": "completed",
+  "11": "completed",
+  "12": "completed",
+  "13": "completed"
+ },
+ "controls.synthetic_pass": "9/9",
+ "controls.native_captured_pass": "9/9",
+ "ordering_violations_all_cases": [],
+ "byte_compare_mismatches_all_cases": [],
+ "timed_out_signals": [],
+ "failure_signals": [
+  {
+   "case": 2,
+   "path": "subs.c2-ctl2.attach.failure",
+   "signal": "failure:eof"
+  },
+  {
+   "case": 8,
+   "path": "after.attachAfter.failure",
+   "signal": "failure:eof"
+  },
+  {
+   "case": 10,
+   "path": "stopProof.ping_old.failure",
+   "signal": "failure:connect"
+  },
+  {
+   "case": 10,
+   "path": "oldCursorOnNew.attach.failure",
+   "signal": "failure:eof"
+  },
+  {
+   "case": 12,
+   "path": "ownerClose.pingAfter.failure",
+   "signal": "failure:connect"
+  }
+ ]
+}

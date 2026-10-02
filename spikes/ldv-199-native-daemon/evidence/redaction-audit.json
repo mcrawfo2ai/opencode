@@ -1,0 +1,13 @@
+{
+ "files": 19,
+ "daemon_tokens_checked": 4,
+ "token_matches": 0,
+ "ticket_checked": true,
+ "forbidden_patterns": {
+  "service_json_content": [],
+  "github_token": [],
+  "aws_key": [],
+  "bearer": []
+ },
+ "ok": true
+}

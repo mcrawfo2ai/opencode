@@ -1,0 +1,183 @@
+{
+ "when": "before any native launch",
+ "results": [
+  {
+   "tag": "synthetic-offline",
+   "name": "observed-byte-changed",
+   "mutation": "interval#1 byte index 5 48->207",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "expectedOffset": 757,
+    "reported": {
+     "nativeOffset": 757,
+     "oracleIndex": 645,
+     "nativeByte": 207,
+     "oracleByte": 48,
+     "intervalStart": 752,
+     "intervalEnd": 1392
+    }
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "observed-offset-shifted",
+   "mutation": "interval#1 start/end +1",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": {
+     "nativeOffset": 753,
+     "oracleIndex": 641,
+     "nativeByte": 82,
+     "oracleByte": 48,
+     "intervalStart": 753,
+     "intervalEnd": 1393
+    }
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "interval-bounds-inconsistent",
+   "mutation": "interval#0 end +3 without data",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "start": 112,
+      "end": 755,
+      "dataLength": 640
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "intermediate-ack-omitted",
+   "mutation": "dropped ack event",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "fx": "F",
+      "at": 1,
+      "problem": "exit gate released without intermediate acknowledgment"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "exit-released-before-native-running",
+   "mutation": "swapped native-running and gate-release",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "fx": "F",
+      "at": 1,
+      "problem": "exit gate released without native-running observation after intermediate ack"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "detach-before-owner-close",
+   "mutation": "moved sub-detach before owner-close",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "at": 2,
+      "sub": "S1",
+      "problem": "sub-detach before owner-close"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "detach-before-property-settled",
+   "mutation": "moved sub-detach after owner-close but before property-observed",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "at": 3,
+      "sub": "S1",
+      "problem": "sub-detach before property observed/timed out"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "instance-identity-substituted",
+   "mutation": "frame#1 instance_id I1->I-substituted",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "reported": [
+     {
+      "at": 1,
+      "socket": "s2",
+      "field": "instance_id",
+      "got": "I-substituted",
+      "want": "I1"
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "tag": "synthetic-offline",
+   "name": "raw-exit-code-replaced-by-zero",
+   "mutation": "recorded exit_code null->0 (raw_was_null=true)",
+   "baseline_green": true,
+   "mutated_red": true,
+   "restored_green": true,
+   "detected_expected_change": true,
+   "detail": {
+    "raw_was_null": true,
+    "reported": [
+     {
+      "at": 0,
+      "raw": null,
+      "recorded": 0,
+      "problem": "recorded exit_code differs from raw"
+     }
+    ]
+   },
+   "pass": true
+  }
+ ]
+}

@@ -1,0 +1,420 @@
+{
+ "started": "2026-10-02T12:38:00.262Z",
+ "steps": [
+  {
+   "t_ms": 49220,
+   "step": "release-gates",
+   "fixtures": 17
+  },
+  {
+   "t_ms": 49221,
+   "step": "close-owned-non-owner-sockets",
+   "closed": 2
+  },
+  {
+   "t_ms": 49379,
+   "step": "verify-daemon",
+   "daemon": "d9",
+   "verified": true
+  },
+  {
+   "t_ms": 49399,
+   "step": "shutdown-daemon",
+   "daemon": "d9",
+   "resp": {
+    "type": "ok"
+   }
+  },
+  {
+   "t_ms": 49406,
+   "step": "verify-daemon",
+   "daemon": "d2",
+   "verified": true
+  },
+  {
+   "t_ms": 49426,
+   "step": "shutdown-daemon",
+   "daemon": "d2",
+   "resp": {
+    "type": "ok"
+   }
+  },
+  {
+   "t_ms": 49477,
+   "step": "close-owner-sockets",
+   "closed": 2
+  },
+  {
+   "t_ms": 49477,
+   "step": "daemon-state",
+   "daemon": "d1",
+   "state": "gone",
+   "exitInfo": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 34800,
+    "wall": "2026-10-02T12:37:45.846Z"
+   }
+  },
+  {
+   "t_ms": 49477,
+   "step": "daemon-state",
+   "daemon": "d9",
+   "state": "gone",
+   "exitInfo": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 49410,
+    "wall": "2026-10-02T12:38:00.455Z"
+   }
+  },
+  {
+   "t_ms": 49477,
+   "step": "daemon-state",
+   "daemon": "d2",
+   "state": "gone",
+   "exitInfo": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 49437,
+    "wall": "2026-10-02T12:38:00.483Z"
+   }
+  },
+  {
+   "t_ms": 49477,
+   "step": "daemon-state",
+   "daemon": "d3",
+   "state": "gone",
+   "exitInfo": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 37718,
+    "wall": "2026-10-02T12:37:48.763Z"
+   }
+  }
+ ],
+ "leftovers": [],
+ "escalations": [],
+ "owned": {
+  "boot_id": "6159cce6-ab5f-4c1e-b1a1-8a3079651ce2",
+  "daemons": [
+   {
+    "tag": "d1",
+    "instance_id": "d1abb3af1ee5de32e025a41f483a4f69",
+    "spawned_pid": 5971,
+    "starttime_ticks": 165513,
+    "exe": "/tmp/r/bin/opencode-pty"
+   },
+   {
+    "tag": "d9",
+    "instance_id": "6a826cc1a15a164dd558c9dc722f0157",
+    "spawned_pid": 6349,
+    "starttime_ticks": 168866,
+    "exe": "/tmp/r/bin/opencode-pty"
+   },
+   {
+    "tag": "d2",
+    "instance_id": "a713b6f494649fc3855ad73a8c10a9fe",
+    "spawned_pid": 6411,
+    "starttime_ticks": 169041,
+    "exe": "/tmp/r/bin/opencode-pty"
+   },
+   {
+    "tag": "d3",
+    "instance_id": "216f60fde135df71db37d84ba49f2193",
+    "spawned_pid": 6499,
+    "starttime_ticks": 169250,
+    "exe": "/tmp/r/bin/opencode-pty"
+   }
+  ],
+  "fixtures": [
+   {
+    "name": "c1-exit0",
+    "daemon": "d1",
+    "pty_id": 828395501584285,
+    "pid": 5975,
+    "starttime_ticks": 165520,
+    "comm": "node"
+   },
+   {
+    "name": "c1-exit7",
+    "daemon": "d1",
+    "pty_id": 3675000901613742,
+    "pid": 6006,
+    "starttime_ticks": 166450,
+    "comm": "node"
+   },
+   {
+    "name": "c2",
+    "daemon": "d1",
+    "pty_id": 8971950391898439,
+    "pid": 6037,
+    "starttime_ticks": 167379,
+    "comm": "node"
+   },
+   {
+    "name": "c3-A1",
+    "daemon": "d1",
+    "pty_id": 3979086798518193,
+    "pid": 6074,
+    "starttime_ticks": 167696,
+    "comm": "node"
+   },
+   {
+    "name": "c3-A2",
+    "daemon": "d1",
+    "pty_id": 8228016242327638,
+    "pid": 6093,
+    "starttime_ticks": 167714,
+    "comm": "node"
+   },
+   {
+    "name": "c3-B1",
+    "daemon": "d1",
+    "pty_id": 1342468630638623,
+    "pid": 6112,
+    "starttime_ticks": 167733,
+    "comm": "node"
+   },
+   {
+    "name": "c4",
+    "daemon": "d1",
+    "pty_id": 757706580291015,
+    "pid": 6156,
+    "starttime_ticks": 167865,
+    "comm": "bash"
+   },
+   {
+    "name": "c5",
+    "daemon": "d1",
+    "pty_id": 4289905510334205,
+    "pid": 6204,
+    "starttime_ticks": 168044,
+    "comm": "node"
+   },
+   {
+    "name": "c6",
+    "daemon": "d1",
+    "pty_id": 1169493042209863,
+    "pid": 6258,
+    "starttime_ticks": 168247,
+    "comm": "node"
+   },
+   {
+    "name": "c7",
+    "daemon": "d1",
+    "pty_id": 3402722554807910,
+    "pid": 6288,
+    "starttime_ticks": 168276,
+    "comm": "node"
+   },
+   {
+    "name": "c8",
+    "daemon": "d1",
+    "pty_id": 4672739093545768,
+    "pid": 6321,
+    "starttime_ticks": 168807,
+    "comm": "node"
+   },
+   {
+    "name": "c9",
+    "daemon": "d9",
+    "pty_id": 6862428554476163,
+    "pid": 6353,
+    "starttime_ticks": 168873,
+    "comm": "node"
+   },
+   {
+    "name": "c10-old",
+    "daemon": "d1",
+    "pty_id": 5543841146341604,
+    "pid": 6387,
+    "starttime_ticks": 168967,
+    "comm": "node"
+   },
+   {
+    "name": "c10-new",
+    "daemon": "d2",
+    "pty_id": 3683012013731596,
+    "pid": 6417,
+    "starttime_ticks": 169051,
+    "comm": "node"
+   },
+   {
+    "name": "c11",
+    "daemon": "d2",
+    "pty_id": 7779548238242088,
+    "pid": 6443,
+    "starttime_ticks": 169079,
+    "comm": "node"
+   },
+   {
+    "name": "c13",
+    "daemon": "d2",
+    "pty_id": 4649177175792218,
+    "pid": 6474,
+    "starttime_ticks": 169223,
+    "comm": "node"
+   },
+   {
+    "name": "c12",
+    "daemon": "d3",
+    "pty_id": 6196331223829866,
+    "pid": 6503,
+    "starttime_ticks": 169257,
+    "comm": "node"
+   }
+  ]
+ },
+ "final": {
+  "daemons": [
+   {
+    "tag": "d1",
+    "pid": 5971,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 34800,
+     "wall": "2026-10-02T12:37:45.846Z"
+    }
+   },
+   {
+    "tag": "d9",
+    "pid": 6349,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 49410,
+     "wall": "2026-10-02T12:38:00.455Z"
+    }
+   },
+   {
+    "tag": "d2",
+    "pid": 6411,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 49437,
+     "wall": "2026-10-02T12:38:00.483Z"
+    }
+   },
+   {
+    "tag": "d3",
+    "pid": 6499,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 37718,
+     "wall": "2026-10-02T12:37:48.763Z"
+    }
+   }
+  ],
+  "fixtures": [
+   {
+    "name": "c1-exit0",
+    "pid": 5975,
+    "state": "gone"
+   },
+   {
+    "name": "c1-exit7",
+    "pid": 6006,
+    "state": "gone"
+   },
+   {
+    "name": "c2",
+    "pid": 6037,
+    "state": "gone"
+   },
+   {
+    "name": "c3-A1",
+    "pid": 6074,
+    "state": "gone"
+   },
+   {
+    "name": "c3-A2",
+    "pid": 6093,
+    "state": "gone"
+   },
+   {
+    "name": "c3-B1",
+    "pid": 6112,
+    "state": "gone"
+   },
+   {
+    "name": "c4",
+    "pid": 6156,
+    "state": "gone"
+   },
+   {
+    "name": "c5",
+    "pid": 6204,
+    "state": "gone"
+   },
+   {
+    "name": "c6",
+    "pid": 6258,
+    "state": "gone"
+   },
+   {
+    "name": "c7",
+    "pid": 6288,
+    "state": "gone"
+   },
+   {
+    "name": "c8",
+    "pid": 6321,
+    "state": "gone"
+   },
+   {
+    "name": "c9",
+    "pid": 6353,
+    "state": "gone"
+   },
+   {
+    "name": "c10-old",
+    "pid": 6387,
+    "state": "gone"
+   },
+   {
+    "name": "c10-new",
+    "pid": 6417,
+    "state": "gone"
+   },
+   {
+    "name": "c11",
+    "pid": 6443,
+    "state": "gone"
+   },
+   {
+    "name": "c13",
+    "pid": 6474,
+    "state": "gone"
+   },
+   {
+    "name": "c12",
+    "pid": 6503,
+    "state": "gone"
+   }
+  ]
+ },
+ "fixture_signal_logs": {
+  "c5": [
+   "SIGHUP wall_ms=1790944658408"
+  ],
+  "c8": [
+   "SIGHUP wall_ms=1790944664257"
+  ],
+  "c10-old": [
+   "SIGHUP wall_ms=1790944665841"
+  ],
+  "c12": [
+   "SIGHUP wall_ms=1790944668759"
+  ]
+ },
+ "finished": "2026-10-02T12:38:01.128Z",
+ "duration_ms": 866
+}

@@ -1,0 +1,573 @@
+{
+ "id": 13,
+ "run_status": "completed",
+ "duration_ms": 264,
+ "result": {
+  "id": 13,
+  "title": "supplementary: external SIGKILL of an identified owned fixture child (does native ever report exit_code null?)",
+  "start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944238957,
+    "mono_ns": "1263012748081",
+    "pid": 4139,
+    "oracle_len": 20,
+    "extra": null,
+    "observed_wall_ms": 1790944238967
+   },
+   "expectedTail": 20,
+   "wait": {
+    "tail": 20
+   }
+  },
+  "mid": {
+   "ok": true,
+   "ack": {
+    "name": "mid-emitted",
+    "wall_ms": 1790944238988,
+    "mono_ns": "1263042834416",
+    "pid": 4139,
+    "oracle_len": 28,
+    "extra": null,
+    "observed_wall_ms": 1790944238989
+   },
+   "expectedTail": 28,
+   "wait": {
+    "tail": 28
+   },
+   "running": true
+  },
+  "identityRechecked": {
+   "same": true,
+   "pid": 4139
+  },
+  "procWitness": {
+   "state": "zombie",
+   "timedOut": false,
+   "after_kill_ms": 0
+  },
+  "list": {
+   "terminal": {
+    "id": 4885426169821627,
+    "pid": 4139,
+    "fg": null,
+    "group": "ldv199-c13-3623",
+    "lifecycle": {
+     "status": "exited",
+     "exit_code": 1
+    },
+    "head": 0,
+    "tail": 28,
+    "cols": 80,
+    "rows": 24
+   },
+   "lifecycle_raw": {
+    "status": "exited",
+    "exit_code": 1
+   }
+  },
+  "witness": {
+   "label": "c13-witness",
+   "role_requested": "observer",
+   "attachmentID": "c13-witness",
+   "requestedCursor": 10,
+   "attach": {
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 10,
+    "available_offset": 10,
+    "end_offset": 10,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 10,
+    "terminal": {
+     "id": 4885426169821627,
+     "pid": 4139,
+     "fg": "node",
+     "group": "ldv199-c13-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 10,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+     "pty_id": 4885426169821627,
+     "group_id": "ldv199-c13-3623",
+     "socket": "c13-witness"
+    }
+   },
+   "frames": 2,
+   "liveBytes": 18,
+   "maxEnd": 28,
+   "exit": {
+    "exit_code_raw": 1,
+    "final_offset": 28,
+    "t": 37410.196563,
+    "wall": 1790944239012
+   },
+   "eof": {
+    "t": 37410.354519,
+    "wall": 1790944239012,
+    "afterExit": true
+   },
+   "close": {
+    "t": 37410.475819,
+    "wall": 1790944239012,
+    "hadError": false,
+    "local": false
+   },
+   "errors": [],
+   "problems": [],
+   "events": [
+    {
+     "t": 37410.196563,
+     "type": "exited",
+     "exit_code": 1,
+     "final_offset": 28
+    }
+   ],
+   "rawIntervalsCount": 2,
+   "rawIntervals": [
+    [
+     10,
+     20
+    ],
+    [
+     20,
+     28
+    ]
+   ],
+   "detachedLocally": false,
+   "framesAfterLocalDetach": 0,
+   "compare": {
+    "intervals": 2,
+    "comparedBytes": 18,
+    "preOriginBytes": 0,
+    "beyondOracleBytes": 0,
+    "boundsProblems": [],
+    "firstDifference": null,
+    "nativeSha256": "5ef6d22835562efbdc02732c519d3f5d0943668970ed01169a0703945156c0ca",
+    "oracleSha256": "5ef6d22835562efbdc02732c519d3f5d0943668970ed01169a0703945156c0ca",
+    "ok": true,
+    "coverage": {
+     "from": 10,
+     "to": 28,
+     "holes": [],
+     "overlaps": [],
+     "covered": true
+    },
+    "replayStartBasis": "requested_offset",
+    "preOriginVerified": null
+   }
+  },
+  "fixtureExitStageAck": false,
+  "note": "exit via external signal is not a fixture-gated exit; any code/null is reported exactly as received",
+  "removeAfter": {
+   "type": "ok"
+  },
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 37164.05,
+    "wall": "2026-10-02T12:30:38.766Z",
+    "kind": "request",
+    "conn": "create-c13",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c13-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c13-3623",
+     "title": "ldv199-c13",
+     "group_id": "ldv199-c13-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 37173.2,
+    "wall": "2026-10-02T12:30:38.775Z",
+    "kind": "response",
+    "conn": "create-c13",
+    "rtt_ms": 9.19,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 4885426169821627,
+      "pid": 4139,
+      "fg": null,
+      "group": "ldv199-c13-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 37173.5,
+    "wall": "2026-10-02T12:30:38.775Z",
+    "kind": "fixture-created",
+    "fx": "c13",
+    "ptyId": 4885426169821627,
+    "pid": 4139,
+    "group": "ldv199-c13-3623",
+    "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+    "proc": {
+     "pid": 4139,
+     "comm": "node",
+     "state": "R",
+     "ppid": 4077,
+     "starttime_ticks": 126282,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c13-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 4885426169821627,
+      "pid": 4139,
+      "fg": null,
+      "group": "ldv199-c13-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 37214.64,
+    "wall": "2026-10-02T12:30:38.816Z",
+    "kind": "ack",
+    "fx": "c13",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944238814,
+     "mono_ns": "1262869366453",
+     "pid": 4139,
+     "oracle_len": 10,
+     "extra": null,
+     "observed_wall_ms": 1790944238816
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 37346.43,
+    "wall": "2026-10-02T12:30:38.948Z",
+    "kind": "origin",
+    "fx": "c13",
+    "origin": 10,
+    "head": 0,
+    "preLen_oracle": 10,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 37346.5,
+    "wall": "2026-10-02T12:30:38.948Z",
+    "kind": "sub-attach",
+    "sub": "c13-witness",
+    "fx": "c13",
+    "role": "observer",
+    "attachmentID": "c13-witness",
+    "cursor": 10,
+    "takeover": false
+   },
+   {
+    "i": 6,
+    "t_ms": 37355.41,
+    "wall": "2026-10-02T12:30:38.957Z",
+    "kind": "sub-attached",
+    "sub": "c13-witness",
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 10,
+    "available_offset": 10,
+    "end_offset": 10,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 10,
+    "terminal": {
+     "id": 4885426169821627,
+     "pid": 4139,
+     "fg": "node",
+     "group": "ldv199-c13-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 10,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "a126400c9850f9c3e1931acf88ee2a55",
+     "pty_id": 4885426169821627,
+     "group_id": "ldv199-c13-3623",
+     "socket": "c13-witness"
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 37355.62,
+    "wall": "2026-10-02T12:30:38.957Z",
+    "kind": "gate-release",
+    "fx": "c13",
+    "name": "start",
+    "wall_ms": 1790944238957
+   },
+   {
+    "i": 8,
+    "t_ms": 37357.47,
+    "wall": "2026-10-02T12:30:38.959Z",
+    "kind": "output",
+    "sub": "c13-witness",
+    "start": 10,
+    "end": 20,
+    "len": 10
+   },
+   {
+    "i": 9,
+    "t_ms": 37365.83,
+    "wall": "2026-10-02T12:30:38.967Z",
+    "kind": "ack",
+    "fx": "c13",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944238957,
+     "mono_ns": "1263012748081",
+     "pid": 4139,
+     "oracle_len": 20,
+     "extra": null,
+     "observed_wall_ms": 1790944238967
+    }
+   },
+   {
+    "i": 10,
+    "t_ms": 37377.29,
+    "wall": "2026-10-02T12:30:38.979Z",
+    "kind": "gate-release",
+    "fx": "c13",
+    "name": "mid",
+    "wall_ms": 1790944238979
+   },
+   {
+    "i": 11,
+    "t_ms": 37387.4,
+    "wall": "2026-10-02T12:30:38.989Z",
+    "kind": "output",
+    "sub": "c13-witness",
+    "start": 20,
+    "end": 28,
+    "len": 8
+   },
+   {
+    "i": 12,
+    "t_ms": 37387.52,
+    "wall": "2026-10-02T12:30:38.989Z",
+    "kind": "ack",
+    "fx": "c13",
+    "name": "mid-emitted",
+    "ack": {
+     "name": "mid-emitted",
+     "wall_ms": 1790944238988,
+     "mono_ns": "1263042834416",
+     "pid": 4139,
+     "oracle_len": 28,
+     "extra": null,
+     "observed_wall_ms": 1790944238989
+    }
+   },
+   {
+    "i": 13,
+    "t_ms": 37397.51,
+    "wall": "2026-10-02T12:30:38.999Z",
+    "kind": "request",
+    "conn": "list-running-c13",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 14,
+    "t_ms": 37407.25,
+    "wall": "2026-10-02T12:30:39.009Z",
+    "kind": "response",
+    "conn": "list-running-c13",
+    "rtt_ms": 9.82,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 4885426169821627,
+       "pid": 4139,
+       "fg": "node",
+       "group": "ldv199-c13-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 28,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 15,
+    "t_ms": 37407.28,
+    "wall": "2026-10-02T12:30:39.009Z",
+    "kind": "native-running",
+    "fx": "c13",
+    "terminal": {
+     "id": 4885426169821627,
+     "pid": 4139,
+     "fg": "node",
+     "group": "ldv199-c13-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 28,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 16,
+    "t_ms": 37407.65,
+    "wall": "2026-10-02T12:30:39.009Z",
+    "kind": "external-sigkill",
+    "fx": "c13",
+    "pid": 4139,
+    "wall_ms": 1790944239009
+   },
+   {
+    "i": 17,
+    "t_ms": 37410.26,
+    "wall": "2026-10-02T12:30:39.012Z",
+    "kind": "sub-event",
+    "sub": "c13-witness",
+    "event": {
+     "type": "exited",
+     "exit_code": 1,
+     "final_offset": 28
+    }
+   },
+   {
+    "i": 18,
+    "t_ms": 37410.36,
+    "wall": "2026-10-02T12:30:39.012Z",
+    "kind": "eof",
+    "sub": "c13-witness"
+   },
+   {
+    "i": 19,
+    "t_ms": 37410.48,
+    "wall": "2026-10-02T12:30:39.012Z",
+    "kind": "close",
+    "sub": "c13-witness",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 20,
+    "t_ms": 37416.56,
+    "wall": "2026-10-02T12:30:39.018Z",
+    "kind": "sub-detach",
+    "sub": "c13-witness"
+   },
+   {
+    "i": 21,
+    "t_ms": 37416.72,
+    "wall": "2026-10-02T12:30:39.018Z",
+    "kind": "request",
+    "conn": "c13-terminate",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 4885426169821627
+    }
+   },
+   {
+    "i": 22,
+    "t_ms": 37427.21,
+    "wall": "2026-10-02T12:30:39.029Z",
+    "kind": "response",
+    "conn": "c13-terminate",
+    "rtt_ms": 10.53,
+    "response": {
+     "type": "ok"
+    }
+   }
+  ]
+ }
+}

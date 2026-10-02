@@ -1,0 +1,701 @@
+{
+ "id": 8,
+ "run_status": "completed",
+ "duration_ms": 589,
+ "result": {
+  "id": 8,
+  "title": "explicit native removal (terminate) of a running fixture",
+  "start": {
+   "ok": true,
+   "ack": {
+    "name": "started",
+    "wall_ms": 1790944234783,
+    "mono_ns": "1258838052736",
+    "pid": 3987,
+    "oracle_len": 18,
+    "extra": null,
+    "observed_wall_ms": 1790944234788
+   },
+   "expectedTail": 18,
+   "wait": {
+    "tail": 18
+   }
+  },
+  "runningBefore": true,
+  "terminate": {
+   "wall_ms": 1790944234809,
+   "rtt_ms": 11.61,
+   "resp": {
+    "type": "ok"
+   }
+  },
+  "procAtResponse": "gone",
+  "procWitness": {
+   "state": "gone",
+   "timedOut": false,
+   "after_terminate_response_ms": 11
+  },
+  "after": {
+   "listPresent": false,
+   "listTerminal": null,
+   "snapshot": {
+    "type": "error",
+    "message": "terminal 4218507250296981 not found"
+   },
+   "attachAfter": {
+    "failure": "eof"
+   },
+   "signalsLog": [
+    "c8 SIGHUP wall_ms=1790944234818"
+   ],
+   "fixtureExitStageAck": false
+  },
+  "subs": {
+   "M": {
+    "label": "c8-measured",
+    "role_requested": "controller",
+    "attachmentID": "c8-measured",
+    "requestedCursor": 9,
+    "attach": {
+     "type": "attached",
+     "role": "controller",
+     "generation": 1,
+     "requested_offset": 9,
+     "available_offset": 9,
+     "end_offset": 9,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 9,
+     "terminal": {
+      "id": 4218507250296981,
+      "pid": 3987,
+      "fg": "node",
+      "group": "ldv199-c8-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 9,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 4218507250296981,
+      "group_id": "ldv199-c8-3623",
+      "socket": "c8-measured"
+     }
+    },
+    "frames": 1,
+    "liveBytes": 9,
+    "maxEnd": 18,
+    "exit": null,
+    "eof": {
+     "t": 33216.410598,
+     "wall": 1790944234818,
+     "afterExit": false
+    },
+    "close": {
+     "t": 33216.447959,
+     "wall": 1790944234818,
+     "hadError": false,
+     "local": false
+    },
+    "errors": [],
+    "problems": [],
+    "events": [
+     {
+      "t": 33165.222308,
+      "type": "controller_changed",
+      "attachment_id": "c8-measured",
+      "generation": 1
+     }
+    ],
+    "rawIntervalsCount": 1,
+    "rawIntervals": [
+     [
+      9,
+      18
+     ]
+    ],
+    "detachedLocally": false,
+    "framesAfterLocalDetach": 0
+   },
+   "W": {
+    "label": "c8-witness",
+    "role_requested": "observer",
+    "attachmentID": "c8-witness",
+    "requestedCursor": 9,
+    "attach": {
+     "type": "attached",
+     "role": "observer",
+     "generation": 1,
+     "requested_offset": 9,
+     "available_offset": 9,
+     "end_offset": 9,
+     "truncated": false,
+     "replay_len": 0,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 9,
+     "terminal": {
+      "id": 4218507250296981,
+      "pid": 3987,
+      "fg": "node",
+      "group": "ldv199-c8-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 9,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": [],
+     "bind": {
+      "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+      "pty_id": 4218507250296981,
+      "group_id": "ldv199-c8-3623",
+      "socket": "c8-witness"
+     }
+    },
+    "frames": 1,
+    "liveBytes": 9,
+    "maxEnd": 18,
+    "exit": null,
+    "eof": {
+     "t": 33216.166368,
+     "wall": 1790944234818,
+     "afterExit": false
+    },
+    "close": {
+     "t": 33216.371349,
+     "wall": 1790944234818,
+     "hadError": false,
+     "local": false
+    },
+    "errors": [],
+    "problems": [],
+    "events": [],
+    "rawIntervalsCount": 1,
+    "rawIntervals": [
+     [
+      9,
+      18
+     ]
+    ],
+    "detachedLocally": false,
+    "framesAfterLocalDetach": 0
+   }
+  },
+  "note": "any exit observed after terminate is removal-induced, not spontaneous completion",
+  "orderingViolations": []
+ },
+ "trace": {
+  "dropped": 0,
+  "events": [
+   {
+    "i": 0,
+    "t_ms": 32963.77,
+    "wall": "2026-10-02T12:30:34.565Z",
+    "kind": "request",
+    "conn": "create-c8",
+    "op": "create",
+    "request": {
+     "op": "create",
+     "program": "/opt/node22/bin/node",
+     "args": [
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c8-3623/scenario.json"
+     ],
+     "cwd": "/tmp/r/fx/c8-3623",
+     "title": "ldv199-c8",
+     "group_id": "ldv199-c8-3623",
+     "env": {
+      "PATH": "/usr/bin:/bin",
+      "HOME": "/tmp/r/home",
+      "TERM": "xterm",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/tmp"
+     },
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 1,
+    "t_ms": 32973.55,
+    "wall": "2026-10-02T12:30:34.575Z",
+    "kind": "response",
+    "conn": "create-c8",
+    "rtt_ms": 9.9,
+    "response": {
+     "type": "created",
+     "terminal": {
+      "id": 4218507250296981,
+      "pid": 3987,
+      "fg": null,
+      "group": "ldv199-c8-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 2,
+    "t_ms": 32973.69,
+    "wall": "2026-10-02T12:30:34.575Z",
+    "kind": "fixture-created",
+    "fx": "c8",
+    "ptyId": 4218507250296981,
+    "pid": 3987,
+    "group": "ldv199-c8-3623",
+    "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+    "proc": {
+     "pid": 3987,
+     "comm": "node",
+     "state": "R",
+     "ppid": 3634,
+     "starttime_ticks": 125862,
+     "exe": "/opt/node22/bin/node",
+     "cmdline": [
+      "/opt/node22/bin/node",
+      "/home/user/opencode/spikes/ldv-199-native-daemon/probe/fixture.mjs",
+      "/tmp/r/fx/c8-3623/scenario.json"
+     ]
+    },
+    "createResponse": {
+     "type": "created",
+     "terminal": {
+      "id": 4218507250296981,
+      "pid": 3987,
+      "fg": null,
+      "group": "ldv199-c8-3623",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 0,
+      "cols": 80,
+      "rows": 24
+     }
+    }
+   },
+   {
+    "i": 3,
+    "t_ms": 33025.19,
+    "wall": "2026-10-02T12:30:34.627Z",
+    "kind": "ack",
+    "fx": "c8",
+    "name": "ready",
+    "ack": {
+     "name": "ready",
+     "wall_ms": 1790944234617,
+     "mono_ns": "1258672488160",
+     "pid": 3987,
+     "oracle_len": 9,
+     "extra": null,
+     "observed_wall_ms": 1790944234627
+    }
+   },
+   {
+    "i": 4,
+    "t_ms": 33156.24,
+    "wall": "2026-10-02T12:30:34.758Z",
+    "kind": "origin",
+    "fx": "c8",
+    "origin": 9,
+    "head": 0,
+    "preLen_oracle": 9,
+    "origin_equals_preLen": true,
+    "lifecycle": {
+     "status": "running"
+    },
+    "mode": {
+     "echo_off": true,
+     "opost_off": true,
+     "columns": 80,
+     "rows": 24,
+     "isTTY": true,
+     "env_keys": [
+      "COLORTERM",
+      "HOME",
+      "LANG",
+      "OPENCODE_PTY_RUNTIME_DIR",
+      "PATH",
+      "SHELL",
+      "TERM",
+      "TMPDIR",
+      "XDG_CACHE_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_DATA_HOME",
+      "XDG_RUNTIME_DIR"
+     ],
+     "set_status": 0
+    }
+   },
+   {
+    "i": 5,
+    "t_ms": 33156.32,
+    "wall": "2026-10-02T12:30:34.758Z",
+    "kind": "sub-attach",
+    "sub": "c8-measured",
+    "fx": "c8",
+    "role": "controller",
+    "attachmentID": "c8-measured",
+    "cursor": 9,
+    "takeover": false
+   },
+   {
+    "i": 6,
+    "t_ms": 33164.96,
+    "wall": "2026-10-02T12:30:34.767Z",
+    "kind": "sub-attached",
+    "sub": "c8-measured",
+    "type": "attached",
+    "role": "controller",
+    "generation": 1,
+    "requested_offset": 9,
+    "available_offset": 9,
+    "end_offset": 9,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 9,
+    "terminal": {
+     "id": 4218507250296981,
+     "pid": 3987,
+     "fg": "node",
+     "group": "ldv199-c8-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 9,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 4218507250296981,
+     "group_id": "ldv199-c8-3623",
+     "socket": "c8-measured"
+    }
+   },
+   {
+    "i": 7,
+    "t_ms": 33165,
+    "wall": "2026-10-02T12:30:34.767Z",
+    "kind": "sub-attach",
+    "sub": "c8-witness",
+    "fx": "c8",
+    "role": "observer",
+    "attachmentID": "c8-witness",
+    "cursor": 9,
+    "takeover": false
+   },
+   {
+    "i": 8,
+    "t_ms": 33165.26,
+    "wall": "2026-10-02T12:30:34.767Z",
+    "kind": "sub-event",
+    "sub": "c8-measured",
+    "event": {
+     "type": "controller_changed",
+     "attachment_id": "c8-measured",
+     "generation": 1
+    }
+   },
+   {
+    "i": 9,
+    "t_ms": 33175.37,
+    "wall": "2026-10-02T12:30:34.777Z",
+    "kind": "sub-attached",
+    "sub": "c8-witness",
+    "type": "attached",
+    "role": "observer",
+    "generation": 1,
+    "requested_offset": 9,
+    "available_offset": 9,
+    "end_offset": 9,
+    "truncated": false,
+    "replay_len": 0,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 9,
+    "terminal": {
+     "id": 4218507250296981,
+     "pid": 3987,
+     "fg": "node",
+     "group": "ldv199-c8-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 9,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": [],
+    "bind": {
+     "instance_id": "c31595bd8d338456ea4cffb96a546bad",
+     "pty_id": 4218507250296981,
+     "group_id": "ldv199-c8-3623",
+     "socket": "c8-witness"
+    }
+   },
+   {
+    "i": 10,
+    "t_ms": 33175.53,
+    "wall": "2026-10-02T12:30:34.777Z",
+    "kind": "gate-release",
+    "fx": "c8",
+    "name": "start",
+    "wall_ms": 1790944234777
+   },
+   {
+    "i": 11,
+    "t_ms": 33182.76,
+    "wall": "2026-10-02T12:30:34.784Z",
+    "kind": "output",
+    "sub": "c8-witness",
+    "start": 9,
+    "end": 18,
+    "len": 9
+   },
+   {
+    "i": 12,
+    "t_ms": 33182.92,
+    "wall": "2026-10-02T12:30:34.785Z",
+    "kind": "output",
+    "sub": "c8-measured",
+    "start": 9,
+    "end": 18,
+    "len": 9
+   },
+   {
+    "i": 13,
+    "t_ms": 33186.24,
+    "wall": "2026-10-02T12:30:34.788Z",
+    "kind": "ack",
+    "fx": "c8",
+    "name": "started",
+    "ack": {
+     "name": "started",
+     "wall_ms": 1790944234783,
+     "mono_ns": "1258838052736",
+     "pid": 3987,
+     "oracle_len": 18,
+     "extra": null,
+     "observed_wall_ms": 1790944234788
+    }
+   },
+   {
+    "i": 14,
+    "t_ms": 33197.34,
+    "wall": "2026-10-02T12:30:34.799Z",
+    "kind": "request",
+    "conn": "list-running-c8",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 15,
+    "t_ms": 33206.97,
+    "wall": "2026-10-02T12:30:34.809Z",
+    "kind": "response",
+    "conn": "list-running-c8",
+    "rtt_ms": 9.81,
+    "response": {
+     "type": "terminals",
+     "terminals": [
+      {
+       "id": 4218507250296981,
+       "pid": 3987,
+       "fg": "node",
+       "group": "ldv199-c8-3623",
+       "lifecycle": {
+        "status": "running"
+       },
+       "head": 0,
+       "tail": 18,
+       "cols": 80,
+       "rows": 24
+      }
+     ]
+    }
+   },
+   {
+    "i": 16,
+    "t_ms": 33207.01,
+    "wall": "2026-10-02T12:30:34.809Z",
+    "kind": "native-running",
+    "fx": "c8",
+    "terminal": {
+     "id": 4218507250296981,
+     "pid": 3987,
+     "fg": "node",
+     "group": "ldv199-c8-3623",
+     "lifecycle": {
+      "status": "running"
+     },
+     "head": 0,
+     "tail": 18,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   {
+    "i": 17,
+    "t_ms": 33207.32,
+    "wall": "2026-10-02T12:30:34.809Z",
+    "kind": "request",
+    "conn": "c8-terminate",
+    "op": "terminate",
+    "request": {
+     "op": "terminate",
+     "id": 4218507250296981
+    }
+   },
+   {
+    "i": 18,
+    "t_ms": 33216.18,
+    "wall": "2026-10-02T12:30:34.818Z",
+    "kind": "eof",
+    "sub": "c8-witness"
+   },
+   {
+    "i": 19,
+    "t_ms": 33216.37,
+    "wall": "2026-10-02T12:30:34.818Z",
+    "kind": "close",
+    "sub": "c8-witness",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 20,
+    "t_ms": 33216.41,
+    "wall": "2026-10-02T12:30:34.818Z",
+    "kind": "eof",
+    "sub": "c8-measured"
+   },
+   {
+    "i": 21,
+    "t_ms": 33216.45,
+    "wall": "2026-10-02T12:30:34.818Z",
+    "kind": "close",
+    "sub": "c8-measured",
+    "hadError": false,
+    "local": false
+   },
+   {
+    "i": 22,
+    "t_ms": 33218.7,
+    "wall": "2026-10-02T12:30:34.820Z",
+    "kind": "response",
+    "conn": "c8-terminate",
+    "rtt_ms": 11.61,
+    "response": {
+     "type": "ok"
+    }
+   },
+   {
+    "i": 23,
+    "t_ms": 33519.88,
+    "wall": "2026-10-02T12:30:35.122Z",
+    "kind": "request",
+    "conn": "c8-list-after",
+    "op": "list",
+    "request": {
+     "op": "list"
+    }
+   },
+   {
+    "i": 24,
+    "t_ms": 33520.6,
+    "wall": "2026-10-02T12:30:35.122Z",
+    "kind": "response",
+    "conn": "c8-list-after",
+    "rtt_ms": 0.91,
+    "response": {
+     "type": "terminals",
+     "terminals": []
+    }
+   },
+   {
+    "i": 25,
+    "t_ms": 33520.99,
+    "wall": "2026-10-02T12:30:35.123Z",
+    "kind": "request",
+    "conn": "c8-snapshot-after",
+    "op": "snapshot",
+    "request": {
+     "op": "snapshot",
+     "id": 4218507250296981
+    }
+   },
+   {
+    "i": 26,
+    "t_ms": 33530.85,
+    "wall": "2026-10-02T12:30:35.132Z",
+    "kind": "response",
+    "conn": "c8-snapshot-after",
+    "rtt_ms": 10.11,
+    "response": {
+     "type": "error",
+     "message": "terminal 4218507250296981 not found"
+    }
+   },
+   {
+    "i": 27,
+    "t_ms": 33530.89,
+    "wall": "2026-10-02T12:30:35.133Z",
+    "kind": "sub-attach",
+    "sub": "c8-attach-after",
+    "fx": "c8",
+    "role": "observer",
+    "attachmentID": "c8-attach-after",
+    "cursor": 0,
+    "takeover": false
+   },
+   {
+    "i": 28,
+    "t_ms": 33550.98,
+    "wall": "2026-10-02T12:30:35.153Z",
+    "kind": "sub-attach-failed",
+    "sub": "c8-attach-after",
+    "failure": "eof"
+   },
+   {
+    "i": 29,
+    "t_ms": 33551.3,
+    "wall": "2026-10-02T12:30:35.153Z",
+    "kind": "sub-detach",
+    "sub": "c8-attach-after"
+   },
+   {
+    "i": 30,
+    "t_ms": 33551.45,
+    "wall": "2026-10-02T12:30:35.153Z",
+    "kind": "sub-detach",
+    "sub": "c8-measured"
+   },
+   {
+    "i": 31,
+    "t_ms": 33551.46,
+    "wall": "2026-10-02T12:30:35.153Z",
+    "kind": "sub-detach",
+    "sub": "c8-witness"
+   }
+  ]
+ }
+}
