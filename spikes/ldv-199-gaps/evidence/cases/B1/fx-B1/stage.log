@@ -1,0 +1,11 @@
+1790958681308412 fixture start pid=2120
+1790958681325463 mode verified
+1790958681330923 ack ready oracle_len=0
+1790958681596343 gate-passed start
+1790958681605333 ack started oracle_len=9
+1790958681616382 gate-passed mid
+1790958681625347 ack mid-emitted oracle_len=16
+1790958681646529 gate-passed exit
+1790958681656432 ack final-emitted oracle_len=25
+1790958681662102 ack exit-stage oracle_len=25
+1790958681662954 exiting 7

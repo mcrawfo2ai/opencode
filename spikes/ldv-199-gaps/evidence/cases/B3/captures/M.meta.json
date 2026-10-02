@@ -1,0 +1,79 @@
+{
+ "label": "M",
+ "case": "B3",
+ "fx": "B3",
+ "role_requested": "observer",
+ "attachment_id": "M",
+ "requested_cursor": 0,
+ "takeover": false,
+ "expected_identity": {
+  "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+  "pty_id": 5870515630746586,
+  "group_id": "ldv199gaps-B3-B3-2086"
+ },
+ "daemon": "dB",
+ "attach": {
+  "type": "attached",
+  "role": "observer",
+  "generation": 0,
+  "requested_offset": 0,
+  "available_offset": 0,
+  "end_offset": 0,
+  "truncated": false,
+  "replay_len": 0,
+  "replay_start_basis": "requested_offset",
+  "replay_start": 0,
+  "replay_file": null,
+  "terminal": {
+   "id": 5870515630746586,
+   "pid": 2227,
+   "fg": "bash",
+   "group": "ldv199gaps-B3-B3-2086",
+   "lifecycle": {
+    "status": "running"
+   },
+   "head": 0,
+   "tail": 0,
+   "cols": 80,
+   "rows": 24
+  },
+  "problems": []
+ },
+ "rx": {
+  "path": "cases/B3/captures/M.rx.bin",
+  "bytes_written": 606,
+  "lost": false,
+  "lost_reason": null,
+  "bytes_in": 606
+ },
+ "index_file": "cases/B3/captures/M.index.jsonl",
+ "frames": 6,
+ "max_end_online": 16,
+ "exited_frame_client_view": {
+  "exit_code_raw": 1,
+  "exit_code_key_present": true,
+  "final_offset": 16,
+  "raw_payload": "{\"type\":\"exited\",\"exit_code\":1,\"final_offset\":16}",
+  "t_ms": 6826.80993,
+  "wall_ms": 1790958687645,
+  "hdrOff": 553
+ },
+ "eof": {
+  "t_ms": 6827.547928,
+  "wall_ms": 1790958687645,
+  "afterExitFrame": true
+ },
+ "close": {
+  "t_ms": 6828.141406,
+  "wall_ms": 1790958687646,
+  "hadError": false,
+  "local": false,
+  "reason": null
+ },
+ "errors": [],
+ "problems": [],
+ "detached_locally": false,
+ "detach_reason": null,
+ "frames_after_local_detach": 0,
+ "client_views_note": "all *_client_view / *_online fields are client-derived; offline/verify.py re-derives from rx.bin"
+}

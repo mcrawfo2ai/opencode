@@ -1,0 +1,26 @@
+[
+ {
+  "boundary": "after-start",
+  "length": 9,
+  "sha256": "e3c837668ef782f687a369ebbbd489b0ae758fb7ae226231bd3bf0367fc6db93",
+  "t_ms": 7279.818,
+  "trace_seq": 127,
+  "matches_live_length": true
+ },
+ {
+  "boundary": "after-mid",
+  "length": 16,
+  "sha256": "ad24058ee96fccfc5e20399f6b45d55a08d926da413d122b7d7088a909bf1bc7",
+  "t_ms": 7300.094,
+  "trace_seq": 134,
+  "matches_live_length": true
+ },
+ {
+  "boundary": "final",
+  "length": 25,
+  "sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+  "t_ms": 7360.919,
+  "trace_seq": 147,
+  "matches_live_length": true
+ }
+]

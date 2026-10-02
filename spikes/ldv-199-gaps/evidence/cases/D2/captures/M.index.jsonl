@@ -1,0 +1,3 @@
+{"i":0,"t_ms":7248.55422,"hdrOff":0,"payload_len":491,"kind":"attached"}
+{"i":1,"t_ms":7267.994,"hdrOff":495,"payload_len":26,"kind":"output","start":0,"end":9}
+{"i":2,"kind":"conn:close","t_ms":7280.335,"hadError":false,"local":true,"reason":"measured-loss"}

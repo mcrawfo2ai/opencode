@@ -1,0 +1,496 @@
+{
+ "started": "2026-10-02T16:31:52.896Z",
+ "steps": [
+  {
+   "t_ms": 32079,
+   "step": "close-owned-non-owner-sockets",
+   "closed": 39
+  },
+  {
+   "t_ms": 32230,
+   "step": "release-remaining-gates"
+  },
+  {
+   "t_ms": 32541,
+   "step": "verify-daemon",
+   "daemon": "dB",
+   "verified": true,
+   "identity_ok": true,
+   "ping": "pong"
+  },
+  {
+   "t_ms": 32562,
+   "step": "terminate-recorded-pty",
+   "daemon": "dB",
+   "pty_id": 1283003628143177,
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32571,
+   "step": "terminate-recorded-pty",
+   "daemon": "dB",
+   "pty_id": 4788864321944517,
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32582,
+   "step": "terminate-recorded-pty",
+   "daemon": "dB",
+   "pty_id": 5870515630746586,
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32592,
+   "step": "terminate-recorded-pty",
+   "daemon": "dB",
+   "pty_id": 7220684115631940,
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32602,
+   "step": "terminate-recorded-pty",
+   "daemon": "dB",
+   "pty_id": 7560076496900084,
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32612,
+   "step": "shutdown-request",
+   "daemon": "dB",
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32672,
+   "step": "verify-daemon",
+   "daemon": "C2",
+   "verified": true,
+   "identity_ok": true,
+   "ping": "pong"
+  },
+  {
+   "t_ms": 32693,
+   "step": "terminate-recorded-pty",
+   "daemon": "C2",
+   "pty_id": 4606837517433128,
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32702,
+   "step": "shutdown-request",
+   "daemon": "C2",
+   "resp": "ok"
+  },
+  {
+   "t_ms": 32753,
+   "step": "close-owner-sockets",
+   "closed": 39
+  },
+  {
+   "t_ms": 33054,
+   "step": "daemon-final-state",
+   "daemon": "dB",
+   "state": "gone",
+   "exit": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 32623.522,
+    "wall_ms": 1790958713441
+   }
+  },
+  {
+   "t_ms": 33054,
+   "step": "daemon-final-state",
+   "daemon": "C1",
+   "state": "gone",
+   "exit": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 15883.532,
+    "wall_ms": 1790958696701
+   }
+  },
+  {
+   "t_ms": 33054,
+   "step": "daemon-final-state",
+   "daemon": "C2",
+   "state": "gone",
+   "exit": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 32713.409,
+    "wall_ms": 1790958713531
+   }
+  },
+  {
+   "t_ms": 33054,
+   "step": "daemon-final-state",
+   "daemon": "dA",
+   "state": "gone",
+   "exit": {
+    "code": 0,
+    "signal": null,
+    "t_ms": 16911.75,
+    "wall_ms": 1790958697729
+   }
+  }
+ ],
+ "escalations": [],
+ "leftovers": [],
+ "errors": [],
+ "owned": {
+  "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+  "daemons": [
+   {
+    "tag": "dB",
+    "spawned_pid": 2116,
+    "proc": {
+     "pid": 2116,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 98734,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+    "runtime_dir": "/tmp/g/rt-B"
+   },
+   {
+    "tag": "C1",
+    "spawned_pid": 2506,
+    "proc": {
+     "pid": 2506,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 100237,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+    "runtime_dir": "/tmp/g/rt-C"
+   },
+   {
+    "tag": "C2",
+    "spawned_pid": 2556,
+    "proc": {
+     "pid": 2556,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 100283,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "instance_id": "e41ab7a8f0b42b8dd4051223563819d5",
+    "runtime_dir": "/tmp/g/rt-C"
+   },
+   {
+    "tag": "dA",
+    "spawned_pid": 2618,
+    "proc": {
+     "pid": 2618,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 100344,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "instance_id": "80324bc4d967e9009943d7f41e97744a",
+    "runtime_dir": "/tmp/g/rt-A"
+   }
+  ],
+  "fixtures": [
+   {
+    "name": "B1",
+    "case": "B1",
+    "daemon": "dB",
+    "pty_id": 7560076496900084,
+    "pid": 2120,
+    "proc": {
+     "pid": 2120,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2116,
+     "starttime_ticks": 98742,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/B1-B1"
+     ]
+    }
+   },
+   {
+    "name": "B2",
+    "case": "B2",
+    "daemon": "dB",
+    "pty_id": 4788864321944517,
+    "pid": 2182,
+    "proc": {
+     "pid": 2182,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2116,
+     "starttime_ticks": 99294,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/B2-B2"
+     ]
+    }
+   },
+   {
+    "name": "B3",
+    "case": "B3",
+    "daemon": "dB",
+    "pty_id": 5870515630746586,
+    "pid": 2227,
+    "proc": {
+     "pid": 2227,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2116,
+     "starttime_ticks": 99342,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/B3-B3"
+     ]
+    }
+   },
+   {
+    "name": "D2",
+    "case": "D2",
+    "daemon": "dB",
+    "pty_id": 7220684115631940,
+    "pid": 2272,
+    "proc": {
+     "pid": 2272,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2116,
+     "starttime_ticks": 99391,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/D2-D2"
+     ]
+    }
+   },
+   {
+    "name": "D3",
+    "case": "D3",
+    "daemon": "dB",
+    "pty_id": 1283003628143177,
+    "pid": 2331,
+    "proc": {
+     "pid": 2331,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2116,
+     "starttime_ticks": 99461,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/D3-D3"
+     ]
+    }
+   },
+   {
+    "name": "old",
+    "case": "C",
+    "daemon": "C1",
+    "pty_id": 2852042093172248,
+    "pid": 2510,
+    "proc": {
+     "pid": 2510,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2506,
+     "starttime_ticks": 100245,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/C-old"
+     ]
+    }
+   },
+   {
+    "name": "new",
+    "case": "C",
+    "daemon": "C2",
+    "pty_id": 4606837517433128,
+    "pid": 2563,
+    "proc": {
+     "pid": 2563,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2556,
+     "starttime_ticks": 100295,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/C-new"
+     ]
+    }
+   },
+   {
+    "name": "A",
+    "case": "A",
+    "daemon": "dA",
+    "pty_id": 3883592932406032,
+    "pid": 2622,
+    "proc": {
+     "pid": 2622,
+     "comm": "bash",
+     "state": "R",
+     "ppid": 2618,
+     "starttime_ticks": 100352,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/usr/bin/bash",
+     "cmdline": [
+      "/bin/bash",
+      "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+      "/tmp/g/fx/A-A"
+     ]
+    }
+   }
+  ]
+ },
+ "final": {
+  "daemons": [
+   {
+    "tag": "dB",
+    "pid": 2116,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 32623.522,
+     "wall_ms": 1790958713441
+    }
+   },
+   {
+    "tag": "C1",
+    "pid": 2506,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 15883.532,
+     "wall_ms": 1790958696701
+    }
+   },
+   {
+    "tag": "C2",
+    "pid": 2556,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 32713.409,
+     "wall_ms": 1790958713531
+    }
+   },
+   {
+    "tag": "dA",
+    "pid": 2618,
+    "state": "gone",
+    "exit": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 16911.75,
+     "wall_ms": 1790958697729
+    }
+   }
+  ],
+  "fixtures": [
+   {
+    "case": "B1",
+    "name": "B1",
+    "pid": 2120,
+    "state": "gone"
+   },
+   {
+    "case": "B2",
+    "name": "B2",
+    "pid": 2182,
+    "state": "gone"
+   },
+   {
+    "case": "B3",
+    "name": "B3",
+    "pid": 2227,
+    "state": "gone"
+   },
+   {
+    "case": "D2",
+    "name": "D2",
+    "pid": 2272,
+    "state": "gone"
+   },
+   {
+    "case": "D3",
+    "name": "D3",
+    "pid": 2331,
+    "state": "gone"
+   },
+   {
+    "case": "C",
+    "name": "old",
+    "pid": 2510,
+    "state": "gone"
+   },
+   {
+    "case": "C",
+    "name": "new",
+    "pid": 2563,
+    "state": "gone"
+   },
+   {
+    "case": "A",
+    "name": "A",
+    "pid": 2622,
+    "state": "gone"
+   }
+  ]
+ },
+ "fixture_signal_logs": {},
+ "leftover_files": {
+  "run_root": "/tmp/g",
+  "note": "scratch files under the private /tmp bind are not committed"
+ },
+ "finished": "2026-10-02T16:31:54.177Z",
+ "duration_ms": 1282
+}

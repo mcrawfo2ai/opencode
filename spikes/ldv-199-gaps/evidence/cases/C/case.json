@@ -1,0 +1,266 @@
+{
+ "case": "C",
+ "daemons": [
+  {
+   "tag": "C1",
+   "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+   "pid": 2506,
+   "ping_rx": "cases/C/requests/0016-ping-launch-C1.rx.bin",
+   "runtime_dir": "/tmp/g/rt-C"
+  },
+  {
+   "tag": "C2",
+   "instance_id": "e41ab7a8f0b42b8dd4051223563819d5",
+   "pid": 2556,
+   "ping_rx": "cases/C/requests/0021-ping-launch-C2.rx.bin",
+   "runtime_dir": "/tmp/g/rt-C"
+  }
+ ],
+ "fixtures": [
+  {
+   "child_env_names": {
+    "supplied_by_request": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "PATH",
+     "SHELL",
+     "TERM",
+     "TMPDIR"
+    ],
+    "observed_in_child": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PATH",
+     "PWD",
+     "SHELL",
+     "SHLVL",
+     "TERM",
+     "TMPDIR",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "not_supplied_by_request": [
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PWD",
+     "SHLVL",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+   },
+   "name": "old",
+   "dir_rel": "fx-old",
+   "pty_id": 2852042093172248,
+   "group_id": "ldv199gaps-C-old-2086",
+   "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+   "pid": 2510,
+   "proc": {
+    "pid": 2510,
+    "comm": "bash",
+    "state": "R",
+    "ppid": 2506,
+    "starttime_ticks": 100245,
+    "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+    "exe": "/usr/bin/bash",
+    "cmdline": [
+     "/bin/bash",
+     "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+     "/tmp/g/fx/C-old"
+    ]
+   },
+   "origin": 0,
+   "origin_head": 0,
+   "origin_sample_file": "samples/origin-old.jsonl",
+   "create_rx": "cases/C/requests/0018-create-old.rx.bin",
+   "oracle": "oracle.frozen.bin",
+   "boundaries": [
+    {
+     "boundary": "after-start",
+     "length": 12,
+     "sha256": "c1ad9920d0d5f2bc27a08b8cb5bf7dfd236f40e72992d6dadbd81e5314b0b92d",
+     "t_ms": 15822.818,
+     "trace_seq": 257,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "after-mid",
+     "length": 22,
+     "sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+     "t_ms": 15843.259,
+     "trace_seq": 261,
+     "matches_live_length": true
+    }
+   ],
+   "plan": [
+    "mode",
+    "ack ready",
+    "gate start",
+    "emit start.bin started",
+    "gate mid",
+    "emit mid.bin mid-emitted",
+    "gate exit",
+    "emit final.bin final-emitted",
+    "exit 0 exit-stage"
+   ],
+   "frozen": {
+    "boundary": "after-mid",
+    "length": 22,
+    "sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+    "t_ms": 15843.259,
+    "trace_seq": 261,
+    "matches_live_length": true
+   }
+  },
+  {
+   "child_env_names": {
+    "supplied_by_request": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "PATH",
+     "SHELL",
+     "TERM",
+     "TMPDIR"
+    ],
+    "observed_in_child": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PATH",
+     "PWD",
+     "SHELL",
+     "SHLVL",
+     "TERM",
+     "TMPDIR",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "not_supplied_by_request": [
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PWD",
+     "SHLVL",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+   },
+   "name": "new",
+   "dir_rel": "fx-new",
+   "pty_id": 4606837517433128,
+   "group_id": "ldv199gaps-C-new-2086",
+   "instance_id": "e41ab7a8f0b42b8dd4051223563819d5",
+   "pid": 2563,
+   "proc": {
+    "pid": 2563,
+    "comm": "bash",
+    "state": "R",
+    "ppid": 2556,
+    "starttime_ticks": 100295,
+    "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+    "exe": "/usr/bin/bash",
+    "cmdline": [
+     "/bin/bash",
+     "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+     "/tmp/g/fx/C-new"
+    ]
+   },
+   "origin": 0,
+   "origin_head": 0,
+   "origin_sample_file": "samples/origin-new.jsonl",
+   "create_rx": "cases/C/requests/0024-create-new.rx.bin",
+   "oracle": "oracle.frozen.bin",
+   "boundaries": [
+    {
+     "boundary": "after-start",
+     "length": 12,
+     "sha256": "2e0eb20011a14fe4ed1f21baaee89ddb13ca68c9d1564c5e108210a9117a69d7",
+     "t_ms": 16318.509,
+     "trace_seq": 306,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "after-mid",
+     "length": 22,
+     "sha256": "61a3b6f0222638148156b39fa6e52bcdf27d4d45b39a3e8e840e2d54d6a7cbda",
+     "t_ms": 16339.892,
+     "trace_seq": 310,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "final",
+     "length": 34,
+     "sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+     "t_ms": 16378.601,
+     "trace_seq": 320,
+     "matches_live_length": true
+    }
+   ],
+   "plan": [
+    "mode",
+    "ack ready",
+    "gate start",
+    "emit start.bin started",
+    "gate mid",
+    "emit mid.bin mid-emitted",
+    "gate exit",
+    "emit final.bin final-emitted",
+    "exit 0 exit-stage"
+   ],
+   "frozen": {
+    "boundary": "final",
+    "length": 34,
+    "sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+    "t_ms": 16378.601,
+    "trace_seq": 320,
+    "matches_live_length": true
+   }
+  }
+ ],
+ "sockets": [
+  {
+   "label": "M",
+   "meta": "captures/M.meta.json",
+   "rx": "captures/M.rx.bin",
+   "index": "captures/M.index.jsonl"
+  },
+  {
+   "label": "W",
+   "meta": "captures/W.meta.json",
+   "rx": "captures/W.rx.bin",
+   "index": "captures/W.index.jsonl"
+  },
+  {
+   "label": "old-cursor-attach",
+   "meta": "captures/old-cursor-attach.meta.json",
+   "rx": "captures/old-cursor-attach.rx.bin",
+   "index": "captures/old-cursor-attach.index.jsonl"
+  },
+  {
+   "label": "M2",
+   "meta": "captures/M2.meta.json",
+   "rx": "captures/M2.rx.bin",
+   "index": "captures/M2.index.jsonl"
+  },
+  {
+   "label": "W2",
+   "meta": "captures/W2.meta.json",
+   "rx": "captures/W2.rx.bin",
+   "index": "captures/W2.index.jsonl"
+  }
+ ],
+ "evidence_limit_hits": [],
+ "runtime_dir_exact": "/tmp/g/rt-C",
+ "old_cursor": 22
+}

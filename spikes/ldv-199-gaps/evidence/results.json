@@ -1,0 +1,3571 @@
+{
+ "results": {
+  "B-daemon": {
+   "id": "B-daemon",
+   "status": "completed",
+   "identity": {
+    "tag": "dB",
+    "spawned_pid": 2116,
+    "proc": {
+     "pid": 2116,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 98734,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "runtime_dir": "/tmp/g/rt-B",
+    "env_supplied": {
+     "HOME": "/tmp/g/home",
+     "LANG": "C.UTF-8",
+     "PATH": "/usr/bin:/bin",
+     "TMPDIR": "/tmp",
+     "XDG_CONFIG_HOME": "/tmp/g/home/xdg/config",
+     "XDG_DATA_HOME": "/tmp/g/home/xdg/data",
+     "XDG_CACHE_HOME": "/tmp/g/home/xdg/cache",
+     "XDG_RUNTIME_DIR": "/tmp/g/home/xdg/runtime",
+     "OPENCODE_PTY_RUNTIME_DIR": "/tmp/g/rt-B"
+    },
+    "registration_state_final": "ok",
+    "registration": {
+     "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+     "pid": 2116,
+     "protocol": 7,
+     "socket": "/tmp/opencode-pty-0/38c5811ad9fd38bd894bda913007b9c2.sock",
+     "keys": [
+      "instance_id",
+      "pid",
+      "protocol",
+      "socket",
+      "token"
+     ],
+     "token": "<redacted len=13 sha256_8=8d3ce4af>"
+    },
+    "registration_pid_equals_spawned_pid": true,
+    "ping_raw_payload": "{\"type\":\"pong\",\"instance_id\":\"9f8487dcef26a838f764577b545c5e1c\",\"pid\":2116,\"protocol\":7}",
+    "ready": true,
+    "ready_ms": 62,
+    "readiness_polls": [
+     {
+      "t_ms": 6,
+      "state": "missing"
+     },
+     {
+      "t_ms": 62,
+      "state": "ok",
+      "reg_pid": 2116,
+      "reg_instance": "9f8487dcef26a838f764577b545c5e1c",
+      "reg_protocol": 7
+     }
+    ],
+    "inventory_before": [],
+    "inventory_after_ready": [
+     {
+      "name": "service.json",
+      "type": "file",
+      "bytes": 207,
+      "mode": "600",
+      "mtime_ms": 1790958681224,
+      "uid": 0
+     },
+     {
+      "name": "service.lock",
+      "type": "file",
+      "bytes": 0,
+      "mode": "644",
+      "mtime_ms": 1790958681224,
+      "uid": 0
+     }
+    ]
+   },
+   "duration_ms": 76
+  },
+  "B1": {
+   "id": "B1",
+   "title": "gated normal exit (also D1: representative live-exit capture)",
+   "start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958681602684,
+     "pid": 2120,
+     "oracle_len": 9,
+     "payload": "start.bin",
+     "payload_len": 9
+    },
+    "expected_tail": 9,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 9,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 9,
+       "reached": true
+      }
+     ],
+     "expected": 9
+    }
+   },
+   "mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958681622841,
+     "pid": 2120,
+     "oracle_len": 16,
+     "payload": "mid.bin",
+     "payload_len": 7
+    },
+    "expected_tail": 16,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 16,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 16,
+       "reached": true
+      }
+     ],
+     "expected": 16
+    },
+    "native_running": true
+   },
+   "exit": {
+    "reached": true,
+    "released_wall_ms": 1790958681640,
+    "exit_stage_ack": {
+     "stage": "exit-stage",
+     "wall_us": 1790958681659248,
+     "pid": 2120,
+     "oracle_len": 25,
+     "code": 7
+    },
+    "proc_witness": {
+     "state": "gone",
+     "timedOut": false,
+     "after_release_ms": 30
+    },
+    "native_list_exit": {
+     "wall_ms": 1790958681679,
+     "terminal": {
+      "id": 7560076496900084,
+      "pid": 2120,
+      "fg": null,
+      "group": "ldv199gaps-B1-B1-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 25,
+      "cols": 80,
+      "rows": 24
+     },
+     "after_exit_stage_ms": 20
+    },
+    "sub_M": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "sub_W": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "final_oracle": {
+     "boundary": "final",
+     "length": 25,
+     "sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "t_ms": 861.393,
+     "trace_seq": 40,
+     "matches_live_length": true
+    }
+   },
+   "samples": [
+    {
+     "requested_after_ms": 100,
+     "actual_after_anchor_ms": 101,
+     "anchor": "W exited-frame receipt (client)",
+     "list_terminal": {
+      "id": 7560076496900084,
+      "pid": 2120,
+      "fg": null,
+      "group": "ldv199gaps-B1-B1-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 25,
+      "cols": 80,
+      "rows": 24
+     },
+     "snapshot_response": {
+      "type": "snapshot",
+      "terminal": {
+       "id": 7560076496900084,
+       "pid": 2120,
+       "fg": null,
+       "group": "ldv199gaps-B1-B1-2086",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 25,
+       "cols": 80,
+       "rows": 24
+      },
+      "text_len": 46,
+      "checkpoint_b64_len": 168
+     },
+     "snapshot_rx": "cases/B1/requests/0004-ret-snapshot-B1-100.rx.bin",
+     "proc_state": "gone"
+    },
+    {
+     "requested_after_ms": 1000,
+     "actual_after_anchor_ms": 1001,
+     "anchor": "W exited-frame receipt (client)",
+     "list_terminal": {
+      "id": 7560076496900084,
+      "pid": 2120,
+      "fg": null,
+      "group": "ldv199gaps-B1-B1-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 25,
+      "cols": 80,
+      "rows": 24
+     },
+     "snapshot_response": {
+      "type": "snapshot",
+      "terminal": {
+       "id": 7560076496900084,
+       "pid": 2120,
+       "fg": null,
+       "group": "ldv199gaps-B1-B1-2086",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 25,
+       "cols": 80,
+       "rows": 24
+      },
+      "text_len": 46,
+      "checkpoint_b64_len": 168
+     },
+     "snapshot_rx": "cases/B1/requests/0005-ret-snapshot-B1-1000.rx.bin",
+     "proc_state": "gone"
+    },
+    {
+     "requested_after_ms": 5000,
+     "actual_after_anchor_ms": 5003,
+     "anchor": "W exited-frame receipt (client)",
+     "list_terminal": {
+      "id": 7560076496900084,
+      "pid": 2120,
+      "fg": null,
+      "group": "ldv199gaps-B1-B1-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 7
+      },
+      "head": 0,
+      "tail": 25,
+      "cols": 80,
+      "rows": 24
+     },
+     "snapshot_response": {
+      "type": "snapshot",
+      "terminal": {
+       "id": 7560076496900084,
+       "pid": 2120,
+       "fg": null,
+       "group": "ldv199gaps-B1-B1-2086",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 7
+       },
+       "head": 0,
+       "tail": 25,
+       "cols": 80,
+       "rows": 24
+      },
+      "text_len": 46,
+      "checkpoint_b64_len": 168
+     },
+     "snapshot_rx": "cases/B1/requests/0006-ret-snapshot-B1-5000.rx.bin",
+     "proc_state": "gone"
+    }
+   ],
+   "status": "completed",
+   "case_rec": {
+    "case": "B1",
+    "daemons": [
+     {
+      "tag": "dB",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2116,
+      "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+      "runtime_dir": "/tmp/g/rt-B"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "B1",
+      "dir_rel": "fx-B1",
+      "pty_id": 7560076496900084,
+      "group_id": "ldv199gaps-B1-B1-2086",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2120,
+      "proc": {
+       "pid": 2120,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2116,
+       "starttime_ticks": 98742,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/B1-B1"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-B1.jsonl",
+      "create_rx": "cases/B1/requests/0003-create-B1.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 9,
+        "sha256": "a6427ada6b9a6543a6ae33cac7edcf4345a2fde73c09039cf91660bdec901c96",
+        "t_ms": 791.446,
+        "trace_seq": 26,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 16,
+        "sha256": "55bedcfd59026fb850cab73cf22f664bb59d249bcba71ad31f498a7db5efe7c7",
+        "t_ms": 812.825,
+        "trace_seq": 30,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "final",
+        "length": 25,
+        "sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+        "t_ms": 861.393,
+        "trace_seq": 40,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 7 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "final",
+       "length": 25,
+       "sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+       "t_ms": 861.393,
+       "trace_seq": 40,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "M",
+      "meta": "captures/M.meta.json",
+      "rx": "captures/M.rx.bin",
+      "index": "captures/M.index.jsonl"
+     },
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": []
+   },
+   "duration_ms": 5522
+  },
+  "B2": {
+   "id": "B2",
+   "title": "identified SIGTERM exit attempt (bounded)",
+   "signal": "SIGTERM",
+   "start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958687119728,
+     "pid": 2182,
+     "oracle_len": 9,
+     "payload": "start.bin",
+     "payload_len": 9
+    },
+    "expected_tail": 9,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 9,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 9,
+       "reached": true
+      }
+     ],
+     "expected": 9
+    }
+   },
+   "mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958687140875,
+     "pid": 2182,
+     "oracle_len": 16,
+     "payload": "mid.bin",
+     "payload_len": 7
+    },
+    "expected_tail": 16,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 16,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 16,
+       "reached": true
+      }
+     ],
+     "expected": 16
+    },
+    "native_running": true
+   },
+   "identity_recheck_ok": true,
+   "native_metadata": {
+    "wall_ms": 1790958687165,
+    "after_signal_ms": 8,
+    "terminal": {
+     "id": 4788864321944517,
+     "pid": 2182,
+     "fg": null,
+     "group": "ldv199gaps-B2-B2-2086",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 1
+     },
+     "head": 0,
+     "tail": 16,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   "proc_witness": {
+    "state": "gone",
+    "timedOut": false,
+    "after_signal_ms": 11
+   },
+   "snapshot": {
+    "type": "snapshot",
+    "lifecycle": {
+     "status": "exited",
+     "exit_code": 1
+    }
+   },
+   "sub_M": {
+    "exited_frame": true,
+    "eof": true,
+    "timedOutExit": false,
+    "timedOutEof": false
+   },
+   "sub_W": {
+    "exited_frame": true,
+    "eof": true,
+    "timedOutExit": false,
+    "timedOutEof": false
+   },
+   "fixture_exit_stage_ack": false,
+   "status": "completed",
+   "case_rec": {
+    "case": "B2",
+    "daemons": [
+     {
+      "tag": "dB",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2116,
+      "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+      "runtime_dir": "/tmp/g/rt-B"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "B2",
+      "dir_rel": "fx-B2",
+      "pty_id": 4788864321944517,
+      "group_id": "ldv199gaps-B2-B2-2086",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2182,
+      "proc": {
+       "pid": 2182,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2116,
+       "starttime_ticks": 99294,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/B2-B2"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-B2.jsonl",
+      "create_rx": "cases/B2/requests/0007-create-B2.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 9,
+        "sha256": "22e52de7571765fd78ea394efde12fd0f7a7b9f52f5e8ef40fc9463195c2fa02",
+        "t_ms": 6308.87,
+        "trace_seq": 63,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 16,
+        "sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+        "t_ms": 6330.066,
+        "trace_seq": 67,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "after-mid",
+       "length": 16,
+       "sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+       "t_ms": 6330.066,
+       "trace_seq": 67,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "M",
+      "meta": "captures/M.meta.json",
+      "rx": "captures/M.rx.bin",
+      "index": "captures/M.index.jsonl"
+     },
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": [],
+    "signal": "SIGTERM"
+   },
+   "duration_ms": 483
+  },
+  "B3": {
+   "id": "B3",
+   "title": "identified SIGKILL exit attempt (bounded)",
+   "signal": "SIGKILL",
+   "start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958687601837,
+     "pid": 2227,
+     "oracle_len": 9,
+     "payload": "start.bin",
+     "payload_len": 9
+    },
+    "expected_tail": 9,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 9,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 9,
+       "reached": true
+      }
+     ],
+     "expected": 9
+    }
+   },
+   "mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958687622633,
+     "pid": 2227,
+     "oracle_len": 16,
+     "payload": "mid.bin",
+     "payload_len": 7
+    },
+    "expected_tail": 16,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 16,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 16,
+       "reached": true
+      }
+     ],
+     "expected": 16
+    },
+    "native_running": true
+   },
+   "identity_recheck_ok": true,
+   "native_metadata": {
+    "wall_ms": 1790958687652,
+    "after_signal_ms": 8,
+    "terminal": {
+     "id": 5870515630746586,
+     "pid": 2227,
+     "fg": null,
+     "group": "ldv199gaps-B3-B3-2086",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 1
+     },
+     "head": 0,
+     "tail": 16,
+     "cols": 80,
+     "rows": 24
+    }
+   },
+   "proc_witness": {
+    "state": "gone",
+    "timedOut": false,
+    "after_signal_ms": 11
+   },
+   "snapshot": {
+    "type": "snapshot",
+    "lifecycle": {
+     "status": "exited",
+     "exit_code": 1
+    }
+   },
+   "sub_M": {
+    "exited_frame": true,
+    "eof": true,
+    "timedOutExit": false,
+    "timedOutEof": false
+   },
+   "sub_W": {
+    "exited_frame": true,
+    "eof": true,
+    "timedOutExit": false,
+    "timedOutEof": false
+   },
+   "fixture_exit_stage_ack": false,
+   "status": "completed",
+   "case_rec": {
+    "case": "B3",
+    "daemons": [
+     {
+      "tag": "dB",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2116,
+      "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+      "runtime_dir": "/tmp/g/rt-B"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "B3",
+      "dir_rel": "fx-B3",
+      "pty_id": 5870515630746586,
+      "group_id": "ldv199gaps-B3-B3-2086",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2227,
+      "proc": {
+       "pid": 2227,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2116,
+       "starttime_ticks": 99342,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/B3-B3"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-B3.jsonl",
+      "create_rx": "cases/B3/requests/0009-create-B3.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 9,
+        "sha256": "ebb3e9a019a5bfd17515fa575449045d694a13aadfccf522a44233016dd610b9",
+        "t_ms": 6795.171,
+        "trace_seq": 95,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 16,
+        "sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+        "t_ms": 6816.559,
+        "trace_seq": 99,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "after-mid",
+       "length": 16,
+       "sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+       "t_ms": 6816.559,
+       "trace_seq": 99,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "M",
+      "meta": "captures/M.meta.json",
+      "rx": "captures/M.rx.bin",
+      "index": "captures/M.index.jsonl"
+     },
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": [],
+    "signal": "SIGKILL"
+   },
+   "duration_ms": 483
+  },
+  "D2": {
+   "id": "D2",
+   "title": "same-instance before-exit reconnect (M closes at saved cursor; W/owner stay active)",
+   "start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958688088692,
+     "pid": 2272,
+     "oracle_len": 9,
+     "payload": "start.bin",
+     "payload_len": 9
+    },
+    "expected_tail": 9,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 9,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 9,
+       "reached": true
+      }
+     ],
+     "expected": 9
+    }
+   },
+   "saved_cursor_client_view": 9,
+   "mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958688107964,
+     "pid": 2272,
+     "oracle_len": 16,
+     "payload": "mid.bin",
+     "payload_len": 7
+    },
+    "expected_tail": 16,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "W",
+       "max_end_online": 16,
+       "reached": true
+      }
+     ],
+     "expected": 16
+    },
+    "native_running": true
+   },
+   "reconnect": {
+    "attach": {
+     "type": "attached",
+     "role": "observer",
+     "generation": 0,
+     "requested_offset": 9,
+     "available_offset": 9,
+     "end_offset": 16,
+     "truncated": false,
+     "replay_len": 7,
+     "replay_start_basis": "requested_offset",
+     "replay_start": 9,
+     "replay_file": {
+      "path": "cases/D2/captures/M2.replay.bin",
+      "bytes": 7,
+      "sha256": "5dee3985f21c402202dd09b98e367134192c97e39c1978e6352dfdd3156a6690"
+     },
+     "terminal": {
+      "id": 7220684115631940,
+      "pid": 2272,
+      "fg": "bash",
+      "group": "ldv199gaps-D2-D2-2086",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 16,
+      "cols": 80,
+      "rows": 24
+     },
+     "problems": []
+    },
+    "running_before_exit_release": true
+   },
+   "exit": {
+    "reached": true,
+    "released_wall_ms": 1790958688149,
+    "exit_stage_ack": {
+     "stage": "exit-stage",
+     "wall_us": 1790958688162324,
+     "pid": 2272,
+     "oracle_len": 25,
+     "code": 0
+    },
+    "proc_witness": {
+     "state": "gone",
+     "timedOut": false,
+     "after_release_ms": 20
+    },
+    "native_list_exit": {
+     "wall_ms": 1790958688178,
+     "terminal": {
+      "id": 7220684115631940,
+      "pid": 2272,
+      "fg": null,
+      "group": "ldv199gaps-D2-D2-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 0,
+      "tail": 25,
+      "cols": 80,
+      "rows": 24
+     },
+     "after_exit_stage_ms": 16
+    },
+    "sub_W": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "sub_M2": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "final_oracle": {
+     "boundary": "final",
+     "length": 25,
+     "sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+     "t_ms": 7360.919,
+     "trace_seq": 147,
+     "matches_live_length": true
+    }
+   },
+   "status": "completed",
+   "case_rec": {
+    "case": "D2",
+    "daemons": [
+     {
+      "tag": "dB",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2116,
+      "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+      "runtime_dir": "/tmp/g/rt-B"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "D2",
+      "dir_rel": "fx-D2",
+      "pty_id": 7220684115631940,
+      "group_id": "ldv199gaps-D2-D2-2086",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2272,
+      "proc": {
+       "pid": 2272,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2116,
+       "starttime_ticks": 99391,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/D2-D2"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-D2.jsonl",
+      "create_rx": "cases/D2/requests/0011-create-D2.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 9,
+        "sha256": "e3c837668ef782f687a369ebbbd489b0ae758fb7ae226231bd3bf0367fc6db93",
+        "t_ms": 7279.818,
+        "trace_seq": 127,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 16,
+        "sha256": "ad24058ee96fccfc5e20399f6b45d55a08d926da413d122b7d7088a909bf1bc7",
+        "t_ms": 7300.094,
+        "trace_seq": 134,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "final",
+        "length": 25,
+        "sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+        "t_ms": 7360.919,
+        "trace_seq": 147,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "final",
+       "length": 25,
+       "sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+       "t_ms": 7360.919,
+       "trace_seq": 147,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "M",
+      "meta": "captures/M.meta.json",
+      "rx": "captures/M.rx.bin",
+      "index": "captures/M.index.jsonl"
+     },
+     {
+      "label": "M2",
+      "meta": "captures/M2.meta.json",
+      "rx": "captures/M2.rx.bin",
+      "index": "captures/M2.index.jsonl"
+     },
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": [],
+    "saved_cursor": 9
+   },
+   "duration_ms": 517
+  },
+  "D3": {
+   "id": "D3",
+   "title": "bounded replay/retention: 64 KiB baseline then 4 MiB cumulative in <=256 KiB chunks",
+   "stages": [
+    {
+     "stage": "S1",
+     "list": {
+      "id": 1283003628143177,
+      "pid": 2331,
+      "fg": "bash",
+      "group": "ldv199gaps-D3-D3-2086",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 0,
+      "tail": 65536,
+      "cols": 80,
+      "rows": 24
+     },
+     "attaches": [
+      {
+       "at": "at0",
+       "requested": 0,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 0,
+        "available_offset": 0,
+        "end_offset": 65536,
+        "truncated": false,
+        "replay_len": 65536,
+        "replay_start_basis": "requested_offset",
+        "replay_start": 0,
+        "replay_file": {
+         "path": "cases/D3/captures/S1-at0.replay.bin",
+         "bytes": 65536,
+         "sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11"
+        },
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 0,
+         "tail": 65536,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      },
+      {
+       "at": "saved",
+       "requested": 0,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 0,
+        "available_offset": 0,
+        "end_offset": 65536,
+        "truncated": false,
+        "replay_len": 65536,
+        "replay_start_basis": "requested_offset",
+        "replay_start": 0,
+        "replay_file": {
+         "path": "cases/D3/captures/S1-saved.replay.bin",
+         "bytes": 65536,
+         "sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11"
+        },
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 0,
+         "tail": 65536,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      },
+      {
+       "at": "head",
+       "requested": 0,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 0,
+        "available_offset": 0,
+        "end_offset": 65536,
+        "truncated": false,
+        "replay_len": 65536,
+        "replay_start_basis": "requested_offset",
+        "replay_start": 0,
+        "replay_file": {
+         "path": "cases/D3/captures/S1-head.replay.bin",
+         "bytes": 65536,
+         "sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11"
+        },
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 0,
+         "tail": 65536,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      },
+      {
+       "at": "tail",
+       "requested": 65536,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 65536,
+        "available_offset": 65536,
+        "end_offset": 65536,
+        "truncated": false,
+        "replay_len": 0,
+        "replay_start_basis": "requested_offset",
+        "replay_start": 65536,
+        "replay_file": null,
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 0,
+         "tail": 65536,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      }
+     ],
+     "stop": null
+    },
+    {
+     "stage": "S2",
+     "list": {
+      "id": 1283003628143177,
+      "pid": 2331,
+      "fg": "bash",
+      "group": "ldv199gaps-D3-D3-2086",
+      "lifecycle": {
+       "status": "running"
+      },
+      "head": 2097152,
+      "tail": 4194304,
+      "cols": 80,
+      "rows": 24
+     },
+     "attaches": [
+      {
+       "at": "at0",
+       "requested": 0,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 0,
+        "available_offset": 2097152,
+        "end_offset": 4194304,
+        "truncated": true,
+        "replay_len": 2097152,
+        "replay_start_basis": "available_offset",
+        "replay_start": 2097152,
+        "replay_file": {
+         "path": "cases/D3/captures/S2-at0.replay.bin",
+         "bytes": 2097152,
+         "sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251"
+        },
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 2097152,
+         "tail": 4194304,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      },
+      {
+       "at": "saved",
+       "requested": 65536,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 65536,
+        "available_offset": 2097152,
+        "end_offset": 4194304,
+        "truncated": true,
+        "replay_len": 2097152,
+        "replay_start_basis": "available_offset",
+        "replay_start": 2097152,
+        "replay_file": {
+         "path": "cases/D3/captures/S2-saved.replay.bin",
+         "bytes": 2097152,
+         "sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251"
+        },
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 2097152,
+         "tail": 4194304,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      },
+      {
+       "at": "head",
+       "requested": 2097152,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 2097152,
+        "available_offset": 2097152,
+        "end_offset": 4194304,
+        "truncated": false,
+        "replay_len": 2097152,
+        "replay_start_basis": "requested_offset",
+        "replay_start": 2097152,
+        "replay_file": {
+         "path": "cases/D3/captures/S2-head.replay.bin",
+         "bytes": 2097152,
+         "sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251"
+        },
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 2097152,
+         "tail": 4194304,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      },
+      {
+       "at": "tail",
+       "requested": 4194304,
+       "attach": {
+        "type": "attached",
+        "role": "observer",
+        "generation": 0,
+        "requested_offset": 4194304,
+        "available_offset": 4194304,
+        "end_offset": 4194304,
+        "truncated": false,
+        "replay_len": 0,
+        "replay_start_basis": "requested_offset",
+        "replay_start": 4194304,
+        "replay_file": null,
+        "terminal": {
+         "id": 1283003628143177,
+         "pid": 2331,
+         "fg": "bash",
+         "group": "ldv199gaps-D3-D3-2086",
+         "lifecycle": {
+          "status": "running"
+         },
+         "head": 2097152,
+         "tail": 4194304,
+         "cols": 80,
+         "rows": 24
+        },
+        "problems": []
+       }
+      }
+     ],
+     "stop": "truncation at at0"
+    }
+   ],
+   "baseline": {
+    "ok": true,
+    "ack": {
+     "stage": "baseline",
+     "wall_us": 1790958688778616,
+     "pid": 2331,
+     "oracle_len": 65536,
+     "payload": "base.bin",
+     "payload_len": 65536
+    }
+   },
+   "chunks": {
+    "planned": 16,
+    "acked": 16,
+    "sizes_first_last": [
+     262144,
+     196608
+    ],
+    "timeout": null
+   },
+   "phase2_delivery": {
+    "ok": true,
+    "subs": [
+     {
+      "sub": "W",
+      "max_end_online": 4194304,
+      "reached": true
+     }
+    ],
+    "expected": 4194304
+   },
+   "status": "completed",
+   "exit": {
+    "reached": true,
+    "released_wall_ms": 1790958690809,
+    "exit_stage_ack": {
+     "stage": "exit-stage",
+     "wall_us": 1790958690832196,
+     "pid": 2331,
+     "oracle_len": 4194313,
+     "code": 0
+    },
+    "proc_witness": {
+     "state": "gone",
+     "timedOut": false,
+     "after_release_ms": 31
+    },
+    "native_list_exit": {
+     "wall_ms": 1790958690851,
+     "terminal": {
+      "id": 1283003628143177,
+      "pid": 2331,
+      "fg": null,
+      "group": "ldv199gaps-D3-D3-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 2097161,
+      "tail": 4194313,
+      "cols": 80,
+      "rows": 24
+     },
+     "after_exit_stage_ms": 19
+    },
+    "sub_W": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "final_oracle": {
+     "boundary": "final",
+     "length": 4194313,
+     "sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+     "t_ms": 10040.66,
+     "trace_seq": 222,
+     "matches_live_length": true
+    }
+   },
+   "retention_samples": [
+    {
+     "requested_after_ms": 100,
+     "actual_after_anchor_ms": 100,
+     "anchor": "W exited-frame receipt (client)",
+     "list_terminal": {
+      "id": 1283003628143177,
+      "pid": 2331,
+      "fg": null,
+      "group": "ldv199gaps-D3-D3-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 2097161,
+      "tail": 4194313,
+      "cols": 80,
+      "rows": 24
+     },
+     "snapshot_response": {
+      "type": "snapshot",
+      "terminal": {
+       "id": 1283003628143177,
+       "pid": 2331,
+       "fg": null,
+       "group": "ldv199gaps-D3-D3-2086",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 2097161,
+       "tail": 4194313,
+       "cols": 80,
+       "rows": 24
+      },
+      "text_len": 146208,
+      "checkpoint_b64_len": 198364
+     },
+     "snapshot_rx": "cases/D3/requests/0013-ret-snapshot-D3-100.rx.bin",
+     "proc_state": "gone"
+    },
+    {
+     "requested_after_ms": 1000,
+     "actual_after_anchor_ms": 1001,
+     "anchor": "W exited-frame receipt (client)",
+     "list_terminal": {
+      "id": 1283003628143177,
+      "pid": 2331,
+      "fg": null,
+      "group": "ldv199gaps-D3-D3-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 2097161,
+      "tail": 4194313,
+      "cols": 80,
+      "rows": 24
+     },
+     "snapshot_response": {
+      "type": "snapshot",
+      "terminal": {
+       "id": 1283003628143177,
+       "pid": 2331,
+       "fg": null,
+       "group": "ldv199gaps-D3-D3-2086",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 2097161,
+       "tail": 4194313,
+       "cols": 80,
+       "rows": 24
+      },
+      "text_len": 146208,
+      "checkpoint_b64_len": 198364
+     },
+     "snapshot_rx": "cases/D3/requests/0014-ret-snapshot-D3-1000.rx.bin",
+     "proc_state": "gone"
+    },
+    {
+     "requested_after_ms": 5000,
+     "actual_after_anchor_ms": 5003,
+     "anchor": "W exited-frame receipt (client)",
+     "list_terminal": {
+      "id": 1283003628143177,
+      "pid": 2331,
+      "fg": null,
+      "group": "ldv199gaps-D3-D3-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 2097161,
+      "tail": 4194313,
+      "cols": 80,
+      "rows": 24
+     },
+     "snapshot_response": {
+      "type": "snapshot",
+      "terminal": {
+       "id": 1283003628143177,
+       "pid": 2331,
+       "fg": null,
+       "group": "ldv199gaps-D3-D3-2086",
+       "lifecycle": {
+        "status": "exited",
+        "exit_code": 0
+       },
+       "head": 2097161,
+       "tail": 4194313,
+       "cols": 80,
+       "rows": 24
+      },
+      "text_len": 146208,
+      "checkpoint_b64_len": 198364
+     },
+     "snapshot_rx": "cases/D3/requests/0015-ret-snapshot-D3-5000.rx.bin",
+     "proc_state": "gone"
+    }
+   ],
+   "post_exit_head_attach": {
+    "type": "attached",
+    "role": "observer",
+    "generation": 0,
+    "requested_offset": 2097161,
+    "available_offset": 2097161,
+    "end_offset": 4194313,
+    "truncated": false,
+    "replay_len": 2097152,
+    "replay_start_basis": "requested_offset",
+    "replay_start": 2097161,
+    "replay_file": {
+     "path": "cases/D3/captures/post-exit-head.replay.bin",
+     "bytes": 2097152,
+     "sha256": "5015b089d40ba1c8ce2b5adc159fb13e5aa50047b9c81a8ceb0b843e9eec7cf5"
+    },
+    "terminal": {
+     "id": 1283003628143177,
+     "pid": 2331,
+     "fg": null,
+     "group": "ldv199gaps-D3-D3-2086",
+     "lifecycle": {
+      "status": "exited",
+      "exit_code": 0
+     },
+     "head": 2097161,
+     "tail": 4194313,
+     "cols": 80,
+     "rows": 24
+    },
+    "problems": []
+   },
+   "case_rec": {
+    "case": "D3",
+    "daemons": [
+     {
+      "tag": "dB",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2116,
+      "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+      "runtime_dir": "/tmp/g/rt-B"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "D3",
+      "dir_rel": "fx-D3",
+      "pty_id": 1283003628143177,
+      "group_id": "ldv199gaps-D3-D3-2086",
+      "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+      "pid": 2331,
+      "proc": {
+       "pid": 2331,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2116,
+       "starttime_ticks": 99461,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/D3-D3"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-D3.jsonl",
+      "create_rx": "cases/D3/requests/0012-create-D3.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-baseline",
+        "length": 65536,
+        "sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+        "t_ms": 7970.104,
+        "trace_seq": 163,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-4MiB",
+        "length": 4194304,
+        "sha256": "97e72414b0231ce2b0de9ac0bd63355c263b803cf7e1910d4ed0477e9042d1ee",
+        "t_ms": 9054.124,
+        "trace_seq": 199,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "final",
+        "length": 4194313,
+        "sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+        "t_ms": 10040.66,
+        "trace_seq": 222,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit base.bin baseline",
+       "gate phase2",
+       "emit c01.bin chunk01",
+       "emit c02.bin chunk02",
+       "emit c03.bin chunk03",
+       "emit c04.bin chunk04",
+       "emit c05.bin chunk05",
+       "emit c06.bin chunk06",
+       "emit c07.bin chunk07",
+       "emit c08.bin chunk08",
+       "emit c09.bin chunk09",
+       "emit c10.bin chunk10",
+       "emit c11.bin chunk11",
+       "emit c12.bin chunk12",
+       "emit c13.bin chunk13",
+       "emit c14.bin chunk14",
+       "emit c15.bin chunk15",
+       "emit c16.bin chunk16",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "final",
+       "length": 4194313,
+       "sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+       "t_ms": 10040.66,
+       "trace_seq": 222,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     },
+     {
+      "label": "S1-at0",
+      "meta": "captures/S1-at0.meta.json",
+      "rx": "captures/S1-at0.rx.bin",
+      "index": "captures/S1-at0.index.jsonl"
+     },
+     {
+      "label": "S1-saved",
+      "meta": "captures/S1-saved.meta.json",
+      "rx": "captures/S1-saved.rx.bin",
+      "index": "captures/S1-saved.index.jsonl"
+     },
+     {
+      "label": "S1-head",
+      "meta": "captures/S1-head.meta.json",
+      "rx": "captures/S1-head.rx.bin",
+      "index": "captures/S1-head.index.jsonl"
+     },
+     {
+      "label": "S1-tail",
+      "meta": "captures/S1-tail.meta.json",
+      "rx": "captures/S1-tail.rx.bin",
+      "index": "captures/S1-tail.index.jsonl"
+     },
+     {
+      "label": "S2-at0",
+      "meta": "captures/S2-at0.meta.json",
+      "rx": "captures/S2-at0.rx.bin",
+      "index": "captures/S2-at0.index.jsonl"
+     },
+     {
+      "label": "S2-saved",
+      "meta": "captures/S2-saved.meta.json",
+      "rx": "captures/S2-saved.rx.bin",
+      "index": "captures/S2-saved.index.jsonl"
+     },
+     {
+      "label": "S2-head",
+      "meta": "captures/S2-head.meta.json",
+      "rx": "captures/S2-head.rx.bin",
+      "index": "captures/S2-head.index.jsonl"
+     },
+     {
+      "label": "S2-tail",
+      "meta": "captures/S2-tail.meta.json",
+      "rx": "captures/S2-tail.rx.bin",
+      "index": "captures/S2-tail.index.jsonl"
+     },
+     {
+      "label": "post-exit-head",
+      "meta": "captures/post-exit-head.meta.json",
+      "rx": "captures/post-exit-head.rx.bin",
+      "index": "captures/post-exit-head.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": [],
+    "chunk_bytes_max": 262144,
+    "cumulative_target": 4194304
+   },
+   "duration_ms": 7943
+  },
+  "C": {
+   "id": "C",
+   "title": "same exact runtime-directory restart",
+   "runtime_dir_exact": "/tmp/g/rt-C",
+   "runtime_dir_backing": "/home/user/opencode/.spike-scratch/tmp/g/rt-C",
+   "start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958696630624,
+     "pid": 2510,
+     "oracle_len": 12,
+     "payload": "start.bin",
+     "payload_len": 12
+    },
+    "expected_tail": 12,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 12,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 12,
+       "reached": true
+      }
+     ],
+     "expected": 12
+    }
+   },
+   "mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958696650450,
+     "pid": 2510,
+     "oracle_len": 22,
+     "payload": "mid.bin",
+     "payload_len": 10
+    },
+    "expected_tail": 22,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 22,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 22,
+       "reached": true
+      }
+     ],
+     "expected": 22
+    },
+    "native_running": true
+   },
+   "old": {
+    "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+    "pid": 2506,
+    "proc": {
+     "pid": 2506,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 100237,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    },
+    "pty_id": 2852042093172248,
+    "group": "ldv199gaps-C-old-2086",
+    "cursor_client_view": 22,
+    "token_sha8": "b40d755f",
+    "socket": "/tmp/opencode-pty-0/d964148df12a41e2db7d4bcce0c9546d.sock"
+   },
+   "inventory_before_shutdown": {
+    "label": "before-shutdown",
+    "runtime_dir": "/tmp/g/rt-C",
+    "runtime_inventory": [
+     {
+      "name": "service.json",
+      "type": "file",
+      "bytes": 207,
+      "mode": "600",
+      "mtime_ms": 1790958696252,
+      "uid": 0
+     },
+     {
+      "name": "service.lock",
+      "type": "file",
+      "bytes": 0,
+      "mode": "644",
+      "mtime_ms": 1790958696252,
+      "uid": 0
+     }
+    ],
+    "socket_dir": "/tmp/opencode-pty-0",
+    "socket_dir_inventory": [
+     {
+      "name": "38c5811ad9fd38bd894bda913007b9c2.sock",
+      "type": "socket",
+      "bytes": 0,
+      "mode": "600",
+      "mtime_ms": 1790958681224,
+      "uid": 0
+     },
+     {
+      "name": "d964148df12a41e2db7d4bcce0c9546d.sock",
+      "type": "socket",
+      "bytes": 0,
+      "mode": "600",
+      "mtime_ms": 1790958696252,
+      "uid": 0
+     }
+    ]
+   },
+   "shutdown_verified": true,
+   "shutdown": {
+    "resp": {
+     "type": "ok"
+    },
+    "rx": "cases/C/requests/0020-C-shutdown.rx.bin"
+   },
+   "daemon_stop": {
+    "state": "gone",
+    "after_ms": 21,
+    "exit_event": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 15883.532,
+     "wall_ms": 1790958696701
+    },
+    "verified_by": "recorded pid+starttime+boot identity"
+   },
+   "fixture_after_shutdown": {
+    "state": "gone",
+    "timedOut": false,
+    "after_ms": 0
+   },
+   "old_stream_M": {
+    "eof": true,
+    "close": true,
+    "exited_frame": false,
+    "timedOutEof": false
+   },
+   "old_stream_W": {
+    "eof": true,
+    "close": true,
+    "exited_frame": false,
+    "timedOutEof": false
+   },
+   "inventory_after_shutdown": {
+    "label": "after-shutdown",
+    "runtime_dir": "/tmp/g/rt-C",
+    "runtime_inventory": [
+     {
+      "name": "service.lock",
+      "type": "file",
+      "bytes": 0,
+      "mode": "644",
+      "mtime_ms": 1790958696252,
+      "uid": 0
+     }
+    ],
+    "socket_dir": "/tmp/opencode-pty-0",
+    "socket_dir_inventory": [
+     {
+      "name": "38c5811ad9fd38bd894bda913007b9c2.sock",
+      "type": "socket",
+      "bytes": 0,
+      "mode": "600",
+      "mtime_ms": 1790958681224,
+      "uid": 0
+     }
+    ]
+   },
+   "relaunch": {
+    "ready": true,
+    "ready_ms": 55,
+    "polls": [
+     {
+      "t_ms": 2,
+      "state": "missing"
+     },
+     {
+      "t_ms": 55,
+      "state": "ok",
+      "reg_pid": 2556,
+      "reg_instance": "e41ab7a8f0b42b8dd4051223563819d5",
+      "reg_protocol": 7
+     }
+    ],
+    "identity": {
+     "spawned_pid": 2556,
+     "proc": {
+      "pid": 2556,
+      "comm": "opencode-pty",
+      "state": "R",
+      "ppid": 2086,
+      "starttime_ticks": 100283,
+      "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+      "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "cmdline": [
+       "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+       "daemon"
+      ]
+     }
+    }
+   },
+   "inventory_after_relaunch": {
+    "label": "after-relaunch",
+    "runtime_dir": "/tmp/g/rt-C",
+    "runtime_inventory": [
+     {
+      "name": "service.json",
+      "type": "file",
+      "bytes": 207,
+      "mode": "600",
+      "mtime_ms": 1790958696712,
+      "uid": 0
+     },
+     {
+      "name": "service.lock",
+      "type": "file",
+      "bytes": 0,
+      "mode": "644",
+      "mtime_ms": 1790958696252,
+      "uid": 0
+     }
+    ],
+    "socket_dir": "/tmp/opencode-pty-0",
+    "socket_dir_inventory": [
+     {
+      "name": "38c5811ad9fd38bd894bda913007b9c2.sock",
+      "type": "socket",
+      "bytes": 0,
+      "mode": "600",
+      "mtime_ms": 1790958681224,
+      "uid": 0
+     },
+     {
+      "name": "d964148df12a41e2db7d4bcce0c9546d.sock",
+      "type": "socket",
+      "bytes": 0,
+      "mode": "600",
+      "mtime_ms": 1790958696712,
+      "uid": 0
+     }
+    ]
+   },
+   "identity_compare": {
+    "instance_changed": true,
+    "pid_changed": true,
+    "token_changed": true,
+    "socket_changed": false,
+    "old_instance": "b41f00f56250eb292d7272c12a3c9a00",
+    "new_instance": "e41ab7a8f0b42b8dd4051223563819d5",
+    "new_pid": 2556,
+    "registration_pid_equals_launched_pid": true,
+    "starttime_new_vs_old_distinct": true
+   },
+   "old_id_on_new": {
+    "list_terminals": [],
+    "contains_old_id": false
+   },
+   "old_id_snapshot": {
+    "type": "error",
+    "message": "terminal 2852042093172248 not found"
+   },
+   "old_cursor_attach": {
+    "requested_cursor": 22,
+    "attach": {
+     "failure": "eof",
+     "t_ms": 16002.979
+    },
+    "eof": true,
+    "close": false,
+    "note": "a changed instance identity is not evidence of old-cursor continuity"
+   },
+   "fresh_start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958697126476,
+     "pid": 2563,
+     "oracle_len": 12,
+     "payload": "start.bin",
+     "payload_len": 12
+    },
+    "expected_tail": 12,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M2",
+       "max_end_online": 12,
+       "reached": true
+      },
+      {
+       "sub": "W2",
+       "max_end_online": 12,
+       "reached": true
+      }
+     ],
+     "expected": 12
+    }
+   },
+   "fresh_mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958697145669,
+     "pid": 2563,
+     "oracle_len": 22,
+     "payload": "mid.bin",
+     "payload_len": 10
+    },
+    "expected_tail": 22,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M2",
+       "max_end_online": 22,
+       "reached": true
+      },
+      {
+       "sub": "W2",
+       "max_end_online": 22,
+       "reached": true
+      }
+     ],
+     "expected": 22
+    },
+    "native_running": true
+   },
+   "fresh_exit": {
+    "reached": true,
+    "released_wall_ms": 1790958697168,
+    "exit_stage_ack": {
+     "stage": "exit-stage",
+     "wall_us": 1790958697180909,
+     "pid": 2563,
+     "oracle_len": 34,
+     "code": 0
+    },
+    "proc_witness": {
+     "state": "gone",
+     "timedOut": false,
+     "after_release_ms": 20
+    },
+    "native_list_exit": {
+     "wall_ms": 1790958697196,
+     "terminal": {
+      "id": 4606837517433128,
+      "pid": 2563,
+      "fg": null,
+      "group": "ldv199gaps-C-new-2086",
+      "lifecycle": {
+       "status": "exited",
+       "exit_code": 0
+      },
+      "head": 0,
+      "tail": 34,
+      "cols": 80,
+      "rows": 24
+     },
+     "after_exit_stage_ms": 15
+    },
+    "sub_M2": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "sub_W2": {
+     "exited_frame": true,
+     "eof": true,
+     "timedOutExit": false,
+     "timedOutEof": false
+    },
+    "final_oracle": {
+     "boundary": "final",
+     "length": 34,
+     "sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+     "t_ms": 16378.601,
+     "trace_seq": 320,
+     "matches_live_length": true
+    }
+   },
+   "status": "completed",
+   "case_rec": {
+    "case": "C",
+    "daemons": [
+     {
+      "tag": "C1",
+      "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+      "pid": 2506,
+      "ping_rx": "cases/C/requests/0016-ping-launch-C1.rx.bin",
+      "runtime_dir": "/tmp/g/rt-C"
+     },
+     {
+      "tag": "C2",
+      "instance_id": "e41ab7a8f0b42b8dd4051223563819d5",
+      "pid": 2556,
+      "ping_rx": "cases/C/requests/0021-ping-launch-C2.rx.bin",
+      "runtime_dir": "/tmp/g/rt-C"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "old",
+      "dir_rel": "fx-old",
+      "pty_id": 2852042093172248,
+      "group_id": "ldv199gaps-C-old-2086",
+      "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+      "pid": 2510,
+      "proc": {
+       "pid": 2510,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2506,
+       "starttime_ticks": 100245,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/C-old"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-old.jsonl",
+      "create_rx": "cases/C/requests/0018-create-old.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 12,
+        "sha256": "c1ad9920d0d5f2bc27a08b8cb5bf7dfd236f40e72992d6dadbd81e5314b0b92d",
+        "t_ms": 15822.818,
+        "trace_seq": 257,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 22,
+        "sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+        "t_ms": 15843.259,
+        "trace_seq": 261,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "after-mid",
+       "length": 22,
+       "sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+       "t_ms": 15843.259,
+       "trace_seq": 261,
+       "matches_live_length": true
+      }
+     },
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "new",
+      "dir_rel": "fx-new",
+      "pty_id": 4606837517433128,
+      "group_id": "ldv199gaps-C-new-2086",
+      "instance_id": "e41ab7a8f0b42b8dd4051223563819d5",
+      "pid": 2563,
+      "proc": {
+       "pid": 2563,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2556,
+       "starttime_ticks": 100295,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/C-new"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-new.jsonl",
+      "create_rx": "cases/C/requests/0024-create-new.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 12,
+        "sha256": "2e0eb20011a14fe4ed1f21baaee89ddb13ca68c9d1564c5e108210a9117a69d7",
+        "t_ms": 16318.509,
+        "trace_seq": 306,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 22,
+        "sha256": "61a3b6f0222638148156b39fa6e52bcdf27d4d45b39a3e8e840e2d54d6a7cbda",
+        "t_ms": 16339.892,
+        "trace_seq": 310,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "final",
+        "length": 34,
+        "sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+        "t_ms": 16378.601,
+        "trace_seq": 320,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "final",
+       "length": 34,
+       "sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+       "t_ms": 16378.601,
+       "trace_seq": 320,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "M",
+      "meta": "captures/M.meta.json",
+      "rx": "captures/M.rx.bin",
+      "index": "captures/M.index.jsonl"
+     },
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     },
+     {
+      "label": "old-cursor-attach",
+      "meta": "captures/old-cursor-attach.meta.json",
+      "rx": "captures/old-cursor-attach.rx.bin",
+      "index": "captures/old-cursor-attach.index.jsonl"
+     },
+     {
+      "label": "M2",
+      "meta": "captures/M2.meta.json",
+      "rx": "captures/M2.rx.bin",
+      "index": "captures/M2.index.jsonl"
+     },
+     {
+      "label": "W2",
+      "meta": "captures/W2.meta.json",
+      "rx": "captures/W2.rx.bin",
+      "index": "captures/W2.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": [],
+    "runtime_dir_exact": "/tmp/g/rt-C",
+    "old_cursor": 22
+   },
+   "duration_ms": 1073
+  },
+  "A": {
+   "id": "A",
+   "title": "owner close with M/W active; MID proven before close (additional variant, not the original N15 owner-before-MID order)",
+   "daemon": {
+    "instance_id": "80324bc4d967e9009943d7f41e97744a",
+    "pid": 2618,
+    "proc": {
+     "pid": 2618,
+     "comm": "opencode-pty",
+     "state": "R",
+     "ppid": 2086,
+     "starttime_ticks": 100344,
+     "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+     "exe": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+     "cmdline": [
+      "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+      "daemon"
+     ]
+    }
+   },
+   "attached": {
+    "M": "attached",
+    "W": "attached"
+   },
+   "start": {
+    "ok": true,
+    "stage": "started",
+    "ack": {
+     "stage": "started",
+     "wall_us": 1790958697686770,
+     "pid": 2622,
+     "oracle_len": 8,
+     "payload": "start.bin",
+     "payload_len": 8
+    },
+    "expected_tail": 8,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 8,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 8,
+       "reached": true
+      }
+     ],
+     "expected": 8
+    }
+   },
+   "mid": {
+    "ok": true,
+    "stage": "mid-emitted",
+    "ack": {
+     "stage": "mid-emitted",
+     "wall_us": 1790958697705508,
+     "pid": 2622,
+     "oracle_len": 14,
+     "payload": "mid.bin",
+     "payload_len": 6
+    },
+    "expected_tail": 14,
+    "delivery": {
+     "ok": true,
+     "subs": [
+      {
+       "sub": "M",
+       "max_end_online": 14,
+       "reached": true
+      },
+      {
+       "sub": "W",
+       "max_end_online": 14,
+       "reached": true
+      }
+     ],
+     "expected": 14
+    },
+    "native_running": true
+   },
+   "pre_close": {
+    "prereq": true,
+    "daemon": "alive:S",
+    "fixture": "alive:S"
+   },
+   "owner_close_trace_seq": 356,
+   "window_1": {
+    "duration_ms": 10042,
+    "samples_count": 20,
+    "first": {
+     "step": 0,
+     "t_after_close_ms": 10,
+     "daemon": "zombie",
+     "fixture": "gone",
+     "registration": {
+      "state": "ok-present"
+     },
+     "ping": {
+      "failure": "error"
+     },
+     "list": {
+      "failure": "connect",
+      "code": "ECONNREFUSED"
+     },
+     "M": {
+      "eof": false,
+      "close": false,
+      "exit": false
+     },
+     "W": {
+      "eof": false,
+      "close": false,
+      "exit": false
+     }
+    },
+    "last": {
+     "step": 19,
+     "t_after_close_ms": 9541,
+     "daemon": "gone",
+     "fixture": "gone",
+     "registration": {
+      "state": "missing",
+      "code": "ENOENT"
+     },
+     "ping": {
+      "failure": "connect",
+      "code": "ENOENT"
+     },
+     "list": {
+      "failure": "connect",
+      "code": "ENOENT"
+     },
+     "M": {
+      "eof": true,
+      "close": true,
+      "exit": false
+     },
+     "W": {
+      "eof": true,
+      "close": true,
+      "exit": false
+     }
+    },
+    "daemon_exit_event": {
+     "code": 0,
+     "signal": null,
+     "t_ms": 16911.75,
+     "wall_ms": 1790958697729
+    },
+    "samples": [
+     {
+      "step": 0,
+      "t_after_close_ms": 10,
+      "daemon": "zombie",
+      "fixture": "gone",
+      "registration": {
+       "state": "ok-present"
+      },
+      "ping": {
+       "failure": "error"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ECONNREFUSED"
+      },
+      "M": {
+       "eof": false,
+       "close": false,
+       "exit": false
+      },
+      "W": {
+       "eof": false,
+       "close": false,
+       "exit": false
+      }
+     },
+     {
+      "step": 1,
+      "t_after_close_ms": 512,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 2,
+      "t_after_close_ms": 1014,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 3,
+      "t_after_close_ms": 1515,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 4,
+      "t_after_close_ms": 2016,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 5,
+      "t_after_close_ms": 2518,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 6,
+      "t_after_close_ms": 3020,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 7,
+      "t_after_close_ms": 3521,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 8,
+      "t_after_close_ms": 4023,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 9,
+      "t_after_close_ms": 4524,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 10,
+      "t_after_close_ms": 5026,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 11,
+      "t_after_close_ms": 5528,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 12,
+      "t_after_close_ms": 6029,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 13,
+      "t_after_close_ms": 6531,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 14,
+      "t_after_close_ms": 7033,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 15,
+      "t_after_close_ms": 7535,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 16,
+      "t_after_close_ms": 8036,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 17,
+      "t_after_close_ms": 8538,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 18,
+      "t_after_close_ms": 9040,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     },
+     {
+      "step": 19,
+      "t_after_close_ms": 9541,
+      "daemon": "gone",
+      "fixture": "gone",
+      "registration": {
+       "state": "missing",
+       "code": "ENOENT"
+      },
+      "ping": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "list": {
+       "failure": "connect",
+       "code": "ENOENT"
+      },
+      "M": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      },
+      "W": {
+       "eof": true,
+       "close": true,
+       "exit": false
+      }
+     }
+    ]
+   },
+   "post_stimulus": {
+    "gate_released": true,
+    "ack": null,
+    "ack_timed_out": true,
+    "fixture_after": "gone",
+    "daemon_after": "gone"
+   },
+   "running_after_window_1": {
+    "running": false,
+    "reason": "daemon not alive; native running unverifiable"
+   },
+   "exit": {
+    "reached": false,
+    "reason": "prerequisites (intermediate ack + native running with exit held) not established"
+   },
+   "final": {
+    "M": {
+     "eof": {
+      "t_ms": 16911.464136,
+      "wall_ms": 1790958697729,
+      "afterExitFrame": false
+     },
+     "exit": null,
+     "close": {
+      "t_ms": 16911.848524,
+      "wall_ms": 1790958697730,
+      "hadError": false,
+      "local": false,
+      "reason": null
+     }
+    },
+    "W": {
+     "eof": {
+      "t_ms": 16911.639722,
+      "wall_ms": 1790958697729,
+      "afterExitFrame": false
+     },
+     "exit": null,
+     "close": {
+      "t_ms": 16911.7992,
+      "wall_ms": 1790958697730,
+      "hadError": false,
+      "local": false,
+      "reason": null
+     }
+    }
+   },
+   "status": "completed",
+   "case_rec": {
+    "case": "A",
+    "daemons": [
+     {
+      "tag": "dA",
+      "instance_id": "80324bc4d967e9009943d7f41e97744a",
+      "pid": 2618,
+      "ping_rx": "cases/A/requests/0025-ping-launch-dA.rx.bin",
+      "runtime_dir": "/tmp/g/rt-A"
+     }
+    ],
+    "fixtures": [
+     {
+      "child_env_names": {
+       "supplied_by_request": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "PATH",
+        "SHELL",
+        "TERM",
+        "TMPDIR"
+       ],
+       "observed_in_child": [
+        "COLORTERM",
+        "HOME",
+        "LANG",
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PATH",
+        "PWD",
+        "SHELL",
+        "SHLVL",
+        "TERM",
+        "TMPDIR",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "not_supplied_by_request": [
+        "OPENCODE_PTY_RUNTIME_DIR",
+        "PWD",
+        "SHLVL",
+        "XDG_CACHE_HOME",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "XDG_RUNTIME_DIR"
+       ],
+       "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+      },
+      "name": "A",
+      "dir_rel": "fx-A",
+      "pty_id": 3883592932406032,
+      "group_id": "ldv199gaps-A-A-2086",
+      "instance_id": "80324bc4d967e9009943d7f41e97744a",
+      "pid": 2622,
+      "proc": {
+       "pid": 2622,
+       "comm": "bash",
+       "state": "R",
+       "ppid": 2618,
+       "starttime_ticks": 100352,
+       "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+       "exe": "/usr/bin/bash",
+       "cmdline": [
+        "/bin/bash",
+        "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+        "/tmp/g/fx/A-A"
+       ]
+      },
+      "origin": 0,
+      "origin_head": 0,
+      "origin_sample_file": "samples/origin-A.jsonl",
+      "create_rx": "cases/A/requests/0027-create-A.rx.bin",
+      "oracle": "oracle.frozen.bin",
+      "boundaries": [
+       {
+        "boundary": "after-start",
+        "length": 8,
+        "sha256": "e0035dd2717a08a6794b379770529116fb61f9946a336d239c49500cd07667cc",
+        "t_ms": 16880.811,
+        "trace_seq": 349,
+        "matches_live_length": true
+       },
+       {
+        "boundary": "after-mid",
+        "length": 14,
+        "sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+        "t_ms": 16891.628,
+        "trace_seq": 353,
+        "matches_live_length": true
+       }
+      ],
+      "plan": [
+       "mode",
+       "ack ready",
+       "gate start",
+       "emit start.bin started",
+       "gate mid",
+       "emit mid.bin mid-emitted",
+       "gate post",
+       "emit post.bin post-emitted",
+       "gate exit",
+       "emit final.bin final-emitted",
+       "exit 0 exit-stage"
+      ],
+      "frozen": {
+       "boundary": "after-mid",
+       "length": 14,
+       "sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+       "t_ms": 16891.628,
+       "trace_seq": 353,
+       "matches_live_length": true
+      }
+     }
+    ],
+    "sockets": [
+     {
+      "label": "M",
+      "meta": "captures/M.meta.json",
+      "rx": "captures/M.rx.bin",
+      "index": "captures/M.index.jsonl"
+     },
+     {
+      "label": "W",
+      "meta": "captures/W.meta.json",
+      "rx": "captures/W.rx.bin",
+      "index": "captures/W.index.jsonl"
+     }
+    ],
+    "evidence_limit_hits": [],
+    "owner_close_trace_seq": 356,
+    "windows": {
+     "window_ms": 10000,
+     "event_ms": 10000,
+     "ack_ms": 5000
+    }
+   },
+   "duration_ms": 15570
+  }
+ }
+}

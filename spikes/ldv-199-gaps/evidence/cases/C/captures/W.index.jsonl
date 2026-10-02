@@ -1,0 +1,5 @@
+{"i":0,"t_ms":15800.911082,"hdrOff":0,"payload_len":492,"kind":"attached"}
+{"i":1,"t_ms":15809.58,"hdrOff":496,"payload_len":29,"kind":"output","start":0,"end":12}
+{"i":2,"t_ms":15829.277,"hdrOff":529,"payload_len":27,"kind":"output","start":12,"end":22}
+{"i":3,"kind":"conn:eof","t_ms":15882.526}
+{"i":4,"kind":"conn:close","t_ms":15882.666,"hadError":false,"local":false,"reason":null}

@@ -1,0 +1,170 @@
+{
+ "run": {
+  "started": "2026-10-02T16:31:20.819Z",
+  "dev": false,
+  "only": null,
+  "executable": {
+   "path": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+   "bytes": 3138672,
+   "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa",
+   "mode": "755",
+   "symlink": false,
+   "size_ok": true,
+   "sha256_ok": true
+  },
+  "platform": {
+   "platform": "linux",
+   "arch": "x64",
+   "libc": "gnu",
+   "glibc": "2.39",
+   "kernel": "6.18.44-fc-v51",
+   "node": "v22.22.0",
+   "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+   "clk_tck": 100
+  },
+  "fixture_tools": {
+   "bash": {
+    "path": "/usr/bin/bash",
+    "version": "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)",
+    "sha256": "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1"
+   },
+   "tee": {
+    "path": "/usr/bin/tee",
+    "version": "tee (GNU coreutils) 9.4",
+    "sha256": "8c1efbee8dbee25378fc941db29a88309d6a7525786e4ebba2dda08edb77615e"
+   },
+   "stty": {
+    "path": "/usr/bin/stty",
+    "version": "stty (GNU coreutils) 9.4",
+    "sha256": "44728ed190ae65a0f11a0bff9e4a3d8e297e1cf5841786b7220e19b051c2fdc6"
+   },
+   "stat": {
+    "path": "/usr/bin/stat",
+    "version": "stat (GNU coreutils) 9.4",
+    "sha256": "3b87d297111f11d30b3c51fd2663f131a161e09d8e130e1842adaefb74307efe"
+   },
+   "grep": {
+    "path": "/usr/bin/grep",
+    "version": "grep (GNU grep) 3.11",
+    "sha256": "20a35a4c18f2fe9e6305c1cbf866b9c0fcc3f957132ae66028c99ec353bb0a80"
+   },
+   "sort": {
+    "path": "/usr/bin/sort",
+    "version": "sort (GNU coreutils) 9.4",
+    "sha256": "063baf220830f47b3acb3b68ea67c545d762b4d96d068db31b3a82c6a63fd0f6"
+   },
+   "mkfifo": {
+    "path": "/usr/bin/mkfifo",
+    "version": "mkfifo (GNU coreutils) 9.4",
+    "sha256": "e746d63523729504b4ce7fa8ce8f37d0f6af186b2ed50a4630cd8a62d931f004"
+   },
+   "sha256sum": {
+    "path": "/usr/bin/sha256sum",
+    "version": "sha256sum (GNU coreutils) 9.4",
+    "sha256": "9992e1f1feb6f0f396bc8d6691ebc1adbfc269fd628bce84eda1d4ba5c3995c7"
+   },
+   "python3": {
+    "path": "/usr/bin/python3",
+    "version": "Python 3.11.15",
+    "sha256": "f56a588548dd013906ae1dcd1b6faa417f4e204da634ff354840d9643e78ff9e"
+   },
+   "node": {
+    "path": "/opt/node22/bin/node",
+    "version": "v22.22.0",
+    "sha256": "1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31"
+   }
+  },
+  "isolation": {
+   "mnt_ns": "mnt:[4026532262]",
+   "tmp_mountinfo": [
+    "76 50 254:0 /home/user/opencode/.spike-scratch/tmp /tmp rw,relatime - ext4 /dev/vda rw,discard,resv_strict,resuid=65534,resgid=65534"
+   ],
+   "tmpdir_env": "/tmp",
+   "tmp_probe_landed_in_workspace_scratch": true,
+   "run_root": "/tmp/g",
+   "harness_process_env_var_count": 161,
+   "note": "agent environment names/values are not recorded; daemon and PTY children receive explicit allowlists"
+  },
+  "scripts": {
+   "acquire.mjs": {
+    "bytes": 4097,
+    "sha256": "16d5896f75cd202c137d0c1533d3f57aa41f4c20fd368dfe948b401b81de80da"
+   },
+   "cases.mjs": {
+    "bytes": 29686,
+    "sha256": "acec4f86826e86ef0908028342a71c6cddb09948d995bc93fd3921e6a88baa00"
+   },
+   "fixture.sh": {
+    "bytes": 2834,
+    "sha256": "035d253dab3ef2481b5e662e06a051918bd88d2c085324ba3793f789a675e422"
+   },
+   "harness.mjs": {
+    "bytes": 28326,
+    "sha256": "6fab450803fc786092d6725d66e63b8e1c027419c0346f37b6a7d65e8e78cf2f"
+   },
+   "lib.mjs": {
+    "bytes": 6636,
+    "sha256": "b90bdbb677b4e9df601a5e8e91474f76bf5d7b3c70666ae1986fa66a59113b0d"
+   },
+   "run.mjs": {
+    "bytes": 14542,
+    "sha256": "91029f462a939d4086fbe98679eff5fb12d376e27b748b687f49d1acf1170512"
+   },
+   "wire.mjs": {
+    "bytes": 9599,
+    "sha256": "d0c54b16add4333dd3e3b9428f2a84fd5eeae636cf8e106a23be2310d03ec33d"
+   }
+  },
+  "allowlists": {
+   "daemon_env": [
+    "HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR",
+    "XDG_CONFIG_HOME",
+    "XDG_DATA_HOME",
+    "XDG_CACHE_HOME",
+    "XDG_RUNTIME_DIR",
+    "OPENCODE_PTY_RUNTIME_DIR"
+   ],
+   "fixture_env_supplied": [
+    "PATH",
+    "HOME",
+    "LANG",
+    "TMPDIR",
+    "TERM",
+    "COLORTERM",
+    "SHELL"
+   ]
+  },
+  "finished": "2026-10-02T16:31:54.181Z",
+  "first_launch_to_end_ms": 32952,
+  "within_15_min_budget": true,
+  "evidence_bytes": {
+   "total": 30193046,
+   "per_case": {
+    "run": 367442,
+    "trace": 117426,
+    "B-daemon": 112,
+    "B1": 19515,
+    "B2": 17446,
+    "B3": 19387,
+    "D2": 25851,
+    "D3": 29574956,
+    "C": 31877,
+    "A": 16550,
+    "cleanup": 2484
+   },
+   "limit_hits": []
+  },
+  "trace_events": 421,
+  "redaction_audit": {
+   "files": 333,
+   "bytes": 29924448,
+   "secret_matches": [],
+   "pattern_matches": {},
+   "ok": true,
+   "note": "memory-only secrets (daemon tokens) were registered for redaction before any write; TX frames, service.json contents and env dumps are never stored"
+  }
+ }
+}

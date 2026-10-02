@@ -1,0 +1,2718 @@
+{
+ "cases": [
+  {
+   "case": "A",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 340,
+      "tail": 0
+     },
+     "name": "origin:A",
+     "status": "green"
+    },
+    {
+     "boundaries": 2,
+     "name": "oracle-boundaries-prefix:A",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:A",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 4,
+     "frames_independent": 4,
+     "name": "client-index-crosscheck:M",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 14,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M",
+     "native_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+     "oracle_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M",
+     "socket": "M",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:M",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 3,
+     "frames_independent": 3,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 14,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+     "oracle_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 0,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "name": "ordering:case-A-owner-close",
+     "owner_close_seq": 356,
+     "status": "green",
+     "violations": []
+    }
+   ],
+   "facts": {
+    "case": "A",
+    "fixtures": {
+     "A": {
+      "oracle_bytes": 14,
+      "oracle_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 340,
+       "tail": 0
+      },
+      "pid": 2622
+     }
+    },
+    "sockets": {
+     "M": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 1,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "controller",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 16911.848524,
+        "wall_ms": 1790958697730
+       },
+       "eof": {
+        "afterExitFrame": false,
+        "t_ms": 16911.464136,
+        "wall_ms": 1790958697729
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 14,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+       "ok": true,
+       "oracle_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 14
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 4,
+      "output_frames": 2,
+      "rx_bytes": 614,
+      "rx_sha256": "50f79d46a1d03e2141df5ed8a8d07b8b9b128127d77774782bc41d71c82cee2b",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 1,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 16911.7992,
+        "wall_ms": 1790958697730
+       },
+       "eof": {
+        "afterExitFrame": false,
+        "t_ms": 16911.639722,
+        "wall_ms": 1790958697729
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 14,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+       "ok": true,
+       "oracle_sha256": "80a92079af6be20a82ba415afb9ea2a276e626b8da3b89a2244320c9ea66b5d5",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 14
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 3,
+      "output_frames": 2,
+      "rx_bytes": 544,
+      "rx_sha256": "e9c9ddd4360455eb519e6bfbf2a7819c3539496610fce931fc212e179b985ea6",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  },
+  {
+   "case": "B1",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 18,
+      "tail": 0
+     },
+     "name": "origin:B1",
+     "status": "green"
+    },
+    {
+     "boundaries": 3,
+     "name": "oracle-boundaries-prefix:B1",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:B1",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 5,
+     "frames_independent": 5,
+     "name": "client-index-crosscheck:M",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 25,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M",
+     "native_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "oracle_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M",
+     "socket": "M",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 7 preserved (key present=True)",
+     "name": "exit-code-preservation:M",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 5,
+     "frames_independent": 5,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 25,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "oracle_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 7 preserved (key present=True)",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 1,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "exit_release_wall_ms": 1790958681640,
+     "mid_ack_wall_ms": 1790958681622,
+     "name": "ack-before-exit-release(file clocks):B1",
+     "status": "green"
+    }
+   ],
+   "facts": {
+    "case": "B1",
+    "fixtures": {
+     "B1": {
+      "oracle_bytes": 25,
+      "oracle_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 18,
+       "tail": 0
+      },
+      "pid": 2120
+     }
+    },
+    "sockets": {
+     "M": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 849.182702,
+        "wall_ms": 1790958681667
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 848.045602,
+        "wall_ms": 1790958681666
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 25,
+       "first_difference": null,
+       "intervals": 3,
+       "native_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+       "ok": true,
+       "oracle_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 3,
+       "overlaps": [],
+       "to": 25
+      },
+      "exits": [
+       {
+        "exit_code": 7,
+        "final_offset": 25,
+        "frame": 4,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":7,\"final_offset\":25}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 5,
+      "output_frames": 3,
+      "rx_bytes": 636,
+      "rx_sha256": "c185a622fe0ae642a893b35f013d857b5a557f74daf82557228c25e821d467cd",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 849.048387,
+        "wall_ms": 1790958681667
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 848.572235,
+        "wall_ms": 1790958681666
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 25,
+       "first_difference": null,
+       "intervals": 3,
+       "native_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+       "ok": true,
+       "oracle_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 3,
+       "overlaps": [],
+       "to": 25
+      },
+      "exits": [
+       {
+        "exit_code": 7,
+        "final_offset": 25,
+        "frame": 4,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":7,\"final_offset\":25}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 5,
+      "output_frames": 3,
+      "rx_bytes": 636,
+      "rx_sha256": "c185a622fe0ae642a893b35f013d857b5a557f74daf82557228c25e821d467cd",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  },
+  {
+   "case": "B2",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 55,
+      "tail": 0
+     },
+     "name": "origin:B2",
+     "status": "green"
+    },
+    {
+     "boundaries": 2,
+     "name": "oracle-boundaries-prefix:B2",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:B2",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 4,
+     "frames_independent": 4,
+     "name": "client-index-crosscheck:M",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 16,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M",
+     "native_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+     "oracle_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M",
+     "socket": "M",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 1 preserved (key present=True)",
+     "name": "exit-code-preservation:M",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 4,
+     "frames_independent": 4,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 16,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+     "oracle_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 1 preserved (key present=True)",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 0,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    }
+   ],
+   "facts": {
+    "case": "B2",
+    "fixtures": {
+     "B2": {
+      "oracle_bytes": 16,
+      "oracle_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 55,
+       "tail": 0
+      },
+      "pid": 2182
+     }
+    },
+    "sockets": {
+     "M": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 6340.31492,
+        "wall_ms": 1790958687158
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 6340.076374,
+        "wall_ms": 1790958687158
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 16,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+       "ok": true,
+       "oracle_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 16
+      },
+      "exits": [
+       {
+        "exit_code": 1,
+        "final_offset": 16,
+        "frame": 3,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":1,\"final_offset\":16}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 4,
+      "output_frames": 2,
+      "rx_bytes": 606,
+      "rx_sha256": "a5897f1690056f9be868392a21df35447d1bd253daac7d7c23cdde9a23c6cde1",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 6340.683619,
+        "wall_ms": 1790958687158
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 6340.562088,
+        "wall_ms": 1790958687158
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 16,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+       "ok": true,
+       "oracle_sha256": "bc9dc143ab33300c1d6948b6aa5efd462ee41cf88795bfaae7fb48fc2a4e3428",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 16
+      },
+      "exits": [
+       {
+        "exit_code": 1,
+        "final_offset": 16,
+        "frame": 3,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":1,\"final_offset\":16}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 4,
+      "output_frames": 2,
+      "rx_bytes": 606,
+      "rx_sha256": "a5897f1690056f9be868392a21df35447d1bd253daac7d7c23cdde9a23c6cde1",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  },
+  {
+   "case": "B3",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 87,
+      "tail": 0
+     },
+     "name": "origin:B3",
+     "status": "green"
+    },
+    {
+     "boundaries": 2,
+     "name": "oracle-boundaries-prefix:B3",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:B3",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 4,
+     "frames_independent": 4,
+     "name": "client-index-crosscheck:M",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 16,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M",
+     "native_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+     "oracle_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M",
+     "socket": "M",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 1 preserved (key present=True)",
+     "name": "exit-code-preservation:M",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 4,
+     "frames_independent": 4,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 16,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+     "oracle_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 1 preserved (key present=True)",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 0,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    }
+   ],
+   "facts": {
+    "case": "B3",
+    "fixtures": {
+     "B3": {
+      "oracle_bytes": 16,
+      "oracle_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 87,
+       "tail": 0
+      },
+      "pid": 2227
+     }
+    },
+    "sockets": {
+     "M": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 6828.141406,
+        "wall_ms": 1790958687646
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 6827.547928,
+        "wall_ms": 1790958687645
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 16,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+       "ok": true,
+       "oracle_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 16
+      },
+      "exits": [
+       {
+        "exit_code": 1,
+        "final_offset": 16,
+        "frame": 3,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":1,\"final_offset\":16}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 4,
+      "output_frames": 2,
+      "rx_bytes": 606,
+      "rx_sha256": "97a3ce9ae7f85c6375a79d2de0a41b3ec38cab39dd7ed760135f5c3890b2f0f0",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 6828.024553,
+        "wall_ms": 1790958687646
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 6827.755383,
+        "wall_ms": 1790958687645
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 16,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+       "ok": true,
+       "oracle_sha256": "644d45bf1740c2b6706310b6acc2b98e4f6733524e3964c3c44f2656052aa846",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 16
+      },
+      "exits": [
+       {
+        "exit_code": 1,
+        "final_offset": 16,
+        "frame": 3,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":1,\"final_offset\":16}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 4,
+      "output_frames": 2,
+      "rx_bytes": 606,
+      "rx_sha256": "97a3ce9ae7f85c6375a79d2de0a41b3ec38cab39dd7ed760135f5c3890b2f0f0",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  },
+  {
+   "case": "C",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 249,
+      "tail": 0
+     },
+     "name": "origin:old",
+     "status": "green"
+    },
+    {
+     "boundaries": 2,
+     "name": "oracle-boundaries-prefix:old",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:old",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 298,
+      "tail": 0
+     },
+     "name": "origin:new",
+     "status": "green"
+    },
+    {
+     "boundaries": 3,
+     "name": "oracle-boundaries-prefix:new",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:new",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 3,
+     "frames_independent": 3,
+     "name": "client-index-crosscheck:M",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 22,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M",
+     "native_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+     "oracle_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M",
+     "socket": "M",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:M",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 3,
+     "frames_independent": 3,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 22,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+     "oracle_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:old-cursor-attach",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 0,
+     "frames_independent": 0,
+     "name": "client-index-crosscheck:old-cursor-attach",
+     "status": "green"
+    },
+    {
+     "compared_bytes": 0,
+     "detail": "no native bytes on this socket",
+     "name": "bytes-vs-oracle:old-cursor-attach",
+     "status": "green"
+    },
+    {
+     "name": "identity:old-cursor-attach",
+     "socket": "old-cursor-attach",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:old-cursor-attach",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M2",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 5,
+     "frames_independent": 5,
+     "name": "client-index-crosscheck:M2",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 34,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M2",
+     "native_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+     "oracle_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M2",
+     "socket": "M2",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 0 preserved (key present=True)",
+     "name": "exit-code-preservation:M2",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W2",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 5,
+     "frames_independent": 5,
+     "name": "client-index-crosscheck:W2",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 34,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W2",
+     "native_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+     "oracle_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W2",
+     "socket": "W2",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 0 preserved (key present=True)",
+     "name": "exit-code-preservation:W2",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 1,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "exit_release_wall_ms": 1790958697168,
+     "mid_ack_wall_ms": 1790958697145,
+     "name": "ack-before-exit-release(file clocks):new",
+     "status": "green"
+    }
+   ],
+   "facts": {
+    "case": "C",
+    "fixtures": {
+     "new": {
+      "oracle_bytes": 34,
+      "oracle_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 298,
+       "tail": 0
+      },
+      "pid": 2563
+     },
+     "old": {
+      "oracle_bytes": 22,
+      "oracle_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 249,
+       "tail": 0
+      },
+      "pid": 2510
+     }
+    },
+    "sockets": {
+     "M": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 15882.732693,
+        "wall_ms": 1790958696700
+       },
+       "eof": {
+        "afterExitFrame": false,
+        "t_ms": 15882.301282,
+        "wall_ms": 1790958696700
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 22,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+       "ok": true,
+       "oracle_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 22
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 3,
+      "output_frames": 2,
+      "rx_bytes": 560,
+      "rx_sha256": "553355c7d3c522a7247c9c834fdc25e2731959bef924fe6970d0c2254d7b9c36",
+      "stream_problems": []
+     },
+     "M2": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 16367.521425,
+        "wall_ms": 1790958697185
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 16367.374352,
+        "wall_ms": 1790958697185
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 34,
+       "first_difference": null,
+       "intervals": 3,
+       "native_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+       "ok": true,
+       "oracle_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 3,
+       "overlaps": [],
+       "to": 34
+      },
+      "exits": [
+       {
+        "exit_code": 0,
+        "final_offset": 34,
+        "frame": 4,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":0,\"final_offset\":34}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 5,
+      "output_frames": 3,
+      "rx_bytes": 646,
+      "rx_sha256": "392fa7bf5043d70edb08fcdbf69c92da2f92b2544309a20207e0f26e6c180914",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 15882.66588,
+        "wall_ms": 1790958696700
+       },
+       "eof": {
+        "afterExitFrame": false,
+        "t_ms": 15882.526488,
+        "wall_ms": 1790958696700
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 22,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+       "ok": true,
+       "oracle_sha256": "602e47ca00682b4d69cbc6a99e60a642401bda76676cb8d0b00509946cae06de",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 22
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 3,
+      "output_frames": 2,
+      "rx_bytes": 560,
+      "rx_sha256": "553355c7d3c522a7247c9c834fdc25e2731959bef924fe6970d0c2254d7b9c36",
+      "stream_problems": []
+     },
+     "W2": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 16367.578702,
+        "wall_ms": 1790958697185
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 16367.269267,
+        "wall_ms": 1790958697185
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 34,
+       "first_difference": null,
+       "intervals": 3,
+       "native_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+       "ok": true,
+       "oracle_sha256": "e137014fa96e7cc1f0234e234c116319cde70917dcd1b4a53eb1308f7446c6c8",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 3,
+       "overlaps": [],
+       "to": 34
+      },
+      "exits": [
+       {
+        "exit_code": 0,
+        "final_offset": 34,
+        "frame": 4,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":0,\"final_offset\":34}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 5,
+      "output_frames": 3,
+      "rx_bytes": 646,
+      "rx_sha256": "392fa7bf5043d70edb08fcdbf69c92da2f92b2544309a20207e0f26e6c180914",
+      "stream_problems": []
+     },
+     "old-cursor-attach": {
+      "attached": null,
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "case-end-cleanup",
+        "t_ms": 16004.853327,
+        "wall_ms": 1790958696823
+       },
+       "eof": {
+        "afterExitFrame": false,
+        "consumed_as_attach_failure": true,
+        "t_ms": 16002.978715,
+        "wall_ms": 1790958696821
+       }
+      },
+      "coverage": {
+       "holes": [],
+       "intervals": 0,
+       "overlaps": []
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 0,
+      "output_frames": 0,
+      "rx_bytes": 0,
+      "rx_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  },
+  {
+   "case": "D2",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 119,
+      "tail": 0
+     },
+     "name": "origin:D2",
+     "status": "green"
+    },
+    {
+     "boundaries": 3,
+     "name": "oracle-boundaries-prefix:D2",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:D2",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 2,
+     "frames_independent": 2,
+     "name": "client-index-crosscheck:M",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 9,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M",
+     "native_sha256": "e3c837668ef782f687a369ebbbd489b0ae758fb7ae226231bd3bf0367fc6db93",
+     "oracle_sha256": "e3c837668ef782f687a369ebbbd489b0ae758fb7ae226231bd3bf0367fc6db93",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M",
+     "socket": "M",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:M",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:M2",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:M2",
+     "replay_sha256": "5dee3985f21c402202dd09b98e367134192c97e39c1978e6352dfdd3156a6690",
+     "status": "green"
+    },
+    {
+     "frames_client": 3,
+     "frames_independent": 3,
+     "name": "client-index-crosscheck:M2",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 16,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:M2",
+     "native_sha256": "0450529546a377d91a9c6aca3692d15df90ef86fef1d9b60dd8e9c3e913dd6cf",
+     "oracle_sha256": "0450529546a377d91a9c6aca3692d15df90ef86fef1d9b60dd8e9c3e913dd6cf",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:M2",
+     "socket": "M2",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 0 preserved (key present=True)",
+     "name": "exit-code-preservation:M2",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 5,
+     "frames_independent": 5,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 25,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+     "oracle_sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 0 preserved (key present=True)",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 1,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "exit_release_wall_ms": 1790958688149,
+     "mid_ack_wall_ms": 1790958688107,
+     "name": "ack-before-exit-release(file clocks):D2",
+     "status": "green"
+    }
+   ],
+   "facts": {
+    "case": "D2",
+    "fixtures": {
+     "D2": {
+      "oracle_bytes": 25,
+      "oracle_sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 119,
+       "tail": 0
+      },
+      "pid": 2272
+     }
+    },
+    "sockets": {
+     "M": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "measured-loss",
+        "t_ms": 7280.335438,
+        "wall_ms": 1790958688098
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 9,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "e3c837668ef782f687a369ebbbd489b0ae758fb7ae226231bd3bf0367fc6db93",
+       "ok": true,
+       "oracle_sha256": "e3c837668ef782f687a369ebbbd489b0ae758fb7ae226231bd3bf0367fc6db93",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 9
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 2,
+      "output_frames": 1,
+      "rx_bytes": 525,
+      "rx_sha256": "7b71db47296894d1f973ca919c11878c0300b12cab8170831902e1a48fd78400",
+      "stream_problems": []
+     },
+     "M2": {
+      "attached": {
+       "available_offset": 9,
+       "end_offset": 16,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 7,
+       "replay_start": 9,
+       "requested_offset": 9,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 7348.281988,
+        "wall_ms": 1790958688166
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 7348.117397,
+        "wall_ms": 1790958688166
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 16,
+       "first_difference": null,
+       "intervals": 2,
+       "native_sha256": "0450529546a377d91a9c6aca3692d15df90ef86fef1d9b60dd8e9c3e913dd6cf",
+       "ok": true,
+       "oracle_sha256": "0450529546a377d91a9c6aca3692d15df90ef86fef1d9b60dd8e9c3e913dd6cf",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 9,
+       "holes": [],
+       "intervals": 2,
+       "overlaps": [],
+       "to": 25
+      },
+      "exits": [
+       {
+        "exit_code": 0,
+        "final_offset": 25,
+        "frame": 2,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":0,\"final_offset\":25}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 3,
+      "output_frames": 1,
+      "rx_bytes": 592,
+      "rx_sha256": "f99f804a86b863acdfb16c820ed06338173f52b3e8d7e8cb5ffb159fad18c1ee",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 7348.35306,
+        "wall_ms": 1790958688166
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 7348.010557,
+        "wall_ms": 1790958688166
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 25,
+       "first_difference": null,
+       "intervals": 3,
+       "native_sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+       "ok": true,
+       "oracle_sha256": "2b541ebe8643c77e77b83e067033975589dea6f4a225ecfa839d579c248e404b",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 3,
+       "overlaps": [],
+       "to": 25
+      },
+      "exits": [
+       {
+        "exit_code": 0,
+        "final_offset": 25,
+        "frame": 4,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":0,\"final_offset\":25}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 5,
+      "output_frames": 3,
+      "rx_bytes": 636,
+      "rx_sha256": "3bd9258d2843949717dcf1668656c088805859f6aa158efec072a7669e1a314f",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  },
+  {
+   "case": "D3",
+   "checks": [
+    {
+     "detail": {
+      "head": 0,
+      "head_equals_tail": true,
+      "origin": 0,
+      "sample_seq": 157,
+      "tail": 0
+     },
+     "name": "origin:D3",
+     "status": "green"
+    },
+    {
+     "boundaries": 3,
+     "name": "oracle-boundaries-prefix:D3",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "echo_off": true,
+     "name": "mode:D3",
+     "opost_off": true,
+     "size": "24 80",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:W",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 375,
+     "frames_independent": 375,
+     "name": "client-index-crosscheck:W",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 4194313,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:W",
+     "native_sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+     "oracle_sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:W",
+     "socket": "W",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "raw exit_code 0 preserved (key present=True)",
+     "name": "exit-code-preservation:W",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S1-at0",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:S1-at0",
+     "replay_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S1-at0",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 65536,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:S1-at0",
+     "native_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "oracle_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:S1-at0",
+     "socket": "S1-at0",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S1-at0",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S1-saved",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:S1-saved",
+     "replay_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S1-saved",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 65536,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:S1-saved",
+     "native_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "oracle_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:S1-saved",
+     "socket": "S1-saved",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S1-saved",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S1-head",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:S1-head",
+     "replay_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S1-head",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 65536,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:S1-head",
+     "native_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "oracle_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:S1-head",
+     "socket": "S1-head",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S1-head",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S1-tail",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S1-tail",
+     "status": "green"
+    },
+    {
+     "compared_bytes": 0,
+     "detail": "no native bytes on this socket",
+     "name": "bytes-vs-oracle:S1-tail",
+     "status": "green"
+    },
+    {
+     "name": "identity:S1-tail",
+     "socket": "S1-tail",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S1-tail",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S2-at0",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:S2-at0",
+     "replay_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S2-at0",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 2097152,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:S2-at0",
+     "native_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "oracle_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:S2-at0",
+     "socket": "S2-at0",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S2-at0",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S2-saved",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:S2-saved",
+     "replay_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S2-saved",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 2097152,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:S2-saved",
+     "native_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "oracle_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:S2-saved",
+     "socket": "S2-saved",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S2-saved",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S2-head",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:S2-head",
+     "replay_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S2-head",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 2097152,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:S2-head",
+     "native_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "oracle_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:S2-head",
+     "socket": "S2-head",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S2-head",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:S2-tail",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:S2-tail",
+     "status": "green"
+    },
+    {
+     "compared_bytes": 0,
+     "detail": "no native bytes on this socket",
+     "name": "bytes-vs-oracle:S2-tail",
+     "status": "green"
+    },
+    {
+     "name": "identity:S2-tail",
+     "socket": "S2-tail",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:S2-tail",
+     "status": "green"
+    },
+    {
+     "frame_problems": [],
+     "name": "frames-wellformed:post-exit-head",
+     "note": "incomplete/limit stream problems are facts; invalid output frames are red",
+     "status": "green",
+     "stream_problems": []
+    },
+    {
+     "name": "replay-file-matches-wire:post-exit-head",
+     "replay_sha256": "5015b089d40ba1c8ce2b5adc159fb13e5aa50047b9c81a8ceb0b843e9eec7cf5",
+     "status": "green"
+    },
+    {
+     "frames_client": 1,
+     "frames_independent": 1,
+     "name": "client-index-crosscheck:post-exit-head",
+     "status": "green"
+    },
+    {
+     "beyond_oracle_bytes": 0,
+     "compared_bytes": 2097152,
+     "first_difference": null,
+     "name": "bytes-vs-oracle:post-exit-head",
+     "native_sha256": "5015b089d40ba1c8ce2b5adc159fb13e5aa50047b9c81a8ceb0b843e9eec7cf5",
+     "oracle_sha256": "5015b089d40ba1c8ce2b5adc159fb13e5aa50047b9c81a8ceb0b843e9eec7cf5",
+     "pre_origin_bytes": 0,
+     "status": "green"
+    },
+    {
+     "name": "identity:post-exit-head",
+     "socket": "post-exit-head",
+     "status": "green",
+     "violations": []
+    },
+    {
+     "detail": "no exited frame on this socket",
+     "name": "exit-code-preservation:post-exit-head",
+     "status": "green"
+    },
+    {
+     "checked_exit_releases": 1,
+     "name": "ordering:exit-gates",
+     "status": "green",
+     "violations": []
+    }
+   ],
+   "facts": {
+    "case": "D3",
+    "fixtures": {
+     "D3": {
+      "oracle_bytes": 4194313,
+      "oracle_sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+      "origin": {
+       "head": 0,
+       "head_equals_tail": true,
+       "origin": 0,
+       "sample_seq": 157,
+       "tail": 0
+      },
+      "pid": 2331
+     }
+    },
+    "sockets": {
+     "S1-at0": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 65536,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 65536,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 8200.757794,
+        "wall_ms": 1790958689019
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 65536,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+       "ok": true,
+       "oracle_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 65536
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 87887,
+      "rx_sha256": "5045082664d2217d253ded9d0aeb7bd74506e524fe3571c273bb1fed7589405d",
+      "stream_problems": []
+     },
+     "S1-head": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 65536,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 65536,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 8615.966969,
+        "wall_ms": 1790958689434
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 65536,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+       "ok": true,
+       "oracle_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 65536
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 87887,
+      "rx_sha256": "5045082664d2217d253ded9d0aeb7bd74506e524fe3571c273bb1fed7589405d",
+      "stream_problems": []
+     },
+     "S1-saved": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 65536,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 65536,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 8403.316877,
+        "wall_ms": 1790958689221
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 65536,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+       "ok": true,
+       "oracle_sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 65536
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 87887,
+      "rx_sha256": "5045082664d2217d253ded9d0aeb7bd74506e524fe3571c273bb1fed7589405d",
+      "stream_problems": []
+     },
+     "S1-tail": {
+      "attached": {
+       "available_offset": 65536,
+       "end_offset": 65536,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 65536,
+       "requested_offset": 65536,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 8827.71574,
+        "wall_ms": 1790958689645
+       },
+       "eof": null
+      },
+      "coverage": {
+       "holes": [],
+       "intervals": 0,
+       "overlaps": []
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 511,
+      "rx_sha256": "6aeb2bb7eb3c7602375ac778aac85ae9ba7c7b16878e5578802f7baf07bd0527",
+      "stream_problems": []
+     },
+     "S2-at0": {
+      "attached": {
+       "available_offset": 2097152,
+       "end_offset": 4194304,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "available_offset",
+       "replay_len": 2097152,
+       "replay_start": 2097152,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": true
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 9315.80679,
+        "wall_ms": 1790958690134
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 2097152,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+       "ok": true,
+       "oracle_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 2097152,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 4194304
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 2796722,
+      "rx_sha256": "e6a7eddc2e99d09778a284aca4f1a13b069520ab67d5fc262797f47a83ccb636",
+      "stream_problems": []
+     },
+     "S2-head": {
+      "attached": {
+       "available_offset": 2097152,
+       "end_offset": 4194304,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 2097152,
+       "replay_start": 2097152,
+       "requested_offset": 2097152,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 9783.609956,
+        "wall_ms": 1790958690601
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 2097152,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+       "ok": true,
+       "oracle_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 2097152,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 4194304
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 2796729,
+      "rx_sha256": "0207adb9a3281a633bd5dc19c7802b7decb35db67822b3dbcb834c5a4f4811b8",
+      "stream_problems": []
+     },
+     "S2-saved": {
+      "attached": {
+       "available_offset": 2097152,
+       "end_offset": 4194304,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "available_offset",
+       "replay_len": 2097152,
+       "replay_start": 2097152,
+       "requested_offset": 65536,
+       "role": "observer",
+       "truncated": true
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 9548.567581,
+        "wall_ms": 1790958690366
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 2097152,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+       "ok": true,
+       "oracle_sha256": "7d09886a12f722899b3d62256c571578c00dbb2d6010b6d9bbd410e141f22251",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 2097152,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 4194304
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 2796726,
+      "rx_sha256": "5c5f2e534ed9ed77d52144c6994c1da7a77bcc6ce8e705a3a64bb9c6d121dad7",
+      "stream_problems": []
+     },
+     "S2-tail": {
+      "attached": {
+       "available_offset": 4194304,
+       "end_offset": 4194304,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 4194304,
+       "requested_offset": 4194304,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 9991.484225,
+        "wall_ms": 1790958690809
+       },
+       "eof": null
+      },
+      "coverage": {
+       "holes": [],
+       "intervals": 0,
+       "overlaps": []
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 525,
+      "rx_sha256": "c7c67594c10476b7f01927361f0f4b89188982b6d680033735990bdaa08e8d95",
+      "stream_problems": []
+     },
+     "W": {
+      "attached": {
+       "available_offset": 0,
+       "end_offset": 0,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 0,
+       "replay_start": 0,
+       "requested_offset": 0,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": false,
+        "reason": null,
+        "t_ms": 10019.189536,
+        "wall_ms": 1790958690837
+       },
+       "eof": {
+        "afterExitFrame": true,
+        "t_ms": 10018.653968,
+        "wall_ms": 1790958690836
+       }
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 4194313,
+       "first_difference": null,
+       "intervals": 373,
+       "native_sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+       "ok": true,
+       "oracle_sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 0,
+       "holes": [],
+       "intervals": 373,
+       "overlaps": [],
+       "to": 4194313
+      },
+      "exits": [
+       {
+        "exit_code": 0,
+        "final_offset": 4194313,
+        "frame": 374,
+        "key_present": true,
+        "raw_payload": "{\"type\":\"exited\",\"exit_code\":0,\"final_offset\":4194313}"
+       }
+      ],
+      "frame_problems": [],
+      "frames": 375,
+      "output_frames": 373,
+      "rx_bytes": 4202699,
+      "rx_sha256": "06ec059a840fb7422ae90f74dc8aee973889e383a655ceeccb2e078f628ebbe9",
+      "stream_problems": []
+     },
+     "post-exit-head": {
+      "attached": {
+       "available_offset": 2097161,
+       "end_offset": 4194313,
+       "frame": 0,
+       "generation": 0,
+       "replay_basis": "requested_offset",
+       "replay_len": 2097152,
+       "replay_start": 2097161,
+       "requested_offset": 2097161,
+       "role": "observer",
+       "truncated": false
+      },
+      "client_view": {
+       "close": {
+        "hadError": false,
+        "local": true,
+        "reason": "examination-complete",
+        "t_ms": 15279.453982,
+        "wall_ms": 1790958696097
+       },
+       "eof": null
+      },
+      "compare": {
+       "beyond_oracle_bytes": 0,
+       "compared_bytes": 2097152,
+       "first_difference": null,
+       "intervals": 1,
+       "native_sha256": "5015b089d40ba1c8ce2b5adc159fb13e5aa50047b9c81a8ceb0b843e9eec7cf5",
+       "ok": true,
+       "oracle_sha256": "5015b089d40ba1c8ce2b5adc159fb13e5aa50047b9c81a8ceb0b843e9eec7cf5",
+       "pre_origin_bytes": 0
+      },
+      "coverage": {
+       "from": 2097161,
+       "holes": [],
+       "intervals": 1,
+       "overlaps": [],
+       "to": 4194313
+      },
+      "exits": [],
+      "frame_problems": [],
+      "frames": 1,
+      "output_frames": 0,
+      "rx_bytes": 2796740,
+      "rx_sha256": "8ff0a9c05e989698c1f874b542b64e91baf2ec422808fefe0a0e6e069bfaed69",
+      "stream_problems": []
+     }
+    }
+   },
+   "red": []
+  }
+ ],
+ "checks_total": 173,
+ "evidence": "/home/user/opencode/spikes/ldv-199-gaps/evidence",
+ "red_total": 0
+}

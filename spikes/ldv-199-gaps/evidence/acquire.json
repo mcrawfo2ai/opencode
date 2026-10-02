@@ -1,0 +1,171 @@
+{
+ "started": "2026-10-02T16:20:42.077Z",
+ "tool": {
+  "node": "v22.22.0",
+  "npm": "10.9.4"
+ },
+ "npm_pack_json": [
+  {
+   "name": "@opencode-ai/pty-linux-x64-gnu",
+   "version": "0.1.13",
+   "filename": "opencode-ai-pty-linux-x64-gnu-0.1.13.tgz",
+   "size": 1278488,
+   "unpackedSize": 3140270,
+   "shasum": "99213b6d0d88a4e4ab28b639dbfb1ead7b3e0534",
+   "integrity": "sha512-jliNgsevGuxfIeX7eyzjHhrJkF8uEUPnDLbF2v16uv69FhEHrraf7jyWkxazMP6rNvn2CGtwMMc4BXPS5pzjhg==",
+   "fileCount": 3
+  },
+  {
+   "name": "@opencode-ai/pty",
+   "version": "0.1.13",
+   "filename": "opencode-ai-pty-0.1.13.tgz",
+   "size": 1699,
+   "unpackedSize": 3118,
+   "shasum": "f4488cb7f099370a3b1dd95bffdce8d2c4acf7af",
+   "integrity": "sha512-WPCN8h8HaZhhUcrMG0zu+4D9vco0EZiEg/gCF1K3JPRN6UsHMiXq1HVIy5IlyfcoyjfViRmQmXYE4AuU3laBjA==",
+   "fileCount": 5
+  }
+ ],
+ "native": {
+  "tarball": "opencode-ai-pty-linux-x64-gnu-0.1.13.tgz",
+  "tarball_bytes": 1278488,
+  "tarball_sha1": "99213b6d0d88a4e4ab28b639dbfb1ead7b3e0534",
+  "tarball_sha256": "f712b3bd123505e5b919868d81ce36bcd8ec97565eb14fc9e0dd4a2d0bf1d774",
+  "tarball_sha512_integrity": "sha512-jliNgsevGuxfIeX7eyzjHhrJkF8uEUPnDLbF2v16uv69FhEHrraf7jyWkxazMP6rNvn2CGtwMMc4BXPS5pzjhg==",
+  "tar_listing": [
+   "-rw-r--r-- 0/0            1067 1985-10-26 08:15 package/LICENSE",
+   "-rwxr-xr-x 0/0         3138672 1985-10-26 08:15 package/bin/opencode-pty",
+   "-rw-r--r-- 0/0             531 1985-10-26 08:15 package/package.json"
+  ],
+  "inventory": [
+   {
+    "path": "bin/opencode-pty",
+    "bytes": 3138672,
+    "mode": "755",
+    "symlink": false,
+    "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa"
+   },
+   {
+    "path": "LICENSE",
+    "bytes": 1067,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "a0b3bba7a9ae94cb3c4e3049ed88ac17a9883464bb28f04ef7298b9fcd0593a2"
+   },
+   {
+    "path": "package.json",
+    "bytes": 531,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "576de2fe99512e2dd839e7e8a4897daff8eac9cf4cea41e4ebd536b190ba30fe"
+   }
+  ]
+ },
+ "parent": {
+  "tarball": "opencode-ai-pty-0.1.13.tgz",
+  "tarball_bytes": 1699,
+  "tarball_sha1": "f4488cb7f099370a3b1dd95bffdce8d2c4acf7af",
+  "tarball_sha256": "8d46a91b827fbbf1ca45708524040ea0a446f4c515731d78ac7a60a69214f0d9",
+  "tarball_sha512_integrity": "sha512-WPCN8h8HaZhhUcrMG0zu+4D9vco0EZiEg/gCF1K3JPRN6UsHMiXq1HVIy5IlyfcoyjfViRmQmXYE4AuU3laBjA==",
+  "tar_listing": [
+   "-rw-r--r-- 0/0            1067 1985-10-26 08:15 package/LICENSE",
+   "-rw-r--r-- 0/0             662 1985-10-26 08:15 package/index.js",
+   "-rw-r--r-- 0/0             449 1985-10-26 08:15 package/bin/opencode-pty.js",
+   "-rw-r--r-- 0/0             888 1985-10-26 08:15 package/package.json",
+   "-rw-r--r-- 0/0              52 1985-10-26 08:15 package/index.d.ts"
+  ],
+  "inventory": [
+   {
+    "path": "bin/opencode-pty.js",
+    "bytes": 449,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "bf94003842ffafcdf271a3707d7e6b86efcffb2e643f30c3f2c5e0342eb526f0"
+   },
+   {
+    "path": "index.d.ts",
+    "bytes": 52,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "372f29e37834ba234a7e1407c1b76cbd77fb72470df4d1bb2e64c896fc2bbde4"
+   },
+   {
+    "path": "index.js",
+    "bytes": 662,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "ab4fcc01f9da6ab0c202b3eb1e3249e4e5f20add64f4310af389f4627a1bfd23"
+   },
+   {
+    "path": "LICENSE",
+    "bytes": 1067,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "a0b3bba7a9ae94cb3c4e3049ed88ac17a9883464bb28f04ef7298b9fcd0593a2"
+   },
+   {
+    "path": "package.json",
+    "bytes": 888,
+    "mode": "644",
+    "symlink": false,
+    "sha256": "40dd993e2dccf380d4c70a598b09deacaf6a03871c64909cd2ff1bff1e9ba110"
+   }
+  ]
+ },
+ "executable": {
+  "path": "/home/user/opencode/.spike-scratch/gaps-dl/native/package/bin/opencode-pty",
+  "bytes": 3138672,
+  "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa",
+  "mode": "755",
+  "symlink": false,
+  "expected": {
+   "size": 3138672,
+   "sha256": "b8caf78cbed9610aa5b744264aade552ed57cac70b2ebc27a788a0b1d2e02caa"
+  },
+  "size_ok": true,
+  "sha256_ok": true
+ },
+ "native_package_json": {
+  "name": "@opencode-ai/pty-linux-x64-gnu",
+  "version": "0.1.13",
+  "description": "OpenCode persistent PTY service for linux-x64-gnu",
+  "license": "MIT",
+  "repository": {
+   "type": "git",
+   "url": "git+https://github.com/anomalyco/opencode-pty.git"
+  },
+  "os": [
+   "linux"
+  ],
+  "cpu": [
+   "x64"
+  ],
+  "libc": [
+   "glibc"
+  ],
+  "exports": {
+   "./package.json": "./package.json",
+   "./bin/opencode-pty": "./bin/opencode-pty"
+  },
+  "files": [
+   "bin"
+  ],
+  "publishConfig": {
+   "access": "public"
+  }
+ },
+ "parent_binding": {
+  "package_json_name": "@opencode-ai/pty",
+  "index_js_sha256": "ab4fcc01f9da6ab0c202b3eb1e3249e4e5f20add64f4310af389f4627a1bfd23",
+  "note": "index.js resolves binaryPath to @opencode-ai/pty-<platform>-<arch>-<libc>/bin/opencode-pty; not executed here (no hooks, no wrapper)"
+ },
+ "platform": {
+  "platform": "linux",
+  "arch": "x64",
+  "libc": "gnu",
+  "glibcVersionRuntime": "2.39"
+ },
+ "compatible": true,
+ "blocked": false,
+ "finished": "2026-10-02T16:20:43.800Z"
+}

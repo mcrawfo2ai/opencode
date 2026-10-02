@@ -1,0 +1,26 @@
+[
+ {
+  "boundary": "after-baseline",
+  "length": 65536,
+  "sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+  "t_ms": 7970.104,
+  "trace_seq": 163,
+  "matches_live_length": true
+ },
+ {
+  "boundary": "after-4MiB",
+  "length": 4194304,
+  "sha256": "97e72414b0231ce2b0de9ac0bd63355c263b803cf7e1910d4ed0477e9042d1ee",
+  "t_ms": 9054.124,
+  "trace_seq": 199,
+  "matches_live_length": true
+ },
+ {
+  "boundary": "final",
+  "length": 4194313,
+  "sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+  "t_ms": 10040.66,
+  "trace_seq": 222,
+  "matches_live_length": true
+ }
+]

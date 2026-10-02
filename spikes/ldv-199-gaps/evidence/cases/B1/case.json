@@ -1,0 +1,138 @@
+{
+ "case": "B1",
+ "daemons": [
+  {
+   "tag": "dB",
+   "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+   "pid": 2116,
+   "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+   "runtime_dir": "/tmp/g/rt-B"
+  }
+ ],
+ "fixtures": [
+  {
+   "child_env_names": {
+    "supplied_by_request": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "PATH",
+     "SHELL",
+     "TERM",
+     "TMPDIR"
+    ],
+    "observed_in_child": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PATH",
+     "PWD",
+     "SHELL",
+     "SHLVL",
+     "TERM",
+     "TMPDIR",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "not_supplied_by_request": [
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PWD",
+     "SHLVL",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+   },
+   "name": "B1",
+   "dir_rel": "fx-B1",
+   "pty_id": 7560076496900084,
+   "group_id": "ldv199gaps-B1-B1-2086",
+   "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+   "pid": 2120,
+   "proc": {
+    "pid": 2120,
+    "comm": "bash",
+    "state": "R",
+    "ppid": 2116,
+    "starttime_ticks": 98742,
+    "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+    "exe": "/usr/bin/bash",
+    "cmdline": [
+     "/bin/bash",
+     "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+     "/tmp/g/fx/B1-B1"
+    ]
+   },
+   "origin": 0,
+   "origin_head": 0,
+   "origin_sample_file": "samples/origin-B1.jsonl",
+   "create_rx": "cases/B1/requests/0003-create-B1.rx.bin",
+   "oracle": "oracle.frozen.bin",
+   "boundaries": [
+    {
+     "boundary": "after-start",
+     "length": 9,
+     "sha256": "a6427ada6b9a6543a6ae33cac7edcf4345a2fde73c09039cf91660bdec901c96",
+     "t_ms": 791.446,
+     "trace_seq": 26,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "after-mid",
+     "length": 16,
+     "sha256": "55bedcfd59026fb850cab73cf22f664bb59d249bcba71ad31f498a7db5efe7c7",
+     "t_ms": 812.825,
+     "trace_seq": 30,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "final",
+     "length": 25,
+     "sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "t_ms": 861.393,
+     "trace_seq": 40,
+     "matches_live_length": true
+    }
+   ],
+   "plan": [
+    "mode",
+    "ack ready",
+    "gate start",
+    "emit start.bin started",
+    "gate mid",
+    "emit mid.bin mid-emitted",
+    "gate exit",
+    "emit final.bin final-emitted",
+    "exit 7 exit-stage"
+   ],
+   "frozen": {
+    "boundary": "final",
+    "length": 25,
+    "sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+    "t_ms": 861.393,
+    "trace_seq": 40,
+    "matches_live_length": true
+   }
+  }
+ ],
+ "sockets": [
+  {
+   "label": "M",
+   "meta": "captures/M.meta.json",
+   "rx": "captures/M.rx.bin",
+   "index": "captures/M.index.jsonl"
+  },
+  {
+   "label": "W",
+   "meta": "captures/W.meta.json",
+   "rx": "captures/W.rx.bin",
+   "index": "captures/W.index.jsonl"
+  }
+ ],
+ "evidence_limit_hits": []
+}

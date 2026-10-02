@@ -1,0 +1,2 @@
+{"i":0,"t_ms":8201.431175,"hdrOff":0,"payload_len":87883,"kind":"attached"}
+{"i":1,"kind":"conn:close","t_ms":8403.317,"hadError":false,"local":true,"reason":"examination-complete"}

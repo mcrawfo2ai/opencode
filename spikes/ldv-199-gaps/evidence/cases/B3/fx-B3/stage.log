@@ -1,0 +1,7 @@
+1790958687311947 fixture start pid=2227
+1790958687325612 mode verified
+1790958687330484 ack ready oracle_len=0
+1790958687595756 gate-passed start
+1790958687604637 ack started oracle_len=9
+1790958687615637 gate-passed mid
+1790958687625660 ack mid-emitted oracle_len=16

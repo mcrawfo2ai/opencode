@@ -1,0 +1,7 @@
+{"i":0,"t_ms":768.92168,"hdrOff":0,"payload_len":491,"kind":"attached"}
+{"i":1,"t_ms":781.624,"hdrOff":495,"payload_len":26,"kind":"output","start":0,"end":9}
+{"i":2,"t_ms":801.544,"hdrOff":525,"payload_len":24,"kind":"output","start":9,"end":16}
+{"i":3,"t_ms":832.423,"hdrOff":553,"payload_len":26,"kind":"output","start":16,"end":25}
+{"i":4,"t_ms":847.638,"hdrOff":583,"payload_len":49,"kind":"exited"}
+{"i":5,"kind":"conn:eof","t_ms":848.572}
+{"i":6,"kind":"conn:close","t_ms":849.048,"hadError":false,"local":false,"reason":null}

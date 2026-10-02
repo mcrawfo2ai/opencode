@@ -1,0 +1,26 @@
+[
+ {
+  "boundary": "after-start",
+  "length": 9,
+  "sha256": "a6427ada6b9a6543a6ae33cac7edcf4345a2fde73c09039cf91660bdec901c96",
+  "t_ms": 791.446,
+  "trace_seq": 26,
+  "matches_live_length": true
+ },
+ {
+  "boundary": "after-mid",
+  "length": 16,
+  "sha256": "55bedcfd59026fb850cab73cf22f664bb59d249bcba71ad31f498a7db5efe7c7",
+  "t_ms": 812.825,
+  "trace_seq": 30,
+  "matches_live_length": true
+ },
+ {
+  "boundary": "final",
+  "length": 25,
+  "sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+  "t_ms": 861.393,
+  "trace_seq": 40,
+  "matches_live_length": true
+ }
+]

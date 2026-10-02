@@ -1,0 +1,26 @@
+[
+ {
+  "name": "start.bin",
+  "bytes": 9,
+  "sha256": "ebb3e9a019a5bfd17515fa575449045d694a13aadfccf522a44233016dd610b9",
+  "mode": "444"
+ },
+ {
+  "name": "mid.bin",
+  "bytes": 7,
+  "sha256": "97f343cecf8728f0f45b489447e8c1667514f1543b3cf7187d998886668e2517",
+  "mode": "444"
+ },
+ {
+  "name": "final.bin",
+  "bytes": 9,
+  "sha256": "959da56305c281775b4ce60758b208b473afe387a4b9bc45b31d53fff4876f4b",
+  "mode": "444"
+ },
+ {
+  "name": "post.bin",
+  "bytes": 8,
+  "sha256": "e409d3789e723bc1de7cdce12c43e98e97a1691b58fefb87b0207855797fdb6e",
+  "mode": "444"
+ }
+]

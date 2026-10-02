@@ -1,0 +1,24 @@
+mode
+ack ready
+gate start
+emit base.bin baseline
+gate phase2
+emit c01.bin chunk01
+emit c02.bin chunk02
+emit c03.bin chunk03
+emit c04.bin chunk04
+emit c05.bin chunk05
+emit c06.bin chunk06
+emit c07.bin chunk07
+emit c08.bin chunk08
+emit c09.bin chunk09
+emit c10.bin chunk10
+emit c11.bin chunk11
+emit c12.bin chunk12
+emit c13.bin chunk13
+emit c14.bin chunk14
+emit c15.bin chunk15
+emit c16.bin chunk16
+gate exit
+emit final.bin final-emitted
+exit 0 exit-stage

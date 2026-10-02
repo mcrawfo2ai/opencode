@@ -1,0 +1,203 @@
+{
+ "case": "D3",
+ "daemons": [
+  {
+   "tag": "dB",
+   "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+   "pid": 2116,
+   "ping_rx": "cases/B-daemon/requests/0001-ping-launch-dB.rx.bin",
+   "runtime_dir": "/tmp/g/rt-B"
+  }
+ ],
+ "fixtures": [
+  {
+   "child_env_names": {
+    "supplied_by_request": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "PATH",
+     "SHELL",
+     "TERM",
+     "TMPDIR"
+    ],
+    "observed_in_child": [
+     "COLORTERM",
+     "HOME",
+     "LANG",
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PATH",
+     "PWD",
+     "SHELL",
+     "SHLVL",
+     "TERM",
+     "TMPDIR",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "not_supplied_by_request": [
+     "OPENCODE_PTY_RUNTIME_DIR",
+     "PWD",
+     "SHLVL",
+     "XDG_CACHE_HOME",
+     "XDG_CONFIG_HOME",
+     "XDG_DATA_HOME",
+     "XDG_RUNTIME_DIR"
+    ],
+    "note": "names only; values never dumped. Extra names come from the daemon env merge or the shell (PWD, SHLVL)"
+   },
+   "name": "D3",
+   "dir_rel": "fx-D3",
+   "pty_id": 1283003628143177,
+   "group_id": "ldv199gaps-D3-D3-2086",
+   "instance_id": "9f8487dcef26a838f764577b545c5e1c",
+   "pid": 2331,
+   "proc": {
+    "pid": 2331,
+    "comm": "bash",
+    "state": "R",
+    "ppid": 2116,
+    "starttime_ticks": 99461,
+    "boot_id": "df2c3c4a-461f-4aa8-a858-2f50d8db0515",
+    "exe": "/usr/bin/bash",
+    "cmdline": [
+     "/bin/bash",
+     "/home/user/opencode/spikes/ldv-199-gaps/scripts/fixture.sh",
+     "/tmp/g/fx/D3-D3"
+    ]
+   },
+   "origin": 0,
+   "origin_head": 0,
+   "origin_sample_file": "samples/origin-D3.jsonl",
+   "create_rx": "cases/D3/requests/0012-create-D3.rx.bin",
+   "oracle": "oracle.frozen.bin",
+   "boundaries": [
+    {
+     "boundary": "after-baseline",
+     "length": 65536,
+     "sha256": "1eb58663eb6a7a5030bab938c13984eaeeebe4c0404ed27ebd87a24578e58e11",
+     "t_ms": 7970.104,
+     "trace_seq": 163,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "after-4MiB",
+     "length": 4194304,
+     "sha256": "97e72414b0231ce2b0de9ac0bd63355c263b803cf7e1910d4ed0477e9042d1ee",
+     "t_ms": 9054.124,
+     "trace_seq": 199,
+     "matches_live_length": true
+    },
+    {
+     "boundary": "final",
+     "length": 4194313,
+     "sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+     "t_ms": 10040.66,
+     "trace_seq": 222,
+     "matches_live_length": true
+    }
+   ],
+   "plan": [
+    "mode",
+    "ack ready",
+    "gate start",
+    "emit base.bin baseline",
+    "gate phase2",
+    "emit c01.bin chunk01",
+    "emit c02.bin chunk02",
+    "emit c03.bin chunk03",
+    "emit c04.bin chunk04",
+    "emit c05.bin chunk05",
+    "emit c06.bin chunk06",
+    "emit c07.bin chunk07",
+    "emit c08.bin chunk08",
+    "emit c09.bin chunk09",
+    "emit c10.bin chunk10",
+    "emit c11.bin chunk11",
+    "emit c12.bin chunk12",
+    "emit c13.bin chunk13",
+    "emit c14.bin chunk14",
+    "emit c15.bin chunk15",
+    "emit c16.bin chunk16",
+    "gate exit",
+    "emit final.bin final-emitted",
+    "exit 0 exit-stage"
+   ],
+   "frozen": {
+    "boundary": "final",
+    "length": 4194313,
+    "sha256": "bec03042117f96d07303d65937a0f41f9d6803fc4b350eda6d1913e2b2aba893",
+    "t_ms": 10040.66,
+    "trace_seq": 222,
+    "matches_live_length": true
+   }
+  }
+ ],
+ "sockets": [
+  {
+   "label": "W",
+   "meta": "captures/W.meta.json",
+   "rx": "captures/W.rx.bin",
+   "index": "captures/W.index.jsonl"
+  },
+  {
+   "label": "S1-at0",
+   "meta": "captures/S1-at0.meta.json",
+   "rx": "captures/S1-at0.rx.bin",
+   "index": "captures/S1-at0.index.jsonl"
+  },
+  {
+   "label": "S1-saved",
+   "meta": "captures/S1-saved.meta.json",
+   "rx": "captures/S1-saved.rx.bin",
+   "index": "captures/S1-saved.index.jsonl"
+  },
+  {
+   "label": "S1-head",
+   "meta": "captures/S1-head.meta.json",
+   "rx": "captures/S1-head.rx.bin",
+   "index": "captures/S1-head.index.jsonl"
+  },
+  {
+   "label": "S1-tail",
+   "meta": "captures/S1-tail.meta.json",
+   "rx": "captures/S1-tail.rx.bin",
+   "index": "captures/S1-tail.index.jsonl"
+  },
+  {
+   "label": "S2-at0",
+   "meta": "captures/S2-at0.meta.json",
+   "rx": "captures/S2-at0.rx.bin",
+   "index": "captures/S2-at0.index.jsonl"
+  },
+  {
+   "label": "S2-saved",
+   "meta": "captures/S2-saved.meta.json",
+   "rx": "captures/S2-saved.rx.bin",
+   "index": "captures/S2-saved.index.jsonl"
+  },
+  {
+   "label": "S2-head",
+   "meta": "captures/S2-head.meta.json",
+   "rx": "captures/S2-head.rx.bin",
+   "index": "captures/S2-head.index.jsonl"
+  },
+  {
+   "label": "S2-tail",
+   "meta": "captures/S2-tail.meta.json",
+   "rx": "captures/S2-tail.rx.bin",
+   "index": "captures/S2-tail.index.jsonl"
+  },
+  {
+   "label": "post-exit-head",
+   "meta": "captures/post-exit-head.meta.json",
+   "rx": "captures/post-exit-head.rx.bin",
+   "index": "captures/post-exit-head.index.jsonl"
+  }
+ ],
+ "evidence_limit_hits": [],
+ "chunk_bytes_max": 262144,
+ "cumulative_target": 4194304
+}

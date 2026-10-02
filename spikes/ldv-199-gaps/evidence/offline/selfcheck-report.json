@@ -1,0 +1,277 @@
+{
+ "evidence": "/home/user/opencode/spikes/ldv-199-gaps/evidence",
+ "mutations": [
+  {
+   "name": "changed-byte",
+   "mutation": "XOR 0xFF on payload byte 2 of the first output frame in B1/W.rx.bin",
+   "case": "B1",
+   "files": [
+    "cases/B1/captures/W.rx.bin"
+   ],
+   "mutation_info": {
+    "native_offset": 2,
+    "orig_byte": 65,
+    "new_byte": 190
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "bytes-vs-oracle:W"
+   ],
+   "red_detail": [
+    {
+     "name": "bytes-vs-oracle:W",
+     "compared_bytes": 25,
+     "first_difference": {
+      "native_offset": 2,
+      "oracle_index": 2,
+      "native_byte": 190,
+      "oracle_byte": 65,
+      "src": "frame",
+      "frame": 1,
+      "interval": [
+       0,
+       9
+      ]
+     },
+     "beyond_oracle_bytes": 0,
+     "pre_origin_bytes": 0,
+     "native_sha256": "8e366080d38c86453f4b10456bacee37b66a5f247b2bd5521c7c4579a6191644",
+     "oracle_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850"
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "bytes-vs-oracle:W first_difference at native offset 0",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "changed-offset",
+   "mutation": "start/end uint64 of the first output frame +1 in B1/W.rx.bin",
+   "case": "B1",
+   "files": [
+    "cases/B1/captures/W.rx.bin"
+   ],
+   "mutation_info": {
+    "start_before": 0,
+    "end_before": 9,
+    "start_after": 1,
+    "end_after": 10
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "bytes-vs-oracle:W"
+   ],
+   "red_detail": [
+    {
+     "name": "bytes-vs-oracle:W",
+     "compared_bytes": 25,
+     "first_difference": {
+      "native_offset": 1,
+      "oracle_index": 1,
+      "native_byte": 83,
+      "oracle_byte": 84,
+      "src": "frame",
+      "frame": 1,
+      "interval": [
+       1,
+       10
+      ]
+     },
+     "beyond_oracle_bytes": 0,
+     "pre_origin_bytes": 0,
+     "native_sha256": "8956fbfce5bb0008472988e8d0d3852b3de6017010ee50b9b1759efa8838d850",
+     "oracle_sha256": "9ec526138d056f883fe3bebc411664c77421b210cc14c652add37d7c0780f7f2"
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "bytes-vs-oracle:W difference at shifted start or bytes beyond oracle",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "omitted-ack",
+   "mutation": "removed B1 ack-observed(mid-emitted) from trace.jsonl",
+   "case": "B1",
+   "files": [
+    "trace.jsonl"
+   ],
+   "mutation_info": {
+    "removed_events": 1
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "ordering:exit-gates"
+   ],
+   "red_detail": [
+    {
+     "name": "ordering:exit-gates",
+     "checked_exit_releases": 1,
+     "violations": [
+      {
+       "fx": "B1",
+       "release_seq": 32,
+       "reason": "exit gate released without a prior intermediate acknowledgment"
+      }
+     ]
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "ordering: exit gate released without a prior intermediate acknowledgment",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "early-exit-release",
+   "mutation": "swapped B1 native-running and gate-release(exit) in trace.jsonl",
+   "case": "B1",
+   "files": [
+    "trace.jsonl"
+   ],
+   "mutation_info": {
+    "swapped_indices": [
+     31,
+     32
+    ]
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "ordering:exit-gates"
+   ],
+   "red_detail": [
+    {
+     "name": "ordering:exit-gates",
+     "checked_exit_releases": 1,
+     "violations": [
+      {
+       "fx": "B1",
+       "release_seq": 31,
+       "reason": "exit gate released without a native-running observation after the intermediate ack"
+      }
+     ]
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "ordering: exit gate released without a native-running observation after the ack",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "detach-before-owner-close",
+   "mutation": "inserted a sub-detach event sequenced before A owner-close-action",
+   "case": "A",
+   "files": [
+    "trace.jsonl"
+   ],
+   "mutation_info": {
+    "inserted_detach_seq": 355.5,
+    "owner_close_seq": 356
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "ordering:case-A-owner-close"
+   ],
+   "red_detail": [
+    {
+     "name": "ordering:case-A-owner-close",
+     "owner_close_seq": 356,
+     "violations": [
+      {
+       "seq": 355.5,
+       "kind": "sub-detach",
+       "reason": "sub-detach sequenced BEFORE owner-close-action"
+      },
+      {
+       "reason": "sub-detach before property observation finished/timed out"
+      }
+     ]
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "case A: detach sequenced before owner-close",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "wrong-identity-pty",
+   "mutation": "expected_identity.pty_id +1 in B1/M.meta.json",
+   "case": "B1",
+   "files": [
+    "cases/B1/captures/M.meta.json"
+   ],
+   "mutation_info": {
+    "pty_id_changed_by": 1
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "identity:M"
+   ],
+   "red_detail": [
+    {
+     "name": "identity:M",
+     "violations": [
+      "meta expected pty_id 7560076496900085 != raw created id 7560076496900084"
+     ],
+     "socket": "M"
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "identity:M meta expected pty_id != raw created id",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "wrong-identity-instance",
+   "mutation": "expected_identity.instance_id substituted in B1/M.meta.json",
+   "case": "B1",
+   "files": [
+    "cases/B1/captures/M.meta.json"
+   ],
+   "mutation_info": {
+    "instance_id_substituted": "00000000000000000000000000000000"
+   },
+   "baseline_green": true,
+   "red_after_mutation": [
+    "identity:M"
+   ],
+   "red_detail": [
+    {
+     "name": "identity:M",
+     "violations": [
+      "meta expected instance_id '00000000000000000000000000000000' != raw pong instance '9f8487dcef26a838f764577b545c5e1c'"
+     ],
+     "socket": "M"
+    }
+   ],
+   "expected_reason_met": true,
+   "expected_reason": "identity:M meta expected instance != raw pong instance",
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  },
+  {
+   "name": "null-to-zero (synthetic)",
+   "case": "synthetic",
+   "note": "SYNTHETIC null: exercises only the instrument's preservation rule; it is not evidence of native null production",
+   "baseline_green": true,
+   "red_after_mutation": [
+    "recorded null->0",
+    "wire null->0"
+   ],
+   "red_detail": [
+    "recorded exit_code 0 (key_present=True) != raw wire None (key_present=True)",
+    "recorded exit_code None (key_present=True) != raw wire 0 (key_present=True)"
+   ],
+   "expected_reason_met": true,
+   "restored_byte_identical": true,
+   "green_after_restore": true,
+   "pass": true
+  }
+ ],
+ "all_pass": true
+}

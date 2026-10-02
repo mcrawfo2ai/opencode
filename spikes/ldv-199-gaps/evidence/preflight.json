@@ -1,0 +1,55 @@
+{
+ "tools": {
+  "bash": {
+   "path": "/usr/bin/bash",
+   "version": "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)",
+   "sha256": "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1"
+  },
+  "tee": {
+   "path": "/usr/bin/tee",
+   "version": "tee (GNU coreutils) 9.4",
+   "sha256": "8c1efbee8dbee25378fc941db29a88309d6a7525786e4ebba2dda08edb77615e"
+  },
+  "stty": {
+   "path": "/usr/bin/stty",
+   "version": "stty (GNU coreutils) 9.4",
+   "sha256": "44728ed190ae65a0f11a0bff9e4a3d8e297e1cf5841786b7220e19b051c2fdc6"
+  },
+  "stat": {
+   "path": "/usr/bin/stat",
+   "version": "stat (GNU coreutils) 9.4",
+   "sha256": "3b87d297111f11d30b3c51fd2663f131a161e09d8e130e1842adaefb74307efe"
+  },
+  "grep": {
+   "path": "/usr/bin/grep",
+   "version": "grep (GNU grep) 3.11",
+   "sha256": "20a35a4c18f2fe9e6305c1cbf866b9c0fcc3f957132ae66028c99ec353bb0a80"
+  },
+  "sort": {
+   "path": "/usr/bin/sort",
+   "version": "sort (GNU coreutils) 9.4",
+   "sha256": "063baf220830f47b3acb3b68ea67c545d762b4d96d068db31b3a82c6a63fd0f6"
+  },
+  "mkfifo": {
+   "path": "/usr/bin/mkfifo",
+   "version": "mkfifo (GNU coreutils) 9.4",
+   "sha256": "e746d63523729504b4ce7fa8ce8f37d0f6af186b2ed50a4630cd8a62d931f004"
+  },
+  "sha256sum": {
+   "path": "/usr/bin/sha256sum",
+   "version": "sha256sum (GNU coreutils) 9.4",
+   "sha256": "9992e1f1feb6f0f396bc8d6691ebc1adbfc269fd628bce84eda1d4ba5c3995c7"
+  },
+  "python3": {
+   "path": "/usr/bin/python3",
+   "version": "Python 3.11.15",
+   "sha256": "f56a588548dd013906ae1dcd1b6faa417f4e204da634ff354840d9643e78ff9e"
+  },
+  "node": {
+   "path": "/opt/node22/bin/node",
+   "version": "v22.22.0",
+   "sha256": "1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31"
+  }
+ },
+ "note": "fixture uses bash, tee, stty, stat, grep, sort, mkfifo; verifier uses python3"
+}

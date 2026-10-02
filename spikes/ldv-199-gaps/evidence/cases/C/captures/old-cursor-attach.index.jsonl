@@ -1,0 +1,2 @@
+{"i":0,"kind":"conn:eof","t_ms":16002.979}
+{"i":1,"kind":"conn:close","t_ms":16004.853,"hadError":false,"local":true,"reason":"case-end-cleanup"}

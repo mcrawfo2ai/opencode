@@ -1,0 +1,49 @@
+{
+ "label": "old-cursor-attach",
+ "case": "C",
+ "fx": "old",
+ "role_requested": "observer",
+ "attachment_id": "ghost",
+ "requested_cursor": 22,
+ "takeover": false,
+ "expected_identity": {
+  "instance_id": "e41ab7a8f0b42b8dd4051223563819d5",
+  "pty_id": 2852042093172248,
+  "group_id": "ldv199gaps-C-old-2086"
+ },
+ "daemon": "C2",
+ "attach": {
+  "failure": "eof",
+  "t_ms": 16002.979
+ },
+ "rx": {
+  "path": "cases/C/captures/old-cursor-attach.rx.bin",
+  "bytes_written": 0,
+  "lost": false,
+  "lost_reason": null,
+  "bytes_in": 0
+ },
+ "index_file": "cases/C/captures/old-cursor-attach.index.jsonl",
+ "frames": 2,
+ "max_end_online": 0,
+ "exited_frame_client_view": null,
+ "eof": {
+  "t_ms": 16002.978715,
+  "wall_ms": 1790958696821,
+  "afterExitFrame": false,
+  "consumed_as_attach_failure": true
+ },
+ "close": {
+  "t_ms": 16004.853327,
+  "wall_ms": 1790958696823,
+  "hadError": false,
+  "local": true,
+  "reason": "case-end-cleanup"
+ },
+ "errors": [],
+ "problems": [],
+ "detached_locally": true,
+ "detach_reason": "case-end-cleanup",
+ "frames_after_local_detach": 0,
+ "client_views_note": "all *_client_view / *_online fields are client-derived; offline/verify.py re-derives from rx.bin"
+}

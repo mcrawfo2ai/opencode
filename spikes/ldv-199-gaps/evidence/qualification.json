@@ -1,0 +1,201 @@
+{
+ "rules": "see analysis/qualify.mjs",
+ "claims": [
+  {
+   "id": "A.1",
+   "claim": "pre-close MID established: START+MID emitted by tee oracle with stage acks, delivered to both M and W, native running, exit held, M and W attached/pumping",
+   "qualification": "valid",
+   "basis": "results.A.pre_close + offline verify (A) green",
+   "files": [
+    "cases/A/case.json",
+    "cases/A/fx-A/acks/mid-emitted.json"
+   ]
+  },
+  {
+   "id": "A.2",
+   "claim": "owner-close-action sequenced before any resulting EOF, daemon death or cleanup detach",
+   "qualification": "valid",
+   "basis": "offline check ordering:case-A-owner-close",
+   "files": [
+    "trace.jsonl"
+   ]
+  },
+  {
+   "id": "A.3",
+   "claim": "closing only the owner socket with M/W active: M/W received EOF with no exited frame; daemon exited; fixture PTY child gone; registration removed; ping/list refused",
+   "qualification": "adverse",
+   "basis": "daemon exit event {\"code\":0,\"signal\":null,\"t_ms\":16911.75,\"wall_ms\":1790958697729}; window_1 first/last samples in results.A",
+   "files": [
+    "cases/A/captures/M.rx.bin",
+    "cases/A/captures/W.rx.bin",
+    "trace.jsonl"
+   ]
+  },
+  {
+   "id": "A.4",
+   "claim": "separate post-close emission stimulus (post gate released; post-emitted ack)",
+   "qualification": "timed-out",
+   "basis": "ack deadline 5000 ms; fixture gone, daemon gone",
+   "files": [
+    "cases/A/fx-A/stage.log"
+   ]
+  },
+  {
+   "id": "A.5",
+   "claim": "exit release and second 10 s observation",
+   "qualification": "not-reached",
+   "basis": "prerequisites (intermediate ack + native running with exit held) not established",
+   "files": []
+  },
+  {
+   "id": "A.6",
+   "claim": "property observation finished (window + deadline recorded) before any cleanup detach; no detach-first cleanup",
+   "qualification": "valid",
+   "basis": "property-observation-end recorded; sub-detach-skipped (sockets already closed by peer)",
+   "files": [
+    "trace.jsonl"
+   ]
+  },
+  {
+   "id": "B.1",
+   "claim": "gated normal exit 7: raw exit_code 7 in list/snapshot lifecycle and in exited frames on M and W; EOF after exited; fixture exit-stage and /proc witnesses",
+   "qualification": "valid",
+   "basis": "offline verify (B1) green; raw exited payload in rx.bin",
+   "files": [
+    "cases/B1/captures/M.rx.bin",
+    "cases/B1/captures/W.rx.bin"
+   ]
+  },
+  {
+   "id": "B.2",
+   "claim": "identified SIGTERM on a freshly identity-rechecked fixture: native lifecycle {\"status\":\"exited\",\"exit_code\":1}, exited frames on M and W with raw exit_code (not null), EOF",
+   "qualification": "valid",
+   "basis": "exit_code reported as 1; fixture exit-stage ack present=false",
+   "files": [
+    "cases/B2/captures/M.rx.bin",
+    "cases/B2/captures/W.rx.bin"
+   ]
+  },
+  {
+   "id": "B.3",
+   "claim": "identified SIGKILL on a freshly identity-rechecked fixture: native lifecycle {\"status\":\"exited\",\"exit_code\":1}, exited frames on M and W with raw exit_code (not null), EOF",
+   "qualification": "valid",
+   "basis": "exit_code reported as 1; fixture exit-stage ack present=false",
+   "files": [
+    "cases/B3/captures/M.rx.bin",
+    "cases/B3/captures/W.rx.bin"
+   ]
+  },
+  {
+   "id": "B.4",
+   "claim": "native null exit_code branch",
+   "qualification": "unknown",
+   "basis": "NOT OBSERVED in 3 bounded attempts (normal=7, SIGTERM=1, SIGKILL=1); native-null branch unknown",
+   "files": [
+    "cases/B1",
+    "cases/B2",
+    "cases/B3"
+   ]
+  },
+  {
+   "id": "C.1",
+   "claim": "same exact runtime dir: shutdown on identity-verified daemon; process stop verified by recorded pid/start/boot identity",
+   "qualification": "valid",
+   "basis": "stop after 21 ms",
+   "files": [
+    "cases/C/case.json"
+   ]
+  },
+  {
+   "id": "C.2",
+   "claim": "fixture and old streams after shutdown: fixture gone; old M/W got EOF without exited frame",
+   "qualification": "adverse",
+   "basis": "{\"fixture\":{\"state\":\"gone\",\"timedOut\":false,\"after_ms\":0},\"M\":{\"eof\":true,\"close\":true,\"exited_frame\":false,\"timedOutEof\":false},\"W\":{\"eof\":true,\"close\":true,\"exited_frame\":false,\"timedOutEof\":false}}",
+   "files": [
+    "cases/C/captures/M.rx.bin"
+   ]
+  },
+  {
+   "id": "C.3",
+   "claim": "relaunch same binary in the same exact runtime dir became ready with matching registration pid/protocol/ping; new instance/pid/token; no stale-file error",
+   "qualification": "valid",
+   "basis": "{\"polls\":[{\"t_ms\":2,\"state\":\"missing\"},{\"t_ms\":55,\"state\":\"ok\",\"reg_pid\":2556,\"reg_instance\":\"e41ab7a8f0b42b8dd4051223563819d5\",\"reg_protocol\":7}],\"compare\":{\"instance_changed\":true,\"pid_changed\":true,\"token_changed\":true,\"socket_changed\":false,\"old_instance\":\"b41f00f56250eb292d7272c12a3c9a00\",\"new_instance\":\"e41ab7a8f0b42b8dd4051223563819d5\",\"new_pid\":2556,\"registration_pid_equals_launched_pid\":true,\"starttime_new_vs_old_distinct\":true}}",
+   "files": [
+    "cases/C/case.json",
+    "trace.jsonl"
+   ]
+  },
+  {
+   "id": "C.4",
+   "claim": "old PTY id on the new instance: absent from list; snapshot error; attach at old cursor rejected (EOF without a response frame)",
+   "qualification": "adverse",
+   "basis": "{\"snapshot\":{\"type\":\"error\",\"message\":\"terminal 2852042093172248 not found\"},\"ghost\":{\"failure\":\"eof\",\"t_ms\":16002.979}}",
+   "files": [
+    "cases/C/requests",
+    "cases/C/captures/old-cursor-attach.rx.bin"
+   ]
+  },
+  {
+   "id": "C.5",
+   "claim": "fresh gated PTY created and completed on the new instance (bytes verified offline)",
+   "qualification": "valid",
+   "basis": "offline verify (C) green",
+   "files": [
+    "cases/C/captures/M2.rx.bin",
+    "cases/C/captures/W2.rx.bin"
+   ]
+  },
+  {
+   "id": "C.6",
+   "claim": "changed instance identity as old-cursor continuity",
+   "qualification": "unknown",
+   "basis": "NOT continuity: old id/cursor not recoverable on new instance",
+   "files": []
+  },
+  {
+   "id": "D.1",
+   "claim": "representative live-exit capture (B1): frame bytes recompared offline to frozen oracle for M and W",
+   "qualification": "valid",
+   "basis": "offline bytes-vs-oracle green",
+   "files": [
+    "cases/B1"
+   ]
+  },
+  {
+   "id": "D.2",
+   "claim": "before-exit reconnect: M closed at saved cursor, MID acked+W bytes+running, M reconnected at cursor (attached, running) before exit release; holes/overlaps none",
+   "qualification": "valid",
+   "basis": "{\"req\":9,\"avail\":9,\"end\":16,\"truncated\":false,\"replay_len\":7}",
+   "files": [
+    "cases/D2"
+   ]
+  },
+  {
+   "id": "D.3",
+   "claim": "replay/retention 64 KiB then 4 MiB cumulative: attach at 0/saved/head/tail with actual requested/available/end/truncated and replay bytes recompared offline",
+   "qualification": "valid",
+   "basis": "completed; offline verify (D3) green",
+   "files": [
+    "cases/D3"
+   ]
+  },
+  {
+   "id": "D.4",
+   "claim": "4 MiB cumulative: retained window is a truncated replay (truncated=true when requesting below head); capacity/threshold/longer retention",
+   "qualification": "adverse",
+   "basis": "truncation at at0; list head/tail {\"head\":2097152,\"tail\":4194304}; threshold and longer retention UNKNOWN",
+   "files": [
+    "cases/D3/captures/S2-at0.rx.bin"
+   ]
+  },
+  {
+   "id": "D.5",
+   "claim": "post-exit finite retention samples at actual ~100 ms/1 s/5 s",
+   "qualification": "valid",
+   "basis": "[[100,100,\"W exited-frame receipt (client)\"],[1000,1001,\"W exited-frame receipt (client)\"],[5000,5003,\"W exited-frame receipt (client)\"]]",
+   "files": [
+    "cases/D3/samples/retention-D3.jsonl"
+   ]
+  }
+ ]
+}

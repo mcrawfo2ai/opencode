@@ -1,0 +1,6 @@
+{"i":0,"t_ms":16849.195255,"hdrOff":0,"payload_len":486,"kind":"attached"}
+{"i":1,"t_ms":16849.775,"hdrOff":490,"payload_len":64,"kind":"controller_changed"}
+{"i":2,"t_ms":16865.98,"hdrOff":558,"payload_len":25,"kind":"output","start":0,"end":8}
+{"i":3,"t_ms":16884.964,"hdrOff":587,"payload_len":23,"kind":"output","start":8,"end":14}
+{"i":4,"kind":"conn:eof","t_ms":16911.464}
+{"i":5,"kind":"conn:close","t_ms":16911.849,"hadError":false,"local":false,"reason":null}

@@ -1,0 +1,71 @@
+{
+ "label": "M",
+ "case": "C",
+ "fx": "old",
+ "role_requested": "observer",
+ "attachment_id": "M",
+ "requested_cursor": 0,
+ "takeover": false,
+ "expected_identity": {
+  "instance_id": "b41f00f56250eb292d7272c12a3c9a00",
+  "pty_id": 2852042093172248,
+  "group_id": "ldv199gaps-C-old-2086"
+ },
+ "daemon": "C1",
+ "attach": {
+  "type": "attached",
+  "role": "observer",
+  "generation": 0,
+  "requested_offset": 0,
+  "available_offset": 0,
+  "end_offset": 0,
+  "truncated": false,
+  "replay_len": 0,
+  "replay_start_basis": "requested_offset",
+  "replay_start": 0,
+  "replay_file": null,
+  "terminal": {
+   "id": 2852042093172248,
+   "pid": 2510,
+   "fg": "bash",
+   "group": "ldv199gaps-C-old-2086",
+   "lifecycle": {
+    "status": "running"
+   },
+   "head": 0,
+   "tail": 0,
+   "cols": 80,
+   "rows": 24
+  },
+  "problems": []
+ },
+ "rx": {
+  "path": "cases/C/captures/M.rx.bin",
+  "bytes_written": 560,
+  "lost": false,
+  "lost_reason": null,
+  "bytes_in": 560
+ },
+ "index_file": "cases/C/captures/M.index.jsonl",
+ "frames": 5,
+ "max_end_online": 22,
+ "exited_frame_client_view": null,
+ "eof": {
+  "t_ms": 15882.301282,
+  "wall_ms": 1790958696700,
+  "afterExitFrame": false
+ },
+ "close": {
+  "t_ms": 15882.732693,
+  "wall_ms": 1790958696700,
+  "hadError": false,
+  "local": false,
+  "reason": null
+ },
+ "errors": [],
+ "problems": [],
+ "detached_locally": false,
+ "detach_reason": null,
+ "frames_after_local_detach": 0,
+ "client_views_note": "all *_client_view / *_online fields are client-derived; offline/verify.py re-derives from rx.bin"
+}

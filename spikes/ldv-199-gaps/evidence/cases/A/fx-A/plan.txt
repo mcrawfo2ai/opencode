@@ -1,0 +1,11 @@
+mode
+ack ready
+gate start
+emit start.bin started
+gate mid
+emit mid.bin mid-emitted
+gate post
+emit post.bin post-emitted
+gate exit
+emit final.bin final-emitted
+exit 0 exit-stage
