@@ -1,0 +1,71 @@
+{
+ "allPass": true,
+ "rows": [
+  {
+   "name": "baseline-green-coverage",
+   "expectErrors": [],
+   "gotErrors": [],
+   "pass": true
+  },
+  {
+   "name": "baseline-green-case",
+   "expectErrors": [],
+   "gotErrors": [],
+   "pass": true
+  },
+  {
+   "name": "M1-remove-inventory-route",
+   "mutationLanded": true,
+   "expectErrors": [
+    "MISSING_ROUTE POST /session/{sessionID}/abort"
+   ],
+   "gotErrors": [
+    "MISSING_ROUTE POST /session/{sessionID}/abort"
+   ],
+   "pass": true
+  },
+  {
+   "name": "M2a-change-observed-session-id",
+   "mutationLanded": true,
+   "expectErrors": [
+    "SESSION_ID_MISMATCH"
+   ],
+   "gotErrors": [
+    "SESSION_ID_MISMATCH events=ses_51204866f01543b0abzz created=ses_51204866f01543b0abe2"
+   ],
+   "pass": true
+  },
+  {
+   "name": "M2b-change-observed-marker",
+   "mutationLanded": true,
+   "expectErrors": [
+    "MARKER_MISMATCH"
+   ],
+   "gotErrors": [
+    "MARKER_MISMATCH oracle=MK-a18fafd0dd6d observed=MK-a18fafd0dd00",
+    "MARKER_NOT_IN_STREAM"
+   ],
+   "pass": true
+  },
+  {
+   "name": "M3-reconnect-before-completion",
+   "mutationLanded": true,
+   "expectErrors": [
+    "ORDER_VIOLATION"
+   ],
+   "gotErrors": [
+    "ORDER_VIOLATION completion_persisted !< subscribers_closed"
+   ],
+   "pass": true
+  },
+  {
+   "name": "restored-green-after-mutations",
+   "gotErrors": [],
+   "pass": true,
+   "originals_sha256": {
+    "extracted-contract.json": "9312ea972ccbfba2ef0789e014e80395bfdec7043af5d7f61e4ac5b4f1d7a10f",
+    "case-results.json": "552dd73fbcc6ef719bae848ff5928b59f301749630baff5210e8bf192618d507"
+   }
+  }
+ ]
+}

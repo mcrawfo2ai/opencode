@@ -1,0 +1,26 @@
+{
+ "messages": [
+  {
+   "content": "[CURRENT DATE & TIME: 2026-10-02 15:09:00 +00:00]\n\nPlease read the fixture file and report. nonce=ab8546f7",
+   "created_at": "2026-10-02T15:09:08.500667434+00:00",
+   "role": "user"
+  },
+  {
+   "content": "MARKER MK-a18fafd0dd6d reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<RUN>/workspace/fixture.txt\"}}\n</tool_call>",
+   "created_at": "2026-10-02T15:09:08.500667434+00:00",
+   "role": "assistant"
+  },
+  {
+   "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixture-d9689d3e9478\n[1 lines total]\n</tool_result>\n",
+   "created_at": "2026-10-02T15:09:08.500667434+00:00",
+   "role": "user"
+  },
+  {
+   "content": "FINAL MK-a18fafd0dd6d tool_result_sha=32725231c34078bf",
+   "created_at": "2026-10-02T15:09:08.500667434+00:00",
+   "role": "assistant"
+  }
+ ],
+ "session_id": "b59df0d5-2285-4056-b116-d3328839df72",
+ "session_persistence": true
+}

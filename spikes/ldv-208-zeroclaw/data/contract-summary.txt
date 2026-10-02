@@ -1,0 +1,62 @@
+## operations
+GET /global/health [global.health] params() body(-) -> 200:json=object 400:json=BadRequestError
+GET /session/status [session.status] params(query:directory:string,query:workspace:string) body(-) -> 200:json=object 400:json=anyOf(2)
+GET /session [session.list] params(query:directory:string,query:workspace:string,query:scope:string,query:path:string,query:roots:anyOf(2),query:start:number,query:search:string,query:limit:number) body(-) -> 200:json=array<Session> 400:json=BadRequestError
+POST /session [session.create] params(query:directory:string,query:workspace:string) body(application/json=object) -> 200:json=Session 400:json=anyOf(2)
+GET /session/{sessionID} [session.get] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=Session 400:json=anyOf(2) 404:json=NotFoundError
+PATCH /session/{sessionID} [session.update] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(application/json=object) -> 200:json=Session 400:json=anyOf(2) 404:json=NotFoundError
+DELETE /session/{sessionID} [session.delete] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=boolean 400:json=anyOf(2) 404:json=NotFoundError
+POST /session/{sessionID}/prompt_async [session.prompt_async] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(application/json=object) -> 204:none 400:json=anyOf(2) 404:json=NotFoundError
+POST /session/{sessionID}/message [session.prompt] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(application/json=object) -> 200:json=object 400:json=anyOf(2) 404:json=NotFoundError
+GET /session/{sessionID}/message [session.messages] params(path:sessionID*:string,query:directory:string,query:workspace:string,query:limit:integer,query:before:string) body(-) -> 200:json=array<object> 400:json=anyOf(2) 404:json=NotFoundError
+GET /session/{sessionID}/message/{messageID} [session.message] params(path:sessionID*:string,path:messageID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=object 400:json=anyOf(2) 404:json=NotFoundError
+POST /session/{sessionID}/abort [session.abort] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=boolean 400:json=anyOf(2)
+GET /session/{sessionID}/children [session.children] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=array<Session> 400:json=anyOf(2) 404:json=NotFoundError
+GET /session/{sessionID}/diff [session.diff] params(path:sessionID*:string,query:directory:string,query:workspace:string,query:messageID:string) body(-) -> 200:json=array<SnapshotFileDiff> 400:json=BadRequestError
+GET /session/{sessionID}/todo [session.todo] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=array<Todo> 400:json=anyOf(2) 404:json=NotFoundError
+POST /session/{sessionID}/fork [session.fork] params(path:sessionID*:string,query:directory:string,query:workspace:string) body(application/json=object) -> 200:json=Session 400:json=anyOf(2) 404:json=NotFoundError
+GET /permission [permission.list] params(query:directory:string,query:workspace:string) body(-) -> 200:json=array<PermissionRequest> 400:json=BadRequestError
+POST /permission/{requestID}/reply [permission.reply] params(path:requestID*:string,query:directory:string,query:workspace:string) body(application/json=object) -> 200:json=boolean 400:json=anyOf(2) 404:json=PermissionNotFoundError
+GET /event [event.subscribe] params(query:directory:string,query:workspace:string) body(-) -> 200:text/event-stream=Event
+GET /global/event [global.event] params() body(-) -> 200:text/event-stream=GlobalEvent 400:json=BadRequestError
+GET /agent [app.agents] params(query:directory:string,query:workspace:string) body(-) -> 200:json=array<Agent> 400:json=BadRequestError
+GET /provider [provider.list] params(query:directory:string,query:workspace:string) body(-) -> 200:json=object 400:json=BadRequestError
+GET /question [question.list] params(query:directory:string,query:workspace:string) body(-) -> 200:json=array<QuestionRequest> 400:json=BadRequestError
+POST /question/{requestID}/reply [question.reply] params(path:requestID*:string,query:directory:string,query:workspace:string) body(application/json=object) -> 200:json=boolean 400:json=anyOf(2) 404:json=QuestionNotFoundError
+POST /question/{requestID}/reject [question.reject] params(path:requestID*:string,query:directory:string,query:workspace:string) body(-) -> 200:json=boolean 400:json=anyOf(2) 404:json=QuestionNotFoundError
+
+## selected schemas (property lists)
+Session { id*:string, slug*:string, projectID*:string, workspaceID:string, directory*:string, path:string, parentID:string, summary:object, cost:number, tokens:object, share:object, title*:string, agent:string, model:object, version*:string, metadata:object, time*:object, permission:PermissionRuleset, revert:object }
+SessionStatus { anyOf(3) }
+UserMessage { id*:string, sessionID*:string, role*:string, time*:object, format:OutputFormat, summary:object, agent*:string, model*:object, system:string, tools:object }
+AssistantMessage { id*:string, sessionID*:string, role*:string, time*:object, error:anyOf(8), parentID*:string, modelID*:string, providerID*:string, mode*:string, agent*:string, path*:object, summary:boolean, cost*:number, tokens*:object, structured:object, variant:string, finish:string }
+Message { anyOf(2) }
+Part { anyOf(12) }
+TextPart { id*:string, sessionID*:string, messageID*:string, type*:string, text*:string, synthetic:boolean, ignored:boolean, time:object, metadata:object }
+ToolPart { id*:string, sessionID*:string, messageID*:string, type*:string, callID*:string, tool*:string, state*:ToolState, metadata:object }
+ToolState { anyOf(4) }
+PermissionRequest { id*:string, sessionID*:string, permission*:string, patterns*:array<string>, metadata*:object, always*:array<string>, tool:object }
+QuestionRequest { id*:string, sessionID*:string, questions*:array<QuestionInfo>, tool:QuestionTool }
+Agent { name*:string, description:string, mode*:string, native:boolean, hidden:boolean, topP:number, temperature:number, color:string, permission*:PermissionRuleset, model:object, variant:string, prompt:string, options*:object, steps:number }
+Todo { content*:string, status*:string, priority*:string }
+
+## listed events (properties)
+EventMessagePartDelta type=message.part.delta props=sessionID,messageID,partID,field,delta
+EventMessagePartRemoved type=message.part.removed props=sessionID,messageID,partID
+EventMessagePartUpdated type=message.part.updated props=sessionID,part,time
+EventMessageRemoved type=message.removed props=sessionID,messageID
+EventMessageUpdated type=message.updated props=sessionID,info
+EventPermissionAsked type=permission.asked props=id,sessionID,permission,patterns,metadata,always,tool
+EventPermissionReplied type=permission.replied props=sessionID,requestID,reply
+EventQuestionAsked type=question.asked props=id,sessionID,questions,tool
+EventQuestionRejected type=question.rejected props=sessionID,requestID
+EventQuestionReplied type=question.replied props=sessionID,requestID,answers
+EventServerConnected type=server.connected props=
+EventSessionCompacted type=session.compacted props=sessionID
+EventSessionCreated type=session.created props=sessionID,info
+EventSessionDeleted type=session.deleted props=sessionID,info
+EventSessionDiff type=session.diff props=sessionID,diff
+EventSessionError type=session.error props=sessionID,error
+EventSessionIdle type=session.idle props=sessionID
+EventSessionStatus type=session.status props=sessionID,status
+EventSessionUpdated type=session.updated props=sessionID,info

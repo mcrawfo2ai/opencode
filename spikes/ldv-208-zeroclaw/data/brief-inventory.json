@@ -1,0 +1,179 @@
+{
+ "brief": {
+  "bytes": 15759,
+  "sha256": "208117b0b474ee47f3eef2158a78f20b265b1941a21b88027f945709b593a44d"
+ },
+ "operations": [
+  {
+   "method": "get",
+   "path": "/global/health",
+   "operationId": "global.health",
+   "summary": "Get health"
+  },
+  {
+   "method": "get",
+   "path": "/session/status",
+   "operationId": "session.status",
+   "summary": "Get session status"
+  },
+  {
+   "method": "get",
+   "path": "/session",
+   "operationId": "session.list",
+   "summary": "List sessions"
+  },
+  {
+   "method": "post",
+   "path": "/session",
+   "operationId": "session.create",
+   "summary": "Create session"
+  },
+  {
+   "method": "get",
+   "path": "/session/{sessionID}",
+   "operationId": "session.get",
+   "summary": "Get session"
+  },
+  {
+   "method": "patch",
+   "path": "/session/{sessionID}",
+   "operationId": "session.update",
+   "summary": "Update session"
+  },
+  {
+   "method": "delete",
+   "path": "/session/{sessionID}",
+   "operationId": "session.delete",
+   "summary": "Delete session"
+  },
+  {
+   "method": "post",
+   "path": "/session/{sessionID}/prompt_async",
+   "operationId": "session.prompt_async",
+   "summary": "Send async message"
+  },
+  {
+   "method": "post",
+   "path": "/session/{sessionID}/message",
+   "operationId": "session.prompt",
+   "summary": "Send message"
+  },
+  {
+   "method": "get",
+   "path": "/session/{sessionID}/message",
+   "operationId": "session.messages",
+   "summary": "Get session messages"
+  },
+  {
+   "method": "get",
+   "path": "/session/{sessionID}/message/{messageID}",
+   "operationId": "session.message",
+   "summary": "Get message"
+  },
+  {
+   "method": "post",
+   "path": "/session/{sessionID}/abort",
+   "operationId": "session.abort",
+   "summary": "Abort session"
+  },
+  {
+   "method": "get",
+   "path": "/session/{sessionID}/children",
+   "operationId": "session.children",
+   "summary": "Get session children"
+  },
+  {
+   "method": "get",
+   "path": "/session/{sessionID}/diff",
+   "operationId": "session.diff",
+   "summary": "Get message diff"
+  },
+  {
+   "method": "get",
+   "path": "/session/{sessionID}/todo",
+   "operationId": "session.todo",
+   "summary": "Get session todos"
+  },
+  {
+   "method": "post",
+   "path": "/session/{sessionID}/fork",
+   "operationId": "session.fork",
+   "summary": "Fork session"
+  },
+  {
+   "method": "get",
+   "path": "/permission",
+   "operationId": "permission.list",
+   "summary": "List pending permissions"
+  },
+  {
+   "method": "post",
+   "path": "/permission/{requestID}/reply",
+   "operationId": "permission.reply",
+   "summary": "Respond to permission request"
+  },
+  {
+   "method": "get",
+   "path": "/event",
+   "operationId": "event.subscribe",
+   "summary": "Subscribe to events"
+  },
+  {
+   "method": "get",
+   "path": "/global/event",
+   "operationId": "global.event",
+   "summary": "Get global events"
+  },
+  {
+   "method": "get",
+   "path": "/agent",
+   "operationId": "app.agents",
+   "summary": "List agents"
+  },
+  {
+   "method": "get",
+   "path": "/provider",
+   "operationId": "provider.list",
+   "summary": "List providers"
+  },
+  {
+   "method": "get",
+   "path": "/question",
+   "operationId": "question.list",
+   "summary": "List pending questions"
+  },
+  {
+   "method": "post",
+   "path": "/question/{requestID}/reply",
+   "operationId": "question.reply",
+   "summary": "Reply to question request"
+  },
+  {
+   "method": "post",
+   "path": "/question/{requestID}/reject",
+   "operationId": "question.reject",
+   "summary": "Reject question request"
+  }
+ ],
+ "events": [
+  "EventMessagePartDelta",
+  "EventMessagePartRemoved",
+  "EventMessagePartUpdated",
+  "EventMessageRemoved",
+  "EventMessageUpdated",
+  "EventPermissionAsked",
+  "EventPermissionReplied",
+  "EventQuestionAsked",
+  "EventQuestionRejected",
+  "EventQuestionReplied",
+  "EventServerConnected",
+  "EventSessionCompacted",
+  "EventSessionCreated",
+  "EventSessionDeleted",
+  "EventSessionDiff",
+  "EventSessionError",
+  "EventSessionIdle",
+  "EventSessionStatus",
+  "EventSessionUpdated"
+ ]
+}

@@ -1,0 +1,70 @@
+[
+ {
+  "info": {
+   "id": "msg_native_0",
+   "sessionID": "ses_51204866f01543b0abe2",
+   "role": "user",
+   "time": {
+    "created": 1790953748500
+   }
+  },
+  "parts": [
+   {
+    "type": "text",
+    "text": "[CURRENT DATE & TIME: 2026-10-02 15:09:00 +00:00]\n\nPlease read the fixture file and report. nonce=ab8546f7"
+   }
+  ],
+  "_origin": "native-persisted+shim-ids"
+ },
+ {
+  "info": {
+   "id": "msg_native_1",
+   "sessionID": "ses_51204866f01543b0abe2",
+   "role": "assistant",
+   "time": {
+    "created": 1790953748500
+   }
+  },
+  "parts": [
+   {
+    "type": "text",
+    "text": "MARKER MK-a18fafd0dd6d reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<RUN>/workspace/fixture.txt\"}}\n</tool_call>"
+   }
+  ],
+  "_origin": "native-persisted+shim-ids"
+ },
+ {
+  "info": {
+   "id": "msg_native_2",
+   "sessionID": "ses_51204866f01543b0abe2",
+   "role": "user",
+   "time": {
+    "created": 1790953748500
+   }
+  },
+  "parts": [
+   {
+    "type": "text",
+    "text": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixture-d9689d3e9478\n[1 lines total]\n</tool_result>\n"
+   }
+  ],
+  "_origin": "native-persisted+shim-ids"
+ },
+ {
+  "info": {
+   "id": "msg_native_3",
+   "sessionID": "ses_51204866f01543b0abe2",
+   "role": "assistant",
+   "time": {
+    "created": 1790953748500
+   }
+  },
+  "parts": [
+   {
+    "type": "text",
+    "text": "FINAL MK-a18fafd0dd6d tool_result_sha=32725231c34078bf"
+   }
+  ],
+  "_origin": "native-persisted+shim-ids"
+ }
+]

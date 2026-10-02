@@ -1,0 +1,61 @@
+time	bytes	label
+-	15759	BRIEF complete (seat: orchestrator/Claude cloud) :: a0305830-ldv-208-zeroclaw-spike-brief.md
+-	8748	BASELINE opencode AGENTS.md (system-injected project instructions; seat: orchestrator)
+-	19000	NAV so far (probe/insp outputs, clone, ls listings; approximate, pre-ledger)
+14:46:30	5741	route-grep :: cd /home/user/zeroclaw-labs/zeroclaw/crates/zeroclaw-gateway/src && grep -n -E '\.route\("' lib.rs | cut -c1-140 | head -150
+14:46:36	812	routes-2290-2300 :: sed -n '2288,2301p' lib.rs | cut -c1-200
+14:46:36	714	ws-route :: sed -n '2371,2383p' lib.rs | cut -c1-200
+14:46:36	366	api-fns :: grep -n -E '^pub (async )?fn handle_api_session|^pub async fn handle_api_sessions' api.rs | cut -c1-160
+14:46:36	74	sse-fns :: grep -n -E '^pub (async )?fn |^pub struct |^pub enum ' sse.rs | cut -c1-160
+14:46:40	2893	api.rs:1724-1760 :: sed -n '1700,1770p' api.rs
+14:46:40	4260	api.rs:1840-1970 :: sed -n '1840,1969p' api.rs
+14:46:48	2762	ws-head :: sed -n '1,75p' ws.rs | cut -c1-170
+14:46:48	2001	ws-fns :: grep -n -E '^(pub )?(async )?fn |^pub struct |^struct |^enum |^pub enum ' ws.rs | head -60 | cut -c1-150
+14:46:56	0	docs-grep :: grep -rIl -E 'ws/chat' docs README.md 2>/dev/null | head -15
+14:46:56	4276	ws-auth :: sed -n '75,202p' crates/zeroclaw-gateway/src/ws.rs | cut -c1-160
+14:47:02	619	ws-frame-types :: grep -n -o -E '"type": *"[a-z_]+"|msg_type == "[a-z_]+"|"[a-z_]+" => ' ws.rs | sort -t: -k2 -u | head -70
+14:47:02	4287	ws-socket-start :: sed -n '377,470p' ws.rs | cut -c1-150
+14:47:04	3090	ws-connect :: sed -n '470,540p' ws.rs | cut -c1-150
+14:47:04	4215	ws-msgloop :: sed -n '600,700p' ws.rs | cut -c1-150
+14:47:11	1683	ws-content :: sed -n '1429,1435p;2722,2760p' ws.rs | cut -c1-150
+14:47:11	2066	ws-abort :: grep -n -i -E 'abort|cancel' ws.rs | head -30 | cut -c1-170
+14:47:11	3507	ws-turnframes :: sed -n '1995,2030p;2130,2160p' ws.rs | cut -c1-160
+14:47:11	1646	ws-done :: sed -n '1654,1692p' ws.rs | cut -c1-150
+14:47:21	2941	cargo-head :: sed -n '1,60p' Cargo.toml | cut -c1-140
+14:47:21	776	cargo-features :: grep -n -E '^\[features\]|^default|^\[\[bin\]\]|^name = |^path = ' Cargo.toml | head -30
+14:47:27	1836	features :: sed -n '249,300p' Cargo.toml | cut -c1-160
+14:47:27	1124	gw-feature :: grep -n -E '^(gateway|agent-runtime|channel-|schema-export|observability|ci|minimal)[a-z0-9-]* *=' Cargo.toml | head -20 | cut -c1-200
+14:47:50	6632	sse :: sed -n '1,175p' sse.rs | cut -c1-150
+14:47:57	978	sse-stream-webhook :: grep -n 'text/event-stream\|handle_webhook_stream\|stream_mode\|X-Stream' crates/zeroclaw-gateway/src/lib.rs | head -20 | cut -c1-170
+14:47:57	438	cfg-docs :: grep -rIl -E '\[agents\.' docs src crates/zeroclaw-config 2>/dev/null | head -12
+14:48:03	2299	webhook-stream-doc :: sed -n '3170,3200p;3575,3600p' crates/zeroclaw-gateway/src/lib.rs | cut -c1-160
+14:48:03	3497	custom-provider-doc :: sed -n '1,90p' docs/book/src/providers/custom.md | cut -c1-170
+14:48:24	2044	anatomy :: cat docs/book/src/agents/anatomy.md | cut -c1-200
+14:48:25	842	custom-slot-example :: sed -n '8,24p' docs/book/src/providers/custom.md | cut -c1-400
+14:48:40	830	cfg-fixtures :: grep -rIn -E '^\s*\[risk_profiles\.' --include=*.rs --include=*.toml --include=*.md . 2>/dev/null | grep -v '^./target' | head -12 | cut -c1-170
+14:48:44	1068	harness-config :: cat dev/config.harness-test.toml | cut -c1-200
+14:48:50	1339	env-vars :: grep -rn -E 'ZEROCLAW_CONFIG_DIR|ZEROCLAW_WORKSPACE|ZEROCLAW_HOME' --include=*.rs src crates/zeroclaw-config/src | head -12 | cut -c1-190
+14:48:50	1646	gw-cli :: grep -n -E 'Gateway|gateway' src/main.rs | head -25 | cut -c1-170
+14:48:57	1925	route-multiline :: grep -n -A1 -E '\.route\(\s*$' lib.rs | grep -E '"/' | sed -E 's/^[0-9]+-\s*//' | cut -c1-120
+14:48:57	871	route-others :: grep -rn -E '\.route\(' --include=*.rs . | grep -v '^./lib.rs' | grep -v 'test' | head -12 | cut -c1-150
+14:48:57	3	route-count :: grep -c '\.route(' lib.rs
+14:49:02	320	v1-route :: grep -n '/v1/' lib.rs | head -8 | cut -c1-150
+14:49:02	611	approvals-absence :: grep -rn -i -E 'pending_approvals|/api/approv|/api/permission|/api/question|/api/providers|/api/agents"|/api/todo|/api/fork|/api/diff' --include=*.rs . | grep -v -E 'ws_approval.rs|ws.rs' | head -10 | cut -c1-150
+14:49:06	4011	mock-provider-sse :: sed -n '7838,7880p;7925,7975p' lib.rs | cut -c1-170
+14:49:12	1683	compat-stream :: grep -rn -E 'supports_streaming|"stream"|stream: *(true|Some)|fn stream_chat|fn chat_with_tools|native_tool_calling|supports_native_tools' --include=*.rs . | grep -i -E 'compat' | head -25 | cut -c1-170
+14:49:27	107	file_read-def :: grep -rn -l 'fn name(&self) -> &str' zeroclaw-tools/src | xargs grep -l '"file_read"' | head -3
+14:49:27	1655	file_read-schema :: grep -n -A22 'fn parameters_schema' zeroclaw-tools/src/pipeline.rs | head -40 | cut -c1-150
+14:49:27	882	session-store :: grep -rn -E 'fn (load_with_timestamps|append|session_exists|list_sessions_with_metadata)' --include=*.rs . | head -8 | cut -c1-160
+14:50:03	1423	gwcmds :: grep -rn -A22 'pub enum GatewayCommands' --include=*.rs src crates | head -40 | cut -c1-150
+14:50:03	2732	gw-start :: sed -n '6915,6960p' src/main.rs | cut -c1-150
+14:50:49	7735	contract-summary-read :: cat data/contract-summary.txt | cut -c1-330
+14:51:54	628	sess-persist :: grep -rn -E 'session_backend *[:=]|session_persistence|fn new_session_backend|SessionBackend::' --include=*.rs crates/zeroclaw-gateway/src/lib.rs | head -10 | cut -c1-170
+14:53:25	4641	api.rs:2102-2260 :: sed -n '2102,2260p' api.rs | grep -v '^\s*//' | cut -c1-150
+15:06:10	3228	probes :: bun -e 'const r=JSON.parse(require("fs").readFileSync("evidence/case-results.json","utf8")); for(const p of r.cases.nativeProbes) console.log(p.m,p.p,p.status,p.ct||"",(p.head||p.note||"").slice(0,110).replace(/\n/g," ")); console.log(JSON.stringify(r.timeline.map(t=>[t.kind,
+15:06:10	580	gwlog :: tail -c 1800 evidence/gateway-stdout-tail.txt
+15:06:10	1800	shimtrace :: head -c 1800 evidence/shim-trace.jsonl
+15:06:27	1562	results2 :: bun -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync("evidence/case-results.json","utf8")); console.log(JSON.stringify(r.core)); console.log(JSON.stringify(r.timeline.slice(14).map(t=>[t.kind,t.mono_ms|0,t.persisted,t.observed,t.cursor,t.same_gateway_instance,t
+15:06:27	166	toolfmt :: grep -rn -m3 -E '<tool_call>|tool_call\b.*json' /home/user/zeroclaw-labs/zeroclaw/crates/zeroclaw-tool-call-parser/src/lib.rs | cut -c1-170 | head -6
+15:08:49	1739	r2 :: bun -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync("evidence/case-results.json","utf8")); console.log(JSON.stringify(r.timeline.map(t=>[t.kind,t.mono_ms|0,t.persisted_before_any_model_output??t.persisted??t.observed??t.seen??t.call]))); console.log(JSON.stringify(r
+15:09:14	1232	r3 :: bun -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync("evidence/case-results.json","utf8")); console.log(JSON.stringify(r.cases.concurrent)); const c=r.cases.cancel; console.log(JSON.stringify(r.stubOracleFinal.filter(x=>x.marker===c.marker).map(x=>[x.kind,x.phase,x.m
+15:09:27	1823	sse-summary :: bun -e 'const fs=require("fs");const rd=f=>fs.readFileSync(f,"utf8").trim().split("\n").map(l=>JSON.parse(l)); const n=rd("evidence/native-sse-frames-first.jsonl"); const c={}; const keys=new Set(); let hasId=0; for(const f of n){ if(!f.raw) {console.log("meta",JSON.stri

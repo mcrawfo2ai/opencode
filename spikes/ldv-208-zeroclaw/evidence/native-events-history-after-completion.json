@@ -1,0 +1,71 @@
+{
+ "events": [
+  {
+   "agent_alias": "default",
+   "channel": "wss",
+   "model": "stub-model",
+   "model_provider": "custom.stub",
+   "source": "observability",
+   "timestamp": "2026-10-02T15:09:00.205548951+00:00",
+   "turn_id": "307b4930-a37d-4891-93e8-12a656d22bf4",
+   "type": "agent_start"
+  },
+  {
+   "agent_alias": "default",
+   "channel": "wss",
+   "messages_count": 2,
+   "model": "stub-model",
+   "model_provider": "custom.stub",
+   "source": "observability",
+   "timestamp": "2026-10-02T15:09:00.220091752+00:00",
+   "turn_id": "307b4930-a37d-4891-93e8-12a656d22bf4",
+   "type": "llm_request"
+  },
+  {
+   "agent_alias": "default",
+   "channel": "wss",
+   "source": "observability",
+   "timestamp": "2026-10-02T15:09:08.433879307+00:00",
+   "tool": "file_read",
+   "turn_id": "307b4930-a37d-4891-93e8-12a656d22bf4",
+   "type": "tool_call_start"
+  },
+  {
+   "agent_alias": "default",
+   "channel": "wss",
+   "duration_ms": 1,
+   "source": "observability",
+   "success": true,
+   "timestamp": "2026-10-02T15:09:08.436221755+00:00",
+   "tool": "file_read",
+   "turn_id": "307b4930-a37d-4891-93e8-12a656d22bf4",
+   "type": "tool_call"
+  },
+  {
+   "agent_alias": "default",
+   "channel": "wss",
+   "messages_count": 4,
+   "model": "stub-model",
+   "model_provider": "custom.stub",
+   "source": "observability",
+   "timestamp": "2026-10-02T15:09:08.441213739+00:00",
+   "turn_id": "307b4930-a37d-4891-93e8-12a656d22bf4",
+   "type": "llm_request"
+  },
+  {
+   "agent_alias": "default",
+   "channel": "wss",
+   "cost_usd": null,
+   "duration_ms": 8294,
+   "input_tokens": null,
+   "model": "stub-model",
+   "model_provider": "custom.stub",
+   "output_tokens": null,
+   "source": "observability",
+   "timestamp": "2026-10-02T15:09:08.499843628+00:00",
+   "tokens_used": null,
+   "turn_id": "307b4930-a37d-4891-93e8-12a656d22bf4",
+   "type": "agent_end"
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+{"seq":0,"mono_ms":8639.674,"reader":"native-/api/events#2","kind":"connected","status":200,"ct":"text/event-stream"}
+{"seq":1,"mono_ms":10196.877,"reader":"native-/api/events#2","kind":"closed_by_driver","err":"AbortError: The operation was aborted."}

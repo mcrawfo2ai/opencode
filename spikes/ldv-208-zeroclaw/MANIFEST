@@ -1,0 +1,35 @@
+# MANIFEST: sha256  bytes  path
+# Self-entry normalization: the digest of MANIFEST itself is sha256 of this file's bytes with only the 64-hex digest on the MANIFEST line replaced by 64 zeroes.
+d2033880c7f0f2f8230e925b61918822b9f9e97918d4fcc9fa3c60f8ba6f512d  19936  HANDOFF.md
+6565340a4747b26b0f0cd6c7fda5a863d08a2cad8aeaaf1fad6a18a8115e6f44  3988  data/brief-inventory.json
+bb5c13350d4742a01825a8c1b031e75f88bfa1fb11d6ee2e2ea55d193e5ea6b0  7735  data/contract-summary.txt
+9312ea972ccbfba2ef0789e014e80395bfdec7043af5d7f61e4ac5b4f1d7a10f  144922  data/extracted-contract.json
+3118a9df4ca10096a7b33f5da1d36076425602ab43c9dce5af24777d8a96cde6  13306  data/extraction-report.json
+552dd73fbcc6ef719bae848ff5928b59f301749630baff5210e8bf192618d507  28028  evidence/case-results.json
+e337b74372dde9f7bff379a6b9bcd6cbb81cbc1e7d61f0fa4ae0d8023f059473  858  evidence/config.sanitized.toml
+d7e26f77e18ed2714214b5f5c564d5401b04d89d38103e0dec5bd76230f8c59b  582  evidence/gateway-stdout-tail.txt
+5673484ae144fc3e899452ef3cfa2e10845ce54afbaa6eaff7fb35218e40c7f5  1565  evidence/mutation-controls.json
+a44e86b81bbbe0e28085878914ec00806ad3fd9ed3465ecd13a10dc049e4cb57  1861  evidence/native-events-history-after-completion.json
+5baff4d472156ab1f9243d2ed00cd4bd28ba93b9d6c5016004d29862de4b8b19  948  evidence/native-messages-final.json
+0cbcca3388ac2978994de6fde137460b98cb990e38bd557f62c8a08b650ba9e6  336  evidence/native-session-list.json
+0cdbe2bc175b161011b2667298149ed29e2098cecf5288a048703502402a52d0  26362  evidence/native-sse-frames-first.jsonl
+156bd61e6cfaecbc3214f945be8ea6e4269a95729c626191dc2312d03d723518  252  evidence/native-sse-frames-reconnect.jsonl
+989cf0d5463c99c81d1132cf3c9f41c9bac2e2b4cb6246246692deb36eba55ae  7348  evidence/read-ledger.tsv
+a820e74df06f6458d9b112ff9f231bf428707f7cc2685adabe0fce994f5b2ef0  1493  evidence/shim-messages-final.json
+f7ba51d859355e3ee419798b44c38e351dc783971698718905a9913e04adddd5  6204  evidence/shim-sse-frames-first.jsonl
+e8c26a1410a348aba52c917889550e052edd67139ac80bb5baff1c7a4e42c544  446  evidence/shim-sse-frames-reconnect.jsonl
+e9c500c68f622cc294a5196cc337afc8cb78195459c2f8e0b9d332ba9e4747ae  20308  evidence/shim-trace.jsonl
+50a1441d6827a3c2e54fa5cf922870b0d5e4d652218593608040f09cc7750db3  3779  evidence/stub-oracle-core.json
+7c5c7ade4674ec3de236f95a4d216d8ee8ba0eaf36668113be6c29d477907388  7613  scripts/extract-contract.mjs
+b65df05e7b1426fd8ce59fa4944f8ae2cd83c0c2f5897b43aca5ab9ac2d15999  3730  scripts/harness.mjs
+040c3b86c91c8094d97f600b85f249dbde217c5e284d5184eeb944ea1893db4b  1877  scripts/manifest.mjs
+18564829bb3c99839f3877671b722cb4434fb0a793f9275ab7de3b628132925b  5343  scripts/mutation-controls.mjs
+8309d568c1d5665e6ccfeb63b8766a058ffb644967747a3b558aa450d49b4475  397  scripts/nav.sh
+7f13c7026010e1f52b01063af1d9ec61a04333eabc485f3b9a14f5740653d564  980  scripts/parse-brief-inventory.mjs
+4141944fc3cab47a4ffccdcab9ded54fdd9f318769cde6bac587647bdc303450  20863  scripts/run-spike.mjs
+05c425c7ff85796d52dba5cccfe06bd1d0f13a0a527a17f601303b033a33bf54  8200  scripts/shim.mjs
+3700004cfac5c5d32659352f403311fc82639ba51008ca3fa4e025b292cbb670  8095  scripts/stub_provider.py
+398fe43778b3e992df015bab5d18ab501d39b18092399f7d1a70fae79083bce5  2192  scripts/summarize-contract.mjs
+45df9dd3ef68da92b17a142afbd726601aec4534da103200a3bf0360d34c0dfe  3579  scripts/verify-case-evidence.mjs
+1e6733bf2b8941a021457d3d846f7e3df80807c7d60380d7bc0014431ca2639f  1877  scripts/verify-coverage.mjs
+9b34d7ee77086375695300851f6635939ff6a33d0bb0bbef91cb93436ab21ff1  SELF  MANIFEST

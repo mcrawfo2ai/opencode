@@ -1,0 +1,1036 @@
+{
+ "cases": {
+  "nativeProbes": [
+   {
+    "m": "GET",
+    "p": "/health",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"paired\":false,\"require_pairing\":false,\"runtime\":{\"components\":{\"gateway\":{\"last_ok\":\"2026-10-02T15:09:00.129254411+00:00\",\"restart_count\":0,\"status\":\"ok\",\"updated_at\":\"2026-10-02T15:09:00.129231421+00:00\"}},\"pid\":1200,\"updated_at\":\"2026-10-02T15:09:00.149635185+00:00\",\"uptime_seconds\":0},\"status\":"
+   },
+   {
+    "m": "GET",
+    "p": "/api/health",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"health\":{\"components\":{\"gateway\":{\"last_error\":null,\"last_ok\":\"2026-10-02T15:09:00.129254411+00:00\",\"restart_count\":0,\"status\":\"ok\",\"updated_at\":\"2026-10-02T15:09:00.129231421+00:00\"}},\"pid\":1200,\"updated_at\":\"2026-10-02T15:09:00.150625327+00:00\",\"uptime_seconds\":0}}"
+   },
+   {
+    "m": "GET",
+    "p": "/api/sessions",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"sessions\":[]}"
+   },
+   {
+    "m": "GET",
+    "p": "/api/sessions/running",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"sessions\":[]}"
+   },
+   {
+    "m": "GET",
+    "p": "/api/events/history",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"events\":[]}"
+   },
+   {
+    "m": "GET",
+    "p": "/api/status",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"version\":\"0.8.5\",\"model_provider\":\"custom.stub\",\"model\":\"stub-model\",\"temperature\":null,\"uptime_seconds\":0,\"daemon_started_at\":\"2026-10-02T15:09:00.129222032+00:00\",\"gateway_port\":45097,\"locale\":\"en\",\"memory_backend\":\"sqlite\",\"paired\":false,\"channels\":{},\"nodes\":{\"connected\":[],\"mdns_peers\":[]},\"h"
+   },
+   {
+    "m": "GET",
+    "p": "/api/config/agent-options",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"channels\":[],\"channel_types\":[],\"model_providers\":[\"custom.stub\"],\"risk_profiles\":[\"default\"],\"runtime_profiles\":[\"default\"],\"skill_bundles\":[],\"knowledge_bundles\":[],\"mcp_bundles\":[],\"agents\":[\"default\"]}"
+   },
+   {
+    "m": "GET",
+    "p": "/api/tools",
+    "status": 200,
+    "ct": "application/json",
+    "head": "{\"tools\":[{\"description\":\"Execute a shell command in the workspace directory\",\"name\":\"shell\",\"parameters\":{\"properties\":{\"approved\":{\"default\":false,\"description\":\"Set true to explicitly approve medium/high-risk commands in supervised mode\",\"type\":\"boolean\"},\"command\":{\"description\":\"The shell comma"
+   },
+   {
+    "m": "GET",
+    "p": "/session",
+    "status": 503,
+    "ct": "text/plain; charset=utf-8",
+    "head": "Web dashboard not available. Reinstall with the supported installer so the dashboard is built and placed where the gateway looks for it: `./install.sh --source` on Linux/macOS, or `setup.bat` on Windows. The daemon's API endpoints remain reachable independently of the dashboard."
+   },
+   {
+    "m": "GET",
+    "p": "/event",
+    "note": "skipped GET (would hang if it were an SSE route; absence established statically)"
+   },
+   {
+    "m": "GET",
+    "p": "/permission",
+    "status": 503,
+    "ct": "text/plain; charset=utf-8",
+    "head": "Web dashboard not available. Reinstall with the supported installer so the dashboard is built and placed where the gateway looks for it: `./install.sh --source` on Linux/macOS, or `setup.bat` on Windows. The daemon's API endpoints remain reachable independently of the dashboard."
+   },
+   {
+    "m": "GET",
+    "p": "/question",
+    "status": 503,
+    "ct": "text/plain; charset=utf-8",
+    "head": "Web dashboard not available. Reinstall with the supported installer so the dashboard is built and placed where the gateway looks for it: `./install.sh --source` on Linux/macOS, or `setup.bat` on Windows. The daemon's API endpoints remain reachable independently of the dashboard."
+   },
+   {
+    "m": "GET",
+    "p": "/agent",
+    "status": 503,
+    "ct": "text/plain; charset=utf-8",
+    "head": "Web dashboard not available. Reinstall with the supported installer so the dashboard is built and placed where the gateway looks for it: `./install.sh --source` on Linux/macOS, or `setup.bat` on Windows. The daemon's API endpoints remain reachable independently of the dashboard."
+   },
+   {
+    "m": "GET",
+    "p": "/provider",
+    "status": 503,
+    "ct": "text/plain; charset=utf-8",
+    "head": "Web dashboard not available. Reinstall with the supported installer so the dashboard is built and placed where the gateway looks for it: `./install.sh --source` on Linux/macOS, or `setup.bat` on Windows. The daemon's API endpoints remain reachable independently of the dashboard."
+   }
+  ],
+  "corePrompt": {
+   "PROMPT_sha": "a638c26153232565adf3f74cd000ce466e1d33b1b685d91b0bfbdc3724febddb",
+   "persistedHit": null,
+   "stubReq1": {
+    "seq": 2,
+    "mono_ms": 297.932,
+    "kind": "request_received",
+    "phase": 1,
+    "stream": true,
+    "marker": "MK-a18fafd0dd6d",
+    "prompt_sha": "a18fafd0dd6dec3a",
+    "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:00 +00:00]\n\nPlease read the fixture file and report. nonce=ab8546f7",
+    "roles": [
+     "system",
+     "user"
+    ],
+    "last_role": "user",
+    "tool_names": [],
+    "last_tool_content_sha": null,
+    "last_tool_content_head": null,
+    "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+    "system_tool_call_tag": true,
+    "has_authorization": false
+   }
+  },
+  "stream": {
+   "marker": "MK-a18fafd0dd6d",
+   "fixtureSha": "5de68c888aebe5ad",
+   "fixtureText": "ldv208-fixture-d9689d3e9478",
+   "toolCall": {
+    "id": "evt_000007",
+    "type": "message.part.updated",
+    "properties": {
+     "sessionID": "ses_51204866f01543b0abe2",
+     "part": {
+      "id": "prt_99c87b3750574086884b",
+      "sessionID": "ses_51204866f01543b0abe2",
+      "messageID": "msg_ea489b0d05ca4dd4aa9e",
+      "type": "tool",
+      "callID": "085b7c09-b8dd-4247-91c9-92858f15b44b",
+      "tool": "file_read",
+      "state": {
+       "status": "running",
+       "input": {
+        "path": "<RUN>/workspace/fixture.txt"
+       },
+       "time": {
+        "start": 1790953748434
+       }
+      }
+     },
+     "time": 1790953748434
+    }
+   },
+   "toolDone": {
+    "id": "evt_000008",
+    "type": "message.part.updated",
+    "properties": {
+     "sessionID": "ses_51204866f01543b0abe2",
+     "part": {
+      "id": "prt_99c87b3750574086884b",
+      "sessionID": "ses_51204866f01543b0abe2",
+      "messageID": "msg_ea489b0d05ca4dd4aa9e",
+      "type": "tool",
+      "callID": "085b7c09-b8dd-4247-91c9-92858f15b44b",
+      "tool": "file_read",
+      "state": {
+       "status": "completed",
+       "output": "1: ldv208-fixture-d9689d3e9478\n[1 lines total]",
+       "time": {
+        "start": 1790953748446,
+        "end": 1790953748446
+       }
+      }
+     },
+     "time": 1790953748446
+    }
+   },
+   "finalPersisted": {
+    "elapsed_ms": 2,
+    "messages": [
+     {
+      "role": "user",
+      "content_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:00 +00:00]\n\nPlease read the fixture file and report. nonce=ab8546f7",
+      "created_at": "2026-10-02T15:09:08.500667434+00:00"
+     },
+     {
+      "role": "assistant",
+      "content_head": "MARKER MK-a18fafd0dd6d reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<RUN>/workspa",
+      "created_at": "2026-10-02T15:09:08.500667434+00:00"
+     },
+     {
+      "role": "user",
+      "content_head": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixture-d9689d3e9478\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T15:09:08.500667434+00:00"
+     },
+     {
+      "role": "assistant",
+      "content_head": "FINAL MK-a18fafd0dd6d tool_result_sha=32725231c34078bf",
+      "created_at": "2026-10-02T15:09:08.500667434+00:00"
+     }
+    ]
+   },
+   "stateAfter": {
+    "session_id": "b59df0d5-2285-4056-b116-d3328839df72",
+    "state": "idle"
+   }
+  },
+  "reconnect": {
+   "cursorSaved": "evt_000012",
+   "sameInstance": true,
+   "replayFramesShim": 0,
+   "replayFramesNative": 0,
+   "recoveredFromPersistence": 4
+  },
+  "cancel": {
+   "marker": "MK-6abc7027898e",
+   "abortResponse": {
+    "status": 200,
+    "json": true,
+    "head": "true"
+   },
+   "stubSawDisconnect": false,
+   "stubGateStillWaiting": true,
+   "nativeStateAfter": {
+    "session_id": "65d26a19-3045-4607-9685-1530bf74d05e",
+    "state": "idle"
+   },
+   "nativeRunning": {
+    "sessions": []
+   },
+   "shimEventTypes": [
+    "server.connected",
+    "message.updated",
+    "session.error",
+    "session.status",
+    "session.idle"
+   ]
+  },
+  "concurrent": {
+   "sessions": {
+    "a": "ses_eec48f201dfd4ce886ed",
+    "b": "ses_7aa3ab42daa040558e45"
+   },
+   "markers": {
+    "A": "MK-835a151c3348",
+    "B": "MK-b3360077a2a8"
+   },
+   "crossContamination": {
+    "eventsInA_withB_marker": 0,
+    "eventsInB_withA_marker": 0
+   },
+   "idleOrder": [
+    "B",
+    "A"
+   ],
+   "nativePersisted": {
+    "A": [
+     "user:[CURRENT DATE & TIME: 2026-10-02 15:09:12 +00:00]\n\nconcurren",
+     "assistant:MARKER MK-835a151c3348 reading fixture. <tool_call>\n{\"name\":",
+     "user:[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixt",
+     "assistant:FINAL MK-835a151c3348 tool_result_sha=32725231c34078bf"
+    ],
+    "B": [
+     "user:[CURRENT DATE & TIME: 2026-10-02 15:09:12 +00:00]\n\nconcurren",
+     "assistant:MARKER MK-b3360077a2a8 reading fixture. <tool_call>\n{\"name\":",
+     "user:[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixt",
+     "assistant:FINAL MK-b3360077a2a8 tool_result_sha=32725231c34078bf"
+    ]
+   }
+  }
+ },
+ "deadlineFailures": [
+  "prompt persistence not observed natively within 8s while model output gated (probe window shortened to save time)"
+ ],
+ "notReached": [],
+ "core": {
+  "SID": "ses_51204866f01543b0abe2",
+  "NID": "b59df0d5-2285-4056-b116-d3328839df72",
+  "marker": "MK-a18fafd0dd6d",
+  "PROMPT_sha": "a638c26153232565adf3f74cd000ce466e1d33b1b685d91b0bfbdc3724febddb"
+ },
+ "cleanup": [
+  {
+   "name": "zeroclaw-gateway",
+   "pid": 1200,
+   "identity_recorded": {
+    "pid": 1200,
+    "starttime_ticks": "39193",
+    "cmdline": "<SCRATCH-RUN>/target/debug/zeroclaw gateway start -p 45097 --host 127.0.0.1"
+   },
+   "identity_matches_before_signal": true,
+   "exit": 143,
+   "alive_after": false
+  },
+  {
+   "name": "stub-provider",
+   "pid": 1199,
+   "identity_recorded": {
+    "pid": 1199,
+    "starttime_ticks": "39183",
+    "cmdline": "python3 /home/user/opencode/spikes/ldv-208-zeroclaw/scripts/stub_provider.py <RUN>/logs/stub.port <RUN>/logs/fixture.path <RUN>/logs/stub-oracle.jsonl"
+   },
+   "identity_matches_before_signal": true,
+   "exit": 143,
+   "alive_after": false
+  }
+ ],
+ "timeline": [
+  {
+   "mono_ms": 230.515,
+   "kind": "gateway_ready",
+   "port": 45097,
+   "waited_ms": 109,
+   "identity": {
+    "pid": 1200,
+    "starttime_ticks": "39193",
+    "cmdline": "<SCRATCH-RUN>/target/debug/zeroclaw gateway start -p 45097 --host 127.0.0.1"
+   }
+  },
+  {
+   "mono_ms": 264.927,
+   "kind": "native_probes_done"
+  },
+  {
+   "mono_ms": 267.185,
+   "kind": "session_created_via_shim",
+   "shimSessionID": "ses_51204866f01543b0abe2",
+   "nativeSessionID": "b59df0d5-2285-4056-b116-d3328839df72",
+   "status": 200
+  },
+  {
+   "mono_ms": 268.371,
+   "kind": "native_session_list_before_prompt",
+   "status": 200,
+   "head": "{\"sessions\":[]}"
+  },
+  {
+   "mono_ms": 271.516,
+   "kind": "prompt_async_submitted",
+   "status": 204,
+   "prompt_sha": "a638c26153232565"
+  },
+  {
+   "mono_ms": 8408.21,
+   "kind": "prompt_persistence_probe",
+   "persisted_before_any_model_output": false,
+   "stub_received_prompt": true
+  },
+  {
+   "mono_ms": 8460.425,
+   "kind": "streams_attached"
+  },
+  {
+   "mono_ms": 8463.389,
+   "kind": "stub_g1_released",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "mono_ms": 8514.638,
+   "kind": "marker_observed",
+   "observed": true,
+   "event_type": "message.part.updated"
+  },
+  {
+   "mono_ms": 8516.618,
+   "kind": "stub_g2_released"
+  },
+  {
+   "mono_ms": 8567.303,
+   "kind": "tool_events",
+   "call": true,
+   "result": true
+  },
+  {
+   "mono_ms": 8569.613,
+   "kind": "stub_phase2_request_seen",
+   "seen": true,
+   "tool_content_sha": "32725231c34078bf"
+  },
+  {
+   "mono_ms": 8570.961,
+   "kind": "stub_g3_released"
+  },
+  {
+   "mono_ms": 8622.678,
+   "kind": "completion_event_observed",
+   "observed": true
+  },
+  {
+   "mono_ms": 8626.511,
+   "kind": "completion_persisted_probe",
+   "persisted": true,
+   "native_state": {
+    "session_id": "b59df0d5-2285-4056-b116-d3328839df72",
+    "state": "idle"
+   }
+  },
+  {
+   "mono_ms": 8637.06,
+   "kind": "reconnect_cursor_saved",
+   "cursor": "evt_000012",
+   "cursor_origin": "shim-generated evt id (native SSE frames carry no id: see raw frames)"
+  },
+  {
+   "mono_ms": 8638.516,
+   "kind": "subscribers_closed"
+  },
+  {
+   "mono_ms": 10191.436,
+   "kind": "reconnect_established",
+   "same_gateway_instance": true,
+   "lastEventID_sent": false
+  },
+  {
+   "mono_ms": 10363.075,
+   "kind": "cancel_prompt_gated",
+   "marker": "MK-6abc7027898e"
+  },
+  {
+   "mono_ms": 10369.036,
+   "kind": "abort_response",
+   "status": 200,
+   "body": "true"
+  }
+ ],
+ "stubOracleFinal": [
+  {
+   "seq": 1,
+   "mono_ms": 1.782,
+   "kind": "stub_started",
+   "port": 44233
+  },
+  {
+   "seq": 2,
+   "mono_ms": 297.932,
+   "kind": "request_received",
+   "phase": 1,
+   "stream": true,
+   "marker": "MK-a18fafd0dd6d",
+   "prompt_sha": "a18fafd0dd6dec3a",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:00 +00:00]\n\nPlease read the fixture file and report. nonce=ab8546f7",
+   "roles": [
+    "system",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": null,
+   "last_tool_content_head": null,
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 3,
+   "mono_ms": 298.416,
+   "kind": "gate_wait",
+   "gate": "g1",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 8392.907,
+   "kind": "gate_release_ack",
+   "gate": "g1",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 8393.34,
+   "kind": "gate_open",
+   "gate": "g1",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 8393.737,
+   "kind": "emitted",
+   "marker": "MK-a18fafd0dd6d",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 8393.893,
+   "kind": "gate_wait",
+   "gate": "g2",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 8446.655,
+   "kind": "gate_release_ack",
+   "gate": "g2",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 8447.015,
+   "kind": "gate_open",
+   "gate": "g2",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 8447.351,
+   "kind": "emitted",
+   "marker": "MK-a18fafd0dd6d",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 8447.436,
+   "kind": "emitted",
+   "marker": "MK-a18fafd0dd6d",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 8494.769,
+   "kind": "request_received",
+   "phase": 2,
+   "stream": true,
+   "marker": "MK-a18fafd0dd6d",
+   "prompt_sha": "a18fafd0dd6dec3a",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:00 +00:00]\n\nPlease read the fixture file and report. nonce=ab8546f7",
+   "roles": [
+    "system",
+    "user",
+    "assistant",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": "32725231c34078bf",
+   "last_tool_content_head": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixture-d9689d3e9478\n[1 lines total]\n</tool_result>\n",
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 13,
+   "mono_ms": 8495.086,
+   "kind": "gate_wait",
+   "gate": "g3",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 8501.158,
+   "kind": "gate_release_ack",
+   "gate": "g3",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 8501.452,
+   "kind": "gate_open",
+   "gate": "g3",
+   "marker": "MK-a18fafd0dd6d"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 8501.878,
+   "kind": "emitted",
+   "marker": "MK-a18fafd0dd6d",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 8501.972,
+   "kind": "emitted",
+   "marker": "MK-a18fafd0dd6d",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 18,
+   "mono_ms": 10258.441,
+   "kind": "request_received",
+   "phase": 1,
+   "stream": true,
+   "marker": "MK-6abc7027898e",
+   "prompt_sha": "6abc7027898ee88a",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:10 +00:00]\n\ncancel-case prompt nonce=f703c7",
+   "roles": [
+    "system",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": null,
+   "last_tool_content_head": null,
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 19,
+   "mono_ms": 10258.811,
+   "kind": "gate_wait",
+   "gate": "g1",
+   "marker": "MK-6abc7027898e"
+  },
+  {
+   "seq": 20,
+   "mono_ms": 12807.467,
+   "kind": "gate_release_ack",
+   "gate": "g1",
+   "marker": "MK-6abc7027898e"
+  },
+  {
+   "seq": 21,
+   "mono_ms": 12807.834,
+   "kind": "gate_open",
+   "gate": "g1",
+   "marker": "MK-6abc7027898e"
+  },
+  {
+   "seq": 22,
+   "mono_ms": 12808.125,
+   "kind": "emitted",
+   "marker": "MK-6abc7027898e",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 23,
+   "mono_ms": 12808.163,
+   "kind": "gate_wait",
+   "gate": "g2",
+   "marker": "MK-6abc7027898e"
+  },
+  {
+   "seq": 24,
+   "mono_ms": 12928.85,
+   "kind": "request_received",
+   "phase": 1,
+   "stream": true,
+   "marker": "MK-b3360077a2a8",
+   "prompt_sha": "b3360077a2a8a2c7",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:12 +00:00]\n\nconcurrent B beta c72a",
+   "roles": [
+    "system",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": null,
+   "last_tool_content_head": null,
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 25,
+   "mono_ms": 12929.184,
+   "kind": "gate_wait",
+   "gate": "g1",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 26,
+   "mono_ms": 12936.455,
+   "kind": "request_received",
+   "phase": 1,
+   "stream": true,
+   "marker": "MK-835a151c3348",
+   "prompt_sha": "835a151c334826ad",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:12 +00:00]\n\nconcurrent A alpha 5ab9",
+   "roles": [
+    "system",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": null,
+   "last_tool_content_head": null,
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 27,
+   "mono_ms": 12936.753,
+   "kind": "gate_wait",
+   "gate": "g1",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 28,
+   "mono_ms": 12976.651,
+   "kind": "gate_release_ack",
+   "gate": "g1",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 29,
+   "mono_ms": 12977.165,
+   "kind": "gate_open",
+   "gate": "g1",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 30,
+   "mono_ms": 12977.451,
+   "kind": "emitted",
+   "marker": "MK-b3360077a2a8",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 31,
+   "mono_ms": 12977.491,
+   "kind": "gate_wait",
+   "gate": "g2",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 32,
+   "mono_ms": 12978.122,
+   "kind": "gate_release_ack",
+   "gate": "g2",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 33,
+   "mono_ms": 12978.283,
+   "kind": "gate_open",
+   "gate": "g2",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 34,
+   "mono_ms": 12978.714,
+   "kind": "emitted",
+   "marker": "MK-b3360077a2a8",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 35,
+   "mono_ms": 12978.837,
+   "kind": "emitted",
+   "marker": "MK-b3360077a2a8",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 36,
+   "mono_ms": 13031.172,
+   "kind": "gate_release_ack",
+   "gate": "g3",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 37,
+   "mono_ms": 13050.415,
+   "kind": "request_received",
+   "phase": 2,
+   "stream": true,
+   "marker": "MK-b3360077a2a8",
+   "prompt_sha": "b3360077a2a8a2c7",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:12 +00:00]\n\nconcurrent B beta c72a",
+   "roles": [
+    "system",
+    "user",
+    "assistant",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": "32725231c34078bf",
+   "last_tool_content_head": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixture-d9689d3e9478\n[1 lines total]\n</tool_result>\n",
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 38,
+   "mono_ms": 13051.036,
+   "kind": "gate_wait",
+   "gate": "g3",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 39,
+   "mono_ms": 13051.202,
+   "kind": "gate_open",
+   "gate": "g3",
+   "marker": "MK-b3360077a2a8"
+  },
+  {
+   "seq": 40,
+   "mono_ms": 13051.3,
+   "kind": "emitted",
+   "marker": "MK-b3360077a2a8",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 41,
+   "mono_ms": 13051.336,
+   "kind": "emitted",
+   "marker": "MK-b3360077a2a8",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 42,
+   "mono_ms": 13084.218,
+   "kind": "gate_release_ack",
+   "gate": "g1",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 43,
+   "mono_ms": 13084.861,
+   "kind": "gate_open",
+   "gate": "g1",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 44,
+   "mono_ms": 13085.149,
+   "kind": "emitted",
+   "marker": "MK-835a151c3348",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 45,
+   "mono_ms": 13085.313,
+   "kind": "gate_wait",
+   "gate": "g2",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 46,
+   "mono_ms": 13087.136,
+   "kind": "gate_release_ack",
+   "gate": "g2",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 47,
+   "mono_ms": 13087.389,
+   "kind": "gate_open",
+   "gate": "g2",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 48,
+   "mono_ms": 13087.763,
+   "kind": "emitted",
+   "marker": "MK-835a151c3348",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 49,
+   "mono_ms": 13087.904,
+   "kind": "emitted",
+   "marker": "MK-835a151c3348",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 50,
+   "mono_ms": 13132.206,
+   "kind": "request_received",
+   "phase": 2,
+   "stream": true,
+   "marker": "MK-835a151c3348",
+   "prompt_sha": "835a151c334826ad",
+   "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 15:09:12 +00:00]\n\nconcurrent A alpha 5ab9",
+   "roles": [
+    "system",
+    "user",
+    "assistant",
+    "user"
+   ],
+   "last_role": "user",
+   "tool_names": [],
+   "last_tool_content_sha": "32725231c34078bf",
+   "last_tool_content_head": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-fixture-d9689d3e9478\n[1 lines total]\n</tool_result>\n",
+   "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+   "system_tool_call_tag": true,
+   "has_authorization": false
+  },
+  {
+   "seq": 51,
+   "mono_ms": 13132.531,
+   "kind": "gate_wait",
+   "gate": "g3",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 52,
+   "mono_ms": 13145.405,
+   "kind": "gate_release_ack",
+   "gate": "g3",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 53,
+   "mono_ms": 13145.887,
+   "kind": "gate_open",
+   "gate": "g3",
+   "marker": "MK-835a151c3348"
+  },
+  {
+   "seq": 54,
+   "mono_ms": 13146.208,
+   "kind": "emitted",
+   "marker": "MK-835a151c3348",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 55,
+   "mono_ms": 13146.477,
+   "kind": "emitted",
+   "marker": "MK-835a151c3348",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 56,
+   "mono_ms": 13204.08,
+   "kind": "gate_release_ack",
+   "gate": "g1",
+   "marker": "*"
+  },
+  {
+   "seq": 57,
+   "mono_ms": 13205.748,
+   "kind": "gate_release_ack",
+   "gate": "g2",
+   "marker": "*"
+  },
+  {
+   "seq": 58,
+   "mono_ms": 13205.984,
+   "kind": "gate_open",
+   "gate": "g2",
+   "marker": "MK-6abc7027898e"
+  },
+  {
+   "seq": 59,
+   "mono_ms": 13206.572,
+   "kind": "client_disconnected",
+   "marker": "MK-6abc7027898e",
+   "phase": 1
+  },
+  {
+   "seq": 60,
+   "mono_ms": 13207.372,
+   "kind": "gate_release_ack",
+   "gate": "g3",
+   "marker": "*"
+  }
+ ],
+ "gateway": {
+  "port": 45097,
+  "args": [
+   "gateway",
+   "start",
+   "-p",
+   "45097",
+   "--host",
+   "127.0.0.1"
+  ],
+  "identity": {
+   "pid": 1200,
+   "starttime_ticks": "39193",
+   "cmdline": "<SCRATCH-RUN>/target/debug/zeroclaw gateway start -p 45097 --host 127.0.0.1"
+  },
+  "envKeys": [
+   "PATH",
+   "HOME",
+   "LANG",
+   "NO_PROXY",
+   "RUST_BACKTRACE",
+   "ZEROCLAW_CONFIG_DIR",
+   "ZEROCLAW_DATA_DIR"
+  ]
+ },
+ "stub": {
+  "port": 44233,
+  "identity": {
+   "pid": 1199,
+   "starttime_ticks": "39183",
+   "cmdline": "python3 /home/user/opencode/spikes/ldv-208-zeroclaw/scripts/stub_provider.py <RUN>/logs/stub.port <RUN>/logs/fixture.path <RUN>/logs/stub-oracle.jsonl"
+  },
+  "envKeys": [
+   "PATH",
+   "HOME",
+   "LANG",
+   "NO_PROXY",
+   "RUST_BACKTRACE"
+  ]
+ },
+ "truncations": []
+}
