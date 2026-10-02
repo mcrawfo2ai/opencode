@@ -1,0 +1,16 @@
+{
+ "mode": "extra-main",
+ "gwPort": 43965,
+ "stubPort": 36333,
+ "gateway": {
+  "pid": 7274,
+  "starttime_ticks": "58517",
+  "cmdline": "/tmp/claude-0/zc/zeroclaw/target/debug/zeroclaw gateway start -p 43965 --host 127.0.0.1"
+ },
+ "stub": {
+  "pid": 7273,
+  "starttime_ticks": "58507",
+  "cmdline": "python3 /tmp/claude-0/wt/spikes/ldv-208-zeroclaw-observers/scripts/stub_provider.py /tmp/claude-0/zc/run-extra-main/logs/stub.port /tmp/claude-0/zc/run-extra-main/logs/fixture.path /tmp/claude-0/zc/run-extra-main/logs/stub-oracle.jsonl"
+ },
+ "started_wall": "2026-10-02T17:39:53.687Z"
+}

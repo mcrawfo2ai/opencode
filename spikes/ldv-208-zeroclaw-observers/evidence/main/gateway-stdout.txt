@@ -1,0 +1,12 @@
+🦀 ZeroClaw Gateway listening on http://127.0.0.1:38331
+  ⚠️  Web Dashboard: not available — reinstall with the supported installer (`./install.sh --source` on Linux/macOS, `setup.bat` on Windows) to build it
+  ⚠️  Pairing: DISABLED (all requests accepted)
+
+  POST /pair      — pair a new client (X-Pairing-Code header)
+  POST /webhook   — {"message": "your prompt"}
+  GET  /api/*     — REST API (bearer token required)
+  GET  /ws/chat   — WebSocket agent chat
+  GET  /health    — health check
+  GET  /metrics   — Prometheus metrics
+  Press Ctrl+C to stop.
+

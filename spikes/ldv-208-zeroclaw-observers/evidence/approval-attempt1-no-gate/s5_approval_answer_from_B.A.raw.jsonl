@@ -1,0 +1,7 @@
+{"t_ms":9984,"wall_ms":1790962649378,"ev":"open","data":null}
+{"t_ms":9984.575,"wall_ms":1790962649379,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-e4e099\",\"type\":\"session_start\"}"}
+{"t_ms":10687.649,"wall_ms":1790962650082,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"Q5 read the fixture nonce=c76960\"}"}
+{"t_ms":10793.404,"wall_ms":1790962650188,"ev":"message","data":"{\"content\":\"MARKER MK-c8cb5dbbddb4 reading fixture. \",\"type\":\"chunk\"}"}
+{"t_ms":11599.481,"wall_ms":1790962650994,"ev":"message","data":"{\"args\":{\"path\":\"/tmp/claude-0/zc/run-approval/workspace/fixture.txt\"},\"id\":\"aa3fb93b-1e51-40b3-ac98-0a03f0310f27\",\"name\":\"file_read\",\"type\":\"tool_call\"}"}
+{"t_ms":11610.129,"wall_ms":1790962651004,"ev":"message","data":"{\"id\":\"aa3fb93b-1e51-40b3-ac98-0a03f0310f27\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-bde9d8c767cc\\n[1 lines total]\",\"type\":\"tool_result\"}"}
+{"t_ms":19729.638,"wall_ms":1790962659124,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

@@ -1,0 +1,33 @@
+{"seq": 1, "mono_ms": 1.659, "kind": "stub_started", "port": 45789}
+{"seq": 2, "mono_ms": 947.961, "kind": "request_received", "phase": 1, "stream": true, "marker": "MK-84b20984799d", "prompt_sha": "84b20984799d531b", "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 17:38:03 +00:00]\n\nQ5 read the fixture nonce=bad79f", "roles": ["system", "user"], "last_role": "user", "tool_names": [], "last_tool_content_sha": null, "last_tool_content_head": null, "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ", "system_tool_call_tag": true, "has_authorization": false}
+{"seq": 3, "mono_ms": 948.252, "kind": "gate_wait", "gate": "g1", "marker": "MK-84b20984799d"}
+{"seq": 4, "mono_ms": 977.83, "kind": "gate_release_ack", "gate": "g1", "marker": "MK-84b20984799d"}
+{"seq": 5, "mono_ms": 978.128, "kind": "gate_open", "gate": "g1", "marker": "MK-84b20984799d"}
+{"seq": 6, "mono_ms": 978.459, "kind": "emitted", "marker": "MK-84b20984799d", "delta_keys": ["role", "content"], "finish": null}
+{"seq": 7, "mono_ms": 978.512, "kind": "gate_wait", "gate": "g2", "marker": "MK-84b20984799d"}
+{"seq": 8, "mono_ms": 1779.941, "kind": "gate_release_ack", "gate": "g2", "marker": "MK-84b20984799d"}
+{"seq": 9, "mono_ms": 1780.351, "kind": "gate_open", "gate": "g2", "marker": "MK-84b20984799d"}
+{"seq": 10, "mono_ms": 1780.666, "kind": "emitted", "marker": "MK-84b20984799d", "delta_keys": ["content"], "finish": null}
+{"seq": 11, "mono_ms": 1780.729, "kind": "emitted", "marker": "MK-84b20984799d", "delta_keys": [], "finish": "stop"}
+{"seq": 12, "mono_ms": 1879.686, "kind": "request_received", "phase": 2, "stream": true, "marker": "MK-84b20984799d", "prompt_sha": "84b20984799d531b", "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 17:38:03 +00:00]\n\nQ5 read the fixture nonce=bad79f", "roles": ["system", "user", "assistant", "user"], "last_role": "user", "tool_names": [], "last_tool_content_sha": "72529dcbf84961ad", "last_tool_content_head": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-c162b86d132a\n[1 lines total]\n</tool_result>\n", "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ", "system_tool_call_tag": true, "has_authorization": false}
+{"seq": 13, "mono_ms": 1880.007, "kind": "gate_wait", "gate": "g3", "marker": "MK-84b20984799d"}
+{"seq": 14, "mono_ms": 1936.729, "kind": "gate_release_ack", "gate": "g3", "marker": "MK-84b20984799d"}
+{"seq": 15, "mono_ms": 1937.013, "kind": "gate_open", "gate": "g3", "marker": "MK-84b20984799d"}
+{"seq": 16, "mono_ms": 1937.636, "kind": "emitted", "marker": "MK-84b20984799d", "delta_keys": ["role", "content"], "finish": null}
+{"seq": 17, "mono_ms": 1938.629, "kind": "emitted", "marker": "MK-84b20984799d", "delta_keys": [], "finish": "stop"}
+{"seq": 18, "mono_ms": 4663.334, "kind": "request_received", "phase": 1, "stream": true, "marker": "MK-854ac8631306", "prompt_sha": "854ac8631306ed16", "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 17:38:07 +00:00]\n\nQ5 read the fixture nonce=89d2ba", "roles": ["system", "user"], "last_role": "user", "tool_names": [], "last_tool_content_sha": null, "last_tool_content_head": null, "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ", "system_tool_call_tag": true, "has_authorization": false}
+{"seq": 19, "mono_ms": 4663.639, "kind": "gate_wait", "gate": "g1", "marker": "MK-854ac8631306"}
+{"seq": 20, "mono_ms": 4699.052, "kind": "gate_release_ack", "gate": "g1", "marker": "MK-854ac8631306"}
+{"seq": 21, "mono_ms": 4699.368, "kind": "gate_open", "gate": "g1", "marker": "MK-854ac8631306"}
+{"seq": 22, "mono_ms": 4699.625, "kind": "emitted", "marker": "MK-854ac8631306", "delta_keys": ["role", "content"], "finish": null}
+{"seq": 23, "mono_ms": 4699.676, "kind": "gate_wait", "gate": "g2", "marker": "MK-854ac8631306"}
+{"seq": 24, "mono_ms": 5501.734, "kind": "gate_release_ack", "gate": "g2", "marker": "MK-854ac8631306"}
+{"seq": 25, "mono_ms": 5502.185, "kind": "gate_open", "gate": "g2", "marker": "MK-854ac8631306"}
+{"seq": 26, "mono_ms": 5502.566, "kind": "emitted", "marker": "MK-854ac8631306", "delta_keys": ["content"], "finish": null}
+{"seq": 27, "mono_ms": 5502.63, "kind": "emitted", "marker": "MK-854ac8631306", "delta_keys": [], "finish": "stop"}
+{"seq": 28, "mono_ms": 12673.065, "kind": "request_received", "phase": 2, "stream": true, "marker": "MK-854ac8631306", "prompt_sha": "854ac8631306ed16", "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 17:38:07 +00:00]\n\nQ5 read the fixture nonce=89d2ba", "roles": ["system", "user", "assistant", "user"], "last_role": "user", "tool_names": [], "last_tool_content_sha": "72529dcbf84961ad", "last_tool_content_head": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-c162b86d132a\n[1 lines total]\n</tool_result>\n", "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ", "system_tool_call_tag": true, "has_authorization": false}
+{"seq": 29, "mono_ms": 12673.384, "kind": "gate_wait", "gate": "g3", "marker": "MK-854ac8631306"}
+{"seq": 30, "mono_ms": 12731.047, "kind": "gate_release_ack", "gate": "g3", "marker": "MK-854ac8631306"}
+{"seq": 31, "mono_ms": 12731.234, "kind": "gate_open", "gate": "g3", "marker": "MK-854ac8631306"}
+{"seq": 32, "mono_ms": 12731.525, "kind": "emitted", "marker": "MK-854ac8631306", "delta_keys": ["role", "content"], "finish": null}
+{"seq": 33, "mono_ms": 12731.628, "kind": "emitted", "marker": "MK-854ac8631306", "delta_keys": [], "finish": "stop"}

@@ -1,0 +1,6 @@
+{"t_ms":222.83,"wall_ms":1790962786476,"ev":"open","data":null}
+{"t_ms":225.373,"wall_ms":1790962786479,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-47ae3f\",\"type\":\"session_start\"}"}
+{"t_ms":928.522,"wall_ms":1790962787182,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"X1 read the fixture nonce=3c5bcc\"}"}
+{"t_ms":1034.54,"wall_ms":1790962787288,"ev":"message","data":"{\"content\":\"MARKER MK-a976f896f559 reading fixture. \",\"type\":\"chunk\"}"}
+{"t_ms":1841.737,"wall_ms":1790962788095,"ev":"message","data":"{\"arguments_summary\":\"path: /tmp/claude-0/zc/run-extra-approval/workspace/fixture.txt\",\"request_id\":\"db0500f8-0cb7-4318-9d98-28a523e59d77\",\"timeout_secs\":120,\"tool\":\"file_read\",\"type\":\"approval_request\"}"}
+{"t_ms":1887.013,"wall_ms":1790962788140,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

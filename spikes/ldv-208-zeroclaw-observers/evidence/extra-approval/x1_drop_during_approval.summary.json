@@ -1,0 +1,410 @@
+{
+ "scenario": "x1_drop_during_approval",
+ "session": "x1_drop_during_approval-47ae3f",
+ "timeline": [
+  {
+   "t_ms": 928.667,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1886.668,
+   "stage": "approval_request_seen_on_A",
+   "seen": true,
+   "B": 0
+  },
+  {
+   "t_ms": 1887.112,
+   "stage": "A_closed_with_approval_pending"
+  },
+  {
+   "t_ms": 4389.354,
+   "stage": "snapshot",
+   "label": "2.5s-after-drop"
+  },
+  {
+   "t_ms": 4391.275,
+   "stage": "phase2_request_seen"
+  },
+  {
+   "t_ms": 6894.793,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 225.421,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-47ae3f\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1034.601,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-a976f896f559 reading fixture. \",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 1841.806,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: /tmp/claude-0/zc/run-extra-approval/workspace/fixture.txt\",\"request_id\":\"db0500f8-0cb7-4318-9d98-28a523e59d77\",\"timeout_secs\":120,\"tool\":\"file…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 577.303,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-47ae3f\",\"type\":\"session_start\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "2.5s-after-drop",
+   "t_ms": 4389.343,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "final",
+   "t_ms": 6894.785,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 17:39:47 +00:00] X1 read the fixture nonce=3c5bcc",
+    "assistant: MARKER MK-a976f896f559 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> Tool call not executed: 'file_read' requires",
+    "assistant: FINAL MK-a976f896f559 tool_result_sha=3e48f01580f888cf"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 926.767,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 1429.688,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:47.183021627+00:00",
+      "last_activity": "2026-10-02T17:39:47.183021627+00:00",
+      "message_count": 0,
+      "session_id": "x1_drop_during_approval-47ae3f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "running",
+    "turn_id": "cc1be523-89f1-42fe-a1fa-ab4bd59afe8f",
+    "turn_started_at": "2026-10-02T17:39:47.196677540+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1932.068,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:47.183021627+00:00",
+      "last_activity": "2026-10-02T17:39:47.183021627+00:00",
+      "message_count": 0,
+      "session_id": "x1_drop_during_approval-47ae3f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "running",
+    "turn_id": "cc1be523-89f1-42fe-a1fa-ab4bd59afe8f",
+    "turn_started_at": "2026-10-02T17:39:47.196677540+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2433.976,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:47.183021627+00:00",
+      "last_activity": "2026-10-02T17:39:47.183021627+00:00",
+      "message_count": 0,
+      "session_id": "x1_drop_during_approval-47ae3f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "running",
+    "turn_id": "cc1be523-89f1-42fe-a1fa-ab4bd59afe8f",
+    "turn_started_at": "2026-10-02T17:39:47.196677540+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2936.335,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:47.183021627+00:00",
+      "last_activity": "2026-10-02T17:39:47.183021627+00:00",
+      "message_count": 0,
+      "session_id": "x1_drop_during_approval-47ae3f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "running",
+    "turn_id": "cc1be523-89f1-42fe-a1fa-ab4bd59afe8f",
+    "turn_started_at": "2026-10-02T17:39:47.196677540+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3438.476,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:47.183021627+00:00",
+      "last_activity": "2026-10-02T17:39:47.183021627+00:00",
+      "message_count": 0,
+      "session_id": "x1_drop_during_approval-47ae3f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "running",
+    "turn_id": "cc1be523-89f1-42fe-a1fa-ab4bd59afe8f",
+    "turn_started_at": "2026-10-02T17:39:47.196677540+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3940.776,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:47.183021627+00:00",
+      "last_activity": "2026-10-02T17:39:47.183021627+00:00",
+      "message_count": 0,
+      "session_id": "x1_drop_during_approval-47ae3f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "running",
+    "turn_id": "cc1be523-89f1-42fe-a1fa-ab4bd59afe8f",
+    "turn_started_at": "2026-10-02T17:39:47.196677540+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4443.272,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4945.167,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5447.521,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5949.814,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6452.218,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-47ae3f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 931.321,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 931.588,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 968.057,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 968.258,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 968.469,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 968.564,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 1770.074,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 1770.508,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 1771.986,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 1772.155,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 1868.207,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 1868.64,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 4326.641,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 4326.894,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 4327.221,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 4327.291,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

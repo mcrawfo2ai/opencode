@@ -1,0 +1,39 @@
+schema_version = 3
+
+[providers.models.custom.stub]
+model = "stub-model"
+uri = "http://127.0.0.1:36333/v1"
+
+[agents.default]
+enabled = true
+model_provider = "custom.stub"
+risk_profile = "default"
+runtime_profile = "default"
+
+[agents.default.workspace]
+path = "<RUN>/workspace"
+
+[risk_profiles.default]
+level = "supervised"
+auto_approve = ["file_read", "file_write", "file_edit", "memory_recall", "memory_store", "calculator", "glob_search", "content_search"]
+
+[runtime_profiles.default]
+max_tool_iterations = 8
+max_tool_result_chars = 50000
+max_context_tokens = 32000
+
+[runtime_profiles.default.context_compression]
+enabled = false
+tool_result_retrim_chars = 2000
+
+[gateway]
+port = 43965
+host = "127.0.0.1"
+allow_public_bind = false
+require_pairing = false
+session_persistence = true
+
+[memory]
+backend = "sqlite"
+auto_save = false
+embedding_provider = "none"

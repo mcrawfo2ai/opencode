@@ -1,0 +1,50 @@
+bytes	label	command
+4500	pre-ledger: repo/toolchain/branch/worktree command outputs (estimate)	-
+12000	prior HANDOFF.md first 12000 bytes	git show origin/spike/ldv-208-zeroclaw:.../HANDOFF.md | head -c 12000
+3200	prior-art file listing with sizes	git ls-tree
+8094	prior stub_provider.py (whole)	git show origin/spike/ldv-208-zeroclaw:spikes/ldv-208-zeroclaw/scripts/stub_provider.py
+857	prior config.sanitized.toml	git show origin/spike/ldv-208-zeroclaw:spikes/ldv-208-zeroclaw/evidence/config.sanitized.toml
+1551	grep prior run-spike.mjs launch/ws bits	grep -n -E 'spawn|ZEROCLAW|env:|ws/chat|WebSocket|file_read|fixture|sed -|workspace' prior-run-spike.mjs | cut -c1-220 | head -60
+5585	grep ws.rs query params / routes / session registry	grep -n -E 'struct WsQuery|session_id|"type": *"(session_start|connected|error|history|aborted|done|chunk|approval_request|tool_call|tool_result)|fn handle_ws_chat|fn handle_socket|subscribe|broadcast|SessionQueue|lock_session|active_session' 
+3729	prior harness.mjs (whole)	git show origin/spike/ldv-208-zeroclaw:spikes/ldv-208-zeroclaw/scripts/harness.mjs
+1783	ws.rs L836-870 approval_response parse	sed -n 836,870p ws.rs | cut -c1-160
+1879	ws.rs L956-1000 approval_request emit	sed -n 956,1000p ws.rs | cut -c1-160
+3058	prior run-spike.mjs L22-47 & L76-100	sed -n '22,47p;76,100p' prior-run-spike.mjs | cut -c1-260
+4102	show s1a,s1b	bun scripts/show.mjs evidence/main s1a_both_before s1b_B_midturn
+5133	show s1c,s2	bun scripts/show.mjs evidence/main s1c_B_after_done s2_prompt_from_B | cut -c1-330
+3172	show s3a,s3b	bun scripts/show.mjs evidence/main s3a_owner_drop s3b_owner_drop_B | cut -c1-420
+1541	show s4	bun scripts/show.mjs evidence/main s4_reconnect | cut -c1-400
+1420	samples digest s6,s3a	bun scripts/samples-digest.mjs evidence/main s6_liveness s3a_owner_drop
+397	one full running-state sample s6	python3 -c "import json;s=json.load(open('evidence/main/s6_liveness.samples.json'));x=s[10];print(json.dumps(x['state'],indent=None));print(json.dumps(x['running']))"
+2367	show s5 A,B	bun scripts/show.mjs evidence/approval s5_approval_answer_from_A s5_approval_answer_from_B | cut -c1-380
+2967	grep risk profile approval knobs	grep -rn -E 'always_ask|non_cli_excluded_tools|auto_approve' --include=*.rs crates/zeroclaw-config/src | grep -v -E 'test|assert' | cut -c1-210 | head -30
+226	grep dev config approval hints	grep -n -i -E 'approv|always_ask|level' dev/config.harness-test.toml | head -10
+4201	show s5 rerun	bun scripts/show.mjs evidence/approval s5_approval_answer_from_A s5_approval_answer_from_B | cut -c1-420
+1195	grep ws.rs detach	grep -n -i -E 'detach' ws.rs | cut -c1-190 | head -14
+72	grep gateway log for detach/close	grep -i -h -E 'detach|disconnect|socket closed|ws closed' main/gateway-stdout.txt | cut -c1-230 | head -8; wc -c main/gateway-stdout.txt approval/gateway-stdout.txt
+1808	ws.rs L1212-1218, L1312-1328, L1714-1724	sed -n '1212,1218p;1312,1328p;1714,1724p' ws.rs | cut -c1-170
+580	gateway stdout (main) whole	cat /tmp/claude-0/wt/spikes/ldv-208-zeroclaw-observers/evidence/main/gateway-stdout.txt
+2191	s2 final messages compact + s3a created_at	python3 - <<'EOF'
+import json
+for n,idx in (('main/s2_prompt_from_B',-1),('main/s3a_owner_drop',-1)):
+    s=json.load(open(n+'.snapshots.json'))[idx]; b=s['messages']['body']; ms=b['messages'] if isinstance(b,dict) else b
+    print(n, s['label'], 'keys', list(b.keys()) if isinstance(b,dict) else 'list')
+    for m in ms: print('  ', m.get('created_at'), m['role'], str(m['content']).replace(chr(10),' ')[:75])
+EOF
+grep -l -i -E 'ghp_|sk-[a-z0-9]{10}|Bearer [A-Za-z0-9]|BEGIN [A-Z ]*PRIVATE|api_key|GITHUB_TOKEN|ANTHROPIC' -r . | head; echo secret-scan-done; pgrep -af 'zeroclaw gateway|stub_provider' | cut -c1-120; echo pgrep-done
+51	s2 after-turn1 created_at	python3 -c "
+import json
+s=json.load(open('main/s2_prompt_from_B.snapshots.json'))[0]; print(s['label'], sorted(set(m['created_at'] for m in s['messages']['body']['messages'])))"
+861	approval frames raw (A request, B error, sent)	grep -h -E 'approval_request|"error"|approval_response' s5_approval_answer_from_B.A.raw.jsonl s5_approval_answer_from_B.B.raw.jsonl | cut -c1-520
+4033	show x1 x2	bun scripts/show.mjs evidence/extra-approval x1_drop_during_approval | cut -c1-330; bun scripts/show.mjs evidence/extra-main x2_prompt_B_inflight | cut -c1-330
+540	digest x1	bun scripts/samples-digest.mjs evidence/extra-approval x1_drop_during_approval | cut -c1-200
+791	x2 seen flag, x2 order, x1 denial text	python3 - <<'EOF'
+import json
+s=json.load(open('extra-main/x2_prompt_B_inflight.summary.json'))
+print([e for e in s['timeline'] if e['stage'].startswith('second_request')])
+sn=json.load(open('extra-main/x2_prompt_B_inflight.snapshots.json'))[-1]['messages']['body']['messages']
+print([ (m['role'], str(m['content'])[:55].replace(chr(10),' ')) for m in sn if m['role']=='user' or 'FINAL' in str(m['content'])])
+sn=json.load(open('extra-approval/x1_drop_during_approval.snapshots.json'))[-1]['messages']['body']['messages']
+print(str(sn[2]['content'])[:300].replace(chr(10),' ')); print(str(sn[3]['content'])[:200])
+EOF
+12000	unlogged non-rd outputs (launch/run logs, cleanup lines, build tails, listings; estimate)	various

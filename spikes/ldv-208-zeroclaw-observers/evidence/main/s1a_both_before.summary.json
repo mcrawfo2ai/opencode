@@ -1,0 +1,502 @@
+{
+ "scenario": "s1a_both_before",
+ "session": "s1a_both_before-8c91a9",
+ "timeline": [
+  {
+   "t_ms": 947.725,
+   "stage": "snapshot",
+   "label": "pre-prompt"
+  },
+  {
+   "t_ms": 950.204,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1054.367,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-3486d8ebaaed"
+  },
+  {
+   "t_ms": 2557.657,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 3359.759,
+   "stage": "snapshot",
+   "label": "after-first-chunk"
+  },
+  {
+   "t_ms": 4362.239,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 4465.638,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 5468.809,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 5470.347,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 6976.528,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 6977.508,
+   "stage": "snapshot",
+   "label": "after-done"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 242.064,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1a_both_before-8c91a9\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 2558.821,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-3486d8ebaaed reading fixture. \",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 4369.043,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"/tmp/claude-0/zc/run-main/workspace/fixture.txt\"},\"id\":\"04a624c8-c3f8-4c44-925f-a6e88d82db1c\",\"name\":\"file_read\",\"type\":\"tool_call\"}"
+    },
+    {
+     "i": 3,
+     "t_ms": 4381.827,
+     "type": "tool_result",
+     "brief": "{\"id\":\"04a624c8-c3f8-4c44-925f-a6e88d82db1c\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-092825dc7f9f\\n[1 lines total]\",\"type\":\"tool_result\"}"
+    },
+    {
+     "i": 4,
+     "t_ms": 5476.106,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-3486d8ebaaed tool_result_sha=99f37d5ac9408cdf\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 5,
+     "t_ms": 5485.59,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-3486d8ebaaed tool_result_sha=99f37d5ac9408cdf\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 593.965,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1a_both_before-8c91a9\",\"type\":\"session_start\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "pre-prompt",
+   "t_ms": 947.634,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "after-first-chunk",
+   "t_ms": 3359.753,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "before-final",
+   "t_ms": 5468.783,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "after-done",
+   "t_ms": 6977.505,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 17:36:10 +00:00] Q1a read the fixture nonce=f11ecb",
+    "assistant: MARKER MK-3486d8ebaaed reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-092825dc7f9f [1 lines ",
+    "assistant: FINAL MK-3486d8ebaaed tool_result_sha=99f37d5ac9408cdf"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 944.536,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 1447.85,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1950.567,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2452.678,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2954.887,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3457.372,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3960.969,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4463.747,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4966.568,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5468.589,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:10.046405995+00:00",
+      "last_activity": "2026-10-02T17:36:10.046405995+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-8c91a9"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "running",
+    "turn_id": "643e634c-f9f3-471c-b945-eecbb83349f7",
+    "turn_started_at": "2026-10-02T17:36:10.062482652+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5970.42,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6473.044,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6975.296,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1a_both_before-8c91a9",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 939.924,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 940.216,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 2469.517,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 2469.866,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 2469.99,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 2470.037,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 4274.175,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 4274.679,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 4275.032,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 4275.174,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 4330.451,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 4330.731,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 5382.404,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 5382.812,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 5383.202,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 5383.284,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

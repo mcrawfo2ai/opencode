@@ -1,0 +1,5 @@
+{"t_ms":4297.118,"wall_ms":1790962686712,"ev":"open","data":null}
+{"t_ms":4300.011,"wall_ms":1790962686715,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-7d8963\",\"type\":\"session_start\"}"}
+{"t_ms":5608.842,"wall_ms":1790962688023,"ev":"sent","data":"{\"type\":\"approval_response\",\"request_id\":\"47a15838-b4ad-412a-b5f4-cc8c8f32f9c0\",\"decision\":\"approve\"}"}
+{"t_ms":5624.499,"wall_ms":1790962688039,"ev":"message","data":"{\"message\":\"Unsupported message type \\\"approval_response\\\". Send {\\\"type\\\":\\\"message\\\",\\\"content\\\":\\\"your text\\\"}\",\"type\":\"error\"}"}
+{"t_ms":14697.751,"wall_ms":1790962697112,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

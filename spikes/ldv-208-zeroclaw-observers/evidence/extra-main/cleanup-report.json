@@ -1,0 +1,38 @@
+{
+ "gateway_identity_start": {
+  "pid": 7274,
+  "starttime_ticks": "58517",
+  "cmdline": "/tmp/claude-0/zc/zeroclaw/target/debug/zeroclaw gateway start -p 43965 --host 127.0.0.1"
+ },
+ "gateway_identity_end": {
+  "pid": 7274,
+  "starttime_ticks": "58517",
+  "cmdline": "/tmp/claude-0/zc/zeroclaw/target/debug/zeroclaw gateway start -p 43965 --host 127.0.0.1"
+ },
+ "report": [
+  {
+   "name": "zeroclaw-gateway",
+   "pid": 7274,
+   "identity_recorded": {
+    "pid": 7274,
+    "starttime_ticks": "58517",
+    "cmdline": "/tmp/claude-0/zc/zeroclaw/target/debug/zeroclaw gateway start -p 43965 --host 127.0.0.1"
+   },
+   "identity_matches_before_signal": true,
+   "exit": 143,
+   "alive_after": false
+  },
+  {
+   "name": "stub-provider",
+   "pid": 7273,
+   "identity_recorded": {
+    "pid": 7273,
+    "starttime_ticks": "58507",
+    "cmdline": "python3 /tmp/claude-0/wt/spikes/ldv-208-zeroclaw-observers/scripts/stub_provider.py /tmp/claude-0/zc/run-extra-main/logs/stub.port /tmp/claude-0/zc/run-extra-main/logs/fixture.path /tmp/claude-0/zc/run-extra-main/logs/stub-oracle.jsonl"
+   },
+   "identity_matches_before_signal": true,
+   "exit": 143,
+   "alive_after": false
+  }
+ ]
+}

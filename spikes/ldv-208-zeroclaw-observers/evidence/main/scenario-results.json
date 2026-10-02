@@ -1,0 +1,11 @@
+{
+ "s1a_both_before": "done",
+ "s1b_B_midturn": "done",
+ "s1c_B_after_done": "done",
+ "s2_prompt_from_B:turn1(A)": "done",
+ "s2_prompt_from_B:turn2(B)": "done",
+ "s3a_owner_drop": "done",
+ "s3b_owner_drop_B": "done",
+ "s4_reconnect": "done",
+ "s6_liveness": "done"
+}

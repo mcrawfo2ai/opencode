@@ -1,0 +1,14 @@
+[
+ {
+  "label": "final",
+  "t_ms": 19602.471,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "s5_approval_answer_from_B-e4e099",
+    "session_persistence": true
+   }
+  }
+ }
+]

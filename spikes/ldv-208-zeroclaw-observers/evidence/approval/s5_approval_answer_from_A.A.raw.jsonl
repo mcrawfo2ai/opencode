@@ -1,0 +1,11 @@
+{"t_ms":222.349,"wall_ms":1790962682637,"ev":"open","data":null}
+{"t_ms":225.39,"wall_ms":1790962682640,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_A-f1885e\",\"type\":\"session_start\"}"}
+{"t_ms":927.824,"wall_ms":1790962683342,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"Q5 read the fixture nonce=bad79f\"}"}
+{"t_ms":1034.632,"wall_ms":1790962683449,"ev":"message","data":"{\"content\":\"MARKER MK-84b20984799d reading fixture. \",\"type\":\"chunk\"}"}
+{"t_ms":1841.923,"wall_ms":1790962684257,"ev":"message","data":"{\"arguments_summary\":\"path: /tmp/claude-0/zc/run-approval/workspace/fixture.txt\",\"request_id\":\"aa4fbdf9-8f66-45ea-b61d-2ac3196a887f\",\"timeout_secs\":120,\"tool\":\"file_read\",\"type\":\"approval_request\"}"}
+{"t_ms":1887.272,"wall_ms":1790962684302,"ev":"sent","data":"{\"type\":\"approval_response\",\"request_id\":\"aa4fbdf9-8f66-45ea-b61d-2ac3196a887f\",\"decision\":\"approve\"}"}
+{"t_ms":1889.877,"wall_ms":1790962684305,"ev":"message","data":"{\"args\":{\"path\":\"/tmp/claude-0/zc/run-approval/workspace/fixture.txt\"},\"id\":\"ce7299d5-48ec-47b8-a1f2-72783b433dd5\",\"name\":\"file_read\",\"type\":\"tool_call\"}"}
+{"t_ms":1900.264,"wall_ms":1790962684315,"ev":"message","data":"{\"id\":\"ce7299d5-48ec-47b8-a1f2-72783b433dd5\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-c162b86d132a\\n[1 lines total]\",\"type\":\"tool_result\"}"}
+{"t_ms":1994.116,"wall_ms":1790962684409,"ev":"message","data":"{\"content\":\"FINAL MK-84b20984799d tool_result_sha=72529dcbf84961ad\",\"type\":\"chunk\"}"}
+{"t_ms":2007.213,"wall_ms":1790962684422,"ev":"message","data":"{\"cost_usd\":null,\"full_response\":\"FINAL MK-84b20984799d tool_result_sha=72529dcbf84961ad\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"last_serving_provider_ref\":\"custom.stub\",\"max_context_tokens\":32000,\"model\":\"stub-model\",\"output_tokens\":null,\"provider\":\"custom.stub\",\"provider_ref\":\"custom.stub\",\"tokens_used\":null,\"type\":\"done\",\"usage_by_provider\":[{\"cached_input_tokens\":0,\"cost_usd\":0.0,\"input_tokens\":0,\"model\":\"stub-model\",\"output_tokens\":0,\"provider_ref\":\"custom.stub\"}]}"}
+{"t_ms":3940.69,"wall_ms":1790962686355,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

@@ -1,0 +1,265 @@
+[
+ {
+  "t_ms": 929.172,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 404,
+   "body": {
+    "error": "Session not found"
+   }
+  }
+ },
+ {
+  "t_ms": 1431.585,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 1934.23,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2436.46,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2938.953,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 3441.321,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 3944.079,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 4446.143,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 4949.255,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:57.926959813+00:00",
+      "message_count": 4,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e81c77b4-419c-4b36-8a6d-0c62c3d82200",
+    "turn_started_at": "2026-10-02T17:39:57.932054628+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 5451.693,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 5953.819,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 6456.302,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "idle"
+   }
+  }
+ }
+]

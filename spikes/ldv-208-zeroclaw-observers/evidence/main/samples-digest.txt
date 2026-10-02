@@ -1,0 +1,43 @@
+=== s1a_both_before: 13 samples
+  945..945ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  1448..5469ms x9  [200,{"sessions":[{"created_at":"2026-10-02T17:36:10.046405995+00:00","last_activity":"2026-10-02T17:36:10.046405995+00:00","message_count":0,"session_id":"s1a_both_before-8c91a9"}]},200,{"session_id":"s1a_both_before-8c91a9","state":"running","turn_id":"643e6
+  5970..6975ms x3  [200,{"sessions":[]},200,{"session_id":"s1a_both_before-8c91a9","state":"idle"}]
+  stages: 950:prompt_sent 1054:stub_g1_waiting 2558:g1_released 4362:g2_released 4466:stub_g3_waiting 5470:g3_released 6977:turn_window_end
+=== s1b_B_midturn: 9 samples
+  7837..7837ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  8339..10349ms x5  [200,{"sessions":[{"created_at":"2026-10-02T17:36:16.934118588+00:00","last_activity":"2026-10-02T17:36:16.934118588+00:00","message_count":0,"session_id":"s1b_B_midturn-7fdbaa"}]},200,{"session_id":"s1b_B_midturn-7fdbaa","state":"running","turn_id":"1a86590e-
+  10851..11856ms x3  [200,{"sessions":[]},200,{"session_id":"s1b_B_midturn-7fdbaa","state":"idle"}]
+  stages: 7838:prompt_sent 7942:stub_g1_waiting 7944:g1_released 9097:B_attached_after_first_chunk 9599:g2_released 9704:stub_g3_waiting 10709:g3_released 12211:turn_window_end
+=== s1c_B_after_done: 10 samples
+  12715..12715ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  13217..13719ms x2  [200,{"sessions":[{"created_at":"2026-10-02T17:36:21.812660079+00:00","last_activity":"2026-10-02T17:36:21.812660079+00:00","message_count":0,"session_id":"s1c_B_after_done-05c456"}]},200,{"session_id":"s1c_B_after_done-05c456","state":"running","turn_id":"f2a
+  14222..17236ms x7  [200,{"sessions":[]},200,{"session_id":"s1c_B_after_done-05c456","state":"idle"}]
+  stages: 12717:prompt_sent 12821:stub_g1_waiting 12823:g1_released 13626:g2_released 13730:stub_g3_waiting 13732:g3_released 15236:turn_window_end 15589:B_attached_after_done
+=== s2_prompt_from_B: 11 samples
+  18447..18447ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  18949..19451ms x2  [200,{"sessions":[{"created_at":"2026-10-02T17:36:27.544164888+00:00","last_activity":"2026-10-02T17:36:27.544164888+00:00","message_count":0,"session_id":"s2_prompt_from_B-a571a4"}]},200,{"session_id":"s2_prompt_from_B-a571a4","state":"running","turn_id":"2f6
+  19954..20958ms x3  [200,{"sessions":[]},200,{"session_id":"s2_prompt_from_B-a571a4","state":"idle"}]
+  21460..21963ms x2  [200,{"sessions":[{"created_at":"2026-10-02T17:36:27.544164888+00:00","last_activity":"2026-10-02T17:36:28.566485993+00:00","message_count":4,"session_id":"s2_prompt_from_B-a571a4"}]},200,{"session_id":"s2_prompt_from_B-a571a4","state":"running","turn_id":"4a4
+  22465..23470ms x3  [200,{"sessions":[]},200,{"session_id":"s2_prompt_from_B-a571a4","state":"idle"}]
+  stages: 18448:prompt_sent 18552:stub_g1_waiting 18555:g1_released 19360:g2_released 19465:stub_g3_waiting 19468:g3_released 20970:turn_window_end 20971:A_idle_now_prompt_on_B 20971:frame_counts_before_turn2 20974:prompt_sent 21078:stub_g1_waiting 21081:g1_released 21885:g2_released 21991:stub_g3_waiting 21993:g3_released 23496:turn_window_end
+=== s3a_owner_drop: 14 samples
+  24329..24329ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  24831..29355ms x10  [200,{"sessions":[{"created_at":"2026-10-02T17:36:33.426267543+00:00","last_activity":"2026-10-02T17:36:33.426267543+00:00","message_count":0,"session_id":"s3a_owner_drop-2058b7"}]},200,{"session_id":"s3a_owner_drop-2058b7","state":"running","turn_id":"4b5d8d3
+  29857..30861ms x3  [200,{"sessions":[]},200,{"session_id":"s3a_owner_drop-2058b7","state":"idle"}]
+  stages: 24330:prompt_sent 24435:stub_g1_waiting 24437:g1_released 25238:A_closed_mid_turn 29744:g2_released 29849:stub_g3_waiting 29853:g3_released 31355:turn_window_end
+=== s3b_owner_drop_B: 15 samples
+  32074..32074ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  32575..37597ms x11  [200,{"sessions":[{"created_at":"2026-10-02T17:36:41.171611796+00:00","last_activity":"2026-10-02T17:36:41.171611796+00:00","message_count":0,"session_id":"s3b_owner_drop_B-7ba851"}]},200,{"session_id":"s3b_owner_drop_B-7ba851","state":"running","turn_id":"291
+  38099..39103ms x3  [200,{"sessions":[]},200,{"session_id":"s3b_owner_drop_B-7ba851","state":"idle"}]
+  stages: 32076:prompt_sent 32181:stub_g1_waiting 32183:g1_released 32984:A_closed_mid_turn 37491:g2_released 37595:stub_g3_waiting 37600:g3_released 39103:turn_window_end
+=== s4_reconnect: 12 samples
+  39964..39964ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  40466..43983ms x8  [200,{"sessions":[{"created_at":"2026-10-02T17:36:49.062856340+00:00","last_activity":"2026-10-02T17:36:49.062856340+00:00","message_count":0,"session_id":"s4_reconnect-5f560a"}]},200,{"session_id":"s4_reconnect-5f560a","state":"running","turn_id":"4498acab-5c
+  44485..45489ms x3  [200,{"sessions":[]},200,{"session_id":"s4_reconnect-5f560a","state":"idle"}]
+  stages: 39967:prompt_sent 40072:stub_g1_waiting 40074:g1_released 40875:A_closed_mid_turn 41726:A2_opened_same_session 43229:g2_released 43336:stub_g3_waiting 44339:g3_released 45895:turn_window_end
+=== s6_liveness: 29 samples
+  46349..47353ms x3  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  47855..47855ms x1  [200,{"sessions":[]},200,{"session_id":"s6_liveness-0964d4","state":"idle"}]
+  48357..57394ms x19  [200,{"sessions":[{"created_at":"2026-10-02T17:36:56.948987150+00:00","last_activity":"2026-10-02T17:36:56.948987150+00:00","message_count":0,"session_id":"s6_liveness-0964d4"}]},200,{"session_id":"s6_liveness-0964d4","state":"running","turn_id":"4db1fc83-c5f4
+  57896..60406ms x6  [200,{"sessions":[]},200,{"session_id":"s6_liveness-0964d4","state":"idle"}]
+  stages: 47850:idle_baseline_done 47853:prompt_sent 47958:stub_g1_waiting 50961:g1_released 54764:g2_released 54870:stub_g3_waiting 57872:g3_released 59378:turn_window_end

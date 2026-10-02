@@ -1,0 +1,388 @@
+{
+ "scenario": "s1c_B_after_done",
+ "session": "s1c_B_after_done-05c456",
+ "timeline": [
+  {
+   "t_ms": 12716.725,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 12820.795,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-7ef5f2d928d6"
+  },
+  {
+   "t_ms": 12823.021,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 13626.171,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 13729.961,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 13732.419,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 15235.638,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 15236.838,
+   "stage": "snapshot",
+   "label": "after-done-before-B"
+  },
+  {
+   "t_ms": 15588.691,
+   "stage": "B_attached_after_done"
+  },
+  {
+   "t_ms": 17590.981,
+   "stage": "snapshot",
+   "label": "after-B-attached"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 12366.414,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1c_B_after_done-05c456\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 12824.252,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-7ef5f2d928d6 reading fixture. \",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 13630.74,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"/tmp/claude-0/zc/run-main/workspace/fixture.txt\"},\"id\":\"6f9c31d5-30cb-4acd-bbf7-1b7d3a2e85e5\",\"name\":\"file_read\",\"type\":\"tool_call\"}"
+    },
+    {
+     "i": 3,
+     "t_ms": 13640.728,
+     "type": "tool_result",
+     "brief": "{\"id\":\"6f9c31d5-30cb-4acd-bbf7-1b7d3a2e85e5\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-092825dc7f9f\\n[1 lines total]\",\"type\":\"tool_result\"}"
+    },
+    {
+     "i": 4,
+     "t_ms": 13738.821,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-7ef5f2d928d6 tool_result_sha=99f37d5ac9408cdf\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 5,
+     "t_ms": 13738.873,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-7ef5f2d928d6 tool_result_sha=99f37d5ac9408cdf\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 15240.767,
+     "type": "session_start",
+     "brief": "{\"message_count\":4,\"resumed\":true,\"session_id\":\"s1c_B_after_done-05c456\",\"type\":\"session_start\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "after-done-before-B",
+   "t_ms": 15236.834,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 17:36:21 +00:00] Q1c read the fixture nonce=1ca736",
+    "assistant: MARKER MK-7ef5f2d928d6 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-092825dc7f9f [1 lines ",
+    "assistant: FINAL MK-7ef5f2d928d6 tool_result_sha=99f37d5ac9408cdf"
+   ]
+  },
+  {
+   "label": "after-B-attached",
+   "t_ms": 17590.976,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 17:36:21 +00:00] Q1c read the fixture nonce=1ca736",
+    "assistant: MARKER MK-7ef5f2d928d6 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-092825dc7f9f [1 lines ",
+    "assistant: FINAL MK-7ef5f2d928d6 tool_result_sha=99f37d5ac9408cdf"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 12715.115,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 13217.07,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:21.812660079+00:00",
+      "last_activity": "2026-10-02T17:36:21.812660079+00:00",
+      "message_count": 0,
+      "session_id": "s1c_B_after_done-05c456"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "running",
+    "turn_id": "f2a7d4ad-23a1-436c-9c9d-973a3e1bb4dc",
+    "turn_started_at": "2026-10-02T17:36:21.824650889+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 13719.423,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:36:21.812660079+00:00",
+      "last_activity": "2026-10-02T17:36:21.812660079+00:00",
+      "message_count": 0,
+      "session_id": "s1c_B_after_done-05c456"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "running",
+    "turn_id": "f2a7d4ad-23a1-436c-9c9d-973a3e1bb4dc",
+    "turn_started_at": "2026-10-02T17:36:21.824650889+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 14221.527,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 14723.976,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 15225.841,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 15727.804,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 16230.349,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 16733.203,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 17235.746,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-05c456",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 34,
+   "mono_ms": 12695.421,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 35,
+   "mono_ms": 12695.879,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 36,
+   "mono_ms": 12735.18,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 37,
+   "mono_ms": 12735.476,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 38,
+   "mono_ms": 12735.765,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 39,
+   "mono_ms": 12735.818,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 40,
+   "mono_ms": 13538.258,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 41,
+   "mono_ms": 13538.625,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 42,
+   "mono_ms": 13539.32,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 43,
+   "mono_ms": 13540.115,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 44,
+   "mono_ms": 13587.931,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 45,
+   "mono_ms": 13588.189,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 46,
+   "mono_ms": 13644.543,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 47,
+   "mono_ms": 13644.898,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 48,
+   "mono_ms": 13645.143,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 49,
+   "mono_ms": 13645.271,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

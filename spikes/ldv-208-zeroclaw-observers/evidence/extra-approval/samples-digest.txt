@@ -1,0 +1,5 @@
+=== x1_drop_during_approval: 12 samples
+  927..927ms x1  [200,{"sessions":[]},404,{"error":"Session not found"}]
+  1430..3941ms x6  [200,{"sessions":[{"created_at":"2026-10-02T17:39:47.183021627+00:00","last_activity":"2026-10-02T17:39:47.183021627+00:00","message_count":0,"session_id":"x1_drop_during_approval-47ae3f"}]},200,{"session_id":"x1_drop_during_approval-47ae3f","state":"running",
+  4443..6452ms x5  [200,{"sessions":[]},200,{"session_id":"x1_drop_during_approval-47ae3f","state":"idle"}]
+  stages: 929:prompt_sent 1887:approval_request_seen_on_A 1887:A_closed_with_approval_pending 4391:phase2_request_seen

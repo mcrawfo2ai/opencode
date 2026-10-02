@@ -1,0 +1,47 @@
+[
+ {
+  "label": "before-final",
+  "t_ms": 10706.491,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "s1b_B_midturn-7fdbaa",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "after-done",
+  "t_ms": 12212.461,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 17:36:16 +00:00]\n\nQ1b read the fixture nonce=c00c3a",
+      "created_at": "2026-10-02T17:36:19.808506677+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-0a787fd2f316 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"/tmp/claude-0/zc/run-main/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T17:36:19.808506677+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-092825dc7f9f\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T17:36:19.808506677+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-0a787fd2f316 tool_result_sha=99f37d5ac9408cdf",
+      "created_at": "2026-10-02T17:36:19.808506677+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s1b_B_midturn-7fdbaa",
+    "session_persistence": true
+   }
+  }
+ }
+]

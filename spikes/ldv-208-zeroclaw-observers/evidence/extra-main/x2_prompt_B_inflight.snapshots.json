@@ -1,0 +1,67 @@
+[
+ {
+  "label": "B-prompt+2.5s",
+  "t_ms": 4343.135,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 6863.505,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 17:39:54 +00:00]\n\nX2 first prompt from A nonce=3929bf",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-928a5db41130 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"/tmp/claude-0/zc/run-extra-main/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-5a07167bb50b\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-928a5db41130 tool_result_sha=9dc413fcca1d5f9f",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 17:39:57 +00:00]\n\nX2 second prompt from B nonce=2e22e2",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-cf22a544476b reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"/tmp/claude-0/zc/run-extra-main/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-5a07167bb50b\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-cf22a544476b tool_result_sha=9dc413fcca1d5f9f",
+      "created_at": "2026-10-02T17:39:58.878397414+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "session_persistence": true
+   }
+  }
+ }
+]

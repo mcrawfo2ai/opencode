@@ -1,0 +1,9 @@
+{"t_ms":577.012,"wall_ms":1790962794041,"ev":"open","data":null}
+{"t_ms":579.766,"wall_ms":1790962794044,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"x2_prompt_B_inflight-3fcf0b\",\"type\":\"session_start\"}"}
+{"t_ms":1838.657,"wall_ms":1790962795303,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"X2 second prompt from B nonce=2e22e2\"}"}
+{"t_ms":4557.219,"wall_ms":1790962798021,"ev":"message","data":"{\"content\":\"MARKER MK-cf22a544476b reading fixture. \",\"type\":\"chunk\"}"}
+{"t_ms":5363.715,"wall_ms":1790962798828,"ev":"message","data":"{\"args\":{\"path\":\"/tmp/claude-0/zc/run-extra-main/workspace/fixture.txt\"},\"id\":\"ab42988e-a6d0-4f80-a350-8c9103a3a593\",\"name\":\"file_read\",\"type\":\"tool_call\"}"}
+{"t_ms":5373.757,"wall_ms":1790962798838,"ev":"message","data":"{\"id\":\"ab42988e-a6d0-4f80-a350-8c9103a3a593\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-5a07167bb50b\\n[1 lines total]\",\"type\":\"tool_result\"}"}
+{"t_ms":5413.385,"wall_ms":1790962798878,"ev":"message","data":"{\"content\":\"FINAL MK-cf22a544476b tool_result_sha=9dc413fcca1d5f9f\",\"type\":\"chunk\"}"}
+{"t_ms":5415.139,"wall_ms":1790962798879,"ev":"message","data":"{\"cost_usd\":null,\"full_response\":\"FINAL MK-cf22a544476b tool_result_sha=9dc413fcca1d5f9f\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"last_serving_provider_ref\":\"custom.stub\",\"max_context_tokens\":32000,\"model\":\"stub-model\",\"output_tokens\":null,\"provider\":\"custom.stub\",\"provider_ref\":\"custom.stub\",\"tokens_used\":null,\"type\":\"done\",\"usage_by_provider\":[{\"cached_input_tokens\":0,\"cost_usd\":0.0,\"input_tokens\":0,\"model\":\"stub-model\",\"output_tokens\":0,\"provider_ref\":\"custom.stub\"}]}"}
+{"t_ms":6959.638,"wall_ms":1790962800424,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

@@ -1,0 +1,592 @@
+{
+ "scenario": "x2_prompt_B_inflight",
+ "session": "x2_prompt_B_inflight-3fcf0b",
+ "timeline": [
+  {
+   "t_ms": 930.887,
+   "stage": "prompt_A_sent"
+  },
+  {
+   "t_ms": 1838.796,
+   "stage": "prompt_B_sent_while_A_inflight"
+  },
+  {
+   "t_ms": 4341.491,
+   "stage": "second_request_reached_stub_while_A_gated",
+   "seen": false
+  },
+  {
+   "t_ms": 4343.145,
+   "stage": "snapshot",
+   "label": "B-prompt+2.5s"
+  },
+  {
+   "t_ms": 4448.811,
+   "stage": "A_turn_finished_at_stub"
+  },
+  {
+   "t_ms": 4554.377,
+   "stage": "second_turn_g1_waiting",
+   "marker": "MK-cf22a544476b"
+  },
+  {
+   "t_ms": 6863.51,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 228.037,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x2_prompt_B_inflight-3fcf0b\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1037.514,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-928a5db41130 reading fixture. \",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 4351.8,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"/tmp/claude-0/zc/run-extra-main/workspace/fixture.txt\"},\"id\":\"c83cdd1c-8d0d-48b2-8d8f-8639cd801df0\",\"name\":\"file_read\",\"type\":\"tool_call\"}"
+    },
+    {
+     "i": 3,
+     "t_ms": 4364.355,
+     "type": "tool_result",
+     "brief": "{\"id\":\"c83cdd1c-8d0d-48b2-8d8f-8639cd801df0\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-5a07167bb50b\\n[1 lines total]\",\"type\":\"tool_result\"}"
+    },
+    {
+     "i": 4,
+     "t_ms": 4449.784,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-928a5db41130 tool_result_sha=9dc413fcca1d5f9f\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 5,
+     "t_ms": 4463.696,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-928a5db41130 tool_result_sha=9dc413fcca1d5f9f\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 579.819,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x2_prompt_B_inflight-3fcf0b\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 4557.274,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-cf22a544476b reading fixture. \",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 5363.776,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"/tmp/claude-0/zc/run-extra-main/workspace/fixture.txt\"},\"id\":\"ab42988e-a6d0-4f80-a350-8c9103a3a593\",\"name\":\"file_read\",\"type\":\"tool_call\"}"
+    },
+    {
+     "i": 3,
+     "t_ms": 5373.802,
+     "type": "tool_result",
+     "brief": "{\"id\":\"ab42988e-a6d0-4f80-a350-8c9103a3a593\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-5a07167bb50b\\n[1 lines total]\",\"type\":\"tool_result\"}"
+    },
+    {
+     "i": 4,
+     "t_ms": 5413.517,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-cf22a544476b tool_result_sha=9dc413fcca1d5f9f\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 5,
+     "t_ms": 5415.21,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-cf22a544476b tool_result_sha=9dc413fcca1d5f9f\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "B-prompt+2.5s",
+   "t_ms": 4343.135,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "final",
+   "t_ms": 6863.505,
+   "status": 200,
+   "count": 8,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 17:39:54 +00:00] X2 first prompt from A nonce=3929bf",
+    "assistant: MARKER MK-928a5db41130 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-5a07167bb50b [1 lines ",
+    "assistant: FINAL MK-928a5db41130 tool_result_sha=9dc413fcca1d5f9f",
+    "user: [CURRENT DATE & TIME: 2026-10-02 17:39:57 +00:00] X2 second prompt from B nonce=2e22e2",
+    "assistant: MARKER MK-cf22a544476b reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-5a07167bb50b [1 lines ",
+    "assistant: FINAL MK-cf22a544476b tool_result_sha=9dc413fcca1d5f9f"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 929.172,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 1431.585,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1934.23,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2436.46,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2938.953,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3441.321,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3944.079,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4446.143,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:54.396104647+00:00",
+      "message_count": 0,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e27ad1a5-f085-4eed-902d-85725dfc969e",
+    "turn_started_at": "2026-10-02T17:39:54.408932480+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4949.255,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T17:39:54.396104647+00:00",
+      "last_activity": "2026-10-02T17:39:57.926959813+00:00",
+      "message_count": 4,
+      "session_id": "x2_prompt_B_inflight-3fcf0b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "running",
+    "turn_id": "e81c77b4-419c-4b36-8a6d-0c62c3d82200",
+    "turn_started_at": "2026-10-02T17:39:57.932054628+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5451.693,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5953.819,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6456.302,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x2_prompt_B_inflight-3fcf0b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 942.122,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 942.532,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 979.2,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 979.502,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 979.775,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 979.82,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 4287.39,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 4287.716,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 4288.684,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 4289.018,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 4343.125,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 4343.354,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 4391.885,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 4392.144,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 4392.375,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 4392.511,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 18,
+   "mono_ms": 4460.499,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 19,
+   "mono_ms": 4460.862,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 20,
+   "mono_ms": 4498.815,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 21,
+   "mono_ms": 4499.237,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 22,
+   "mono_ms": 4499.569,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 23,
+   "mono_ms": 4499.616,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 24,
+   "mono_ms": 5301.013,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 25,
+   "mono_ms": 5301.424,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 26,
+   "mono_ms": 5301.828,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 27,
+   "mono_ms": 5303.011,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 28,
+   "mono_ms": 5303.833,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 29,
+   "mono_ms": 5351.635,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 30,
+   "mono_ms": 5351.869,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 31,
+   "mono_ms": 5351.938,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 32,
+   "mono_ms": 5352.007,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 33,
+   "mono_ms": 5352.043,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

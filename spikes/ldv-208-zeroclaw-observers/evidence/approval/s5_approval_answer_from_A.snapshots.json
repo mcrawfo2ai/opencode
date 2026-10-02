@@ -1,0 +1,35 @@
+[
+ {
+  "label": "final",
+  "t_ms": 3549.429,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 17:38:03 +00:00]\n\nQ5 read the fixture nonce=bad79f",
+      "created_at": "2026-10-02T17:38:04.421427635+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-84b20984799d reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"/tmp/claude-0/zc/run-approval/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T17:38:04.421427635+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-c162b86d132a\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T17:38:04.421427635+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-84b20984799d tool_result_sha=72529dcbf84961ad",
+      "created_at": "2026-10-02T17:38:04.421427635+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s5_approval_answer_from_A-f1885e",
+    "session_persistence": true
+   }
+  }
+ }
+]
