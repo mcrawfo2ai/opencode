@@ -1,0 +1,157 @@
+[
+ {
+  "seq": 2,
+  "mono_ms": 948.909,
+  "kind": "request_received",
+  "phase": 1,
+  "stream": true,
+  "marker": "MK-bef5d1189b82",
+  "prompt_sha": "bef5d1189b8221b2",
+  "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 18:24:14 +00:00]\n\nX1 read the fixture nonce=ba7391",
+  "roles": [
+   "system",
+   "user"
+  ],
+  "last_role": "user",
+  "tool_names": [],
+  "last_tool_content_sha": null,
+  "last_tool_content_head": null,
+  "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+  "system_tool_call_tag": true,
+  "has_authorization": false
+ },
+ {
+  "seq": 3,
+  "mono_ms": 949.158,
+  "kind": "gate_wait",
+  "gate": "g1",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 4,
+  "mono_ms": 981.107,
+  "kind": "gate_release_ack",
+  "gate": "g1",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 5,
+  "mono_ms": 981.44,
+  "kind": "gate_open",
+  "gate": "g1",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 6,
+  "mono_ms": 981.705,
+  "kind": "emitted",
+  "marker": "MK-bef5d1189b82",
+  "delta_keys": [
+   "role",
+   "content"
+  ],
+  "finish": null
+ },
+ {
+  "seq": 7,
+  "mono_ms": 981.752,
+  "kind": "gate_wait",
+  "gate": "g2",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 8,
+  "mono_ms": 1783.165,
+  "kind": "gate_release_ack",
+  "gate": "g2",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 9,
+  "mono_ms": 1783.525,
+  "kind": "gate_open",
+  "gate": "g2",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 10,
+  "mono_ms": 1783.87,
+  "kind": "emitted",
+  "marker": "MK-bef5d1189b82",
+  "delta_keys": [
+   "content"
+  ],
+  "finish": null
+ },
+ {
+  "seq": 11,
+  "mono_ms": 1783.939,
+  "kind": "emitted",
+  "marker": "MK-bef5d1189b82",
+  "delta_keys": [],
+  "finish": "stop"
+ },
+ {
+  "seq": 12,
+  "mono_ms": 1882.657,
+  "kind": "request_received",
+  "phase": 2,
+  "stream": true,
+  "marker": "MK-bef5d1189b82",
+  "prompt_sha": "bef5d1189b8221b2",
+  "prompt_head": "[CURRENT DATE & TIME: 2026-10-02 18:24:14 +00:00]\n\nX1 read the fixture nonce=ba7391",
+  "roles": [
+   "system",
+   "user",
+   "assistant",
+   "user"
+  ],
+  "last_role": "user",
+  "tool_names": [],
+  "last_tool_content_sha": "3e48f01580f888cf",
+  "last_tool_content_head": "[Tool results]\n<tool_result name=\"file_read\">\nTool call not executed: 'file_read' requires approval and no operator decision was available, so the runtime denied it by policy. This was not a user's de",
+  "system_file_read_excerpt": "s\n\nSkills are listed in the system prompt. Use `read_skill` when available, or `file_read` on a skill file, for full details.\nKeep local notes (SSH hosts, device names, etc.) in `TOOLS.md`.\n\n## Crash Recovery\n\n- If a run stops unexpectedly, recover context before acting.\n- Check `MEMORY.md` + latest `memory/*.md` notes to avoid duplicate ",
+  "system_tool_call_tag": true,
+  "has_authorization": false
+ },
+ {
+  "seq": 13,
+  "mono_ms": 1882.926,
+  "kind": "gate_wait",
+  "gate": "g3",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 14,
+  "mono_ms": 4340.777,
+  "kind": "gate_release_ack",
+  "gate": "g3",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 15,
+  "mono_ms": 4341.024,
+  "kind": "gate_open",
+  "gate": "g3",
+  "marker": "MK-bef5d1189b82"
+ },
+ {
+  "seq": 16,
+  "mono_ms": 4341.324,
+  "kind": "emitted",
+  "marker": "MK-bef5d1189b82",
+  "delta_keys": [
+   "role",
+   "content"
+  ],
+  "finish": null
+ },
+ {
+  "seq": 17,
+  "mono_ms": 4341.465,
+  "kind": "emitted",
+  "marker": "MK-bef5d1189b82",
+  "delta_keys": [],
+  "finish": "stop"
+ }
+]

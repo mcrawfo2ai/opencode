@@ -1,0 +1,352 @@
+{
+ "scenario": "s5_approval_answer_from_A",
+ "session": "s5_approval_answer_from_A-d021d7",
+ "timeline": [
+  {
+   "t_ms": 938.24,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1846.855,
+   "stage": "g1_g2_released"
+  },
+  {
+   "t_ms": 1898.004,
+   "stage": "approval_request_seen",
+   "seen": true,
+   "A": 1,
+   "B": 1
+  },
+  {
+   "t_ms": 1898.302,
+   "stage": "approval_response_sent",
+   "from": "A"
+  },
+  {
+   "t_ms": 3509.92,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 235.948,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_A-d021d7\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1045.164,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-749fafa6eefd reading fixture. \",\"seq\":1,\"session_id\":\"s5_approval_answer_from_A-d021d7\",\"turn_id\":\"5546dc5c-c20f-482c-8501-48338fd39c4a\",\"type\":\"chu…"
+    },
+    {
+     "i": 2,
+     "t_ms": 1854.218,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"20e50143-3a8c-400d-9e20-fa2ec2220cb7\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 1902.039,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-patched-ap/workspace/fixture.txt\"},\"id\":\"cfbf1b08-066b-43cb-9160-52…"
+    },
+    {
+     "i": 4,
+     "t_ms": 1919.699,
+     "type": "tool_result",
+     "brief": "{\"id\":\"cfbf1b08-066b-43cb-9160-5203512b3eb9\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-fa3e9a46e65e\\n[1 lines total]\",\"seq\":4,\"session_id\":\"s5_approval_answer_fr…"
+    },
+    {
+     "i": 5,
+     "t_ms": 2004.699,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-749fafa6eefd tool_result_sha=c4b1a40f540bbc35\",\"seq\":5,\"session_id\":\"s5_approval_answer_from_A-d021d7\",\"turn_id\":\"5546dc5c-c20f-482c-8501-48338fd39c4…"
+    },
+    {
+     "i": 6,
+     "t_ms": 2018.186,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-749fafa6eefd tool_result_sha=c4b1a40f540bbc35\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 587.023,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_A-d021d7\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1045.2,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-749fafa6eefd reading fixture. \",\"seq\":1,\"session_id\":\"s5_approval_answer_from_A-d021d7\",\"turn_id\":\"5546dc5c-c20f-482c-8501-48338fd39c4a\",\"type\":\"chu…"
+    },
+    {
+     "i": 2,
+     "t_ms": 1854.276,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"20e50143-3a8c-400d-9e20-fa2ec2220cb7\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 1902.082,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-patched-ap/workspace/fixture.txt\"},\"id\":\"cfbf1b08-066b-43cb-9160-52…"
+    },
+    {
+     "i": 4,
+     "t_ms": 1919.739,
+     "type": "tool_result",
+     "brief": "{\"id\":\"cfbf1b08-066b-43cb-9160-5203512b3eb9\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-fa3e9a46e65e\\n[1 lines total]\",\"seq\":4,\"session_id\":\"s5_approval_answer_fr…"
+    },
+    {
+     "i": 5,
+     "t_ms": 2004.791,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-749fafa6eefd tool_result_sha=c4b1a40f540bbc35\",\"seq\":5,\"session_id\":\"s5_approval_answer_from_A-d021d7\",\"turn_id\":\"5546dc5c-c20f-482c-8501-48338fd39c4…"
+    },
+    {
+     "i": 6,
+     "t_ms": 2020.021,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-749fafa6eefd tool_result_sha=c4b1a40f540bbc35\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "final",
+   "t_ms": 3509.913,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:21:03 +00:00] Q5 read the fixture nonce=a219b2",
+    "assistant: MARKER MK-749fafa6eefd reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-fa3e9a46e65e [1 lines ",
+    "assistant: FINAL MK-749fafa6eefd tool_result_sha=c4b1a40f540bbc35"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 936.231,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 1439.207,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:03.334175416+00:00",
+      "last_activity": "2026-10-02T18:21:03.347872909+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_A-d021d7"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-d021d7",
+    "state": "running",
+    "turn_id": "5546dc5c-c20f-482c-8501-48338fd39c4a",
+    "turn_started_at": "2026-10-02T18:21:03.347773358+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1947.258,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:03.334175416+00:00",
+      "last_activity": "2026-10-02T18:21:04.313601479+00:00",
+      "message_count": 3,
+      "session_id": "s5_approval_answer_from_A-d021d7"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-d021d7",
+    "state": "running",
+    "turn_id": "5546dc5c-c20f-482c-8501-48338fd39c4a",
+    "turn_started_at": "2026-10-02T18:21:03.347773358+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2449.685,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-d021d7",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2952.009,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-d021d7",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3454.265,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-d021d7",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 954.684,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 954.97,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 986.923,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 987.253,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 987.443,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 987.483,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 1789.405,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 1789.94,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 1790.949,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 1791.152,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 1912.601,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 1912.944,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 1946.68,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 1947.068,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 1947.281,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 1947.347,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

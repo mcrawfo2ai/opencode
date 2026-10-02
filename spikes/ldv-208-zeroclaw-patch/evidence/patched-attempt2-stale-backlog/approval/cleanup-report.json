@@ -1,0 +1,38 @@
+{
+ "gateway_identity_start": {
+  "pid": 17721,
+  "starttime_ticks": "91046",
+  "cmdline": "<SCRATCH>/bin/zeroclaw-patched gateway start -p 41509 --host 127.0.0.1"
+ },
+ "gateway_identity_end": {
+  "pid": 17721,
+  "starttime_ticks": "91046",
+  "cmdline": "<SCRATCH>/bin/zeroclaw-patched gateway start -p 41509 --host 127.0.0.1"
+ },
+ "report": [
+  {
+   "name": "zeroclaw-gateway",
+   "pid": 17721,
+   "identity_recorded": {
+    "pid": 17721,
+    "starttime_ticks": "91046",
+    "cmdline": "<SCRATCH>/bin/zeroclaw-patched gateway start -p 41509 --host 127.0.0.1"
+   },
+   "identity_matches_before_signal": true,
+   "exit": 143,
+   "alive_after": false
+  },
+  {
+   "name": "stub-provider",
+   "pid": 17720,
+   "identity_recorded": {
+    "pid": 17720,
+    "starttime_ticks": "91036",
+    "cmdline": "python3 <REPO>/spikes/ldv-208-zeroclaw-patch/scripts/stub_provider.py <SCRATCH>/run-patched-ap/logs/stub.port <SCRATCH>/run-patched-ap/logs/fixture.path <SCRATCH>/run-patched-ap/logs/stub-oracle.jsonl"
+   },
+   "identity_matches_before_signal": true,
+   "exit": 143,
+   "alive_after": false
+  }
+ ]
+}

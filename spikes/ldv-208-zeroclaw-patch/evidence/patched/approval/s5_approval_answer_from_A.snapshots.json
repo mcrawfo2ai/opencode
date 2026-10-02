@@ -1,0 +1,35 @@
+[
+ {
+  "label": "final",
+  "t_ms": 3532.319,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:25:49 +00:00]\n\nQ5 read the fixture nonce=5d7203",
+      "created_at": "2026-10-02T18:25:50.174785407+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-fc8d3aa5bc74 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-p5-approval/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:25:50.174785407+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-6d32c0bf5f28\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:25:50.174785407+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-fc8d3aa5bc74 tool_result_sha=7fa8e50f7a3de064",
+      "created_at": "2026-10-02T18:25:50.174785407+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s5_approval_answer_from_A-a92bbd",
+    "session_persistence": true
+   }
+  }
+ }
+]

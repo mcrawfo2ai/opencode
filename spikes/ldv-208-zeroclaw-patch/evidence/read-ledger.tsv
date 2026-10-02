@@ -1,0 +1,61 @@
+bytes	source
+17211	observers HANDOFF.md (cat)
+3000	(estimate) initial git/env/ls output, ls-remote, wc output, brief re-read ~0 (brief counted separately)
+5200	run-observers.mjs L1-80
+138	ws.rs 778-790,930-1050 bash -c sed -n 778,790p ws.rs; echo ----; sed -n 930,1050p ws.rs
+5456	ws.rs 778-790,930-1050
+4402	ws.rs 1692-1790
+8797	ws.rs 1790-1850,1995-2100
+416	ws.rs 1099-1112
+2884	grep backend trait + event_tx + event_matches_session
+938	ws.rs 1436-1462
+521	grep prod channel cap + session_backend trait
+1632	sse.rs 50-90
+1951	grep prod broadcast cap, is_public_sse_event, replace fn
+730	grep event_tx creation
+1781	ws.rs 466-482,636-672
+776	event_bus capacity grep
+2665	broadcast.rs 1-110 grep-filtered
+2490	grep sender.send in 1700-2430
+4164	ws.rs 1962-1984,2296-2324,2376-2396
+1723	ws.rs 2100-2136
+67	ChatMessage ctor grep
+303	jq messages shape from prior evidence
+544	jq snapshots keys + messages
+380	frame-seq on prior evidence s1
+518	git log grep PR numbers
+1764	CONTRIBUTING headings + RFC/size grep
+3369	CONTRIBUTING 126-155 + rfcs.md head
+1424	rfcs.md 9-30
+6500	(estimate) GitHub MCP search results x8 + WebFetch summaries x4 + tool schemas not counted
+233	git drift log
+623	frame-seq baseline main
+258	snapshot structure
+719	msg-counts baseline s1a,s3a
+390	test-base summary
+768	frame-seq patched main
+1057	frame-seq patched main v2
+1410	msg-counts patched s1a,s3a,s4
+316	frame-seq baseline approval
+536	frame-seq patched approval
+6838	git diff -U0 view
+347	frame-seq patched x2
+589	test-patched failure detail
+1849	ws.rs test 3458-3490
+1062	frame-seq patched main (final)
+204	frame-seq patched approval (final)
+89	frame-seq patched extra-main (final)
+95	frame-seq patched extra-approval (final)
+536	frame-seq patched approval (final)
+347	frame-seq patched extra-main (final)
+213	frame-seq patched extra-approval (final)
+0	frame-seq patched extra-main (final)
+0	frame-seq patched extra-approval (final)
+1057	frame-seq patched main (final)
+536	frame-seq patched approval (final)
+347	frame-seq patched extra-main (final)
+213	frame-seq patched extra-approval (final)
+474	frame-seq final smoke
+1951	msg-counts final patched s1a,s3a,s3b,s4
+912	grep pending_approvals creation/answer sites
+9000	(estimate) unlogged small outputs: build/test tails, git stat lines, python edit echo, frame-seq reruns shown twice, ls/pgrep, WebFetch prompt overhead

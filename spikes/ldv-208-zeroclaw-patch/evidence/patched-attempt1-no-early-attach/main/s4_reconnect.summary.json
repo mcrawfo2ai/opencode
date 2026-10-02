@@ -1,0 +1,445 @@
+{
+ "scenario": "s4_reconnect",
+ "session": "s4_reconnect-186725",
+ "timeline": [
+  {
+   "t_ms": 33818.944,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 33923.264,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-364d6f8f77ed"
+  },
+  {
+   "t_ms": 33925.642,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 34726.831,
+   "stage": "A_closed_mid_turn"
+  },
+  {
+   "t_ms": 35579.188,
+   "stage": "A2_opened_same_session"
+  },
+  {
+   "t_ms": 37081.812,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 37187.782,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 38190.431,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 38192.023,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 39696.102,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 39697.898,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 33467.999,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s4_reconnect-186725\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 33926.813,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-364d6f8f77ed reading fixture. \",\"seq\":1,\"session_id\":\"s4_reconnect-186725\",\"turn_id\":\"6622cab0-8992-4e6a-8781-819ab4259c1b\",\"type\":\"chunk\"}"
+    }
+   ]
+  },
+  "A2": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 35232.252,
+     "type": "session_start",
+     "brief": "{\"message_count\":1,\"resumed\":true,\"session_id\":\"s4_reconnect-186725\",\"type\":\"session_start\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "before-final",
+   "t_ms": 38190.425,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: Q4 read the fixture nonce=9c94ec",
+    "assistant: MARKER MK-364d6f8f77ed reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-79ed8a68ef33 [1 lines "
+   ]
+  },
+  {
+   "label": "final",
+   "t_ms": 39697.891,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:19:06 +00:00] Q4 read the fixture nonce=9c94ec",
+    "assistant: MARKER MK-364d6f8f77ed reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-79ed8a68ef33 [1 lines ",
+    "assistant: FINAL MK-364d6f8f77ed tool_result_sha=3587b5c43b8d6194"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 33817.346,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 34319.261,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:06.635093931+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 34822.217,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:06.635093931+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 35324.309,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:06.635093931+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 35826.261,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:06.635093931+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 36328.601,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:06.635093931+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 36831.175,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:06.635093931+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 37333.457,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:09.901354209+00:00",
+      "message_count": 3,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 37836.38,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:19:06.622526709+00:00",
+      "last_activity": "2026-10-02T18:19:09.901354209+00:00",
+      "message_count": 3,
+      "session_id": "s4_reconnect-186725"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "running",
+    "turn_id": "6622cab0-8992-4e6a-8781-819ab4259c1b",
+    "turn_started_at": "2026-10-02T18:19:06.635001196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 38338.974,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 38841.92,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 39344.758,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s4_reconnect-186725",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 82,
+   "mono_ms": 33827.279,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 83,
+   "mono_ms": 33827.552,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 84,
+   "mono_ms": 33863.282,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 85,
+   "mono_ms": 33863.558,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 86,
+   "mono_ms": 33863.842,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 87,
+   "mono_ms": 33863.96,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 88,
+   "mono_ms": 37019.129,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 89,
+   "mono_ms": 37019.724,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 90,
+   "mono_ms": 37020.08,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 91,
+   "mono_ms": 37022.069,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 92,
+   "mono_ms": 37073.571,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 93,
+   "mono_ms": 37073.915,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 94,
+   "mono_ms": 38129.512,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 95,
+   "mono_ms": 38129.892,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 96,
+   "mono_ms": 38130.115,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 97,
+   "mono_ms": 38130.3,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

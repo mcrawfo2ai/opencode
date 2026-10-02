@@ -1,0 +1,63 @@
+[
+ {
+  "label": "2.5s-after-drop",
+  "t_ms": 4394.708,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "X1 read the fixture nonce=ba7391",
+      "created_at": "2026-10-02T18:24:14.360079459+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-bef5d1189b82 reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-p3-extra-approval/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:24:15.315907730+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\nTool call not executed: 'file_read' requires approval and no operator decision was available, so the runtime denied it by policy. This was not a user's decision.\n</tool_result>\n",
+      "created_at": "2026-10-02T18:24:15.316343198+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "x1_drop_during_approval-e647da",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 6900.313,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:24:14 +00:00]\n\nX1 read the fixture nonce=ba7391",
+      "created_at": "2026-10-02T18:24:17.824728212+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-bef5d1189b82 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-p3-extra-approval/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:24:17.824728212+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\nTool call not executed: 'file_read' requires approval and no operator decision was available, so the runtime denied it by policy. This was not a user's decision.\n</tool_result>\n",
+      "created_at": "2026-10-02T18:24:17.824728212+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-bef5d1189b82 tool_result_sha=3e48f01580f888cf",
+      "created_at": "2026-10-02T18:24:17.824728212+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "x1_drop_during_approval-e647da",
+    "session_persistence": true
+   }
+  }
+ }
+]

@@ -1,0 +1,99 @@
+[
+ {
+  "label": "1s-after-drop",
+  "t_ms": 7062.371,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3a read the fixture nonce=059c5d",
+      "created_at": "2026-10-02T18:28:33.184405068+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3a_owner_drop-c66c89",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "2s-after-drop",
+  "t_ms": 8065.218,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3a read the fixture nonce=059c5d",
+      "created_at": "2026-10-02T18:28:33.184405068+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3a_owner_drop-c66c89",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "before-final",
+  "t_ms": 11674.849,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3a read the fixture nonce=059c5d",
+      "created_at": "2026-10-02T18:28:33.184405068+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-bb8abfb719e7 reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-final/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:28:38.589926593+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-09dc7c5098fe\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:28:38.601296174+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3a_owner_drop-c66c89",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 13233.612,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:28:33 +00:00]\n\nQ3a read the fixture nonce=059c5d",
+      "created_at": "2026-10-02T18:28:38.700289404+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-bb8abfb719e7 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-final/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:28:38.700289404+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-09dc7c5098fe\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:28:38.700289404+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-bb8abfb719e7 tool_result_sha=5800ff1a41d369d8",
+      "created_at": "2026-10-02T18:28:38.700289404+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s3a_owner_drop-c66c89",
+    "session_persistence": true
+   }
+  }
+ }
+]

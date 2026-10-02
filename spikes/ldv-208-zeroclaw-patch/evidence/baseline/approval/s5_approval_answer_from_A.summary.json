@@ -1,0 +1,317 @@
+{
+ "scenario": "s5_approval_answer_from_A",
+ "session": "s5_approval_answer_from_A-a8fa80",
+ "timeline": [
+  {
+   "t_ms": 1046.684,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1954.888,
+   "stage": "g1_g2_released"
+  },
+  {
+   "t_ms": 2005.996,
+   "stage": "approval_request_seen",
+   "seen": true,
+   "A": 1,
+   "B": 0
+  },
+  {
+   "t_ms": 2006.253,
+   "stage": "approval_response_sent",
+   "from": "A"
+  },
+  {
+   "t_ms": 3668.019,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 343.027,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_A-a8fa80\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1153.627,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-cb397d17f939 reading fixture. \",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 1960.354,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"1dbe7e69-d756-4e7e-bbfb-2391e57e7b35\",\"timeou…"
+    },
+    {
+     "i": 3,
+     "t_ms": 2009.968,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-base-ap/workspace/fixture.txt\"},\"id\":\"12ffaf01-3627-468c-b3ca-56116…"
+    },
+    {
+     "i": 4,
+     "t_ms": 2026.167,
+     "type": "tool_result",
+     "brief": "{\"id\":\"12ffaf01-3627-468c-b3ca-56116e5c556b\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-7e39a3469b39\\n[1 lines total]\",\"type\":\"tool_result\"}"
+    },
+    {
+     "i": 5,
+     "t_ms": 2113.361,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-cb397d17f939 tool_result_sha=b3a4c38ccd21e38a\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 6,
+     "t_ms": 2127.754,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-cb397d17f939 tool_result_sha=b3a4c38ccd21e38a\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 694.644,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_A-a8fa80\",\"type\":\"session_start\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "final",
+   "t_ms": 3668.008,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:13:28 +00:00] Q5 read the fixture nonce=6e0684",
+    "assistant: MARKER MK-cb397d17f939 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-7e39a3469b39 [1 lines ",
+    "assistant: FINAL MK-cb397d17f939 tool_result_sha=b3a4c38ccd21e38a"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 1044.507,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1548.645,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:28.611108104+00:00",
+      "last_activity": "2026-10-02T18:13:28.611108104+00:00",
+      "message_count": 0,
+      "session_id": "s5_approval_answer_from_A-a8fa80"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "running",
+    "turn_id": "b8dc2ac8-2333-47df-935e-88ea61189350",
+    "turn_started_at": "2026-10-02T18:13:28.625731626+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2052.146,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:28.611108104+00:00",
+      "last_activity": "2026-10-02T18:13:28.611108104+00:00",
+      "message_count": 0,
+      "session_id": "s5_approval_answer_from_A-a8fa80"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "running",
+    "turn_id": "b8dc2ac8-2333-47df-935e-88ea61189350",
+    "turn_started_at": "2026-10-02T18:13:28.625731626+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2554.015,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3056.682,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3558.793,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 1060.886,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 1061.195,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 1091.138,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 1091.507,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 1092.963,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 1093.046,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 1893.591,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 1893.885,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 1894.145,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 1894.229,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 2001.894,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 2002.193,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 2050.564,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 2050.865,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 2052.719,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 2052.853,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

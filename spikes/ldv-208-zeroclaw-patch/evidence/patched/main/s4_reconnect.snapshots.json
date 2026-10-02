@@ -1,0 +1,63 @@
+[
+ {
+  "label": "before-final",
+  "t_ms": 38269.366,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q4 read the fixture nonce=0b7d08",
+      "created_at": "2026-10-02T18:25:36.221824018+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-acbd02d9bb69 reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-p4-main/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:25:39.474618435+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-6e137fc22a0a\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:25:39.486023423+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s4_reconnect-41bab4",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 39775.31,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:25:36 +00:00]\n\nQ4 read the fixture nonce=0b7d08",
+      "created_at": "2026-10-02T18:25:40.584883128+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-acbd02d9bb69 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-p4-main/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:25:40.584883128+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-6e137fc22a0a\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:25:40.584883128+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-acbd02d9bb69 tool_result_sha=7d45059b94c376f1",
+      "created_at": "2026-10-02T18:25:40.584883128+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s4_reconnect-41bab4",
+    "session_persistence": true
+   }
+  }
+ }
+]

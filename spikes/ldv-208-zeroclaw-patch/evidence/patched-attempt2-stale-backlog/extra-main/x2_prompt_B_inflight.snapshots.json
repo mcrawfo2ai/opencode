@@ -1,0 +1,73 @@
+[
+ {
+  "label": "B-prompt+2.5s",
+  "t_ms": 4359.044,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "X2 first prompt from A nonce=d936e3",
+      "created_at": "2026-10-02T18:21:40.906929262+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "x2_prompt_B_inflight-9466b9",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 6879.086,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:21:40 +00:00]\n\nX2 first prompt from A nonce=d936e3",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-f7102b828809 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-patched-x2/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-8b4415bdf51a\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-f7102b828809 tool_result_sha=f3da756774bc8156",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:21:44 +00:00]\n\nX2 second prompt from B nonce=3ce811",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-48b0bcc918cf reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-patched-x2/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-8b4415bdf51a\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-48b0bcc918cf tool_result_sha=f3da756774bc8156",
+      "created_at": "2026-10-02T18:21:45.377923444+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "x2_prompt_B_inflight-9466b9",
+    "session_persistence": true
+   }
+  }
+ }
+]

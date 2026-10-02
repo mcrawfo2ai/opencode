@@ -1,0 +1,116 @@
+[
+ {
+  "t_ms": 1044.507,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 1548.645,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:28.611108104+00:00",
+      "last_activity": "2026-10-02T18:13:28.611108104+00:00",
+      "message_count": 0,
+      "session_id": "s5_approval_answer_from_A-a8fa80"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "running",
+    "turn_id": "b8dc2ac8-2333-47df-935e-88ea61189350",
+    "turn_started_at": "2026-10-02T18:13:28.625731626+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2052.146,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:28.611108104+00:00",
+      "last_activity": "2026-10-02T18:13:28.611108104+00:00",
+      "message_count": 0,
+      "session_id": "s5_approval_answer_from_A-a8fa80"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "running",
+    "turn_id": "b8dc2ac8-2333-47df-935e-88ea61189350",
+    "turn_started_at": "2026-10-02T18:13:28.625731626+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2554.015,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 3056.682,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 3558.793,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-a8fa80",
+    "state": "idle"
+   }
+  }
+ }
+]

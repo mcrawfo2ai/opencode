@@ -1,0 +1,656 @@
+{
+ "scenario": "s5_approval_answer_from_B",
+ "session": "s5_approval_answer_from_B-ee287f",
+ "timeline": [
+  {
+   "t_ms": 4668.072,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 5578.676,
+   "stage": "g1_g2_released"
+  },
+  {
+   "t_ms": 5630.444,
+   "stage": "approval_request_seen",
+   "seen": true,
+   "A": 1,
+   "B": 1
+  },
+  {
+   "t_ms": 5630.641,
+   "stage": "approval_response_sent",
+   "from": "B"
+  },
+  {
+   "t_ms": 12675.557,
+   "stage": "no_progress_7s_after_B_answer__control_answer_from_A"
+  },
+  {
+   "t_ms": 14313.083,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 3965.734,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-ee287f\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 4777.921,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-5d382fd7bc8a reading fixture. \",\"seq\":1,\"session_id\":\"s5_approval_answer_from_B-ee287f\",\"turn_id\":\"2129b92a-0089-4764-983d-848bb4ae1ff1\",\"type\":\"chu…"
+    },
+    {
+     "i": 2,
+     "t_ms": 5583.247,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"a367aa7a-0c33-480c-a520-6c5f5f6c25b4\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 12682.154,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-patched-ap/workspace/fixture.txt\"},\"id\":\"5e282481-a6d6-45f5-bd2d-9c…"
+    },
+    {
+     "i": 4,
+     "t_ms": 12707.079,
+     "type": "tool_result",
+     "brief": "{\"id\":\"5e282481-a6d6-45f5-bd2d-9cee947c3671\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-fa3e9a46e65e\\n[1 lines total]\",\"seq\":4,\"session_id\":\"s5_approval_answer_fr…"
+    },
+    {
+     "i": 5,
+     "t_ms": 12810.665,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-5d382fd7bc8a tool_result_sha=c4b1a40f540bbc35\",\"seq\":5,\"session_id\":\"s5_approval_answer_from_B-ee287f\",\"turn_id\":\"2129b92a-0089-4764-983d-848bb4ae1ff…"
+    },
+    {
+     "i": 6,
+     "t_ms": 12810.702,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-5d382fd7bc8a tool_result_sha=c4b1a40f540bbc35\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 4317.316,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-ee287f\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 4777.955,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-5d382fd7bc8a reading fixture. \",\"seq\":1,\"session_id\":\"s5_approval_answer_from_B-ee287f\",\"turn_id\":\"2129b92a-0089-4764-983d-848bb4ae1ff1\",\"type\":\"chu…"
+    },
+    {
+     "i": 2,
+     "t_ms": 5583.302,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"a367aa7a-0c33-480c-a520-6c5f5f6c25b4\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 5644.715,
+     "type": "error",
+     "brief": "{\"message\":\"Unsupported message type \\\"approval_response\\\". Send {\\\"type\\\":\\\"message\\\",\\\"content\\\":\\\"your text\\\"}\",\"type\":\"error\"}"
+    },
+    {
+     "i": 4,
+     "t_ms": 12682.202,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-patched-ap/workspace/fixture.txt\"},\"id\":\"5e282481-a6d6-45f5-bd2d-9c…"
+    },
+    {
+     "i": 5,
+     "t_ms": 12707.133,
+     "type": "tool_result",
+     "brief": "{\"id\":\"5e282481-a6d6-45f5-bd2d-9cee947c3671\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-fa3e9a46e65e\\n[1 lines total]\",\"seq\":4,\"session_id\":\"s5_approval_answer_fr…"
+    },
+    {
+     "i": 6,
+     "t_ms": 12810.718,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-5d382fd7bc8a tool_result_sha=c4b1a40f540bbc35\",\"seq\":5,\"session_id\":\"s5_approval_answer_from_B-ee287f\",\"turn_id\":\"2129b92a-0089-4764-983d-848bb4ae1ff…"
+    },
+    {
+     "i": 7,
+     "t_ms": 12810.768,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-5d382fd7bc8a tool_result_sha=c4b1a40f540bbc35\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "final",
+   "t_ms": 14313.078,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:21:07 +00:00] Q5 read the fixture nonce=52b428",
+    "assistant: MARKER MK-5d382fd7bc8a reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-fa3e9a46e65e [1 lines ",
+    "assistant: FINAL MK-5d382fd7bc8a tool_result_sha=c4b1a40f540bbc35"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 4665.682,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 5168.455,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5670.722,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6172.983,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6675.994,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 7177.695,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 7679.686,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 8182.452,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 8684.975,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 9187.853,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 9690.833,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 10193.309,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 10696.3,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 11206.113,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 11721.318,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 12223.994,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:07.078982126+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 12733.871,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:21:07.063711944+00:00",
+      "last_activity": "2026-10-02T18:21:15.101185350+00:00",
+      "message_count": 3,
+      "session_id": "s5_approval_answer_from_B-ee287f"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "running",
+    "turn_id": "2129b92a-0089-4764-983d-848bb4ae1ff1",
+    "turn_started_at": "2026-10-02T18:21:07.078863714+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 13246.207,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 13748.643,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 14251.103,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ee287f",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 18,
+   "mono_ms": 4705.105,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 19,
+   "mono_ms": 4705.526,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 20,
+   "mono_ms": 4719.72,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 21,
+   "mono_ms": 4720.042,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 22,
+   "mono_ms": 4720.243,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 23,
+   "mono_ms": 4720.297,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 24,
+   "mono_ms": 5521.655,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 25,
+   "mono_ms": 5522.073,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 26,
+   "mono_ms": 5523.343,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 27,
+   "mono_ms": 5523.492,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 28,
+   "mono_ms": 12694.513,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 29,
+   "mono_ms": 12695.703,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 30,
+   "mono_ms": 12744.474,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 31,
+   "mono_ms": 12744.664,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 32,
+   "mono_ms": 12744.904,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 33,
+   "mono_ms": 12744.953,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

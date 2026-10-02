@@ -1,0 +1,553 @@
+{
+ "scenario": "s3b_owner_drop_B",
+ "session": "s3b_owner_drop_B-1549f3",
+ "timeline": [
+  {
+   "t_ms": 26916.93,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 27020.277,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-786d1a0f103e"
+  },
+  {
+   "t_ms": 27022.354,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 27823.147,
+   "stage": "A_closed_mid_turn"
+  },
+  {
+   "t_ms": 27825.613,
+   "stage": "snapshot",
+   "label": "1s-after-drop"
+  },
+  {
+   "t_ms": 28827.356,
+   "stage": "snapshot",
+   "label": "2s-after-drop"
+  },
+  {
+   "t_ms": 32329.303,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 32432.848,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 32435.574,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 32436.537,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 33991.565,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 33993.14,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 26205.252,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s3b_owner_drop_B-1549f3\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 27025.853,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-786d1a0f103e reading fixture. \",\"seq\":1,\"session_id\":\"s3b_owner_drop_B-1549f3\",\"turn_id\":\"7f7d6ac2-c426-443e-8127-e5d4873388c9\",\"type\":\"chunk\"}"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 26565.838,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s3b_owner_drop_B-1549f3\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 27025.901,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-786d1a0f103e reading fixture. \",\"seq\":1,\"session_id\":\"s3b_owner_drop_B-1549f3\",\"turn_id\":\"7f7d6ac2-c426-443e-8127-e5d4873388c9\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 32334.544,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p3/workspace/fixture.txt\"},\"id\":\"fd7b793b-1750-4ab0-91df-726f36e98d…"
+    },
+    {
+     "i": 3,
+     "t_ms": 32346.418,
+     "type": "tool_result",
+     "brief": "{\"id\":\"fd7b793b-1750-4ab0-91df-726f36e98dc2\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-70fd03e3304d\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s3b_owner_drop_B-1549…"
+    },
+    {
+     "i": 4,
+     "t_ms": 32438.248,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-786d1a0f103e tool_result_sha=cca22a93c89a6628\",\"seq\":4,\"session_id\":\"s3b_owner_drop_B-1549f3\",\"turn_id\":\"7f7d6ac2-c426-443e-8127-e5d4873388c9\",\"type\"…"
+    },
+    {
+     "i": 5,
+     "t_ms": 32444.544,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-786d1a0f103e tool_result_sha=cca22a93c89a6628\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "1s-after-drop",
+   "t_ms": 27825.61,
+   "status": 200,
+   "count": 1,
+   "roles_heads": [
+    "user: Q3b read the fixture nonce=048d0e"
+   ]
+  },
+  {
+   "label": "2s-after-drop",
+   "t_ms": 28827.351,
+   "status": 200,
+   "count": 1,
+   "roles_heads": [
+    "user: Q3b read the fixture nonce=048d0e"
+   ]
+  },
+  {
+   "label": "before-final",
+   "t_ms": 32435.571,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: Q3b read the fixture nonce=048d0e",
+    "assistant: MARKER MK-786d1a0f103e reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>/-h",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-70fd03e3304d [1 lines "
+   ]
+  },
+  {
+   "label": "final",
+   "t_ms": 33993.137,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:23:24 +00:00] Q3b read the fixture nonce=048d0e",
+    "assistant: MARKER MK-786d1a0f103e reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-70fd03e3304d [1 lines ",
+    "assistant: FINAL MK-786d1a0f103e tool_result_sha=cca22a93c89a6628"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 26915.067,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 27417.747,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 27920.614,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 28422.51,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 28927.26,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 29429.846,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 29932.579,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 30435.154,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 30938.008,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 31440.703,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 31947.356,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:24.449479341+00:00",
+      "last_activity": "2026-10-02T18:23:24.462896887+00:00",
+      "message_count": 1,
+      "session_id": "s3b_owner_drop_B-1549f3"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "running",
+    "turn_id": "7f7d6ac2-c426-443e-8127-e5d4873388c9",
+    "turn_started_at": "2026-10-02T18:23:24.462769859+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 32453.099,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 32954.782,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 33457.194,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 33959.994,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s3b_owner_drop_B-1549f3",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 66,
+   "mono_ms": 26928.904,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 67,
+   "mono_ms": 26929.199,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 68,
+   "mono_ms": 26959.698,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 69,
+   "mono_ms": 26959.898,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 70,
+   "mono_ms": 26959.963,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 71,
+   "mono_ms": 26959.985,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 72,
+   "mono_ms": 32266.369,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 73,
+   "mono_ms": 32266.756,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 74,
+   "mono_ms": 32268.463,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 75,
+   "mono_ms": 32268.656,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 76,
+   "mono_ms": 32318.982,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 77,
+   "mono_ms": 32319.282,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 78,
+   "mono_ms": 32373.93,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 79,
+   "mono_ms": 32374.141,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 80,
+   "mono_ms": 32375.442,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 81,
+   "mono_ms": 32375.617,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

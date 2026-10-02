@@ -1,0 +1,450 @@
+{
+ "scenario": "x1_drop_during_approval",
+ "session": "x1_drop_during_approval-e647da",
+ "timeline": [
+  {
+   "t_ms": 932.961,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1891.386,
+   "stage": "approval_request_seen_on_A",
+   "seen": true,
+   "B": 1
+  },
+  {
+   "t_ms": 1892.046,
+   "stage": "A_closed_with_approval_pending"
+  },
+  {
+   "t_ms": 4394.719,
+   "stage": "snapshot",
+   "label": "2.5s-after-drop"
+  },
+  {
+   "t_ms": 4396.314,
+   "stage": "phase2_request_seen"
+  },
+  {
+   "t_ms": 6900.318,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 228.364,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-e647da\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1039.154,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-bef5d1189b82 reading fixture. \",\"seq\":1,\"session_id\":\"x1_drop_during_approval-e647da\",\"turn_id\":\"f9727df7-23fe-48bc-8da4-a92de9097379\",\"type\":\"chunk…"
+    },
+    {
+     "i": 2,
+     "t_ms": 1845.586,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"f8dbc528-8db0-46d6-bd81-a0a7c92a1e60\",\"seq\":2…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 580.803,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-e647da\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1039.194,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-bef5d1189b82 reading fixture. \",\"seq\":1,\"session_id\":\"x1_drop_during_approval-e647da\",\"turn_id\":\"f9727df7-23fe-48bc-8da4-a92de9097379\",\"type\":\"chunk…"
+    },
+    {
+     "i": 2,
+     "t_ms": 1845.645,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"f8dbc528-8db0-46d6-bd81-a0a7c92a1e60\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 1904.041,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p3-extra-approval/workspace/fixture.txt\"},\"id\":\"190c3f23-1d12-4749-…"
+    },
+    {
+     "i": 4,
+     "t_ms": 1904.101,
+     "type": "tool_result",
+     "brief": "{\"id\":\"190c3f23-1d12-4749-b64e-bda017661e2e\",\"name\":\"file_read\",\"output\":\"Tool call not executed: 'file_read' requires approval and no operator decision was available, so…"
+    },
+    {
+     "i": 5,
+     "t_ms": 4398.798,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-bef5d1189b82 tool_result_sha=3e48f01580f888cf\",\"seq\":5,\"session_id\":\"x1_drop_during_approval-e647da\",\"turn_id\":\"f9727df7-23fe-48bc-8da4-a92de9097379\"…"
+    },
+    {
+     "i": 6,
+     "t_ms": 4415.421,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-bef5d1189b82 tool_result_sha=3e48f01580f888cf\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "2.5s-after-drop",
+   "t_ms": 4394.708,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: X1 read the fixture nonce=ba7391",
+    "assistant: MARKER MK-bef5d1189b82 reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>/-h",
+    "user: [Tool results] <tool_result name=\"file_read\"> Tool call not executed: 'file_read' requires"
+   ]
+  },
+  {
+   "label": "final",
+   "t_ms": 6900.313,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:24:14 +00:00] X1 read the fixture nonce=ba7391",
+    "assistant: MARKER MK-bef5d1189b82 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> Tool call not executed: 'file_read' requires",
+    "assistant: FINAL MK-bef5d1189b82 tool_result_sha=3e48f01580f888cf"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 930.92,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 1433.781,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:14.346214368+00:00",
+      "last_activity": "2026-10-02T18:24:14.360079459+00:00",
+      "message_count": 1,
+      "session_id": "x1_drop_during_approval-e647da"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "running",
+    "turn_id": "f9727df7-23fe-48bc-8da4-a92de9097379",
+    "turn_started_at": "2026-10-02T18:24:14.359961610+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1936.407,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:14.346214368+00:00",
+      "last_activity": "2026-10-02T18:24:15.316343198+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-e647da"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "running",
+    "turn_id": "f9727df7-23fe-48bc-8da4-a92de9097379",
+    "turn_started_at": "2026-10-02T18:24:14.359961610+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2438.554,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:14.346214368+00:00",
+      "last_activity": "2026-10-02T18:24:15.316343198+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-e647da"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "running",
+    "turn_id": "f9727df7-23fe-48bc-8da4-a92de9097379",
+    "turn_started_at": "2026-10-02T18:24:14.359961610+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2940.824,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:14.346214368+00:00",
+      "last_activity": "2026-10-02T18:24:15.316343198+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-e647da"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "running",
+    "turn_id": "f9727df7-23fe-48bc-8da4-a92de9097379",
+    "turn_started_at": "2026-10-02T18:24:14.359961610+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3442.945,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:14.346214368+00:00",
+      "last_activity": "2026-10-02T18:24:15.316343198+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-e647da"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "running",
+    "turn_id": "f9727df7-23fe-48bc-8da4-a92de9097379",
+    "turn_started_at": "2026-10-02T18:24:14.359961610+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3945.458,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:14.346214368+00:00",
+      "last_activity": "2026-10-02T18:24:15.316343198+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-e647da"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "running",
+    "turn_id": "f9727df7-23fe-48bc-8da4-a92de9097379",
+    "turn_started_at": "2026-10-02T18:24:14.359961610+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4447.999,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4950.563,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5453.483,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5955.997,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6458.471,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-e647da",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 948.909,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 949.158,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 981.107,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 981.44,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 981.705,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 981.752,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 1783.165,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 1783.525,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 1783.87,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 1783.939,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 1882.657,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 1882.926,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 4340.777,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 4341.024,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 4341.324,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 4341.465,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

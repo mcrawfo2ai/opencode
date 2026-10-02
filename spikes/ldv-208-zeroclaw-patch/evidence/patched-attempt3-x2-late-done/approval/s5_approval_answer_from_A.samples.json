@@ -1,0 +1,115 @@
+[
+ {
+  "t_ms": 931.899,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 404,
+   "body": {
+    "error": "Session not found"
+   }
+  }
+ },
+ {
+  "t_ms": 1434.87,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:51.689848335+00:00",
+      "last_activity": "2026-10-02T18:23:51.703898551+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_A-dc304a"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-dc304a",
+    "state": "running",
+    "turn_id": "f5600bc3-a653-4cab-b3d0-e4fffaf5d17f",
+    "turn_started_at": "2026-10-02T18:23:51.703793941+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 1937.528,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:51.689848335+00:00",
+      "last_activity": "2026-10-02T18:23:52.667248506+00:00",
+      "message_count": 3,
+      "session_id": "s5_approval_answer_from_A-dc304a"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-dc304a",
+    "state": "running",
+    "turn_id": "f5600bc3-a653-4cab-b3d0-e4fffaf5d17f",
+    "turn_started_at": "2026-10-02T18:23:51.703793941+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2439.319,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-dc304a",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 2941.519,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-dc304a",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 3444.109,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_A-dc304a",
+    "state": "idle"
+   }
+  }
+ }
+]

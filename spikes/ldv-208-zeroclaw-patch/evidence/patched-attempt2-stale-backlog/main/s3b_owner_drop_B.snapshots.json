@@ -1,0 +1,99 @@
+[
+ {
+  "label": "1s-after-drop",
+  "t_ms": 26286.036,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3b read the fixture nonce=f30a62",
+      "created_at": "2026-10-02T18:20:39.292890395+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3b_owner_drop_B-57988a",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "2s-after-drop",
+  "t_ms": 27287.939,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3b read the fixture nonce=f30a62",
+      "created_at": "2026-10-02T18:20:39.292890395+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3b_owner_drop_B-57988a",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "before-final",
+  "t_ms": 30896.593,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3b read the fixture nonce=f30a62",
+      "created_at": "2026-10-02T18:20:39.292890395+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-34cb4066384f reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-patched2/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:20:44.697873452+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-cef78cb68af3\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:20:44.712657085+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3b_owner_drop_B-57988a",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 32402.322,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:20:39 +00:00]\n\nQ3b read the fixture nonce=f30a62",
+      "created_at": "2026-10-02T18:20:44.806025878+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-34cb4066384f reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-patched2/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:20:44.806025878+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-cef78cb68af3\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:20:44.806025878+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-34cb4066384f tool_result_sha=8e45f35de6ec59d8",
+      "created_at": "2026-10-02T18:20:44.806025878+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s3b_owner_drop_B-57988a",
+    "session_persistence": true
+   }
+  }
+ }
+]

@@ -1,0 +1,6 @@
+{"t_ms":226.831,"wall_ms":1790965570543,"ev":"open","data":null}
+{"t_ms":229.296,"wall_ms":1790965570546,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-79cd10\",\"type\":\"session_start\"}"}
+{"t_ms":932.821,"wall_ms":1790965571249,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"X1 read the fixture nonce=026ddd\"}"}
+{"t_ms":1039.988,"wall_ms":1790965571356,"ev":"message","data":"{\"content\":\"MARKER MK-7a062f60b42b reading fixture. \",\"seq\":1,\"session_id\":\"x1_drop_during_approval-79cd10\",\"turn_id\":\"78122ee5-2daa-49d6-92d6-c5dcdb966e77\",\"type\":\"chunk\"}"}
+{"t_ms":1846.85,"wall_ms":1790965572163,"ev":"message","data":"{\"arguments_summary\":\"path: <SCRATCH>\",\"request_id\":\"bf33918d-c7fa-4da3-b748-a2f950238d03\",\"seq\":2,\"session_id\":\"x1_drop_during_approval-79cd10\",\"timeout_secs\":120,\"tool\":\"file_read\",\"turn_id\":\"78122ee5-2daa-49d6-92d6-c5dcdb966e77\",\"type\":\"approval_request\"}"}
+{"t_ms":1892.295,"wall_ms":1790965572209,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

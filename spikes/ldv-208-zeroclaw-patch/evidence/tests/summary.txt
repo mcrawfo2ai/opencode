@@ -1,0 +1,16 @@
+== test-baseline.log
+test api_config::tests::unreadable_existing_config_survives_failed_save_rollback ... FAILED
+test result: FAILED. 637 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.18s
+exit=101
+== test-patched-code-only.log
+test api_config::tests::unreadable_existing_config_survives_failed_save_rollback ... FAILED
+test ws::tests::reconnect_during_detached_turn_refreshes_history_before_the_follow_up ... FAILED
+test result: FAILED. 636 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.54s
+exit=101
+== test-patched-final.log
+test api_config::tests::unreadable_existing_config_survives_failed_save_rollback ... FAILED
+test result: FAILED. 637 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.77s
+exit=101
+== test-patched-narrow-detached-reconnect.log
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 637 filtered out; finished in 0.98s
+exit=0

@@ -1,0 +1,73 @@
+[
+ {
+  "label": "B-prompt+2.5s",
+  "t_ms": 4344.753,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "X2 first prompt from A nonce=3aa64f",
+      "created_at": "2026-10-02T18:24:06.652936697+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 6963.654,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:24:06 +00:00]\n\nX2 first prompt from A nonce=3aa64f",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-d5b51724c48c reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-p3-extra-main/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-fed6df952ecb\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-d5b51724c48c tool_result_sha=ea2cb91e6798ef57",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:24:10 +00:00]\n\nX2 second prompt from B nonce=726c6f",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-f705aac4d00f reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-p3-extra-main/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-fed6df952ecb\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-f705aac4d00f tool_result_sha=ea2cb91e6798ef57",
+      "created_at": "2026-10-02T18:24:11.224758859+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "session_persistence": true
+   }
+  }
+ }
+]

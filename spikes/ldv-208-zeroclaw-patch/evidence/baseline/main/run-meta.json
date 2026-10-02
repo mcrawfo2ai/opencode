@@ -1,0 +1,16 @@
+{
+ "mode": "main",
+ "gwPort": 43863,
+ "stubPort": 46579,
+ "gateway": {
+  "pid": 10924,
+  "starttime_ticks": "41201",
+  "cmdline": ""
+ },
+ "stub": {
+  "pid": 10921,
+  "starttime_ticks": "41190",
+  "cmdline": "python3 <REPO>/spikes/ldv-208-zeroclaw-patch/scripts/stub_provider.py <SCRATCH>/run-base/logs/stub.port <SCRATCH>/run-base/logs/fixture.path <SCRATCH>/run-base/logs/stub-oracle.jsonl"
+ },
+ "started_wall": "2026-10-02T18:12:44.179Z"
+}

@@ -1,0 +1,5 @@
+{"t_ms":25178.706,"wall_ms":1790964789116,"ev":"open","data":null}
+{"t_ms":25181.447,"wall_ms":1790964789119,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"s3b_owner_drop_B-5e8e40\",\"type\":\"session_start\"}"}
+{"t_ms":25885.873,"wall_ms":1790964789823,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"Q3b read the fixture nonce=5fb2be\"}"}
+{"t_ms":25993.689,"wall_ms":1790964789931,"ev":"message","data":"{\"content\":\"MARKER MK-6d3ae8abc5ee reading fixture. \",\"type\":\"chunk\"}"}
+{"t_ms":26793.249,"wall_ms":1790964790731,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

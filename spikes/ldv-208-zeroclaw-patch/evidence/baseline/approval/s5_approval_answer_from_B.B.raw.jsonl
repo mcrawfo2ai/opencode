@@ -1,0 +1,5 @@
+{"t_ms":4418.712,"wall_ms":1790964811982,"ev":"open","data":null}
+{"t_ms":4422.033,"wall_ms":1790964811985,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-76da1d\",\"type\":\"session_start\"}"}
+{"t_ms":5731.887,"wall_ms":1790964813295,"ev":"sent","data":"{\"type\":\"approval_response\",\"request_id\":\"e9947610-713c-4b10-a3ec-2aea679d3fc0\",\"decision\":\"approve\"}"}
+{"t_ms":5747.438,"wall_ms":1790964813311,"ev":"message","data":"{\"message\":\"Unsupported message type \\\"approval_response\\\". Send {\\\"type\\\":\\\"message\\\",\\\"content\\\":\\\"your text\\\"}\",\"type\":\"error\"}"}
+{"t_ms":14822.443,"wall_ms":1790964822386,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

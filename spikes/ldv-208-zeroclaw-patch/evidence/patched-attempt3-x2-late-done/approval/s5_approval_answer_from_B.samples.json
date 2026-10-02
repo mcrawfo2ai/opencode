@@ -1,0 +1,465 @@
+[
+ {
+  "t_ms": 4654.521,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 404,
+   "body": {
+    "error": "Session not found"
+   }
+  }
+ },
+ {
+  "t_ms": 5156.585,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 5659.119,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 6161.59,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 6664.3,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 7166.635,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 7668.777,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 8171.127,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 8673.603,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 9175.84,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 9678.703,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 10181.26,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 10683.67,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 11186.335,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 11688.933,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 12191.741,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:23:55.425891856+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 12693.629,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:23:55.412034322+00:00",
+      "last_activity": "2026-10-02T18:24:03.446556505+00:00",
+      "message_count": 2,
+      "session_id": "s5_approval_answer_from_B-75f15f"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "running",
+    "turn_id": "2d3df487-8ec3-4650-9cfe-9a84c200c655",
+    "turn_started_at": "2026-10-02T18:23:55.425783151+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 13195.876,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 13698.377,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 14201.06,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s5_approval_answer_from_B-75f15f",
+    "state": "idle"
+   }
+  }
+ }
+]

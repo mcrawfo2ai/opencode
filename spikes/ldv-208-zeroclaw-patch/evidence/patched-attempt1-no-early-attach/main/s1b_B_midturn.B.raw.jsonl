@@ -1,0 +1,3 @@
+{"t_ms":8826.713,"wall_ms":1790965121629,"ev":"open","data":null}
+{"t_ms":8829.626,"wall_ms":1790965121632,"ev":"message","data":"{\"message_count\":1,\"resumed\":true,\"session_id\":\"s1b_B_midturn-bfa742\",\"type\":\"session_start\"}"}
+{"t_ms":12437.871,"wall_ms":1790965125240,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

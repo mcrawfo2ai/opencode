@@ -1,0 +1,68 @@
+[
+ {
+  "label": "after-done-before-B",
+  "t_ms": 15283.128,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:12:56 +00:00]\n\nQ1c read the fixture nonce=5a3b09",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-8d97faef046b reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-base/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-a5c8e15b6544\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-8d97faef046b tool_result_sha=e7435b5efc13b005",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s1c_B_after_done-f45319",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "after-B-attached",
+  "t_ms": 17636.543,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:12:56 +00:00]\n\nQ1c read the fixture nonce=5a3b09",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-8d97faef046b reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-base/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-a5c8e15b6544\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-8d97faef046b tool_result_sha=e7435b5efc13b005",
+      "created_at": "2026-10-02T18:12:57.718222271+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s1c_B_after_done-f45319",
+    "session_persistence": true
+   }
+  }
+ }
+]

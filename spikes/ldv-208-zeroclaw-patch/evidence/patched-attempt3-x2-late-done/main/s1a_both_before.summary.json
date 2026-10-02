@@ -1,0 +1,538 @@
+{
+ "scenario": "s1a_both_before",
+ "session": "s1a_both_before-c0c27c",
+ "timeline": [
+  {
+   "t_ms": 1400.163,
+   "stage": "snapshot",
+   "label": "pre-prompt"
+  },
+  {
+   "t_ms": 1401.854,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1505.345,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-892057cc39bd"
+  },
+  {
+   "t_ms": 3007.596,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 3809.714,
+   "stage": "snapshot",
+   "label": "after-first-chunk"
+  },
+  {
+   "t_ms": 4811.642,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 4916.567,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 5918.957,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 5920.52,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 7475.329,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 7476.964,
+   "stage": "snapshot",
+   "label": "after-done"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 697.65,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1a_both_before-c0c27c\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 3009.208,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-892057cc39bd reading fixture. \",\"seq\":1,\"session_id\":\"s1a_both_before-c0c27c\",\"turn_id\":\"67a43736-7598-4c58-bfc0-3325130f96c7\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 4820.559,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p3/workspace/fixture.txt\"},\"id\":\"e82afb38-d2d4-4e22-a095-e56d101bd9…"
+    },
+    {
+     "i": 3,
+     "t_ms": 4832.842,
+     "type": "tool_result",
+     "brief": "{\"id\":\"e82afb38-d2d4-4e22-a095-e56d101bd9e7\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-70fd03e3304d\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s1a_both_before-c0c27…"
+    },
+    {
+     "i": 4,
+     "t_ms": 5922.799,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-892057cc39bd tool_result_sha=cca22a93c89a6628\",\"seq\":4,\"session_id\":\"s1a_both_before-c0c27c\",\"turn_id\":\"67a43736-7598-4c58-bfc0-3325130f96c7\",\"type\":…"
+    },
+    {
+     "i": 5,
+     "t_ms": 5938.87,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-892057cc39bd tool_result_sha=cca22a93c89a6628\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 1048.891,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1a_both_before-c0c27c\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 3009.241,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-892057cc39bd reading fixture. \",\"seq\":1,\"session_id\":\"s1a_both_before-c0c27c\",\"turn_id\":\"67a43736-7598-4c58-bfc0-3325130f96c7\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 4820.61,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p3/workspace/fixture.txt\"},\"id\":\"e82afb38-d2d4-4e22-a095-e56d101bd9…"
+    },
+    {
+     "i": 3,
+     "t_ms": 4833.152,
+     "type": "tool_result",
+     "brief": "{\"id\":\"e82afb38-d2d4-4e22-a095-e56d101bd9e7\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-70fd03e3304d\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s1a_both_before-c0c27…"
+    },
+    {
+     "i": 4,
+     "t_ms": 5922.821,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-892057cc39bd tool_result_sha=cca22a93c89a6628\",\"seq\":4,\"session_id\":\"s1a_both_before-c0c27c\",\"turn_id\":\"67a43736-7598-4c58-bfc0-3325130f96c7\",\"type\":…"
+    },
+    {
+     "i": 5,
+     "t_ms": 5940.121,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-892057cc39bd tool_result_sha=cca22a93c89a6628\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "pre-prompt",
+   "t_ms": 1400.071,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "after-first-chunk",
+   "t_ms": 3809.706,
+   "status": 200,
+   "count": 1,
+   "roles_heads": [
+    "user: Q1a read the fixture nonce=2cd403"
+   ]
+  },
+  {
+   "label": "before-final",
+   "t_ms": 5918.953,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: Q1a read the fixture nonce=2cd403",
+    "assistant: MARKER MK-892057cc39bd reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>/-h",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-70fd03e3304d [1 lines "
+   ]
+  },
+  {
+   "label": "after-done",
+   "t_ms": 7476.96,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:22:58 +00:00] Q1a read the fixture nonce=2cd403",
+    "assistant: MARKER MK-892057cc39bd reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-70fd03e3304d [1 lines ",
+    "assistant: FINAL MK-892057cc39bd tool_result_sha=cca22a93c89a6628"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 1397.143,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 1900.253,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:22:58.947816706+00:00",
+      "message_count": 1,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2402.677,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:22:58.947816706+00:00",
+      "message_count": 1,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2904.948,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:22:58.947816706+00:00",
+      "message_count": 1,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3406.859,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:22:58.947816706+00:00",
+      "message_count": 1,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3909.598,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:22:58.947816706+00:00",
+      "message_count": 1,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4412.077,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:22:58.947816706+00:00",
+      "message_count": 1,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4914.703,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:23:02.364253889+00:00",
+      "message_count": 3,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5417.357,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:23:02.364253889+00:00",
+      "message_count": 3,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5919.04,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:22:58.934456345+00:00",
+      "last_activity": "2026-10-02T18:23:02.364253889+00:00",
+      "message_count": 3,
+      "session_id": "s1a_both_before-c0c27c"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "running",
+    "turn_id": "67a43736-7598-4c58-bfc0-3325130f96c7",
+    "turn_started_at": "2026-10-02T18:22:58.947729878+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6421.661,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6924.243,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 7426.546,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1a_both_before-c0c27c",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 1418.728,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 1419.001,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 2944.798,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 2945.15,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 2945.617,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 2945.681,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 4748.785,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 4749.143,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 4749.632,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 4750.793,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 4807.111,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 4807.408,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 5857.603,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 5857.862,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 5859.75,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 5860.169,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

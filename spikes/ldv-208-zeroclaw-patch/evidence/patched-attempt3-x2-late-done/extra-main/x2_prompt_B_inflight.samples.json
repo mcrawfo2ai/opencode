@@ -1,0 +1,291 @@
+[
+ {
+  "t_ms": 930.955,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 1434.299,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:06.652936697+00:00",
+      "message_count": 1,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 1936.996,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:06.652936697+00:00",
+      "message_count": 1,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2439.382,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:06.652936697+00:00",
+      "message_count": 1,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2941.819,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:06.652936697+00:00",
+      "message_count": 1,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 3444.066,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:06.652936697+00:00",
+      "message_count": 1,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 3946.593,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:06.652936697+00:00",
+      "message_count": 1,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 4448.748,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:10.072145398+00:00",
+      "message_count": 3,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "3b5f5f70-6191-4525-8e93-3ebcb75e1a17",
+    "turn_started_at": "2026-10-02T18:24:06.652839971+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 4951.044,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:10.183806052+00:00",
+      "message_count": 5,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "88b78b6b-b9bf-491c-b85b-36a35565ecd1",
+    "turn_started_at": "2026-10-02T18:24:10.183673669+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 5453.482,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:24:06.639218733+00:00",
+      "last_activity": "2026-10-02T18:24:10.183806052+00:00",
+      "message_count": 5,
+      "session_id": "x2_prompt_B_inflight-689b84"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "running",
+    "turn_id": "88b78b6b-b9bf-491c-b85b-36a35565ecd1",
+    "turn_started_at": "2026-10-02T18:24:10.183673669+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 5956.121,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 6458.799,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 6961.316,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "x2_prompt_B_inflight-689b84",
+    "state": "idle"
+   }
+  }
+ }
+]

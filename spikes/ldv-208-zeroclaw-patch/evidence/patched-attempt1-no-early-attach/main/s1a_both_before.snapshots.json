@@ -1,0 +1,93 @@
+[
+ {
+  "label": "pre-prompt",
+  "t_ms": 1530.567,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "s1a_both_before-447753",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "after-first-chunk",
+  "t_ms": 3942.771,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q1a read the fixture nonce=8a0613",
+      "created_at": "2026-10-02T18:18:34.350990917+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s1a_both_before-447753",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "before-final",
+  "t_ms": 6051.62,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q1a read the fixture nonce=8a0613",
+      "created_at": "2026-10-02T18:18:34.350990917+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-2278a758283e reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-patched/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:18:37.755862247+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-79ed8a68ef33\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:18:37.769352086+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s1a_both_before-447753",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "after-done",
+  "t_ms": 7557.805,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:18:34 +00:00]\n\nQ1a read the fixture nonce=8a0613",
+      "created_at": "2026-10-02T18:18:38.873653689+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-2278a758283e reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-patched/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:18:38.873653689+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-79ed8a68ef33\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:18:38.873653689+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-2278a758283e tool_result_sha=3587b5c43b8d6194",
+      "created_at": "2026-10-02T18:18:38.873653689+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s1a_both_before-447753",
+    "session_persistence": true
+   }
+  }
+ }
+]

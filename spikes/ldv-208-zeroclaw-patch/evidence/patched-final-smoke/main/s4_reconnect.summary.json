@@ -1,0 +1,475 @@
+{
+ "scenario": "s4_reconnect",
+ "session": "s4_reconnect-429890",
+ "timeline": [
+  {
+   "t_ms": 14050.66,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 14154.591,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-f56ff1da5dd2"
+  },
+  {
+   "t_ms": 14156.889,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 14957.867,
+   "stage": "A_closed_mid_turn"
+  },
+  {
+   "t_ms": 15809.526,
+   "stage": "A2_opened_same_session"
+  },
+  {
+   "t_ms": 17312.309,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 17416.58,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 18419.127,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 18420.828,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 19976.455,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 19978.603,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 13698.939,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s4_reconnect-429890\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 14158.125,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-f56ff1da5dd2 reading fixture. \",\"seq\":1,\"session_id\":\"s4_reconnect-429890\",\"turn_id\":\"327c2634-b019-46b0-a1d5-9dbf9bc7ed78\",\"type\":\"chunk\"}"
+    }
+   ]
+  },
+  "A2": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 15462.997,
+     "type": "session_start",
+     "brief": "{\"message_count\":1,\"resumed\":true,\"session_id\":\"s4_reconnect-429890\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 15463.134,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-f56ff1da5dd2 reading fixture. \",\"replay\":true,\"seq\":1,\"session_id\":\"s4_reconnect-429890\",\"turn_id\":\"327c2634-b019-46b0-a1d5-9dbf9bc7ed78\",\"type\":\"ch…"
+    },
+    {
+     "i": 2,
+     "t_ms": 17318.595,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-final/workspace/fixture.txt\"},\"id\":\"40aabace-4ef8-41a1-85e6-d64063c…"
+    },
+    {
+     "i": 3,
+     "t_ms": 17334.859,
+     "type": "tool_result",
+     "brief": "{\"id\":\"40aabace-4ef8-41a1-85e6-d64063ce6b6a\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-09dc7c5098fe\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s4_reconnect-429890\",…"
+    },
+    {
+     "i": 4,
+     "t_ms": 18422.398,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-f56ff1da5dd2 tool_result_sha=5800ff1a41d369d8\",\"seq\":4,\"session_id\":\"s4_reconnect-429890\",\"turn_id\":\"327c2634-b019-46b0-a1d5-9dbf9bc7ed78\",\"type\":\"ch…"
+    },
+    {
+     "i": 5,
+     "t_ms": 18428.927,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-f56ff1da5dd2 tool_result_sha=5800ff1a41d369d8\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "before-final",
+   "t_ms": 18419.121,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: Q4 read the fixture nonce=7acf79",
+    "assistant: MARKER MK-f56ff1da5dd2 reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>/-h",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-09dc7c5098fe [1 lines "
+   ]
+  },
+  {
+   "label": "final",
+   "t_ms": 19978.598,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:28:41 +00:00] Q4 read the fixture nonce=7acf79",
+    "assistant: MARKER MK-f56ff1da5dd2 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-09dc7c5098fe [1 lines ",
+    "assistant: FINAL MK-f56ff1da5dd2 tool_result_sha=5800ff1a41d369d8"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 14048.424,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 14551.068,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:41.085089524+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 15053.836,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:41.085089524+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 15555.845,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:41.085089524+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 16058.738,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:41.085089524+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 16561.132,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:41.085089524+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 17064.127,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:41.085089524+00:00",
+      "message_count": 1,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 17566.197,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:44.353120360+00:00",
+      "message_count": 3,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 18069.17,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:28:41.070216660+00:00",
+      "last_activity": "2026-10-02T18:28:44.353120360+00:00",
+      "message_count": 3,
+      "session_id": "s4_reconnect-429890"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "running",
+    "turn_id": "327c2634-b019-46b0-a1d5-9dbf9bc7ed78",
+    "turn_started_at": "2026-10-02T18:28:41.084973064+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 18572.114,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 19074.031,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 19576.621,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s4_reconnect-429890",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 34,
+   "mono_ms": 14070.497,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 35,
+   "mono_ms": 14070.781,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 36,
+   "mono_ms": 14096.011,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 37,
+   "mono_ms": 14096.458,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 38,
+   "mono_ms": 14096.73,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 39,
+   "mono_ms": 14096.774,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 40,
+   "mono_ms": 17251.496,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 41,
+   "mono_ms": 17251.833,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 42,
+   "mono_ms": 17253.56,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 43,
+   "mono_ms": 17253.857,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 44,
+   "mono_ms": 17328.032,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 45,
+   "mono_ms": 17328.371,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 46,
+   "mono_ms": 18359.921,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 47,
+   "mono_ms": 18360.322,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 48,
+   "mono_ms": 18360.735,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 49,
+   "mono_ms": 18362.16,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

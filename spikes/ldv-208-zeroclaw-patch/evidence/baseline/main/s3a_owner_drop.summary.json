@@ -1,0 +1,497 @@
+{
+ "scenario": "s3a_owner_drop",
+ "session": "s3a_owner_drop-555067",
+ "timeline": [
+  {
+   "t_ms": 18136.494,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 18240.999,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-a8847ca8596e"
+  },
+  {
+   "t_ms": 18244.706,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 19046.268,
+   "stage": "A_closed_mid_turn"
+  },
+  {
+   "t_ms": 19048.589,
+   "stage": "snapshot",
+   "label": "1s-after-drop"
+  },
+  {
+   "t_ms": 20051.694,
+   "stage": "snapshot",
+   "label": "2s-after-drop"
+  },
+  {
+   "t_ms": 23554.224,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 23658.75,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 23661.627,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 23663.084,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 25166.715,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 25168.392,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 17786.148,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s3a_owner_drop-555067\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 18244.645,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-a8847ca8596e reading fixture. \",\"type\":\"chunk\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "1s-after-drop",
+   "t_ms": 19048.57,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "2s-after-drop",
+   "t_ms": 20051.689,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "before-final",
+   "t_ms": 23661.623,
+   "status": 200,
+   "count": 0,
+   "roles_heads": []
+  },
+  {
+   "label": "final",
+   "t_ms": 25168.389,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:13:02 +00:00] Q3a read the fixture nonce=9b1cd3",
+    "assistant: MARKER MK-a8847ca8596e reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-a5c8e15b6544 [1 lines ",
+    "assistant: FINAL MK-a8847ca8596e tool_result_sha=e7435b5efc13b005"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 18134.625,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 18636.468,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 19139.011,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 19641.285,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 20144.188,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 20646.496,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 21149.372,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 21653.093,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 22156.105,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 22658.606,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 23161.217,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:02.074710268+00:00",
+      "message_count": 0,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 23663.401,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:13:02.074710268+00:00",
+      "last_activity": "2026-10-02T18:13:07.604536826+00:00",
+      "message_count": 4,
+      "session_id": "s3a_owner_drop-555067"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "running",
+    "turn_id": "a2e30f46-28f7-4d7d-b04e-5af52806b383",
+    "turn_started_at": "2026-10-02T18:13:02.086857196+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 24169.238,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 24671.795,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s3a_owner_drop-555067",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 50,
+   "mono_ms": 18108.28,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 51,
+   "mono_ms": 18108.549,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 52,
+   "mono_ms": 18145.719,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 53,
+   "mono_ms": 18146.091,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 54,
+   "mono_ms": 18146.211,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 55,
+   "mono_ms": 18146.271,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 56,
+   "mono_ms": 23456.357,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 57,
+   "mono_ms": 23456.732,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 58,
+   "mono_ms": 23457.283,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 59,
+   "mono_ms": 23458.38,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 60,
+   "mono_ms": 23509.082,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 61,
+   "mono_ms": 23509.414,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 62,
+   "mono_ms": 23565.292,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 63,
+   "mono_ms": 23565.498,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 64,
+   "mono_ms": 23565.895,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 65,
+   "mono_ms": 23565.974,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

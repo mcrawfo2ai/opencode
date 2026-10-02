@@ -1,0 +1,3 @@
+{"t_ms":15461.064,"wall_ms":1790965517770,"ev":"open","data":null}
+{"t_ms":15463.92,"wall_ms":1790965517773,"ev":"message","data":"{\"message_count\":4,\"resumed\":true,\"session_id\":\"s1c_B_after_done-0ca162\",\"type\":\"session_start\"}"}
+{"t_ms":17902.458,"wall_ms":1790965520212,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

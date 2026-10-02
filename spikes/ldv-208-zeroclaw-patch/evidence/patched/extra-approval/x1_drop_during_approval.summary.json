@@ -1,0 +1,451 @@
+{
+ "scenario": "x1_drop_during_approval",
+ "session": "x1_drop_during_approval-79cd10",
+ "timeline": [
+  {
+   "t_ms": 932.968,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 1891.848,
+   "stage": "approval_request_seen_on_A",
+   "seen": true,
+   "B": 1
+  },
+  {
+   "t_ms": 1892.385,
+   "stage": "A_closed_with_approval_pending"
+  },
+  {
+   "t_ms": 4395.003,
+   "stage": "snapshot",
+   "label": "2.5s-after-drop"
+  },
+  {
+   "t_ms": 4396.523,
+   "stage": "phase2_request_seen"
+  },
+  {
+   "t_ms": 6900.488,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 229.357,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-79cd10\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1040.082,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-7a062f60b42b reading fixture. \",\"seq\":1,\"session_id\":\"x1_drop_during_approval-79cd10\",\"turn_id\":\"78122ee5-2daa-49d6-92d6-c5dcdb966e77\",\"type\":\"chunk…"
+    },
+    {
+     "i": 2,
+     "t_ms": 1847.078,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"bf33918d-c7fa-4da3-b748-a2f950238d03\",\"seq\":2…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 581.324,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"x1_drop_during_approval-79cd10\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 1040.12,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-7a062f60b42b reading fixture. \",\"seq\":1,\"session_id\":\"x1_drop_during_approval-79cd10\",\"turn_id\":\"78122ee5-2daa-49d6-92d6-c5dcdb966e77\",\"type\":\"chunk…"
+    },
+    {
+     "i": 2,
+     "t_ms": 1847.128,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"bf33918d-c7fa-4da3-b748-a2f950238d03\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 1905.26,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p5-extra-approval/workspace/fixture.txt\"},\"id\":\"f6e121d5-0286-4025-…"
+    },
+    {
+     "i": 4,
+     "t_ms": 1905.298,
+     "type": "tool_result",
+     "brief": "{\"id\":\"f6e121d5-0286-4025-86ce-7fda41916376\",\"name\":\"file_read\",\"output\":\"Tool call not executed: 'file_read' requires approval and no operator decision was available, so…"
+    },
+    {
+     "i": 5,
+     "t_ms": 4398.858,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-7a062f60b42b tool_result_sha=3e48f01580f888cf\",\"seq\":5,\"session_id\":\"x1_drop_during_approval-79cd10\",\"turn_id\":\"78122ee5-2daa-49d6-92d6-c5dcdb966e77\"…"
+    },
+    {
+     "i": 6,
+     "t_ms": 4415.033,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-7a062f60b42b tool_result_sha=3e48f01580f888cf\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "2.5s-after-drop",
+   "t_ms": 4394.992,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: X1 read the fixture nonce=026ddd",
+    "assistant: MARKER MK-7a062f60b42b reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>/-h",
+    "user: [Tool results] <tool_result name=\"file_read\"> Tool call not executed: 'file_read' requires"
+   ]
+  },
+  {
+   "label": "final",
+   "t_ms": 6900.482,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:26:11 +00:00] X1 read the fixture nonce=026ddd",
+    "assistant: MARKER MK-7a062f60b42b reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> Tool call not executed: 'file_read' requires",
+    "assistant: FINAL MK-7a062f60b42b tool_result_sha=3e48f01580f888cf"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 931.143,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1434.707,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:26:11.250179568+00:00",
+      "last_activity": "2026-10-02T18:26:11.263683144+00:00",
+      "message_count": 1,
+      "session_id": "x1_drop_during_approval-79cd10"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "running",
+    "turn_id": "78122ee5-2daa-49d6-92d6-c5dcdb966e77",
+    "turn_started_at": "2026-10-02T18:26:11.263524339+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 1937.46,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:26:11.250179568+00:00",
+      "last_activity": "2026-10-02T18:26:12.221498157+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-79cd10"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "running",
+    "turn_id": "78122ee5-2daa-49d6-92d6-c5dcdb966e77",
+    "turn_started_at": "2026-10-02T18:26:11.263524339+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2439.213,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:26:11.250179568+00:00",
+      "last_activity": "2026-10-02T18:26:12.221498157+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-79cd10"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "running",
+    "turn_id": "78122ee5-2daa-49d6-92d6-c5dcdb966e77",
+    "turn_started_at": "2026-10-02T18:26:11.263524339+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 2941.721,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:26:11.250179568+00:00",
+      "last_activity": "2026-10-02T18:26:12.221498157+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-79cd10"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "running",
+    "turn_id": "78122ee5-2daa-49d6-92d6-c5dcdb966e77",
+    "turn_started_at": "2026-10-02T18:26:11.263524339+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3443.702,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:26:11.250179568+00:00",
+      "last_activity": "2026-10-02T18:26:12.221498157+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-79cd10"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "running",
+    "turn_id": "78122ee5-2daa-49d6-92d6-c5dcdb966e77",
+    "turn_started_at": "2026-10-02T18:26:11.263524339+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 3946.408,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:26:11.250179568+00:00",
+      "last_activity": "2026-10-02T18:26:12.221498157+00:00",
+      "message_count": 3,
+      "session_id": "x1_drop_during_approval-79cd10"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "running",
+    "turn_id": "78122ee5-2daa-49d6-92d6-c5dcdb966e77",
+    "turn_started_at": "2026-10-02T18:26:11.263524339+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4449.44,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 4952.08,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5454.465,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5957.084,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6459.87,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "x1_drop_during_approval-79cd10",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 2,
+   "mono_ms": 936.191,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 3,
+   "mono_ms": 936.461,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 4,
+   "mono_ms": 968.783,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 5,
+   "mono_ms": 969.082,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 6,
+   "mono_ms": 969.383,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 7,
+   "mono_ms": 969.425,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 8,
+   "mono_ms": 1770.977,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 9,
+   "mono_ms": 1771.29,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 10,
+   "mono_ms": 1771.559,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 11,
+   "mono_ms": 1771.717,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 12,
+   "mono_ms": 1872.161,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 13,
+   "mono_ms": 1872.441,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 14,
+   "mono_ms": 4327.92,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 15,
+   "mono_ms": 4328.206,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 16,
+   "mono_ms": 4328.51,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 17,
+   "mono_ms": 4328.574,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

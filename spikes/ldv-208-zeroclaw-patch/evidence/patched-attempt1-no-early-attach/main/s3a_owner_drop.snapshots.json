@@ -1,0 +1,99 @@
+[
+ {
+  "label": "1s-after-drop",
+  "t_ms": 19087,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3a read the fixture nonce=ebf281",
+      "created_at": "2026-10-02T18:18:50.991909339+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3a_owner_drop-334833",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "2s-after-drop",
+  "t_ms": 20089.531,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3a read the fixture nonce=ebf281",
+      "created_at": "2026-10-02T18:18:50.991909339+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3a_owner_drop-334833",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "before-final",
+  "t_ms": 23699.723,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q3a read the fixture nonce=ebf281",
+      "created_at": "2026-10-02T18:18:50.991909339+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-8711f4921def reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-patched/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:18:56.398808844+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-79ed8a68ef33\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:18:56.410893224+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s3a_owner_drop-334833",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 25205.734,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:18:50 +00:00]\n\nQ3a read the fixture nonce=ebf281",
+      "created_at": "2026-10-02T18:18:56.509432567+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-8711f4921def reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-patched/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:18:56.509432567+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-79ed8a68ef33\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:18:56.509432567+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-8711f4921def tool_result_sha=3587b5c43b8d6194",
+      "created_at": "2026-10-02T18:18:56.509432567+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s3a_owner_drop-334833",
+    "session_persistence": true
+   }
+  }
+ }
+]

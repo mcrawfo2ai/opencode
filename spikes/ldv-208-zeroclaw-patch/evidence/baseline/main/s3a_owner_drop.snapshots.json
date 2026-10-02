@@ -1,0 +1,71 @@
+[
+ {
+  "label": "1s-after-drop",
+  "t_ms": 19048.57,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "s3a_owner_drop-555067",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "2s-after-drop",
+  "t_ms": 20051.689,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "s3a_owner_drop-555067",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "before-final",
+  "t_ms": 23661.623,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [],
+    "session_id": "s3a_owner_drop-555067",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "final",
+  "t_ms": 25168.389,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:13:02 +00:00]\n\nQ3a read the fixture nonce=9b1cd3",
+      "created_at": "2026-10-02T18:13:07.604536826+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-a8847ca8596e reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-base/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:13:07.604536826+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-a5c8e15b6544\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:13:07.604536826+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-a8847ca8596e tool_result_sha=e7435b5efc13b005",
+      "created_at": "2026-10-02T18:13:07.604536826+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s3a_owner_drop-555067",
+    "session_persistence": true
+   }
+  }
+ }
+]

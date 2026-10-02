@@ -1,0 +1,716 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.51s
+     Running unittests src/lib.rs (target/debug/deps/zeroclaw_gateway-db67ac2f33290177)
+
+running 638 tests
+test a2a::tests::agent_card_none_for_unknown_alias ... ok
+test a2a::tests::agent_card_none_for_unpublished_alias ... ok
+test a2a::tests::agent_card_none_for_disabled_alias ... ok
+test a2a::tests::a2a_port_override_supersedes_gateway_port ... ok
+test a2a::tests::card_description_falls_back_to_neutral_default_without_identity ... ok
+test a2a::tests::catalog_capabilities_are_never_empty ... ok
+test a2a::tests::card_serializes_to_camelcase_wire_shape ... ok
+test a2a::tests::catalog_card_empty_skills_without_bundles_on_disk ... ok
+test a2a::tests::card_description_reads_identity_bio_when_configured ... ok
+test a2a::tests::catalog_routes_serve_root_and_prefixed_paths ... ok
+test a2a::tests::catalog_card_excludes_unpublished_aliases ... ok
+test a2a::tests::empty_tags_are_omitted_from_skill_wire_shape ... ok
+test a2a::tests::card_description_uses_name_line_when_bio_absent ... ok
+test a2a::tests::endpoints_derive_from_gateway_port_when_unset ... ok
+test a2a::tests::jsonrpc_error_carries_code_and_id ... ok
+test a2a::tests::out_task_serializes_to_camelcase_wire_shape ... ok
+test a2a::tests::inbound_response_serializes_to_flat_sendmessage_shape ... ok
+test a2a::tests::public_base_url_overrides_derived_endpoint ... ok
+test a2a::tests::published_agent_card_is_spec_shaped ... ok
+test a2a::tests::runtime_gateway_endpoint_supersedes_config_gateway_port_when_unset ... ok
+test a2a::tests::public_base_url_overrides_runtime_gateway_endpoint ... ok
+test a2a::tests::task_not_found_error_uses_conforming_shape ... ok
+test a2a::tests::send_message_params_parse_text_parts ... ok
+test a2a::tests::unsupported_operation_error_uses_conforming_shape ... ok
+test a2a::tests::version_not_supported_error_uses_conforming_shape ... ok
+test a2a::tests::wants_return_immediately_flags_only_when_requested ... ok
+test accept_error_tests::fd_exhaustion_accept_errors_are_recoverable ... ok
+test accept_error_tests::transient_kinds_recover_but_fatal_propagates ... ok
+test a2a::tests::exposed_skills_drop_when_bundle_filter_excludes_them ... ok
+test a2a::tests::exposed_skills_resolve_tag_and_scope_to_bundle ... ok
+test api::tests::a2a_auth::alias_card_serves_unauthenticated_request ... ok
+test api::tests::a2a_auth::alias_card_serves_with_valid_token ... ok
+test api::tests::a2a_auth::catalog_card_serves_unauthenticated_request ... ok
+test api::tests::a2a_auth::task_endpoint_rejects_unauthenticated_request ... ok
+test api::tests::api_channel_relink_requires_bearer_auth_when_pairing_enabled ... ok
+test api::tests::api_channel_relink_unknown_channel_is_not_found ... ok
+test api::tests::api_channel_relink_unsupported_channel_is_explicit_conflict_noop ... ok
+test api::tests::api_channels_readiness_key_tracks_whatsapp_backend_type ... ok
+test api::tests::api_channels_marks_configured_uncompiled_channel_unavailable ... ok
+test api::tests::api_channels_serializes_readiness_without_duplicate_summary_fields ... ok
+test api::tests::api_channels_without_login_probe_keeps_authenticated_unknown ... ok
+test api::tests::api_status_contract_includes_connected_nodes_and_mdns_peers ... ok
+test api::tests::api_status_contract_preserves_nullable_and_nested_fields ... ok
+test api::tests::channel_readiness_orphan_channel_reports_missing_agent_binding_without_broken_health ... ok
+test api::tests::channel_readiness_unchecked_channel_types_are_unknown_not_down ... ok
+test api::tests::channel_readiness_webhook_does_not_call_custom_path_healthy_without_listener ... ok
+test api::tests::channel_readiness_webhook_does_not_call_gateway_route_healthy_without_listener ... ok
+test api::tests::channel_readiness_webhook_rejects_stale_listener_health ... ok
+test api::tests::channel_readiness_webhook_uses_live_pairing_guard_for_auth ... ok
+test api::tests::channel_readiness_webhook_uses_supervised_listener_health_for_custom_path ... ok
+test api::tests::backfilled_orphan_is_revocable_by_its_real_hash ... ok
+test api::tests::concurrent_rotates_do_not_both_issue_a_pairing_code ... ok
+test api::tests::cron_add_refuses_alias_during_destructive_cleanup ... ok
+test api::tests::cron_api_add_rejects_shell_output_format_for_agent_job ... ok
+test accept_error_tests::a_config_api_opt_out_reaches_the_pricing_refresher_without_a_restart ... ok
+test api::tests::cron_api_accepts_agent_jobs ... ok
+test api::tests::cron_api_agent_job_rejects_empty_session_target_as_bad_request ... ok
+test api::tests::cron_api_agent_job_rejects_invalid_session_target_as_bad_request ... ok
+test api::tests::cron_api_agent_job_persists_session_target_main ... ok
+test api::tests::cron_api_agent_job_accepts_session_target_case_and_whitespace ... ok
+test api::tests::cron_api_patch_agent_prompt_without_agent ... ok
+test api::tests::cron_api_patch_enabled_without_agent ... ok
+test api::tests::cron_api_patch_rejects_shell_output_format_for_agent_job ... ok
+test api::tests::cron_api_patch_name_and_schedule_without_agent ... ok
+test api::tests::cron_api_patch_rejects_shell_output_format_for_declarative_job ... ok
+test api::tests::cron_api_patch_shell_command_requires_known_agent ... ok
+test api::tests::cron_api_rejects_announce_delivery_without_target ... ok
+test api::tests::cron_api_patch_shell_prompt_unknown_agent_is_bad_request_not_500 ... ok
+test api::tests::cron_api_run_executes_shell_job_and_records_run ... ok
+test api::tests::cron_api_run_returns_not_found_for_unknown_job ... ok
+test api::tests::cron_api_patch_updates_imperative_shell_output_format ... ok
+test acp::tests::acp_ws_front_door_omitted_cwd_uses_agent_workspace ... ok
+test api::tests::cron_api_run_records_best_effort_delivery_failure_as_degraded ... ok
+test api::tests::cron_api_timezone_add_rejects_invalid_timezone_as_bad_request ... ok
+test api::tests::cron_api_shell_roundtrip_includes_delivery ... ok
+test api::tests::cron_api_timezone_add_persists_explicit_timezone ... ok
+test api::tests::cron_api_shell_raw_output_roundtrip ... ok
+test api::tests::cron_api_timezone_patch_clears_timezone_with_explicit_signal ... ok
+test api::tests::cron_api_timezone_patch_rejects_invalid_timezone_as_bad_request ... ok
+test api::tests::cron_api_timezone_patch_replaces_timezone_when_provided ... ok
+test api::tests::gateway_display_session_id_strips_gw_prefix ... ok
+test api::tests::handle_api_memory_list_truncates_oversized_content ... ok
+test api::tests::handle_api_memory_search_truncates_oversized_content_after_filtering ... ok
+test api::tests::handle_api_tools_scopes_listing_by_agent_query ... ok
+test api::tests::integration_entry_json_derives_category_label_from_category ... ok
+test api::tests::integration_entry_json_exposes_config_key ... ok
+test api::tests::cron_api_timezone_patch_schedule_preserves_existing_timezone ... ok
+test api::tests::require_auth_rejects_empty_bearer_token ... ok
+test api::tests::resolve_gateway_cancel_key_accepts_display_and_full_ids_without_collisions ... ok
+test api::tests::resolve_gateway_session_key_accepts_full_key_and_display_id ... ok
+test api::tests::reconcile_backfills_orphan_token_hashes ... ok
+test api::tests::cron_api_timezone_patch_sets_timezone_without_schedule_change ... ok
+test api::tests::cron_runs_endpoint_serves_retained_history_after_job_deletion ... ok
+test api::tests::revoke_device_invalidates_bearer_token ... ok
+test api::tests::rotate_unknown_device_returns_not_found ... ok
+test api::tests::session_abort_accepts_dotted_display_session_id ... ok
+test api::tests::session_abort_accepts_full_dotted_session_key ... ok
+test api::tests::session_abort_accepts_full_session_key_from_sessions_list ... ok
+test api::tests::session_abort_accepts_underscore_display_session_id ... ok
+test api::tests::session_abort_keeps_dotted_and_underscored_ids_separate ... ok
+test api::tests::session_abort_still_accepts_display_session_id ... ok
+test api::tests::rotate_token_invalidates_old_bearer_token ... ok
+test api::tests::rotate_token_persists_revocation_to_config ... ok
+test api::tests::session_message_post_accepts_full_session_key ... ok
+test api::tests::session_message_post_accepts_underscore_display_session_id ... ok
+test api::tests::session_message_post_persists_and_broadcasts_to_session ... ok
+test api::tests::session_message_post_rejects_empty_content ... ok
+test api::tests::rotate_with_pending_code_revokes_but_returns_null_code ... ok
+test api::tests::session_message_post_rejects_unknown_session_without_creating_it ... ok
+test api::tests::session_rename_accepts_full_session_key ... ok
+test api::tests::session_rename_accepts_underscore_display_session_id ... ok
+test api::tests::session_delete_cancels_full_dotted_session_key ... ok
+test api::tests::session_delete_cancels_raw_dotted_turn_for_sanitized_persistence_key ... ok
+test api::tests::truncate_memory_api_content_caps_total_chars_with_ellipsis ... ok
+test api::tests::session_state_accepts_full_session_key_and_underscore_display_id ... ok
+test api_config::tests::agent_delete_hard_reference_refusal_preserves_generation ... ok
+test api::tests::submit_pairing_enhanced_persists_new_token ... ok
+test api::tests::session_message_post_waits_for_session_queue_before_append ... ok
+test api_config::tests::agent_delete_leaves_owned_state_intact_when_persist_fails ... ok
+test api_config::tests::agent_delete_purges_owned_state_after_successful_persist ... ok
+test api_config::tests::agent_delete_response_carries_partial_failure_warnings ... ok
+test api_config::tests::agent_rename_unrelated_collision_is_not_treated_as_resume ... ok
+test api_config::tests::agent_rename_leaves_owned_state_put_when_persist_fails ... ok
+test api_config::tests::apply_comments_clears_existing_comment_when_passed_empty ... ok
+test api_config::tests::apply_comments_writes_decoration_to_existing_value ... ok
+test api_config::tests::agent_rename_moves_owned_state_after_successful_persist ... ok
+test api_config::tests::agent_rename_resume_converges_when_config_already_to ... ok
+test api_config::tests::channel_bind_phantom_alias_is_404 ... ok
+test api_config::tests::channel_bind_preserves_a_deny_saved_by_the_other_handle ... ok
+test api_config::tests::channel_bind_clears_generation_before_returning_success ... ok
+test api_config::tests::channel_bind_refuses_a_deny_only_the_other_handle_has_saved ... ok
+test api_config::tests::channel_bind_refuses_a_group_key_bound_to_another_channel ... ok
+test api_config::tests::channel_bind_rejects_unauthenticated_request ... ok
+test api_config::tests::cancelled_prop_saves_block_generation_handoff_until_publication ... ok
+test api_config::tests::channel_bind_refuses_an_identity_an_ignore_denies ... ok
+test api_config::tests::channel_bind_still_binds_an_unignored_identity ... ok
+test api_config::tests::channel_generation_is_cleared_before_reload_is_signalled ... ok
+test api_config::tests::channel_bind_reports_the_custom_group_it_actually_wrote ... ok
+test api_config::tests::channel_generation_is_not_retired_when_config_save_fails ... ok
+test api_config::tests::compute_drift_detects_external_edit_to_field ... ok
+test api_config::tests::compute_drift_excludes_env_overridden_secret ... ok
+test api_config::tests::compute_drift_returns_empty_when_no_disk_file ... ok
+test api_config::tests::authenticated_patch_route_rejects_masked_or_empty_secret_values_without_mutation ... ok
+test api_config::tests::compute_drift_returns_empty_when_in_memory_matches_disk ... ok
+test api_config::tests::delete_cascade_resolves_custom_workspace_before_removing_entry ... ok
+test api_config::tests::compute_drift_excludes_gateway_paired_tokens ... ok
+test api_config::tests::compute_drift_surfaces_mismatched_non_secret_field ... ok
+test api_config::tests::config_write_lock_serializes_prop_put_against_concurrent_writer ... ok
+test api_config::tests::delete_map_key_handler_cascades_model_provider_and_persists ... ok
+test api_config::tests::delete_plan_rejects_unsupported_tts_provider_delete ... ok
+test api_config::tests::delete_plan_reports_authoritative_agent_lifecycle_blocker ... ok
+test api_config::tests::disabled_agent_binding_changes_channel_generation_projection ... ok
+test api_config::tests::drift_entry_for_secret_omits_both_values ... ok
+test api_config::tests::every_gateway_secret_is_classified ... ok
+test api_config::tests::delete_map_key_handler_refuses_model_provider_hard_ref_without_mutation ... ok
+test api_config::tests::invalid_etag_value_is_omitted_instead_of_panicking ... ok
+test api_config::tests::delete_map_key_handler_cascades_channel_and_persists ... ok
+test api_config::tests::json_pointer_to_dotted_handles_empty_root ... ok
+test api_config::tests::gateway_paired_tokens_is_gateway_managed ... ok
+test api_config::tests::delete_map_key_handler_rejects_unsupported_tts_without_raw_delete ... ok
+test api_config::tests::json_pointer_to_dotted_handles_pointer_form ... ok
+test api_config::tests::json_pointer_to_dotted_passes_dotted_through ... ok
+test api_config::tests::list_entry_for_secret_omits_value_field ... ok
+test api_config::tests::map_prop_error_classifies_type_mismatch ... ok
+test api_config::tests::map_prop_error_classifies_unknown_property ... ok
+test api_config::tests::map_prop_error_falls_back_to_validation_on_unknown_message ... ok
+test api_config::tests::lookup_prop_field_synthesizes_dynamic_http_request_secret_metadata ... ok
+test api_config::tests::map_key_create_cannot_recreate_agent_during_destructive_cleanup ... ok
+test api_config::tests::migration_preserves_runtime_paths_and_publishes_schema_version ... ok
+test api_config::tests::peer_group_changes_channel_generation_projection ... ok
+test api_config::tests::patch_add_does_not_materialize_resource_keyed_rate_alias ... ok
+test api_config::tests::prop_get_surfaces_disabled_audit_warning ... ok
+test api_config::tests::patch_cannot_recreate_agent_during_destructive_cleanup ... ok
+test api_config::tests::patch_allow_from_deny_all_persists_and_reloads_tool_policy ... ok
+test api_config::tests::prop_put_cannot_recreate_agent_during_destructive_cleanup ... ok
+test api_config::tests::prop_delete_refuses_agent_alias_under_destructive_lease_without_live_or_disk_mutation ... ok
+test api_config::tests::prop_put_does_not_materialize_resource_keyed_rate_alias ... ok
+test api_config::tests::renamed_workspace_move_failure_is_surfaced ... ok
+test api_config::tests::scrub_credentials_catches_credential_shaped_strings ... ok
+test api_config::tests::secret_response_only_carries_path_and_populated_flag ... ok
+test api_config::tests::test_op_coercion_bool_typed_value_matches_stored ... ok
+test api_config::tests::test_op_coercion_float_typed_value_matches_stored ... ok
+test api_config::tests::test_op_coercion_integer_typed_value_matches_stored ... ok
+test api_config::tests::test_op_coercion_mismatched_value_correctly_fails ... ok
+test api_config::tests::test_op_coercion_string_field_no_regression ... ok
+test api_config::tests::prop_put_on_dotted_resource_id_does_not_plant_phantom_sibling ... ok
+test api_logs::tests::attribution_keys_expose_sop_run_id_to_dynamic_clients ... ok
+test api_config::tests::prop_put_still_materializes_operator_chosen_alias ... ok
+test api_oidc::tests::a_callback_refused_for_relay_capacity_can_still_be_retried ... ok
+test api_oidc::tests::a_pending_flow_past_its_ttl_is_gone_when_the_callback_arrives ... ok
+test api_config::tests::unreadable_existing_config_survives_failed_save_rollback ... FAILED
+test api_oidc::tests::a_restored_flow_keeps_the_deadline_it_started_with ... ok
+test api_oidc::tests::a_trusted_forwarded_address_is_the_budgeted_identity ... ok
+test api_oidc::tests::callback_without_a_live_flow_is_refused ... ok
+test api_oidc::tests::a_flow_store_refusal_is_not_billed_to_the_caller ... ok
+test api_oidc::tests::callbacks_without_a_live_flow_run_the_caller_into_the_lockout ... ok
+test api_oidc::tests::a_relay_failure_reaching_the_idp_is_not_billed_to_the_caller ... ok
+test api_oidc::tests::completed_browser_sign_ins_are_not_billed_as_attempts ... ok
+test api_oidc::tests::device_proxy_start_and_poll_round_trip ... ok
+test api_oidc::tests::every_enrollment_response_forbids_caching ... ok
+test api_oidc::tests::callbacks_the_relay_turns_away_are_not_billed_as_attempts ... ok
+test api_oidc::tests::idp_error_on_callback_consumes_the_flow_and_shows_the_fixed_page ... ok
+test api_oidc::tests::pkce_callback_exchanges_once_and_only_once ... ok
+test api_oidc::tests::pkce_login_redirects_to_the_idp_with_s256_and_our_callback ... ok
+test api_oidc::tests::providers_lists_configured_aliases_sorted ... ok
+test api_oidc::tests::device_polls_consume_a_bounded_per_client_budget ... ok
+test api_oidc::tests::removing_the_alias_mid_flow_fails_the_callback_closed ... ok
+test api_oidc::tests::one_client_cannot_park_the_shared_flow_store ... ok
+test api_oidc::tests::the_callback_refuses_a_response_from_another_issuer ... ok
+test api_oidc::tests::relayed_garbage_device_codes_run_into_the_lockout ... ok
+test api_oidc::tests::the_outbound_cap_refuses_relaying_before_contacting_the_idp ... ok
+test api_oidc::tests::the_login_redirect_uri_scheme_follows_the_effective_tls_setting ... ok
+test api_oidc::tests::repeated_slow_down_walks_the_caller_into_the_lockout ... ok
+test api_oidc::tests::the_provider_listing_is_budgeted_for_remote_callers_only ... ok
+test api_oidc::tests::unknown_alias_is_a_404 ... ok
+test api_pairing::tests::submit_pairing_enhanced_enforces_pair_request_limiter_threshold ... ok
+test api_pairing::tests::submit_pairing_enhanced_enforces_shared_auth_limiter_threshold ... ok
+test api_pairing::tests::submit_pairing_enhanced_honors_trusted_forwarded_client_identity ... ok
+test api_pairing::tests::submit_pairing_enhanced_http_boundary_rotating_forwarded_header_cannot_evade_lockout ... ok
+test api_pairing::tests::submit_pairing_enhanced_http_boundary_trusted_proxy_separates_clients ... ok
+test api_pairing::tests::submit_pairing_enhanced_invalid_code_feeds_shared_auth_limiter ... ok
+test api_pairing::tests::submit_pairing_enhanced_keys_lockout_on_peer_not_forwarded_header ... ok
+test api_pairing::tests::submit_pairing_enhanced_rolls_back_in_process_token_when_persist_fails ... ok
+test api_pairing::tests::submit_pairing_enhanced_rolls_back_in_process_token_when_registry_register_fails ... ok
+test api_personality::tests::no_truncation_when_under_limit ... ok
+test api_personality::tests::personality_path_joins_workspace_root ... ok
+test api_personality::tests::truncate_at_max_chars ... ok
+test api_personality::tests::validate_filename_accepts_allowlist ... ok
+test api_personality::tests::validate_filename_rejects_traversal ... ok
+test api_plugins::tests::response_reports_compile_time_wasm_availability ... ok
+test api_quickstart::tests::quickstart_creation_waits_for_destructive_cleanup ... ok
+test api_sections::tests::agent_section_creation_reserves_url_key_through_cleanup ... ok
+test api_sections::tests::apply_first_run_agent_defaults_binds_existing_provider_and_profiles ... ok
+test api_sections::tests::build_agent_options_returns_every_configured_alias ... ok
+test api_sections::tests::channels_picker_marks_configured_after_create_map_key ... ok
+test api_sections::tests::channels_picker_walks_schema_via_init_defaults ... ok
+test api_sections::tests::channels_select_initializes_subsection_so_set_prop_works ... ok
+test api_sections::tests::derive_section_status_completed_sections_without_dispatchable_agent_stays_pending ... ok
+test api_sections::tests::derive_section_status_requires_dispatchable_agent ... ok
+test api_sections::tests::dev_config_template_preserves_dispatch_contract ... ok
+test api_sections::tests::dev_harness_template_preserves_runtime_contract ... ok
+test api_sections::tests::existing_section_selection_without_changes_skips_reload ... ok
+test api_sections::tests::handle_sections_derives_every_top_level_field_from_schema ... ok
+test api_sections::tests::handle_sections_emits_stable_group_key_with_english_fallback ... ok
+test api_sections::tests::memory_picker_sources_from_selectable_backends ... ok
+test api_sections::tests::memory_section_ready_tracks_onboarding_progress_not_default_backend ... ok
+test api_sections::tests::models_query_falls_back_to_bare_family_without_an_alias ... ok
+test api_sections::tests::models_query_uses_configured_alias_for_every_provider_family ... ok
+test api_sections::tests::models_query_uses_hailo_alias_for_catalog_resolution ... ok
+test api_sections::tests::one_tier_alias_map_picker_is_empty_for_unconfigured_section ... ok
+test api_sections::tests::one_tier_alias_map_picker_surfaces_created_aliases ... ok
+test api_sections::tests::picker_dispatch_covers_every_section_variant ... ok
+test api_sections::tests::providers_picker_marks_alias_readiness ... ok
+test api_sections::tests::providers_picker_sources_from_list_providers ... ok
+test api_sections::tests::section_select_snapshot_read_failure_stops_before_save ... ok
+test api_sections::tests::storage_picker_lists_all_kinds_and_marks_created ... ok
+test api_sections::tests::tunnel_picker_badges_present_option_fields_as_configured ... ok
+test api_sections::tests::tunnel_picker_includes_synthetic_none ... ok
+test api_sections::tests::tunnel_picker_marks_active_provider_from_configured_section ... ok
+test api_sections::tests::tunnel_picker_surfaces_all_option_backed_providers_on_fresh_config ... ok
+test api_sections::tests::tunnel_select_updates_canonical_provider_and_active_picker_badge ... ok
+test api_sections::tests::typed_provider_catalog_keys_create_snake_config_sections ... ok
+test api_sections::tests::unchanged_memory_and_tunnel_selections_reject_uninspectable_config ... ok
+test api_sections::tests::unchanged_memory_and_tunnel_selections_skip_reload ... ok
+test api_sections::tests::unchanged_memory_selection_rejects_disk_drift ... ok
+test api_sections::tests::unchanged_tunnel_selection_rejects_default_disk_drift ... ok
+test api_skills::tests::agent_skill_entry_maps_shadowed ... ok
+test api_skills::tests::dropped_skill_entry_maps_each_reason_kind ... ok
+test api_skills::tests::not_editable_maps_to_forbidden ... ok
+test api_sop::tests::http_surface_enforces_policy_membership_via_authenticated_subject ... ok
+test api_sop::tests::loopback_bearer_identity_is_not_derived_when_pairing_is_disabled ... ok
+test api_sop::tests::loopback_caller_with_a_valid_token_keeps_its_authenticated_identity ... ok
+test api_sop::tests::outcome_response_maps_status_codes ... ok
+test api_sop_author::tests::authoring_cancel_a_gated_run_frees_it_regardless_of_approval_policy ... ok
+test api_sop_author::tests::authoring_cancel_active_run_returns_requested_and_keeps_it_active ... ok
+test api_sop_author::tests::authoring_cancel_fails_closed_remotely_when_pairing_is_disabled ... ok
+test api_sop_author::tests::authoring_cancel_is_idempotent_on_a_second_request ... ok
+test api_sop_author::tests::authoring_cancel_rejects_malformed_json_body ... ok
+test api_sop_author::tests::authoring_cancel_rejects_remote_client_behind_trusted_loopback_proxy ... ok
+test api_sop_author::tests::authoring_cancel_rejects_run_id_from_different_sop ... ok
+test api_sop_author::tests::authoring_cancel_rejects_unauthenticated_request ... ok
+test api_sop_author::tests::authoring_cancel_unknown_run_returns_404 ... ok
+test api_sop_author::tests::authoring_decide_enforces_broker_policy_membership ... ok
+test api_sop_author::tests::authoring_decide_pending_quorum_returns_overlay_shape ... ok
+test api_sop_author::tests::authoring_decide_rejects_run_id_from_different_sop_before_broker_resolution ... ok
+test api_sop_author::tests::authoring_rename_moves_the_sop_and_maps_failures_to_status_codes ... ok
+test api_sop_author::tests::authoring_rename_requires_auth ... ok
+test api_sop_author::tests::authoring_save_after_rename_does_not_recreate_the_retired_sop ... ok
+test api_sop_author::tests::manual_run_refuses_an_unowned_procedure_before_starting_it ... ok
+test api_sop_author::tests::manual_run_registers_its_driver_with_the_generation_set ... ok
+test api_sop_author::tests::manual_run_starts_an_owned_procedure ... ok
+test api_upload::tests::accepts_the_four_provider_formats_with_matching_extensions ... ok
+test api_upload::tests::rejects_empty_body ... ok
+test api_upload::tests::rejects_payload_over_the_configured_limit ... ok
+test api_upload::tests::rejects_sniffable_but_provider_unsendable_formats ... ok
+test api_upload::tests::rejects_unknown_bytes_regardless_of_size ... ok
+test auth_rate_limit::tests::lockout_after_max_attempts ... ok
+test auth_rate_limit::tests::lockout_retry_after_is_the_full_lockout_window ... ok
+test auth_rate_limit::tests::loopback_detection_covers_parsed_addresses ... ok
+test auth_rate_limit::tests::loopback_is_exempt ... ok
+test auth_rate_limit::tests::under_limit_is_ok ... ok
+test auth_rate_limit::tests::unknown_key_is_not_locked_out ... ok
+test node_tool::tests::node_tool_execute_node_not_connected ... ok
+test node_tool::tests::node_tool_execute_success ... ok
+test node_tool::tests::node_tool_metadata ... ok
+test node_tool::tests::node_tool_name_format ... ok
+test node_tool::tests::node_tool_rejects_unapproved_sensitive_operation ... ok
+test node_tool::tests::node_tool_spec_generation ... ok
+test nodes::mdns::tests::proprietary_multicast_group_is_not_reserved_mdns ... ok
+test nodes::mdns::tests::receive_error_backoff_delays_retry ... ok
+test nodes::mdns::tests::receive_error_backoff_yields_to_shutdown ... ok
+test nodes::mdns::tests::receive_error_logs_are_rate_limited ... ok
+test nodes::tests::extract_node_ws_token_from_header ... ok
+test nodes::tests::extract_node_ws_token_from_query ... ok
+test nodes::tests::extract_node_ws_token_none_when_empty ... ok
+test nodes::tests::gateway_invoke_message_serialize ... ok
+test nodes::tests::node_capability_deserialize ... ok
+test nodes::tests::node_message_register_deserialize ... ok
+test nodes::tests::node_message_result_deserialize ... ok
+test nodes::tests::node_registry_all_capabilities ... ok
+test nodes::tests::node_registry_capacity_limit ... ok
+test nodes::tests::node_registry_is_empty ... ok
+test nodes::tests::node_registry_re_register_same_id ... ok
+test nodes::tests::node_registry_register_and_unregister ... ok
+test nodes::tests::nodes_auth_token_compare_uses_constant_time_eq_and_trims ... ok
+test nodes::tests::nodes_auth_token_correct_token_passes ... ok
+test nodes::tests::nodes_auth_token_whitespace_only_rejects_any_token ... ok
+test nodes::tests::nodes_auth_token_whitespace_only_rejects_matching_whitespace_token ... ok
+test nodes::tests::nodes_auth_token_whitespace_only_rejects_missing_token ... ok
+test nodes::tests::nodes_auth_token_wrong_token_returns_401 ... ok
+test nodes::tests::nodes_disabled_returns_404 ... ok
+test nodes::tests::nodes_enabled_no_auth_no_pairing_returns_503 ... ok
+test nodes::tests::nodes_pairing_required_wrong_token_returns_401 ... ok
+test openapi::tests::a2a_task_operation_requires_bearer_auth ... ok
+test openapi::tests::config_api_schemas_keep_operator_descriptions ... ok
+test openapi::tests::docs_csp_survives_default_security_layer ... ok
+test openapi::tests::docs_route_sets_own_csp_admitting_scalar_cdn ... ok
+test openapi::tests::spec_declares_bearer_auth ... ok
+test api_oidc::tests::the_production_assembly_keeps_every_boundary ... ok
+test openapi::tests::spec_has_expected_paths ... ok
+test openapi::tests::spec_registers_a2a_task_schemas ... ok
+test openapi::tests::spec_registers_plugin_catalog_schemas ... ok
+test api_oidc::tests::the_pending_flow_store_is_capped_before_the_idp_is_contacted ... ok
+test principal_gate::tests::a_native_token_unpaired_after_admission_cannot_write ... ok
+test openapi::tests::spec_registers_version_schemas ... ok
+test principal_gate::tests::a_present_but_blank_or_non_text_provider_header_is_refused ... ok
+test openapi::tests::status_contract_schema_is_nullable_and_path_is_query_scoped ... ok
+test api_config::tests::refresh_context_window_allows_slow_response_and_forwards_api_key ... ok
+test principal_gate::tests::a_parked_write_with_its_authority_intact_lands ... ok
+test principal_gate::tests::invalid_native_bearer_keeps_the_legacy_denial_shape ... ok
+test principal_gate::tests::methods_outside_the_known_set_fail_closed ... ok
+test principal_gate::tests::a_revocation_after_admission_binds_the_in_flight_write ... ok
+test principal_gate::tests::oidc_identity_with_no_mapped_profile_is_refused ... ok
+test principal_gate::tests::open_mode_without_provider_selection_stays_open ... ok
+test principal_gate::tests::paired_native_bearer_reaches_the_handler_with_full_access ... ok
+test principal_gate::tests::gateway_persist_publishes_into_the_rpc_authority ... ok
+test principal_gate::tests::explicit_create_and_delete_grants_admit_those_operations ... ok
+test principal_gate::tests::rpc_revocation_binds_the_gateway_without_a_reload ... ok
+test principal_gate::tests::scoped_oidc_principal_is_gated_by_config_grants ... ok
+test principal_gate::tests::unauthenticated_requests_get_the_legacy_denial_shape ... ok
+test principal_gate::tests::unknown_provider_selection_is_denied_even_in_open_mode ... ok
+test principal_gate::tests::policy_is_bound_to_the_accepted_revision_not_to_the_request ... ok
+test principal_gate::tests::options_preflight_stays_unauthenticated ... ok
+test security_headers::tests::csp_permits_same_origin_dashboard_assets ... ok
+test security_headers::tests::injects_baseline_headers_without_hsts ... ok
+test security_headers::tests::injects_hsts_only_when_requested ... ok
+test security_headers::tests::preserves_existing_header_values ... ok
+test sse::tests::credential_free_frame_flows_on_unauthenticated_stream ... ok
+test sse::tests::ephemeral_credential_frame_is_withheld_from_unauthenticated_stream ... ok
+test sse::tests::ephemeral_credential_frame_reaches_authenticated_stream_without_marker ... ok
+test sse::tests::history_payload_never_recovers_pairing_credentials ... ok
+test sse::tests::history_payload_returns_only_public_events ... ok
+test sse::tests::observability_tagged_events_are_public_even_without_session_id ... ok
+test sse::tests::route_delivers_credential_without_marker_to_authenticated_client ... ok
+test sse::tests::route_returns_401_when_pairing_enabled_without_valid_token ... ok
+test sse::tests::route_withholds_credential_frame_on_unauthenticated_events_stream ... ok
+test sse::tests::session_scoped_events_are_not_public_sse_events ... ok
+test sse::tests::session_scoped_frame_is_withheld_regardless_of_auth ... ok
+test static_files::tests::fs_asset_allows_symlink_that_resolves_inside_root ... ok
+test static_files::tests::fs_asset_rejects_invalid_components_before_lookup ... ok
+test static_files::tests::fs_asset_rejects_symlink_that_resolves_outside_root ... ok
+test static_files::tests::fs_asset_returns_not_found_for_missing_or_non_file_targets ... ok
+test static_files::tests::fs_asset_serves_contained_nested_file ... ok
+test static_files::tests::spa_index_rejects_symlink_that_resolves_outside_root ... ok
+test static_files::tests::static_route_rejects_malformed_path_syntax ... ok
+test tests::admin_paircode_new_mints_under_live_policy_after_a_config_swap ... ok
+test tests::admin_paircode_new_pairing_disabled_is_bad_request ... ok
+test tests::admin_paircode_new_refuses_loopback_callers_without_the_admin_token ... ok
+test tests::admin_paircode_new_rejects_remote_peer ... ok
+test tests::admin_paircode_new_rotate_all_revokes_everything ... ok
+test principal_gate::tests::path_selectors_are_enforced_on_the_complete_mutation ... ok
+test tests::admin_paircode_new_rotate_unknown_device_is_not_found ... ok
+test tests::admin_paircode_new_without_rotate_keeps_existing_tokens ... ok
+test tests::admin_paircode_refuses_loopback_callers_without_the_admin_token ... ok
+test tests::admin_paircode_new_rotate_device_revokes_one ... ok
+test tests::admin_reload_gate_loopback_always_allowed ... ok
+test tests::admin_reload_gate_remote_blocked_by_default ... ok
+test tests::admin_reload_gate_remote_opt_in_requires_auth ... ok
+test tests::admin_reload_gate_remote_opt_in_without_pairing_is_rejected ... ok
+test tests::admin_paircode_serves_the_code_with_the_admin_token ... ok
+test tests::admin_reload_loopback_no_token_reloads ... ok
+test tests::admin_reload_remote_default_off_is_forbidden ... ok
+test tests::admin_reload_remote_opt_in_invalid_token_is_rejected ... ok
+test tests::admin_reload_remote_opt_in_missing_token_is_rejected ... ok
+test tests::admin_reload_remote_opt_in_valid_token_reloads ... ok
+test tests::admin_reload_remote_opt_in_without_pairing_does_not_reload ... ok
+test tests::allow_remote_admin_defaults_off ... ok
+test tests::already_paired_notice_includes_recovery_command_and_curl ... ok
+test tests::already_paired_notice_states_no_code_was_generated ... ok
+test tests::app_state_is_clone ... ok
+test tests::cancellation_registry_keeps_lossy_session_ids_separate ... ok
+test tests::cancellation_registry_preserves_sse_owner_when_ws_finishes ... ok
+test tests::cancellation_registry_preserves_ws_owner_when_sse_finishes ... ok
+test tests::admin_token_from_an_earlier_gateway_start_is_refused ... ok
+test principal_gate::tests::verbs_follow_the_effect_of_the_mutation_not_the_http_method ... ok
+test tests::client_key_defaults_to_peer_addr_when_untrusted_proxy_mode ... ok
+test tests::client_key_falls_back_to_peer_when_forwarded_header_invalid ... ok
+test tests::client_key_uses_forwarded_ip_only_in_trusted_proxy_mode ... ok
+test principal_gate::tests::whole_configuration_rewrites_need_the_wildcard_selector ... ok
+test tests::cancellation_transport_ws_to_sse_preserves_new_owner ... ok
+test tests::dashboard_index_rejects_symlink_that_escapes_dashboard_root ... ok
+test tests::default_agent_alias_picks_smallest_enabled_and_is_deterministic ... ok
+test tests::duplicate_idempotency_log_omits_caller_key ... ok
+test tests::daemon_startup_gateway_does_not_report_ready_when_tls_setup_fails ... ok
+test tests::cancellation_transport_sse_to_ws_preserves_new_owner ... ok
+test tests::gateway_and_ws_turn_admission_blocks_destructive_alias_work ... ok
+test tests::gateway_cancel_key_preserves_distinct_session_ids ... ok
+test tests::gateway_rate_limiter_blocks_after_limit ... ok
+test tests::gateway_excluded_tools_drops_denied_mcp_tool ... ok
+test tests::gateway_rate_limiter_pair_and_webhook_are_independent ... ok
+test tests::gateway_timeout_uses_typed_config_default ... ok
+test tests::idempotency_storage_key_encoding_is_injective ... ok
+test tests::idempotency_storage_key_is_injective_over_adversarial_inputs ... ok
+test tests::failed_admin_token_rotation_refuses_the_token_left_on_disk ... ok
+test tests::idempotency_store_allows_different_keys ... ok
+test tests::gateway_webhook_secret_uses_one_live_config_owner ... ok
+test tests::idempotency_store_bounded_cardinality_evicts_oldest_key ... ok
+test tests::idempotency_store_eviction_preserves_newest ... ok
+test tests::idempotency_store_max_keys_clamped_to_one ... ok
+test tests::idempotency_store_rapid_duplicate_rejected ... ok
+test tests::idempotency_store_rejects_duplicate_key ... ok
+test tests::is_needs_quickstart_err_detects_marker_from_helper ... ok
+test tests::is_needs_quickstart_err_detects_via_substring ... ok
+test tests::is_needs_quickstart_err_ignores_unrelated_errors ... ok
+test tests::idempotency_store_accepts_after_ttl_expires ... ok
+test tests::legacy_pair_rolls_back_in_process_token_when_persist_fails ... ok
+test tests::long_running_request_timeout_default_is_ten_minutes ... ok
+test tests::long_running_request_timeout_uses_typed_config_default ... ok
+test tests::metrics_endpoint_returns_hint_when_prometheus_is_disabled ... ok
+test tests::needs_quickstart_channel_reply_resolves_via_fluent ... ok
+test tests::needs_quickstart_for_flags_empty_model ... ok
+test tests::needs_quickstart_for_flags_whitespace_only_model ... ok
+test tests::needs_quickstart_for_passes_real_model ... ok
+test tests::normalize_max_keys_preserves_nonzero_values ... ok
+test tests::normalize_max_keys_uses_fallback_for_zero ... ok
+test tests::legacy_pair_rolls_back_in_process_token_when_registry_register_fails ... ok
+test tests::paircode_recovery_command_includes_alternate_port ... ok
+test tests::paircode_recovery_command_includes_specific_host_when_needed ... ok
+test tests::paircode_recovery_command_uses_loopback_for_nonloopback_host ... ok
+test tests::paircode_recovery_curl_normalizes_unspecified_bind_hosts ... ok
+test tests::paircode_recovery_curl_preserves_actual_loopback_hosts ... ok
+test tests::paircode_recovery_curl_preserves_path_prefix ... ok
+test tests::pair_code_never_returns_the_code_even_to_a_loopback_caller ... ok
+test tests::paircode_recovery_curl_targets_running_instance ... ok
+test tests::paircode_recovery_curl_quotes_admin_token_path ... ok
+test tests::idempotency_store_concurrent_access_safe ... ok
+test tests::daemon_startup_gateway_reports_ready_and_uses_external_shutdown_sender ... ok
+test tests::plugin_catalog_rejects_missing_and_invalid_bearer_tokens ... ok
+test tests::plugin_catalog_accepts_a_paired_bearer_in_every_gateway_build ... ok
+test tests::persist_pairing_tokens_serializes_against_concurrent_config_write ... ok
+test tests::public_health_omits_component_error_details ... ok
+test tests::rate_limiter_bounded_cardinality_evicts_oldest_key ... ok
+test tests::persist_pairing_tokens_writes_config_tokens ... ok
+test tests::rate_limiter_exact_boundary_at_max_keys ... ok
+test tests::rate_limiter_independent_keys_tracked_separately ... ok
+test tests::rate_limiter_concurrent_access_safe ... ok
+test tests::rate_limiter_single_key_max_allows_one_request ... ok
+test tests::rate_limiter_sweep_removes_stale_entries ... ok
+test tests::rate_limiter_zero_limit_always_allows ... ok
+test tests::require_localhost_accepts_ipv4_loopback ... ok
+test tests::require_localhost_accepts_ipv6_loopback ... ok
+test tests::require_localhost_rejects_non_loopback_ipv4 ... ok
+test tests::require_localhost_rejects_non_loopback_ipv6 ... ok
+test tests::require_sop_dispatch_credentials_is_pure_over_verdict ... ok
+test tests::resolve_web_dist_dir_accepts_configured_dist ... ok
+test tests::resolve_web_dist_dir_rejects_configured_path_without_index ... ok
+test tests::proxied_loopback_caller_cannot_reach_operator_access_through_any_code_route ... ok
+test tests::rate_limiter_allows_after_window_expires ... ok
+test tests::rate_limiter_rapid_burst_then_cooldown ... ok
+test tests::security_body_limit_is_64kb ... ok
+test tests::security_timeout_default_is_30_seconds ... ok
+test tests::sop_and_chat_webhook_idempotency_namespaces_do_not_collide ... ok
+test tests::sop_dispatch_rejected_when_no_credentials_configured ... ok
+test tests::sop_dispatch_succeeds_with_paired_bearer_token ... ok
+test tests::sop_dispatch_uses_authorization_snapshot_during_secret_rotation ... ok
+test tests::sop_dispatch_uses_authorization_snapshot_when_secret_added_midrequest ... ok
+test tests::sop_idempotency_namespaced_per_path ... ok
+test tests::sop_idempotency_resists_adversarial_cross_path_collision ... ok
+test tests::sop_idempotency_same_path_same_key_still_suppresses ... ok
+test tests::sop_route_without_credentials_hides_body_and_engine_state ... ok
+test tests::sop_webhook_dispatches_matching_path_without_provider_call ... ok
+test tests::sop_webhook_rejects_unmatched_and_invalid_requests_without_chat_fallback ... ok
+test tests::sop_webhook_requires_shared_engine_and_webhook_auth ... ok
+test tests::sop_webhook_route_reaches_the_shared_dispatch_handler ... ok
+test tests::spa_fallback_does_not_treat_api_like_spa_paths_as_api ... ok
+test tests::spa_fallback_reports_unavailable_without_dashboard_assets ... ok
+test tests::spa_fallback_returns_json_for_api_root_path ... ok
+test tests::spa_fallback_returns_json_for_path_prefixed_api_miss ... ok
+test tests::spa_fallback_returns_json_not_html_for_unknown_api_path ... ok
+test tests::spa_fallback_still_serves_dashboard_routes ... ok
+test tests::sse_final_response_reconciliation_handles_empty_and_receipt_suffix ... ok
+test tests::static_routes_reject_malformed_paths_before_spa_fallback ... ok
+test tests::static_routes_serve_valid_assets_with_and_without_prefix ... ok
+test tests::web_dashboard_availability_uses_filesystem_dist ... ok
+test tests::webhook_autosave_stores_distinct_keys_per_request ... ok
+test tests::webhook_body_requires_message_field ... ok
+test tests::webhook_dispatches_sop_first_then_falls_back_to_chat_on_no_match ... ok
+test tests::webhook_explicit_agent_reports_model_without_owning_lifecycle ... ok
+test tests::webhook_forged_namespace_key_cannot_suppress_sop_dispatch ... ok
+test tests::webhook_idempotency_skips_duplicate_provider_calls ... ok
+test tests::webhook_memory_key_is_unique ... ok
+test tests::webhook_path_snapshot_survives_body_parse_and_trigger_match ... ok
+test tests::webhook_secret_hash_accepts_valid_header ... ok
+test tests::webhook_secret_hash_is_deterministic_and_nonempty ... ok
+test tests::webhook_secret_hash_rejects_invalid_header ... ok
+test tests::webhook_secret_hash_rejects_missing_header ... ok
+test tests::webhook_session_id_accepts_valid ... ok
+test tests::webhook_session_id_rejects_empty ... ok
+test tests::webhook_session_id_rejects_invalid_chars ... ok
+test tests::webhook_session_id_rejects_missing ... ok
+test tests::webhook_session_id_rejects_oversized ... ok
+test tests::webhook_session_id_trims_whitespace ... ok
+test tests::webhook_sop_dispatch_rejected_when_no_credentials_configured ... ok
+test tests::webhook_sop_first_ignores_bogus_chat_agent_query_param ... ok
+test tests::webhook_sse_abort_cancels_backpressured_unread_client ... ok
+test tests::webhook_sse_abort_cancels_turn_via_shared_registry ... ok
+test tests::webhook_sse_body_drop_cancels_turn ... ok
+test tests::webhook_sse_production_agent_persists_usage_with_agent_alias ... ok
+test tests::webhook_sse_production_budget_exhaustion_skips_provider_request ... ok
+test tests::webhook_sse_production_cache_hit_reconciles_no_chunk_final_response ... ok
+test tests::run_gateway_starts_with_mismatched_provider_api_key ... ok
+test tests::webhook_sse_replacement_cancels_old_turn_without_removing_new_token ... ok
+test tests::webhook_sse_streams_cumulative_token_then_done ... ok
+test tests::webhook_stream_true_without_sse_accept_keeps_json ... ok
+test tests::webhook_unknown_agent_rejected_before_dispatch ... ok
+test tests::webhook_sse_production_receipt_suffix_reconciles_before_done ... ok
+test tests::websocket_delivers_api_injected_message_for_dotted_session ... ok
+test tests::whatsapp_query_fields_are_optional ... ok
+test tls::tests::test_build_server_config_client_auth_optional ... ok
+test tls::tests::test_build_server_config_no_client_auth ... ok
+test tls::tests::test_build_server_config_with_client_auth ... ok
+test tls::tests::test_build_server_config_with_pinning ... ok
+test tls::tests::test_client_auth_config_defaults ... ok
+test tls::tests::test_config_defaults_deserialization ... ok
+test tests::websocket_resumes_seeded_legacy_dotted_session_transcript ... ok
+test version::tests::cli_check_json_roundtrips ... ok
+test version::tests::detect_restart_returns_a_nonempty_hint ... ok
+test tls::tests::test_disabled_client_auth_skipped ... ok
+test version::tests::parse_phase_extracts_marker ... ok
+test version::tests::restart_hint_keys_resolve_via_fluent ... ok
+test version::tests::restart_mode_wire_values_are_stable ... ok
+test version::tests::self_respawn_daemon_mode_carries_no_standalone_sender ... ok
+test version::tests::self_respawn_standalone_shutdown_tx_drives_gateway_watch ... ok
+test version::tests::strip_ansi_removes_color_codes_and_keeps_text ... ok
+test version::tests::upgrade_state_strings_and_terminality ... ok
+test ws::tests::append_only_backend_durably_replaces_state_through_the_websocket_persistence_boundary ... ok
+test ws::tests::chat_tool_frames_pass_through_when_session_scoped ... ok
+test version::tests::lock_recover_preserves_state_after_poisoning ... ok
+test ws::tests::detach_mid_turn_drops_parked_approvals_so_they_fail_closed ... ok
+test ws::tests::done_context_limits_fall_back_to_agent_active_route_without_usage ... ok
+test ws::tests::done_context_limits_omit_unknown_compatibility_capacity ... ok
+test ws::tests::done_context_limits_prefer_active_usage_route ... ok
+test ws::tests::done_frame_accepted_usageless_route_serializes_null_snapshot ... ok
+test ws::tests::done_frame_falls_back_when_no_call_served ... ok
+test ws::tests::done_frame_model_context_window_presence_tracks_provider_config ... ok
+test ws::tests::done_frame_model_window_follows_live_provider_switch ... ok
+test ws::tests::done_frame_model_window_omitted_on_same_profile_model_fallback ... ok
+test ws::tests::done_frame_prefers_final_served_route_over_stale_usage ... ok
+test ws::tests::event_matches_session_defaults_drops_unwhitelisted_no_session_frames ... ok
+test ws::tests::event_matches_session_passes_session_scoped_chat_messages ... ok
+test ws::tests::extract_ws_token_from_authorization_header ... ok
+test ws::tests::extract_ws_token_from_query_param ... ok
+test ws::tests::extract_ws_token_from_subprotocol ... ok
+test ws::tests::extract_ws_token_precedence_header_over_subprotocol ... ok
+test ws::tests::extract_ws_token_precedence_subprotocol_over_query ... ok
+test ws::tests::extract_ws_token_returns_none_when_empty ... ok
+test ws::tests::extract_ws_token_skips_empty_header_value ... ok
+test ws::tests::extract_ws_token_skips_empty_query_param ... ok
+test ws::tests::extract_ws_token_subprotocol_with_multiple_entries ... ok
+test ws::tests::first_chat_message_content_preserves_the_message_for_dispatch ... ok
+test ws::tests::history_trimmed_frame_carries_token_accounting_when_present ... ok
+test ws::tests::delete_waits_for_a_running_turn_before_removing_its_transcript ... ok
+test ws::tests::mid_turn_client_frames_classify_close_err_and_stream_end_as_gone ... ok
+test ws::tests::needs_onboarding_ws_error_points_to_onboard ... ok
+test ws::tests::needs_onboarding_ws_error_uses_current_configured_model ... ok
+test ws::tests::no_safeguard_notice_yields_no_frame ... ok
+test ws::tests::observability_tagged_frames_are_filtered ... ok
+test ws::tests::observability_telemetry_filter_handles_malformed_source_field ... ok
+test tests::run_gateway_starts_with_unresolved_agent_risk_profile ... ok
+test ws::tests::replace_conversation_state_skips_deleted_session ... ok
+test ws::tests::replace_conversation_state_unless_deleted_reports_durable_failure ... ok
+test ws::tests::resolve_session_cwd_rejects_missing_directory ... ok
+test ws::tests::resolve_session_cwd_uses_default_workspace_without_request ... ok
+test ws::tests::resolve_session_cwd_uses_requested_cwd ... ok
+test ws::tests::resolve_ws_session_cwd_defaults_to_agent_workspace_without_request ... ok
+test ws::tests::resolve_ws_session_cwd_keeps_requested_cwd_strict ... ok
+test ws::tests::restore_trim_uses_live_history_trimmed_frame_shape ... ok
+test ws::tests::safeguard_fallback_frame_carries_models_and_kind_without_category ... ok
+test ws::tests::safeguard_fallback_frame_maps_server_side_kind ... ok
+test ws::tests::safeguard_fallback_frame_preserves_composed_recovery ... ok
+test ws::tests::safeguard_success_sequence_emits_exactly_one_notice_before_done ... ok
+test ws::tests::session_abort_still_cancels_a_detached_turn ... ok
+test ws::tests::session_queue_errors_map_to_explicit_websocket_codes ... ok
+test ws::tests::session_scoped_events_only_match_their_session ... ok
+test ws::tests::sop_ws_error_frames_resolve_via_fluent ... ok
+test ws::tests::reconnect_during_detached_turn_refreshes_history_before_the_follow_up ... ok
+test ws::tests::usage_by_provider_same_provider_two_models ... ok
+test ws::tests::usage_fold_accepted_then_rejected_billed_keeps_accepted_snapshot ... ok
+test ws::tests::usage_fold_cross_provider_accepted_usageless_moves_snapshot_not_ledger ... ok
+test ws::tests::usage_less_final_route_clears_the_previous_context_fill ... ok
+test tests::run_gateway_starts_with_zero_agents ... ok
+test ws::tests::idle_chat_route_pings_before_and_preserves_the_first_client_message ... ok
+test ws::tests::websocket_connect_persists_a_restore_time_trim_before_going_live ... ok
+test ws::tests::websocket_ping_interval_handles_unvalidated_overflow_without_panicking ... ok
+test ws::tests::websocket_ping_interval_skips_missed_ticks ... ok
+test ws::tests::ws_back_channel_registers_under_the_ingress_identity ... ok
+test ws::tests::ws_consolidation_model_pairs_the_active_provider_with_its_model ... ok
+test ws::tests::ws_memory_resolution_honors_agent_backend_none_over_install_backend ... ok
+test ws::tests::ws_sop_frame_enforces_policy_membership_via_auth_subject ... ok
+test ws::tests::ws_terminal_failure_uses_localized_message_without_reclassifying_diagnostic ... ok
+test ws::tests::ws_turn_has_a_single_channel_identity ... ok
+test ws_approval::tests::dropped_responder_denies_with_runtime_provenance ... ok
+test ws::tests::websocket_handler_projects_anthropic_empty_terminal_stream_as_user_error ... ok
+test ws::tests::stale_socket_rebuilds_after_delete_and_equal_length_recreate ... ok
+test ws_approval::tests::ws_approval_channel_declines_free_form_ask ... ok
+test ws_approval::tests::legacy_request_approval_still_returns_a_bare_deny_on_timeout ... ok
+test ws_approval::tests::timed_out_prompt_denies_with_runtime_provenance ... ok
+test ws::tests::websocket_client_disconnect_mid_turn_lets_the_turn_finish_and_persist ... ok
+
+failures:
+
+---- api_config::tests::unreadable_existing_config_survives_failed_save_rollback stdout ----
+
+thread 'api_config::tests::unreadable_existing_config_survives_failed_save_rollback' (24862) panicked at crates/zeroclaw-gateway/src/api_config.rs:3493:9:
+the unreadable incremental source must fail
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/std/src/panicking.rs:689:5
+   1: core::panicking::panic_fmt
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/core/src/panicking.rs:80:14
+   2: zeroclaw_gateway::api_config::tests::unreadable_existing_config_survives_failed_save_rollback::{closure#0}
+             at ./src/api_config.rs:3493:9
+   3: <core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>> as core::future::future::Future>::poll
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/core/src/future/future.rs:133:9
+   4: <core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>> as core::future::future::Future>::poll
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/core/src/future/future.rs:133:9
+   5: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}::{closure#0}
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:830:70
+   6: tokio::task::coop::with_budget::<core::task::poll::Poll<()>, <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}::{closure#0}>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/task/coop/mod.rs:167:5
+   7: tokio::task::coop::budget::<core::task::poll::Poll<()>, <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}::{closure#0}>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/task/coop/mod.rs:133:5
+   8: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:830:25
+   9: <tokio::runtime::scheduler::current_thread::Context>::enter::<core::task::poll::Poll<()>, <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:488:19
+  10: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:829:44
+  11: <tokio::runtime::scheduler::current_thread::CoreGuard>::enter::<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:906:68
+  12: <tokio::runtime::context::scoped::Scoped<tokio::runtime::scheduler::Context>>::set::<<tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}, (alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>)>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context/scoped.rs:40:9
+  13: tokio::runtime::context::set_scheduler::<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>::{closure#0}
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context.rs:187:38
+  14: <std::thread::local::LocalKey<tokio::runtime::context::Context>>::try_with::<tokio::runtime::context::set_scheduler<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>::{closure#0}, (alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>)>
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/std/src/thread/local.rs:462:12
+  15: <std::thread::local::LocalKey<tokio::runtime::context::Context>>::with::<tokio::runtime::context::set_scheduler<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>::{closure#0}, (alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>)>
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/std/src/thread/local.rs:426:20
+  16: tokio::runtime::context::set_scheduler::<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context.rs:187:17
+  17: <tokio::runtime::scheduler::current_thread::CoreGuard>::enter::<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:906:27
+  18: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:817:24
+  19: <tokio::runtime::scheduler::current_thread::CurrentThread>::block_on::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>::{closure#0}
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:218:33
+  20: tokio::runtime::context::runtime::enter_runtime::<<tokio::runtime::scheduler::current_thread::CurrentThread>::block_on<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>::{closure#0}, ()>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context/runtime.rs:65:16
+  21: <tokio::runtime::scheduler::current_thread::CurrentThread>::block_on::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:206:9
+  22: <tokio::runtime::runtime::Runtime>::block_on_inner::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/runtime.rs:374:52
+  23: <tokio::runtime::runtime::Runtime>::block_on::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>
+             at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/runtime.rs:343:18
+  24: zeroclaw_gateway::api_config::tests::unreadable_existing_config_survives_failed_save_rollback
+             at ./src/api_config.rs:3497:67
+  25: zeroclaw_gateway::api_config::tests::unreadable_existing_config_survives_failed_save_rollback::{closure#0}
+             at ./src/api_config.rs:3474:72
+  26: <zeroclaw_gateway::api_config::tests::unreadable_existing_config_survives_failed_save_rollback::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/core/src/ops/function.rs:250:5
+  27: <fn() -> core::result::Result<(), alloc::string::String> as core::ops::function::FnOnce<()>>::call_once
+             at /rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library/core/src/ops/function.rs:250:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+
+failures:
+    api_config::tests::unreadable_existing_config_survives_failed_save_rollback
+
+test result: FAILED. 637 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.77s
+
+error: test failed, to rerun pass `-p zeroclaw-gateway --lib`
+exit=101

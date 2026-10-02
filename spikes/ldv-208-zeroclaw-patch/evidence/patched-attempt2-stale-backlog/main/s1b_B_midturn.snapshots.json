@@ -1,0 +1,63 @@
+[
+ {
+  "label": "before-final",
+  "t_ms": 10236.729,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "Q1b read the fixture nonce=186014",
+      "created_at": "2026-10-02T18:20:21.287484939+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-d856508b50a2 reading fixture. <tool_call>\n{\"arguments\":{\"path\":\"<SCRATCH>/run-patched2/workspace/fixture.txt\"},\"name\":\"file_read\"}\n</tool_call>",
+      "created_at": "2026-10-02T18:20:23.038483823+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-cef78cb68af3\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:20:23.050114731+00:00",
+      "role": "user"
+     }
+    ],
+    "session_id": "s1b_B_midturn-c9f249",
+    "session_persistence": true
+   }
+  }
+ },
+ {
+  "label": "after-done",
+  "t_ms": 11795.902,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:20:21 +00:00]\n\nQ1b read the fixture nonce=186014",
+      "created_at": "2026-10-02T18:20:24.148659566+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-d856508b50a2 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-patched2/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:20:24.148659566+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-cef78cb68af3\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:20:24.148659566+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-d856508b50a2 tool_result_sha=8e45f35de6ec59d8",
+      "created_at": "2026-10-02T18:20:24.148659566+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s1b_B_midturn-c9f249",
+    "session_persistence": true
+   }
+  }
+ }
+]

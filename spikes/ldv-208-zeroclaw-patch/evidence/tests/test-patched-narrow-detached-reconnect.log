@@ -1,0 +1,10 @@
+   Compiling zeroclaw-gateway v0.8.5 (<SCRATCH>/zc/crates/zeroclaw-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 20.42s
+     Running unittests src/lib.rs (target/debug/deps/zeroclaw_gateway-db67ac2f33290177)
+
+running 1 test
+test ws::tests::reconnect_during_detached_turn_refreshes_history_before_the_follow_up ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 637 filtered out; finished in 0.98s
+
+exit=0

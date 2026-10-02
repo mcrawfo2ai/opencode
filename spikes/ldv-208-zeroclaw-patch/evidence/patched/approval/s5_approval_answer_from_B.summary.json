@@ -1,0 +1,656 @@
+{
+ "scenario": "s5_approval_answer_from_B",
+ "session": "s5_approval_answer_from_B-ff6e05",
+ "timeline": [
+  {
+   "t_ms": 4684.541,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 5592.27,
+   "stage": "g1_g2_released"
+  },
+  {
+   "t_ms": 5643.364,
+   "stage": "approval_request_seen",
+   "seen": true,
+   "A": 1,
+   "B": 1
+  },
+  {
+   "t_ms": 5643.577,
+   "stage": "approval_response_sent",
+   "from": "B"
+  },
+  {
+   "t_ms": 12728.159,
+   "stage": "no_progress_7s_after_B_answer__control_answer_from_A"
+  },
+  {
+   "t_ms": 14389.359,
+   "stage": "snapshot",
+   "label": "final"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 3982.539,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-ff6e05\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 4790.672,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-0fd50b67d082 reading fixture. \",\"seq\":1,\"session_id\":\"s5_approval_answer_from_B-ff6e05\",\"turn_id\":\"6695b53b-a23b-4878-96c1-bb74afaac024\",\"type\":\"chu…"
+    },
+    {
+     "i": 2,
+     "t_ms": 5596.959,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"b0c7a653-397a-4b85-b42d-83ac14cfae4c\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 12731.189,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p5-approval/workspace/fixture.txt\"},\"id\":\"044dc1d5-f42a-401d-ab7c-4…"
+    },
+    {
+     "i": 4,
+     "t_ms": 12742.526,
+     "type": "tool_result",
+     "brief": "{\"id\":\"044dc1d5-f42a-401d-ab7c-4764f6b5c821\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-6d32c0bf5f28\\n[1 lines total]\",\"seq\":4,\"session_id\":\"s5_approval_answer_fr…"
+    },
+    {
+     "i": 5,
+     "t_ms": 12835.205,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-0fd50b67d082 tool_result_sha=7fa8e50f7a3de064\",\"seq\":5,\"session_id\":\"s5_approval_answer_from_B-ff6e05\",\"turn_id\":\"6695b53b-a23b-4878-96c1-bb74afaac02…"
+    },
+    {
+     "i": 6,
+     "t_ms": 12839.683,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-0fd50b67d082 tool_result_sha=7fa8e50f7a3de064\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 4335.967,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s5_approval_answer_from_B-ff6e05\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 4790.708,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-0fd50b67d082 reading fixture. \",\"seq\":1,\"session_id\":\"s5_approval_answer_from_B-ff6e05\",\"turn_id\":\"6695b53b-a23b-4878-96c1-bb74afaac024\",\"type\":\"chu…"
+    },
+    {
+     "i": 2,
+     "t_ms": 5597.012,
+     "type": "approval_request",
+     "brief": "{\"arguments_summary\":\"path: <TMP>/-home-user-opencode/0d30e06b-533f-4d82-8c0a-1ded07efab1f/scratchpa…\",\"request_id\":\"b0c7a653-397a-4b85-b42d-83ac14cfae4c\",\"seq\":2…"
+    },
+    {
+     "i": 3,
+     "t_ms": 5658.789,
+     "type": "error",
+     "brief": "{\"message\":\"Unsupported message type \\\"approval_response\\\". Send {\\\"type\\\":\\\"message\\\",\\\"content\\\":\\\"your text\\\"}\",\"type\":\"error\"}"
+    },
+    {
+     "i": 4,
+     "t_ms": 12731.433,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p5-approval/workspace/fixture.txt\"},\"id\":\"044dc1d5-f42a-401d-ab7c-4…"
+    },
+    {
+     "i": 5,
+     "t_ms": 12742.592,
+     "type": "tool_result",
+     "brief": "{\"id\":\"044dc1d5-f42a-401d-ab7c-4764f6b5c821\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-6d32c0bf5f28\\n[1 lines total]\",\"seq\":4,\"session_id\":\"s5_approval_answer_fr…"
+    },
+    {
+     "i": 6,
+     "t_ms": 12835.227,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-0fd50b67d082 tool_result_sha=7fa8e50f7a3de064\",\"seq\":5,\"session_id\":\"s5_approval_answer_from_B-ff6e05\",\"turn_id\":\"6695b53b-a23b-4878-96c1-bb74afaac02…"
+    },
+    {
+     "i": 7,
+     "t_ms": 12841.007,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-0fd50b67d082 tool_result_sha=7fa8e50f7a3de064\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "final",
+   "t_ms": 14389.354,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:25:52 +00:00] Q5 read the fixture nonce=d4f28e",
+    "assistant: MARKER MK-0fd50b67d082 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-6d32c0bf5f28 [1 lines ",
+    "assistant: FINAL MK-0fd50b67d082 tool_result_sha=7fa8e50f7a3de064"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 4683.117,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 5185.176,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 5688.206,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6190.758,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 6694.186,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 7195.958,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 7698.187,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 8200.777,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 8703.423,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 9206.293,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 9708.735,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 10211.647,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 10714.269,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 11217.044,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 11719.552,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 12222.612,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 12725.613,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:52.817399454+00:00",
+      "last_activity": "2026-10-02T18:25:52.830000120+00:00",
+      "message_count": 1,
+      "session_id": "s5_approval_answer_from_B-ff6e05"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "running",
+    "turn_id": "6695b53b-a23b-4878-96c1-bb74afaac024",
+    "turn_started_at": "2026-10-02T18:25:52.829908271+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 13228.369,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 13731.049,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 14233.858,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s5_approval_answer_from_B-ff6e05",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 18,
+   "mono_ms": 4695.94,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 19,
+   "mono_ms": 4696.225,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 20,
+   "mono_ms": 4727.209,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 21,
+   "mono_ms": 4727.486,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 22,
+   "mono_ms": 4727.762,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 23,
+   "mono_ms": 4727.805,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 24,
+   "mono_ms": 5529.884,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 25,
+   "mono_ms": 5530.428,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 26,
+   "mono_ms": 5530.729,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 27,
+   "mono_ms": 5530.925,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 28,
+   "mono_ms": 12734.376,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 29,
+   "mono_ms": 12734.798,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 30,
+   "mono_ms": 12771.134,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 31,
+   "mono_ms": 12771.464,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 32,
+   "mono_ms": 12771.769,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 33,
+   "mono_ms": 12772.623,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

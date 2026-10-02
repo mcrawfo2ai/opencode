@@ -1,0 +1,3 @@
+   Compiling zeroclaw-eval v0.8.5 (<SCRATCH>/zc/crates/zeroclaw-eval)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5m 35s
+exit=0

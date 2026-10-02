@@ -1,0 +1,290 @@
+[
+ {
+  "t_ms": 951.167,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 404,
+   "body": {
+    "error": "Session not found"
+   }
+  }
+ },
+ {
+  "t_ms": 1462.575,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 1965.404,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2467.51,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 2970.422,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 3472.808,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 3975.314,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 4477.675,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 4979.484,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 5482.012,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:12:44.944095370+00:00",
+      "last_activity": "2026-10-02T18:12:44.944095370+00:00",
+      "message_count": 0,
+      "session_id": "s1a_both_before-419c98"
+     }
+    ]
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "running",
+    "turn_id": "0a61d26d-6ba3-405d-954a-d4006dfc6d40",
+    "turn_started_at": "2026-10-02T18:12:44.960733204+00:00"
+   }
+  }
+ },
+ {
+  "t_ms": 5984.601,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 6487.216,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "idle"
+   }
+  }
+ },
+ {
+  "t_ms": 6989.638,
+  "running": {
+   "status": 200,
+   "body": {
+    "sessions": []
+   }
+  },
+  "state": {
+   "status": 200,
+   "body": {
+    "session_id": "s1a_both_before-419c98",
+    "state": "idle"
+   }
+  }
+ }
+]

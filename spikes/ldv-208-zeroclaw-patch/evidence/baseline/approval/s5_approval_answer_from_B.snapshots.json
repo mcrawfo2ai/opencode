@@ -1,0 +1,35 @@
+[
+ {
+  "label": "final",
+  "t_ms": 14474.96,
+  "messages": {
+   "status": 200,
+   "body": {
+    "messages": [
+     {
+      "content": "[CURRENT DATE & TIME: 2026-10-02 18:13:32 +00:00]\n\nQ5 read the fixture nonce=33c2df",
+      "created_at": "2026-10-02T18:13:40.487132526+00:00",
+      "role": "user"
+     },
+     {
+      "content": "MARKER MK-a4dc61ea3410 reading fixture. <tool_call>\n{\"name\": \"file_read\", \"arguments\": {\"path\": \"<SCRATCH>/run-base-ap/workspace/fixture.txt\"}}\n</tool_call>",
+      "created_at": "2026-10-02T18:13:40.487132526+00:00",
+      "role": "assistant"
+     },
+     {
+      "content": "[Tool results]\n<tool_result name=\"file_read\">\n1: ldv208-obs-fixture-7e39a3469b39\n[1 lines total]\n</tool_result>\n",
+      "created_at": "2026-10-02T18:13:40.487132526+00:00",
+      "role": "user"
+     },
+     {
+      "content": "FINAL MK-a4dc61ea3410 tool_result_sha=b3a4c38ccd21e38a",
+      "created_at": "2026-10-02T18:13:40.487132526+00:00",
+      "role": "assistant"
+     }
+    ],
+    "session_id": "s5_approval_answer_from_B-76da1d",
+    "session_persistence": true
+   }
+  }
+ }
+]

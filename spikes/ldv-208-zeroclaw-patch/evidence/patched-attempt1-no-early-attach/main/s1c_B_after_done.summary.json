@@ -1,0 +1,388 @@
+{
+ "scenario": "s1c_B_after_done",
+ "session": "s1c_B_after_done-3ab22b",
+ "timeline": [
+  {
+   "t_ms": 12795.555,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 12899.054,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-e11ef5a6bd04"
+  },
+  {
+   "t_ms": 12901.623,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 13704.788,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 13808.277,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 13810.601,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 15314.049,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 15315.914,
+   "stage": "snapshot",
+   "label": "after-done-before-B"
+  },
+  {
+   "t_ms": 15668.03,
+   "stage": "B_attached_after_done"
+  },
+  {
+   "t_ms": 17670.391,
+   "stage": "snapshot",
+   "label": "after-B-attached"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 12444.806,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1c_B_after_done-3ab22b\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 12902.523,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-e11ef5a6bd04 reading fixture. \",\"seq\":1,\"session_id\":\"s1c_B_after_done-3ab22b\",\"turn_id\":\"f45c6413-8f0b-4c4a-9b00-4ced6dfc85f0\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 13710.238,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-patched/workspace/fixture.txt\"},\"id\":\"81917b7f-93c2-46f9-8189-1cbb6…"
+    },
+    {
+     "i": 3,
+     "t_ms": 13723.024,
+     "type": "tool_result",
+     "brief": "{\"id\":\"81917b7f-93c2-46f9-8189-1cbb671b407d\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-79ed8a68ef33\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s1c_B_after_done-3ab2…"
+    },
+    {
+     "i": 4,
+     "t_ms": 13811.759,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-e11ef5a6bd04 tool_result_sha=3587b5c43b8d6194\",\"seq\":4,\"session_id\":\"s1c_B_after_done-3ab22b\",\"turn_id\":\"f45c6413-8f0b-4c4a-9b00-4ced6dfc85f0\",\"type\"…"
+    },
+    {
+     "i": 5,
+     "t_ms": 13815.18,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-e11ef5a6bd04 tool_result_sha=3587b5c43b8d6194\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 15322.078,
+     "type": "session_start",
+     "brief": "{\"message_count\":4,\"resumed\":true,\"session_id\":\"s1c_B_after_done-3ab22b\",\"type\":\"session_start\"}"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "after-done-before-B",
+   "t_ms": 15315.909,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:18:45 +00:00] Q1c read the fixture nonce=aab8c1",
+    "assistant: MARKER MK-e11ef5a6bd04 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-79ed8a68ef33 [1 lines ",
+    "assistant: FINAL MK-e11ef5a6bd04 tool_result_sha=3587b5c43b8d6194"
+   ]
+  },
+  {
+   "label": "after-B-attached",
+   "t_ms": 17670.386,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:18:45 +00:00] Q1c read the fixture nonce=aab8c1",
+    "assistant: MARKER MK-e11ef5a6bd04 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-79ed8a68ef33 [1 lines ",
+    "assistant: FINAL MK-e11ef5a6bd04 tool_result_sha=3587b5c43b8d6194"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 12793.898,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 13295.915,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:18:45.599144635+00:00",
+      "last_activity": "2026-10-02T18:18:45.613053331+00:00",
+      "message_count": 1,
+      "session_id": "s1c_B_after_done-3ab22b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "running",
+    "turn_id": "f45c6413-8f0b-4c4a-9b00-4ced6dfc85f0",
+    "turn_started_at": "2026-10-02T18:18:45.612950642+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 13798.964,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:18:45.599144635+00:00",
+      "last_activity": "2026-10-02T18:18:46.525382401+00:00",
+      "message_count": 3,
+      "session_id": "s1c_B_after_done-3ab22b"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "running",
+    "turn_id": "f45c6413-8f0b-4c4a-9b00-4ced6dfc85f0",
+    "turn_started_at": "2026-10-02T18:18:45.612950642+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 14300.789,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 14803.387,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 15307.019,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 15809.696,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 16311.807,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 16814.354,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 17316.626,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1c_B_after_done-3ab22b",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 34,
+   "mono_ms": 12804.383,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 35,
+   "mono_ms": 12804.684,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 36,
+   "mono_ms": 12839.233,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 37,
+   "mono_ms": 12839.441,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 38,
+   "mono_ms": 12839.647,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 39,
+   "mono_ms": 12839.922,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 40,
+   "mono_ms": 13642.254,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 41,
+   "mono_ms": 13642.545,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 42,
+   "mono_ms": 13642.967,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 43,
+   "mono_ms": 13643.071,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 44,
+   "mono_ms": 13701.986,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 45,
+   "mono_ms": 13702.233,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 46,
+   "mono_ms": 13748.274,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 47,
+   "mono_ms": 13748.5,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 48,
+   "mono_ms": 13748.847,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 49,
+   "mono_ms": 13748.914,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

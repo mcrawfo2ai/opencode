@@ -1,0 +1,432 @@
+{
+ "scenario": "s1b_B_midturn",
+ "session": "s1b_B_midturn-3de449",
+ "timeline": [
+  {
+   "t_ms": 8003.487,
+   "stage": "prompt_sent",
+   "on": "A"
+  },
+  {
+   "t_ms": 8107.143,
+   "stage": "stub_g1_waiting",
+   "marker": "MK-6d2161818ff6"
+  },
+  {
+   "t_ms": 8109.379,
+   "stage": "g1_released"
+  },
+  {
+   "t_ms": 9262.07,
+   "stage": "B_attached_after_first_chunk"
+  },
+  {
+   "t_ms": 9764.428,
+   "stage": "g2_released"
+  },
+  {
+   "t_ms": 9868.309,
+   "stage": "stub_g3_waiting"
+  },
+  {
+   "t_ms": 10870.502,
+   "stage": "snapshot",
+   "label": "before-final"
+  },
+  {
+   "t_ms": 10872.178,
+   "stage": "g3_released"
+  },
+  {
+   "t_ms": 12425.888,
+   "stage": "turn_window_end"
+  },
+  {
+   "t_ms": 12427.88,
+   "stage": "snapshot",
+   "label": "after-done"
+  }
+ ],
+ "sockets": {
+  "A": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 7652.685,
+     "type": "session_start",
+     "brief": "{\"message_count\":0,\"resumed\":false,\"session_id\":\"s1b_B_midturn-3de449\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 8110.588,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-6d2161818ff6 reading fixture. \",\"seq\":1,\"session_id\":\"s1b_B_midturn-3de449\",\"turn_id\":\"d1142144-d500-44fd-9dc3-889375e9f38d\",\"type\":\"chunk\"}"
+    },
+    {
+     "i": 2,
+     "t_ms": 9769.151,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p4-main/workspace/fixture.txt\"},\"id\":\"a3745084-7c52-43d6-8fcb-26221…"
+    },
+    {
+     "i": 3,
+     "t_ms": 9781.408,
+     "type": "tool_result",
+     "brief": "{\"id\":\"a3745084-7c52-43d6-8fcb-26221a2c73b9\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-6e137fc22a0a\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s1b_B_midturn-3de449\"…"
+    },
+    {
+     "i": 4,
+     "t_ms": 10873.595,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-6d2161818ff6 tool_result_sha=7d45059b94c376f1\",\"seq\":4,\"session_id\":\"s1b_B_midturn-3de449\",\"turn_id\":\"d1142144-d500-44fd-9dc3-889375e9f38d\",\"type\":\"c…"
+    },
+    {
+     "i": 5,
+     "t_ms": 10878.361,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-6d2161818ff6 tool_result_sha=7d45059b94c376f1\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  },
+  "B": {
+   "close": {
+    "code": 1000,
+    "reason": "",
+    "wasClean": true
+   },
+   "frames": [
+    {
+     "i": 0,
+     "t_ms": 8915.027,
+     "type": "session_start",
+     "brief": "{\"message_count\":1,\"resumed\":true,\"session_id\":\"s1b_B_midturn-3de449\",\"type\":\"session_start\"}"
+    },
+    {
+     "i": 1,
+     "t_ms": 8915.226,
+     "type": "chunk",
+     "brief": "{\"content\":\"MARKER MK-6d2161818ff6 reading fixture. \",\"replay\":true,\"seq\":1,\"session_id\":\"s1b_B_midturn-3de449\",\"turn_id\":\"d1142144-d500-44fd-9dc3-889375e9f38d\",\"type\":\"c…"
+    },
+    {
+     "i": 2,
+     "t_ms": 9769.296,
+     "type": "tool_call",
+     "brief": "{\"args\":{\"path\":\"<SCRATCH>/run-p4-main/workspace/fixture.txt\"},\"id\":\"a3745084-7c52-43d6-8fcb-26221…"
+    },
+    {
+     "i": 3,
+     "t_ms": 9781.477,
+     "type": "tool_result",
+     "brief": "{\"id\":\"a3745084-7c52-43d6-8fcb-26221a2c73b9\",\"name\":\"file_read\",\"output\":\"1: ldv208-obs-fixture-6e137fc22a0a\\n[1 lines total]\",\"seq\":3,\"session_id\":\"s1b_B_midturn-3de449\"…"
+    },
+    {
+     "i": 4,
+     "t_ms": 10873.953,
+     "type": "chunk",
+     "brief": "{\"content\":\"FINAL MK-6d2161818ff6 tool_result_sha=7d45059b94c376f1\",\"seq\":4,\"session_id\":\"s1b_B_midturn-3de449\",\"turn_id\":\"d1142144-d500-44fd-9dc3-889375e9f38d\",\"type\":\"c…"
+    },
+    {
+     "i": 5,
+     "t_ms": 10879.568,
+     "type": "done",
+     "brief": "{\"cost_usd\":null,\"full_response\":\"FINAL MK-6d2161818ff6 tool_result_sha=7d45059b94c376f1\",\"input_tokens\":null,\"last_input_tokens\":null,\"last_serving_model\":\"stub-model\",\"…"
+    }
+   ]
+  }
+ },
+ "snapshots": [
+  {
+   "label": "before-final",
+   "t_ms": 10870.493,
+   "status": 200,
+   "count": 3,
+   "roles_heads": [
+    "user: Q1b read the fixture nonce=0db43a",
+    "assistant: MARKER MK-6d2161818ff6 reading fixture. <tool_call> {\"arguments\":{\"path\":\"<TMP>/-h",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-6e137fc22a0a [1 lines "
+   ]
+  },
+  {
+   "label": "after-done",
+   "t_ms": 12427.876,
+   "status": 200,
+   "count": 4,
+   "roles_heads": [
+    "user: [CURRENT DATE & TIME: 2026-10-02 18:25:10 +00:00] Q1b read the fixture nonce=0db43a",
+    "assistant: MARKER MK-6d2161818ff6 reading fixture. <tool_call> {\"name\": \"file_read\", \"arguments\": {\"p",
+    "user: [Tool results] <tool_result name=\"file_read\"> 1: ldv208-obs-fixture-6e137fc22a0a [1 lines ",
+    "assistant: FINAL MK-6d2161818ff6 tool_result_sha=7d45059b94c376f1"
+   ]
+  }
+ ],
+ "samples_busy_summary": [
+  {
+   "t_ms": 8002.01,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "error": "Session not found"
+   },
+   "rs": 200,
+   "ss": 404
+  },
+  {
+   "t_ms": 8503.912,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:10.313710475+00:00",
+      "last_activity": "2026-10-02T18:25:10.326763494+00:00",
+      "message_count": 1,
+      "session_id": "s1b_B_midturn-3de449"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "running",
+    "turn_id": "d1142144-d500-44fd-9dc3-889375e9f38d",
+    "turn_started_at": "2026-10-02T18:25:10.326647114+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 9006.951,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:10.313710475+00:00",
+      "last_activity": "2026-10-02T18:25:10.326763494+00:00",
+      "message_count": 1,
+      "session_id": "s1b_B_midturn-3de449"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "running",
+    "turn_id": "d1142144-d500-44fd-9dc3-889375e9f38d",
+    "turn_started_at": "2026-10-02T18:25:10.326647114+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 9509.939,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:10.313710475+00:00",
+      "last_activity": "2026-10-02T18:25:10.326763494+00:00",
+      "message_count": 1,
+      "session_id": "s1b_B_midturn-3de449"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "running",
+    "turn_id": "d1142144-d500-44fd-9dc3-889375e9f38d",
+    "turn_started_at": "2026-10-02T18:25:10.326647114+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 10011.902,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:10.313710475+00:00",
+      "last_activity": "2026-10-02T18:25:12.090265868+00:00",
+      "message_count": 3,
+      "session_id": "s1b_B_midturn-3de449"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "running",
+    "turn_id": "d1142144-d500-44fd-9dc3-889375e9f38d",
+    "turn_started_at": "2026-10-02T18:25:10.326647114+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 10513.925,
+   "running": {
+    "sessions": [
+     {
+      "created_at": "2026-10-02T18:25:10.313710475+00:00",
+      "last_activity": "2026-10-02T18:25:12.090265868+00:00",
+      "message_count": 3,
+      "session_id": "s1b_B_midturn-3de449"
+     }
+    ]
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "running",
+    "turn_id": "d1142144-d500-44fd-9dc3-889375e9f38d",
+    "turn_started_at": "2026-10-02T18:25:10.326647114+00:00"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 11016.101,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 11518.262,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  },
+  {
+   "t_ms": 12020.802,
+   "running": {
+    "sessions": []
+   },
+   "state": {
+    "session_id": "s1b_B_midturn-3de449",
+    "state": "idle"
+   },
+   "rs": 200,
+   "ss": 200
+  }
+ ],
+ "stub_log_slice": [
+  {
+   "seq": 18,
+   "mono_ms": 8016.269,
+   "kind": "request_received",
+   "phase": 1
+  },
+  {
+   "seq": 19,
+   "mono_ms": 8016.603,
+   "kind": "gate_wait",
+   "gate": "g1"
+  },
+  {
+   "seq": 20,
+   "mono_ms": 8050.697,
+   "kind": "gate_release_ack",
+   "gate": "g1"
+  },
+  {
+   "seq": 21,
+   "mono_ms": 8051.02,
+   "kind": "gate_open",
+   "gate": "g1"
+  },
+  {
+   "seq": 22,
+   "mono_ms": 8051.252,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 23,
+   "mono_ms": 8051.292,
+   "kind": "gate_wait",
+   "gate": "g2"
+  },
+  {
+   "seq": 24,
+   "mono_ms": 9705.566,
+   "kind": "gate_release_ack",
+   "gate": "g2"
+  },
+  {
+   "seq": 25,
+   "mono_ms": 9705.879,
+   "kind": "gate_open",
+   "gate": "g2"
+  },
+  {
+   "seq": 26,
+   "mono_ms": 9706.166,
+   "kind": "emitted",
+   "delta_keys": [
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 27,
+   "mono_ms": 9706.224,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  },
+  {
+   "seq": 28,
+   "mono_ms": 9759.781,
+   "kind": "request_received",
+   "phase": 2
+  },
+  {
+   "seq": 29,
+   "mono_ms": 9760.012,
+   "kind": "gate_wait",
+   "gate": "g3"
+  },
+  {
+   "seq": 30,
+   "mono_ms": 10813.284,
+   "kind": "gate_release_ack",
+   "gate": "g3"
+  },
+  {
+   "seq": 31,
+   "mono_ms": 10813.726,
+   "kind": "gate_open",
+   "gate": "g3"
+  },
+  {
+   "seq": 32,
+   "mono_ms": 10814.028,
+   "kind": "emitted",
+   "delta_keys": [
+    "role",
+    "content"
+   ],
+   "finish": null
+  },
+  {
+   "seq": 33,
+   "mono_ms": 10815.17,
+   "kind": "emitted",
+   "delta_keys": [],
+   "finish": "stop"
+  }
+ ]
+}

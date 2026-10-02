@@ -1,0 +1,5 @@
+{"t_ms":17275.241,"wall_ms":1790965231178,"ev":"open","data":null}
+{"t_ms":17278.527,"wall_ms":1790965231181,"ev":"message","data":"{\"message_count\":0,\"resumed\":false,\"session_id\":\"s3a_owner_drop-36b31c\",\"type\":\"session_start\"}"}
+{"t_ms":17628.519,"wall_ms":1790965231531,"ev":"sent","data":"{\"type\":\"message\",\"content\":\"Q3a read the fixture nonce=8e8dd4\"}"}
+{"t_ms":17736.872,"wall_ms":1790965231640,"ev":"message","data":"{\"content\":\"MARKER MK-0902bae8f09e reading fixture. \",\"seq\":1,\"session_id\":\"s3a_owner_drop-36b31c\",\"turn_id\":\"afc04212-a98e-40b3-a45d-ec4f24852d87\",\"type\":\"chunk\"}"}
+{"t_ms":18536.543,"wall_ms":1790965232439,"ev":"close","data":{"code":1000,"reason":"","wasClean":true}}

@@ -1,0 +1,360 @@
+From 368b75adb28c4ffaae4f5f89a1f0469326eb95df Mon Sep 17 00:00:00 2001
+From: spike <spike@example.invalid>
+Date: Fri, 2 Oct 2026 18:28:09 +0000
+Subject: [PATCH] spike(gateway): share turn frames across sockets of one
+ session
+
+Throwaway spike patch, not for merge.
+---
+ crates/zeroclaw-gateway/src/ws.rs | 186 ++++++++++++++++++++++++++++--
+ 1 file changed, 174 insertions(+), 12 deletions(-)
+
+diff --git a/crates/zeroclaw-gateway/src/ws.rs b/crates/zeroclaw-gateway/src/ws.rs
+index aa6f93dfe..6b3924c61 100644
+--- a/crates/zeroclaw-gateway/src/ws.rs
++++ b/crates/zeroclaw-gateway/src/ws.rs
+@@ -374,6 +374,31 @@ where
+     true
+ }
+ 
++/// Await `$fut` (the session permit) while still forwarding shared-bus frames, so
++/// a prompt queued behind another socket's turn does not receive that turn's
++/// frames late and out of order once its own turn ends.
++macro_rules! forward_while_waiting {
++    ($fut:expr, $rx:expr, $sender:expr, $session_id:expr, $conn_id:expr, $replayed:expr) => {{
++        let fut = $fut;
++        tokio::pin!(fut);
++        loop {
++            tokio::select! {
++                // Bus first: the previous turn's last frame is published before it
++                // releases the permit and must not lose the race to the permit.
++                biased;
++                event = $rx.recv() => {
++                    if let Ok(event) = event
++                        && let Some(frame) = shared_frame_for_socket(event, &$session_id, &$conn_id, &$replayed)
++                    {
++                        let _ = $sender.send(Message::Text(frame.to_string().into())).await;
++                    }
++                }
++                out = &mut fut => break out,
++            }
++        }
++    }};
++}
++
+ async fn handle_socket(
+     socket: WebSocket,
+     state: AppState,
+@@ -387,6 +412,7 @@ async fn handle_socket(
+     auth_subject: Option<String>,
+ ) {
+     let (mut sender, mut receiver) = socket.split();
++    let conn_id = uuid::Uuid::new_v4().to_string();
+ 
+     // Resolve session ID: use provided or generate a new UUID
+     let session_id = session_id.unwrap_or_else(|| uuid::Uuid::new_v4().to_string());
+@@ -479,6 +505,22 @@ async fn handle_socket(
+         .send(Message::Text(session_start.to_string().into()))
+         .await;
+ 
++    // Attach to the shared bus before the first client message, so an observer
++    // that never prompts still sees the session's turn frames.
++    let mut broadcast_rx = state.event_tx.subscribe();
++
++    // Late join: replay the running turn's frames buffered so far. Subscribing
++    // first and deduplicating by (turn_id, seq) means nothing is missed or doubled.
++    let mut replayed_through: Option<(String, u64)> = None;
++    for mut frame in current_turn_frames(&state.event_buffer.snapshot(), &session_id) {
++        replayed_through = frame["turn_id"]
++            .as_str()
++            .zip(frame["seq"].as_u64())
++            .map(|(t, s)| (t.to_string(), s));
++        frame["replay"] = true.into();
++        let _ = sender.send(Message::Text(frame.to_string().into())).await;
++    }
++
+     let mut first_msg_fallback: Option<String> = None;
+     let mut requested_cwd = session_cwd;
+     let mut ping_interval = websocket_ping_interval(&config);
+@@ -492,6 +534,14 @@ async fn handle_socket(
+                 }
+                 continue;
+             }
++            event = broadcast_rx.recv() => {
++                if let Ok(event) = event
++                    && let Some(frame) = shared_frame_for_socket(event, &session_id, &conn_id, &replayed_through)
++                {
++                    let _ = sender.send(Message::Text(frame.to_string().into())).await;
++                }
++                continue;
++            }
+         };
+ 
+         match first {
+@@ -728,7 +778,14 @@ async fn handle_socket(
+                                 return;
+                             }
+                         };
+-                    let _session_guard = match state.session_queue.acquire(&session_key).await {
++                    let _session_guard = match forward_while_waiting!(
++                        state.session_queue.acquire(&session_key),
++                        broadcast_rx,
++                        sender,
++                        session_id,
++                        conn_id,
++                        replayed_through
++                    ) {
+                         Ok(guard) => guard,
+                         Err(e) => {
+                             let err = serde_json::json!({
+@@ -753,6 +810,7 @@ async fn handle_socket(
+                         &content,
+                         &session_key,
+                         &session_id,
++                        &conn_id,
+                         auth_subject.as_deref(),
+                     )
+                     .await;
+@@ -781,8 +839,6 @@ async fn handle_socket(
+ 
+     // Subscribe to the shared broadcast channel so cron/heartbeat events
+     // are forwarded to this WebSocket client.
+-    let mut broadcast_rx = state.event_tx.subscribe();
+-
+     loop {
+         tokio::select! {
+             // ── Keepalive ─────────────────────────────────────────────
+@@ -918,7 +974,7 @@ async fn handle_socket(
+                 };
+ 
+                 // Acquire session lock to serialize concurrent turns
+-                let _session_guard = match state.session_queue.acquire(&session_key).await {
++                let _session_guard = match forward_while_waiting!(state.session_queue.acquire(&session_key), broadcast_rx, sender, session_id, conn_id, replayed_through) {
+                     Ok(guard) => guard,
+                     Err(e) => {
+                         let err = serde_json::json!({
+@@ -944,6 +1000,7 @@ async fn handle_socket(
+                     &content,
+                     &session_key,
+                     &session_id,
++                    &conn_id,
+                     auth_subject.as_deref(),
+                 )
+                 .await;
+@@ -955,10 +1012,9 @@ async fn handle_socket(
+             // ── Broadcast event (cron/heartbeat results) ──────────────
+             event = broadcast_rx.recv() => {
+                 if let Ok(event) = event
+-                    && event_matches_session(&event, &session_id)
+-                    && !is_observability_telemetry(&event)
++                    && let Some(frame) = shared_frame_for_socket(event, &session_id, &conn_id, &replayed_through)
+                 {
+-                    let _ = sender.send(Message::Text(event.to_string().into())).await;
++                    let _ = sender.send(Message::Text(frame.to_string().into())).await;
+                 }
+             }
+ 
+@@ -1433,6 +1489,85 @@ fn first_chat_message_content(text: &str) -> Option<String> {
+         .filter(|content| !content.is_empty())
+ }
+ 
++/// Stamp a turn frame with its session, turn and sequence, publish it on the
++/// shared event bus for the other sockets on the session, and buffer it for late
++/// joiners. The caller still writes the returned frame to its own socket.
++fn publish_turn_frame(
++    state: &AppState,
++    conn_id: &str,
++    session_id: &str,
++    turn_id: &str,
++    seq: &mut u64,
++    mut frame: serde_json::Value,
++) -> serde_json::Value {
++    *seq += 1;
++    frame["session_id"] = session_id.into();
++    frame["turn_id"] = turn_id.into();
++    frame["seq"] = (*seq).into();
++    state.event_buffer.push(frame.clone());
++    let mut published = frame.clone();
++    published["origin_conn"] = conn_id.into();
++    let _ = state.event_tx.send(published);
++    frame
++}
++
++/// The frames of the session's newest turn, unless that turn already ended.
++fn current_turn_frames(buffered: &[serde_json::Value], session_id: &str) -> Vec<serde_json::Value> {
++    let turn_frames = buffered
++        .iter()
++        .filter(|f| {
++            f["session_id"].as_str() == Some(session_id)
++                && f["turn_id"].is_string()
++                && f["seq"].is_u64()
++        })
++        .collect::<Vec<_>>();
++    let Some(last) = turn_frames.last() else {
++        return Vec::new();
++    };
++    if matches!(last["type"].as_str(), Some("done" | "aborted")) {
++        return Vec::new();
++    }
++    turn_frames
++        .iter()
++        .filter(|f| f["turn_id"] == last["turn_id"])
++        .map(|f| (**f).clone())
++        .collect()
++}
++
++/// Provisional transcript row so `/messages` reflects a running turn; the
++/// authoritative end-of-turn replace overwrites it.
++fn append_provisional(
++    state: &AppState,
++    session_key: &str,
++    message: zeroclaw_providers::ChatMessage,
++) {
++    if let Some(ref backend) = state.session_backend {
++        let _ = backend.append(session_key, &message);
++    }
++}
++
++/// A shared-bus event as this socket should see it: only this session's, not its
++/// own turn frames (already written directly) and not frames already replayed.
++fn shared_frame_for_socket(
++    mut event: serde_json::Value,
++    session_id: &str,
++    conn_id: &str,
++    replayed_through: &Option<(String, u64)>,
++) -> Option<serde_json::Value> {
++    if !event_matches_session(&event, session_id) || is_observability_telemetry(&event) {
++        return None;
++    }
++    if event["origin_conn"].as_str() == Some(conn_id) {
++        return None;
++    }
++    event.as_object_mut()?.remove("origin_conn");
++    let replayed = replayed_through.as_ref().is_some_and(|(turn, last)| {
++        event["turn_id"].as_str() == Some(turn.as_str())
++            && event["seq"].as_u64().is_some_and(|s| s <= *last)
++    });
++    (!replayed).then_some(event)
++}
++
+ fn event_matches_session(event: &serde_json::Value, session_id: &str) -> bool {
+     match event.get("session_id").and_then(|value| value.as_str()) {
+         Some(event_session_id) => event_session_id == session_id,
+@@ -1706,6 +1841,8 @@ async fn process_chat_message(
+     content: &str,
+     session_key: &str,
+     session_id: &str,
++    // Identifies this socket so its own turn frames are not echoed back from the shared bus.
++    conn_id: &str,
+     // Transport-authenticated approval subject (paired-token hash), threaded so a
+     // mid-turn SOP approval frame carries the same identity as the top-level path.
+     auth_subject: Option<&str>,
+@@ -1769,9 +1906,15 @@ async fn process_chat_message(
+ 
+     // Set session state to running
+     let turn_id = uuid::Uuid::new_v4().to_string();
++    let mut seq = 0u64;
+     if let Some(ref backend) = state.session_backend {
+         let _ = backend.set_session_state(session_key, "running", Some(&turn_id));
+     }
++    append_provisional(
++        state,
++        session_key,
++        zeroclaw_providers::ChatMessage::user(content),
++    );
+ 
+     // ── Cancellation token lifecycle ─────────────────────────────
+     // Create a token before the turn starts so the abort endpoint
+@@ -1830,6 +1973,7 @@ async fn process_chat_message(
+     // and we relay them over WebSocket. Track streamed chunks so we
+     // can reconstruct partial content on cancellation.
+     let mut accumulated_text = String::new();
++    let mut step_text = String::new();
+ 
+     // Aggregate token usage across all LLM calls in this turn.
+     // The agent emits TurnEvent::Usage once per LLM call when the provider
+@@ -1978,6 +2122,7 @@ async fn process_chat_message(
+                                         "arguments_summary": arguments_summary,
+                                         "timeout_secs": timeout_secs,
+                                     });
++                                    let frame = publish_turn_frame(state, conn_id, session_id, &turn_id, &mut seq, frame);
+                                     if sender.send(Message::Text(frame.to_string().into())).await.is_err() {
+                                         detach_mid_turn(session_key, &turn_id, pending_approvals);
+                                         client_gone = true;
+@@ -2004,17 +2149,23 @@ async fn process_chat_message(
+                                     }
+                                     TurnEvent::Chunk { ref delta } => {
+                                         accumulated_text.push_str(delta);
++                                        step_text.push_str(delta);
+                                         serde_json::json!({ "type": "chunk", "content": delta })
+                                     }
+                                     TurnEvent::Thinking { delta } => {
+                                         serde_json::json!({ "type": "thinking", "content": delta })
+                                     }
+                                     TurnEvent::ToolCall { id, name, args } => {
++                                        let call = serde_json::json!({ "name": name, "arguments": args });
++                                        append_provisional(state, session_key, zeroclaw_providers::ChatMessage::assistant(&format!(
++                                            "{}<tool_call>\n{call}\n</tool_call>", std::mem::take(&mut step_text))));
+                                         serde_json::json!({ "type": "tool_call", "id": id, "name": name, "args": args })
+                                     }
+                                     TurnEvent::ToolResult {
+                                         id, name, output, ..
+                                     } => {
++                                        append_provisional(state, session_key, zeroclaw_providers::ChatMessage::user(&format!(
++                                            "[Tool results]\n<tool_result name=\"{name}\">\n{output}\n</tool_result>\n")));
+                                         serde_json::json!({ "type": "tool_result", "id": id, "name": name, "output": output })
+                                     }
+                                     TurnEvent::ApprovalRequest {
+@@ -2065,6 +2216,7 @@ async fn process_chat_message(
+                                     }),
+                                     _ => continue,
+                                 };
++                                let ws_msg = publish_turn_frame(state, conn_id, session_id, &turn_id, &mut seq, ws_msg);
+                                 if client_gone {
+                                     continue;
+                                 }
+@@ -2136,7 +2288,14 @@ async fn process_chat_message(
+         }
+ 
+         // Inform the client the turn was aborted
+-        let aborted = serde_json::json!({ "type": "aborted" });
++        let aborted = publish_turn_frame(
++            state,
++            conn_id,
++            session_id,
++            &turn_id,
++            &mut seq,
++            serde_json::json!({ "type": "aborted" }),
++        );
+         let _ = sender.send(Message::Text(aborted.to_string().into())).await;
+ 
+         if let Some(ref backend) = state.session_backend
+@@ -2317,6 +2476,8 @@ async fn process_chat_message(
+             let safeguard_notice = outcome.safeguard_fallback.as_ref();
+             let done = build_done_frame_json(&meta, &usage_by_provider_vec);
+             for frame in success_terminal_ws_frames(safeguard_notice, done) {
++                let frame =
++                    publish_turn_frame(state, conn_id, session_id, &turn_id, &mut seq, frame);
+                 let _ = sender.send(Message::Text(frame.to_string().into())).await;
+             }
+ 
+@@ -3377,11 +3538,12 @@ data: {{\"type\":\"message_stop\"}}\n\n"
+         disconnect_viewer(first).await;
+         assert!(fixture.has_live_turn(&session_key));
+ 
+-        // Reconnect before the detached turn finishes: nothing is persisted
+-        // yet, so this socket's history snapshot is empty.
++        // Reconnect before the detached turn finishes: only the user prompt is
++        // persisted so far (admission-time persistence), so this socket's
++        // history snapshot holds just that message.
+         let (mut second, session_start) = fixture.connect(session_id).await;
+-        assert_eq!(session_start["resumed"], false);
+-        assert_eq!(session_start["message_count"], 0);
++        assert_eq!(session_start["resumed"], true);
++        assert_eq!(session_start["message_count"], 1);
+ 
+         // The follow-up queues behind the running turn on the session permit;
+         // it must not start a concurrent turn.
+-- 
+2.43.0
+
