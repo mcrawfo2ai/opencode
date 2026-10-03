@@ -1,0 +1,10 @@
+pid=1587
+starttime_ticks=31763
+boot_id=d34e7dcb-4191-4c45-8370-e21ff3fd28df
+exe=/tmp/claude-0/-home-user-opencode/d714ccb5-56b8-5115-9308-90f3ff02951f/scratchpad/tool/bun-linux-x64/bun
+exe_sha256=a83d263767d839e4d2649ca8e35d07159c7afc99afdc96d731ced29e056dda0c
+ready=yes elapsed_s=3.609924329
+listen_inodes=6175 listener_owned_by_pid=yes
+sigterm_sent=yes fence=match
+host_exited=yes
+host_exit_status=130

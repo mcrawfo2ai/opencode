@@ -1,0 +1,26 @@
+{
+ "root": {
+  "entry": {
+   "server": "file://<PLUGIN>/index.ts"
+  },
+  "exportKeys": [
+   "PTYPlugin",
+   "server"
+  ],
+  "defaultId": null,
+  "defaultSetupIsFn": false
+ },
+ "v2": {
+  "entry": {
+   "server": "file://<PLUGIN>/src/v2/index.ts"
+  },
+  "exportKeys": [
+   "NativePtyClient",
+   "Plugin",
+   "default",
+   "nativeTools"
+  ],
+  "defaultId": "opencode-pty",
+  "defaultSetupIsFn": true
+ }
+}

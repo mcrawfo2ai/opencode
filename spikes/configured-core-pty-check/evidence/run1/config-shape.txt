@@ -1,0 +1,1 @@
+config_shape: {"plugins":[{"package":"<PLUGIN>/src/v2","options":{"serverUrl":"http://127.0.0.1:38361"}},"<REPO>/spikes/configured-core-pty-check/probe-plugin"]}
