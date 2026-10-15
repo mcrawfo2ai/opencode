@@ -1,0 +1,247 @@
+{
+ "n": 5,
+ "before": {
+  "rss": 1359196160,
+  "heapTotal": 867871744,
+  "heapUsed": 845376603,
+  "external": 192319227,
+  "arrayBuffers": 43020151
+ },
+ "after": {
+  "rss": 1271951360,
+  "heapTotal": 865659904,
+  "heapUsed": 845376603,
+  "external": 118876713,
+  "arrayBuffers": 36248733
+ },
+ "jsc": {
+  "current": 1268813824,
+  "peak": 1689206784,
+  "currentCommit": 161218560,
+  "peakCommit": 161218560,
+  "pageFaults": 0
+ },
+ "heapSize": 764103929,
+ "heapCapacity": 1014451273,
+ "extraMemorySize": 118876713,
+ "objectCount": 11602240,
+ "globalObjectCount": 1,
+ "protectedObjectCount": 401,
+ "types": [
+  [
+   "Object",
+   6680130
+  ],
+  [
+   "string",
+   1192653
+  ],
+  [
+   "Array",
+   771187
+  ],
+  [
+   "Function",
+   555240
+  ],
+  [
+   "Cell Butterfly",
+   466815
+  ],
+  [
+   "JSLexicalEnvironment",
+   463809
+  ],
+  [
+   "Map",
+   114445
+  ],
+  [
+   "Structure",
+   68863
+  ],
+  [
+   "FunctionExecutable",
+   44771
+  ],
+  [
+   "UnlinkedFunctionExecutable",
+   43263
+  ],
+  [
+   "GetterSetter",
+   21064
+  ],
+  [
+   "FunctionRareData",
+   18558
+  ],
+  [
+   "AsyncFunction",
+   14652
+  ],
+  [
+   "SymbolTable",
+   11885
+  ],
+  [
+   "StructureRareData",
+   7867
+  ],
+  [
+   "GeneratorFunction",
+   7478
+  ],
+  [
+   "Error",
+   6438
+  ],
+  [
+   "FunctionCodeBlock",
+   5233
+  ],
+  [
+   "Set",
+   5056
+  ],
+  [
+   "UnlinkedFunctionCodeBlock",
+   2549
+  ],
+  [
+   "PropertyTable",
+   2521
+  ],
+  [
+   "BigInt",
+   2292
+  ],
+  [
+   "RegExp",
+   2139
+  ],
+  [
+   "Arguments",
+   1808
+  ],
+  [
+   "NativeExecutable",
+   1619
+  ],
+  [
+   "SparseArrayValueMap",
+   1606
+  ],
+  [
+   "symbol",
+   1584
+  ],
+  [
+   "StructureChain",
+   1141
+  ],
+  [
+   "Promise",
+   814
+  ],
+  [
+   "JSPropertyNameEnumerator",
+   590
+  ],
+  [
+   "WeakMap",
+   217
+  ],
+  [
+   "JSModuleEnvironment",
+   209
+  ],
+  [
+   "JSSourceCode",
+   206
+  ],
+  [
+   "ModuleRecord",
+   206
+  ],
+  [
+   "ModuleRegistryEntry",
+   206
+  ],
+  [
+   "WebAssemblyFunction",
+   202
+  ],
+  [
+   "DOMAttributeGetterSetter",
+   176
+  ],
+  [
+   "UnlinkedModuleProgramCodeBlock",
+   174
+  ],
+  [
+   "ModuleProgramExecutable",
+   159
+  ],
+  [
+   "WebAssembly.Global",
+   158
+  ]
+ ],
+ "mimalloc": {
+  "committed": {
+   "total": 161218560,
+   "peak": 161218560,
+   "current": 161218560
+  },
+  "reserved": {
+   "total": 1076232192,
+   "peak": 1076232192,
+   "current": 1076232192
+  },
+  "process": {
+   "elapsed_msecs": 756198,
+   "user_msecs": 106763,
+   "system_msecs": 18385,
+   "page_faults": 0,
+   "rss_current": 161218560,
+   "rss_peak": 1689206784,
+   "commit_current": 161218560,
+   "commit_peak": 161218560
+  },
+  "pages": {
+   "total": 1579,
+   "peak": 195,
+   "current": 184
+  },
+  "pages_abandoned": {
+   "total": 191,
+   "peak": 88,
+   "current": 81
+  },
+  "threads": {
+   "total": 9,
+   "peak": 9,
+   "current": 7
+  },
+  "malloc_normal": {
+   "total": 0,
+   "peak": 0,
+   "current": 0
+  },
+  "malloc_huge": {
+   "total": 36110336,
+   "peak": 36110336,
+   "current": 36110336
+  },
+  "heaps": {
+   "total": 3,
+   "peak": 3,
+   "current": 3
+  },
+  "arena_count": 1,
+  "purged": 159318016,
+  "reset": 0
+ }
+}
