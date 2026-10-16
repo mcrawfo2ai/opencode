@@ -7,7 +7,7 @@
 - **The fixes:** spike 1's fixes release the server and gopls costs. The production PTY leak, however, comes from the pty plugin's own copy of `bun-pty`, which needs the same patch.
 - **Bursts** reach multi-GB in long sessions with large tool inputs. That is driven by a per-step session-summary diff that is unbounded and re-persisted on every step (Q7).
 - **Sockets:** 3 per gopls child plus 1 per event-stream subscriber (Q8).
-- **Soak:** see Q9.
+- **Soak (2 h of a planned 6 h; the container restarted):** with the fixes on, RSS and the JS heap are flat with time. Only the pty plugin's PTY leak grows: +18 pts, +54 ptmx and +38 threads per hour (Q9).
 
 Same build and rules as spike 1: tag `v1.18.32-internetisalie.3` (`f7f6c22`), bun 1.3.14, the extracted models.dev catalog (223 providers, 7,954 models), the `memdump.ts` SIGUSR2 instrument, and the `/proc` sampler, extended with child-process and socket classification. Stub providers only; every API key is the dummy string `x`. Nothing in this repository's runtime code changes.
 
@@ -160,7 +160,38 @@ That totals ~200–250 with a few dozen TUI clients. **I couldn't measure** prod
 
 ## Q9: growth with time, 6 h soak
 
-_In progress: the 6 h soak (8 directories, a session every 3 min, every 4th session ~57 tool calls, all features, opencode fixes on with a 60 s TTL, plugin `bun-pty` unpatched) runs until ~01:05 UTC. This section will be filled in from `runs/q9soak/`._
+Setup:
+- 8 directories (p1–p8) in rotation, one new session every 3 min. Every 4th session is "long" (~57 tool calls); the others make 12, including the pty plugin's `pty_spawn` + `pty_read`.
+- All four features on. opencode-side fixes on (`proto-v2`, `OPENCODE_INSTANCE_IDLE_TTL_MS=60000`). The plugin's `bun-pty` was **unpatched** (it loaded before 19:50, see section 0).
+- 1-minute `/proc` ticks (`runs/q9soak/timeline.jsonl`), plus a post-GC heap dump every 30 min.
+
+**Planned 6 h; ran 1.95 h (19:04–21:01 UTC, 40 sessions), then the sandbox container restarted and took every process with it.**
+- Sessions 29–31 failed in the disk-full window (20:28–20:34), and the T+90 min heap dump was lost to it.
+- I did not restart the soak, so there is no data past 2 h.
+
+| dump | post-GC RSS | heap live / cap MB | objects | mimalloc MB | threads | ptmx / pts | sockets | gopls |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| T0 (boot) | 276 | 108 / 149 | 1.68 M | 47 | 11 | 0 / 0 | 1 | — |
+| T+30 min | 644 | 250 / 397 | 2.46 M | 207 | 44 | 33 / 11 | 7 | 1 (121 MiB, active dir) |
+| T+60 min | 652 | 251 / 414 | 2.46 M | 212 | 63 | 63 / 21 | 7 | 1 (114 MiB, active dir) |
+| T+90 min (no heap dump, disk full) | 495 | — | — | — | 68 | 84 / 28 | 1 | 0 (all dirs idle > TTL) |
+| last tick T+117 min (not GC'd) | 679 | — | — | — | 94 | 111 / 37 | 10 | 1 |
+
+Linear fits over the 1-minute ticks, excluding the first 10 min:
+
+| quantity | slope |
+|---|---:|
+| RSS | **−11 MiB/h** (flat: ticks stay 650–700 MiB with an active directory, ~495 MiB with none) |
+| threads | **+38 /h** |
+| ptmx | **+54 /h** |
+| pts | **+18 /h** |
+
+- **With the opencode fixes on, memory does not grow with time** over 2 h and 40 sessions on 8 rotating directories.
+  - Between T+30 and T+60 the JS heap (250 → 251 MB live) and object count (2.46 M) are flat.
+  - Each directory's instance and gopls are created when it is used and disposed 60 s after it goes idle. With all directories idle (T+90) the process tree drops to the server alone.
+- **The one resource that grows with time is the pty plugin's leak:** ~1 pts + 3 ptmx + ~2 threads per session that calls `pty_spawn`, never released while the session exists (section Q6).
+  - At production's session rate it alone would explain the 3:1 ptmx:pts fds and the thread count rising with uptime. It costs little RSS (~0.1 MiB per PTY here). The cost is fds and native threads.
+- **Not established:** whether anything grows slowly over hours beyond 2 h, or with the fixes **off**. Q6's R2/R3 revisits (fixes off) showed post-GC RSS flat on revisits of the same 20 directories (1,337 → 1,362 → 1,359 MiB), so growth with fixes off tracks *new* directories, not time.
 
 ## What I could not establish
 
