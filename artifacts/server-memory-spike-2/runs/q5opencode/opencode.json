@@ -1,0 +1,36 @@
+{
+ "$schema": "https://opencode.ai/config.json",
+ "model": "stub/stub-coder",
+ "small_model": "stub/stub-coder",
+ "autoupdate": false,
+ "share": "disabled",
+ "permission": "allow",
+ "provider": {
+  "stub": {
+   "npm": "@ai-sdk/openai-compatible",
+   "name": "Stub",
+   "options": {
+    "baseURL": "http://127.0.0.1:4999/v1",
+    "apiKey": "x"
+   },
+   "models": {
+    "stub-coder": {
+     "name": "stub-coder",
+     "tool_call": true,
+     "limit": {
+      "context": 200000,
+      "output": 8000
+     }
+    },
+    "gpt-5-stub": {
+     "name": "gpt-5-stub",
+     "tool_call": true,
+     "limit": {
+      "context": 200000,
+      "output": 8000
+     }
+    }
+   }
+  }
+ }
+}
